@@ -4,13 +4,15 @@ import { Campo } from "@/components/Campo";
 import { Spunta } from "@/components/Icone";
 import { PulsanteContatti } from "@/components/PulsanteContatti";
 import { Intro, Testo } from "@/components/Testo";
+import { metadati } from "@/content/metadati";
 import { perLeAgenzie } from "@/content/per-le-agenzie";
 import { percorsi } from "@/content/sito";
 
-export const metadata: Metadata = {
-  title: "Per le agenzie",
-  description: perLeAgenzie.intro[0],
-};
+export const metadata: Metadata = metadati({
+  titolo: "Per le agenzie",
+  descrizione: perLeAgenzie.intro[0],
+  percorso: percorsi.perLeAgenzie,
+});
 
 // Questa pagina non ha la striscia agenzie: al posto del blocco quiz c'è il modulo per i partner.
 export default function PerLeAgenzie() {

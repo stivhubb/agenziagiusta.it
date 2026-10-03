@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { DatiPercorso } from "@/components/DatiStrutturati";
 import { PaginaContenuto } from "@/components/PaginaContenuto";
 import { citta, titoloCitta } from "@/content/citta";
+import { metadati } from "@/content/metadati";
 import { titoloInChiaro, type Sezione, type Titolo } from "@/content/tipi";
 import { verticali } from "@/content/verticali";
 
@@ -36,18 +38,26 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps<"/[slug]">): Promise<Metadata> {
-  const voce = trova((await params).slug);
+  const { slug } = await params;
+  const voce = trova(slug);
   if (!voce) return {};
-  return {
-    title: titoloInChiaro(voce.titolo),
-    description: voce.pagina?.intro[0],
+  return metadati({
+    titolo: titoloInChiaro(voce.titolo),
+    descrizione: voce.pagina?.intro[0],
+    percorso: `/${slug}/`,
     // Le pagine ancora senza testi non vanno indicizzate.
-    robots: voce.pagina ? undefined : { index: false },
-  };
+    indicizza: Boolean(voce.pagina),
+  });
 }
 
 export default async function Pagina({ params }: PageProps<"/[slug]">) {
-  const voce = trova((await params).slug);
+  const { slug } = await params;
+  const voce = trova(slug);
   if (!voce) notFound();
-  return <PaginaContenuto percorso={voce.percorso} titolo={voce.titolo} pagina={voce.pagina} />;
+  return (
+    <>
+      <DatiPercorso nome={voce.percorso} percorso={`/${slug}/`} />
+      <PaginaContenuto percorso={voce.percorso} titolo={voce.titolo} pagina={voce.pagina} />
+    </>
+  );
 }

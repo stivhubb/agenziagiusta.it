@@ -5,12 +5,14 @@ import { Freccia, FrecciaGiu } from "@/components/Icone";
 import { StrisciaAgenzie } from "@/components/StrisciaAgenzie";
 import { Intro } from "@/components/Testo";
 import { contatti } from "@/content/contatti";
+import { metadati } from "@/content/metadati";
 import { percorsi, sito } from "@/content/sito";
 
-export const metadata: Metadata = {
-  title: "Contatti",
-  description: contatti.apertura,
-};
+export const metadata: Metadata = metadati({
+  titolo: "Contatti",
+  descrizione: contatti.apertura,
+  percorso: percorsi.contatti,
+});
 
 // Questa pagina non ha il pulsante contatti.
 export default function Contatti() {

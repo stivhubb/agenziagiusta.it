@@ -5,12 +5,14 @@ import { PulsanteContatti } from "@/components/PulsanteContatti";
 import { StrisciaAgenzie } from "@/components/StrisciaAgenzie";
 import { Intro, Testo } from "@/components/Testo";
 import { comeFunziona } from "@/content/come-funziona";
+import { metadati } from "@/content/metadati";
 import { percorsi } from "@/content/sito";
 
-export const metadata: Metadata = {
-  title: "Come funziona",
-  description: comeFunziona.intro[0],
-};
+export const metadata: Metadata = metadati({
+  titolo: "Come funziona",
+  descrizione: comeFunziona.intro[0],
+  percorso: percorsi.comeFunziona,
+});
 
 export default function ComeFunziona() {
   return (

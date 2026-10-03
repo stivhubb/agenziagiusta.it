@@ -1,22 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BloccoQuiz } from "@/components/BloccoQuiz";
+import { DatiSito } from "@/components/DatiStrutturati";
 import { Freccia } from "@/components/Icone";
 import { PulsanteContatti } from "@/components/PulsanteContatti";
 import { StrisciaAgenzie } from "@/components/StrisciaAgenzie";
 import { TitoloPagina } from "@/components/Testo";
 import { home } from "@/content/home";
+import { metadati } from "@/content/metadati";
 import { percorsi, sito } from "@/content/sito";
 import { verticali } from "@/content/verticali";
 
-export const metadata: Metadata = {
-  title: { absolute: `${home.titoloPagina} | ${sito.nome}` },
-  description: home.apertura,
-};
+export const metadata: Metadata = metadati({
+  titolo: `${home.titoloPagina} | ${sito.nome}`,
+  titoloIntero: true,
+  descrizione: home.apertura,
+  percorso: percorsi.home,
+});
 
 export default function Home() {
   return (
     <>
+      <DatiSito />
       <section className="contenitore hero-home">
         <div className="occhiello occhiello--punto">{home.occhiello}</div>
         <TitoloPagina titolo={home.titolo} className="titolo-home" />
