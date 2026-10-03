@@ -1,4 +1,4 @@
-import type { Pagina, Titolo } from "./tipi";
+import type { Pagina, Seo, Titolo } from "./tipi";
 
 // Le pagine città. Aggiungere una città significa aggiungere una voce a questo elenco.
 // - slug: indirizzo della pagina (/milano/)
@@ -16,6 +16,14 @@ export function titoloCitta(nome: string): Titolo {
   return {
     testo: `Agenzie di comunicazione a ${nome}: come trovare`,
     evidenza: "quella giusta.",
+  };
+}
+
+// Anche title e description seguono lo stesso schema.
+export function seoCitta(nome: string): Seo {
+  return {
+    title: `Agenzie di comunicazione a ${nome}: guida alla scelta`,
+    description: `Come orientarsi tra le agenzie di comunicazione a ${nome}: tipi di agenzia, prezzi e criteri di scelta. Prepara il brief con il quiz.`,
   };
 }
 

@@ -1,12 +1,18 @@
-import type { Pagina } from "./tipi";
+import type { Pagina, Seo } from "./tipi";
 
 // Testi della pagina Come funziona.
 
 export const comeFunziona: Pagina & {
   passi: { titolo: string; testo: string }[];
   fascia: string;
+  seo: Seo;
 } = {
   titolo: { testo: "Dal quiz all'agenzia giusta,", evidenza: "in tre passi." },
+  seo: {
+    title: "Come funziona AgenziaGiusta.it: dal quiz al brief",
+    description:
+      "Rispondi al quiz, ricevi il brief via email e decidi se inviarlo a 2-3 agenzie adatte. Per le aziende è gratis: ecco come funziona.",
+  },
   intro: [
     "AgenziaGiusta.it non è un'agenzia. Ti aiuta a mettere per iscritto cosa ti serve e, se vuoi, a farlo arrivare alle agenzie più adatte.",
     "Chi cerca un'agenzia di solito parte da una ricerca online, apre una decina di siti che si somigliano e manda qualche richiesta di contatto. Poi aspetta, ripete la stessa spiegazione a ogni telefonata e riceve preventivi che non riesce a confrontare. È un percorso lungo, e il risultato dipende più dal caso che dal merito.",

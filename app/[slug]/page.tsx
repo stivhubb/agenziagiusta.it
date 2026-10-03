@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DatiPercorso } from "@/components/DatiStrutturati";
 import { PaginaContenuto } from "@/components/PaginaContenuto";
-import { citta, titoloCitta } from "@/content/citta";
+import { citta, seoCitta, titoloCitta } from "@/content/citta";
 import { metadati } from "@/content/metadati";
-import { titoloInChiaro, type Sezione, type Titolo } from "@/content/tipi";
+import type { Seo, Sezione, Titolo } from "@/content/tipi";
 import { verticali } from "@/content/verticali";
 
 // Pagine verticali e pagine città: una pagina statica per ogni voce dei due elenchi
@@ -13,6 +13,7 @@ import { verticali } from "@/content/verticali";
 type Voce = {
   percorso: string;
   titolo: Titolo;
+  seo: Seo;
   pagina?: { intro: string[]; sezioni: Sezione[] };
 };
 
@@ -21,13 +22,19 @@ function trova(slug: string): Voce | undefined {
   if (verticale) {
     return {
       percorso: verticale.percorso ?? verticale.nome,
-      titolo: verticale.pagina?.titolo ?? { testo: verticale.nome },
+      titolo: verticale.titolo,
+      seo: verticale.seo,
       pagina: verticale.pagina,
     };
   }
   const c = citta.find((v) => v.slug === slug);
   if (c) {
-    return { percorso: c.nome, titolo: titoloCitta(c.nome), pagina: c.pagina };
+    return {
+      percorso: c.nome,
+      titolo: titoloCitta(c.nome),
+      seo: seoCitta(c.nome),
+      pagina: c.pagina,
+    };
   }
 }
 
@@ -42,8 +49,10 @@ export async function generateMetadata({ params }: PageProps<"/[slug]">): Promis
   const voce = trova(slug);
   if (!voce) return {};
   return metadati({
-    titolo: titoloInChiaro(voce.titolo),
-    descrizione: voce.pagina?.intro[0],
+    // Senza il nome del sito, per lasciare spazio alla parola chiave.
+    titolo: voce.seo.title,
+    titoloIntero: true,
+    descrizione: voce.seo.description,
     percorso: `/${slug}/`,
     // Le pagine ancora senza testi non vanno indicizzate.
     indicizza: Boolean(voce.pagina),

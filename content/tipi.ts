@@ -14,6 +14,5 @@ export type Sezione = { titolo: string; blocchi: Blocco[] };
 // intro: il primo paragrafo è l'apertura, gli altri sono l'intro lunga.
 export type Pagina = { titolo: Titolo; intro: string[]; sezioni: Sezione[] };
 
-export function titoloInChiaro({ testo, evidenza }: Titolo): string {
-  return [testo, evidenza].filter(Boolean).join(" ").replace(/\.$/, "");
-}
+// Title e description per Google: title entro 60 caratteri, description entro 155.
+export type Seo = { title: string; description: string };

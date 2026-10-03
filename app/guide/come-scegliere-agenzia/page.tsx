@@ -4,11 +4,11 @@ import { DatiPercorso } from "@/components/DatiStrutturati";
 import { guida } from "@/content/guida";
 import { metadati } from "@/content/metadati";
 import { percorsi } from "@/content/sito";
-import { titoloInChiaro } from "@/content/tipi";
 
 export const metadata: Metadata = metadati({
-  titolo: titoloInChiaro(guida.titolo),
-  descrizione: guida.intro[0],
+  titolo: guida.seo.title,
+  titoloIntero: true,
+  descrizione: guida.seo.description,
   percorso: percorsi.guida,
 });
 

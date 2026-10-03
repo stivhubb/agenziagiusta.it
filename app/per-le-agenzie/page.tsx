@@ -9,8 +9,8 @@ import { perLeAgenzie } from "@/content/per-le-agenzie";
 import { percorsi } from "@/content/sito";
 
 export const metadata: Metadata = metadati({
-  titolo: "Per le agenzie",
-  descrizione: perLeAgenzie.intro[0],
+  titolo: perLeAgenzie.seo.title,
+  descrizione: perLeAgenzie.seo.description,
   percorso: percorsi.perLeAgenzie,
 });
 

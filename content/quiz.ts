@@ -36,9 +36,11 @@ export const passi: Passo[] = [
 ];
 
 export const quiz = {
-  titoloPagina: "Crea il tuo brief",
-  descrizione:
-    "Rispondi a poche domande su attività, servizi richiesti, budget, tempi e città: alla fine ricevi il tuo brief via email.",
+  seo: {
+    title: "Crea il brief per la tua agenzia",
+    description:
+      "Crea il brief per la tua agenzia in pochi minuti: rispondi a cinque domande e ricevilo via email, pronto da usare.",
+  },
   segnapostoOpzioni: "[OPZIONI DI RISPOSTA: DA DEFINIRE]",
   // Ultimo passo: contatti, consenso e invio del brief sono fuori dal primo giro.
   segnapostoFine:

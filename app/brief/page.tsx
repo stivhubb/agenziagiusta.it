@@ -7,8 +7,8 @@ import { quiz } from "@/content/quiz";
 import { percorsi } from "@/content/sito";
 
 export const metadata: Metadata = metadati({
-  titolo: quiz.titoloPagina,
-  descrizione: quiz.descrizione,
+  titolo: quiz.seo.title,
+  descrizione: quiz.seo.description,
   percorso: percorsi.quiz,
 });
 

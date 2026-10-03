@@ -12,9 +12,9 @@ import { percorsi, sito } from "@/content/sito";
 import { verticali } from "@/content/verticali";
 
 export const metadata: Metadata = metadati({
-  titolo: `${home.titoloPagina} | ${sito.nome}`,
+  titolo: `${home.seo.title} | ${sito.nome}`,
   titoloIntero: true,
-  descrizione: home.apertura,
+  descrizione: home.seo.description,
   percorso: percorsi.home,
 });
 

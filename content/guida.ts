@@ -1,9 +1,14 @@
-import type { Pagina } from "./tipi";
+import type { Pagina, Seo } from "./tipi";
 
 // Testi della guida alla scelta dell'agenzia.
 
-export const guida: Pagina = {
+export const guida: Pagina & { seo: Seo } = {
   titolo: { testo: "Come scegliere un'agenzia e scrivere", evidenza: "un buon brief." },
+  seo: {
+    title: "Come scegliere un'agenzia e scrivere un buon brief",
+    description:
+      "Cosa chiarire prima di cercare un'agenzia, cosa scrivere nel brief e come confrontare le proposte. Con il quiz che prepara il brief per te.",
+  },
   intro: [
     "Scegliere un'agenzia è più semplice se sai già cosa chiedere. Il brief serve a questo: mette per iscritto cosa ti serve, con quale budget e in quali tempi, così ogni agenzia risponde alla stessa domanda.",
     "Molte collaborazioni tra aziende e agenzie partono male per un motivo semplice: la richiesta iniziale è vaga. L'azienda chiede \"un preventivo per la comunicazione\", ogni agenzia interpreta a modo suo e le proposte che arrivano non si possono confrontare, perché rispondono a domande diverse. Si finisce per scegliere in base al prezzo o alla simpatia, e i problemi emergono dopo qualche mese.",

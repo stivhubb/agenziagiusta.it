@@ -1,8 +1,12 @@
 // Testi della home.
 
 export const home = {
-  // "agenzia di comunicazione" non è nell'H1: sta nel titolo della pagina.
-  titoloPagina: "Agenzia di comunicazione: trova quella giusta con un buon brief",
+  // "agenzia di comunicazione" non è nell'H1: sta nel title e nella description per Google.
+  seo: {
+    title: "Trova l'agenzia di comunicazione giusta",
+    description:
+      "Rispondi a poche domande, ricevi un brief pronto e, se vuoi, lo inviamo a 2-3 agenzie di comunicazione adatte al tuo progetto. Gratis per le aziende.",
+  },
   occhiello: "Per le aziende che cercano un'agenzia",
   titolo: { testo: "L'agenzia giusta si trova con", evidenza: "un buon brief." },
   apertura:

@@ -44,6 +44,12 @@ la scheda in home (verticali) e il link nel footer (città) si creano da soli.
 Una voce senza testi (`pagina`) mostra i segnaposto, ha il `noindex` e resta fuori dalla sitemap,
 così non finisce su Google finché non è scritta. Quando i testi ci sono, entra in sitemap da sola.
 
+## Title, H1 e description
+
+Ogni pagina ha il suo H1 (`titolo`) e i suoi `seo.title` e `seo.description` nel file di contenuto:
+title entro 60 caratteri, description entro 155. Per le città seguono uno schema unico,
+in `content/citta.ts`.
+
 ## Segnaposto
 
 I dati mancanti sono tra parentesi quadre e restano visibili nel sito. Ragione sociale,

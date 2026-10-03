@@ -9,8 +9,9 @@ import { metadati } from "@/content/metadati";
 import { percorsi } from "@/content/sito";
 
 export const metadata: Metadata = metadati({
-  titolo: "Come funziona",
-  descrizione: comeFunziona.intro[0],
+  titolo: comeFunziona.seo.title,
+  titoloIntero: true,
+  descrizione: comeFunziona.seo.description,
   percorso: percorsi.comeFunziona,
 });
 

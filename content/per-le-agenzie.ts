@@ -1,4 +1,4 @@
-import type { Pagina } from "./tipi";
+import type { Pagina, Seo } from "./tipi";
 
 // Testi della pagina Per le agenzie.
 // I campi del modulo sono una proposta: quelli definitivi sono da decidere.
@@ -6,8 +6,14 @@ import type { Pagina } from "./tipi";
 export const perLeAgenzie: Pagina & {
   blocco: { occhiello: string; titolo: string; testo: string; vantaggi: string[] };
   modulo: { campi: { id: string; etichetta: string; tipo?: string }[]; pulsante: string };
+  seo: Seo;
 } = {
   titolo: { testo: "Clienti che arrivano con", evidenza: "un brief già scritto." },
+  seo: {
+    title: "Per le agenzie: ricevi brief già scritti",
+    description:
+      "Ricevi brief già scritti da aziende in linea con i tuoi servizi, settori e budget. Nessun costo per i contatti: scopri come diventare partner.",
+  },
   intro: [
     "Le aziende che passano da AgenziaGiusta.it hanno già chiarito cosa cercano, con quale budget e in quali tempi. Ti inviamo solo i progetti in linea con quello che fai.",
     "Chi si occupa di nuovi clienti lo sa: buona parte del tempo va in richieste che non portano a nulla. Contatti senza budget, aziende che non sanno ancora cosa vogliono, preventivi chiesti a dieci agenzie insieme solo per confrontare i prezzi. Ogni risposta costa ore di lavoro, e la maggior parte non diventa un contratto.",
