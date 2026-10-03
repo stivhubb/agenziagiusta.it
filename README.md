@@ -41,8 +41,8 @@ Quelli delle pagine fisse stanno in `content/sito.ts`.
 Si aggiunge una voce all'elenco in `content/verticali.ts` o `content/citta.ts`: la pagina,
 la scheda in home (verticali) e il link nel footer (città) si creano da soli.
 
-Una voce senza testi (`pagina`) mostra i segnaposto e ha il `noindex`, così non finisce su Google
-finché non è scritta.
+Una voce senza testi (`pagina`) mostra i segnaposto, ha il `noindex` e resta fuori dalla sitemap,
+così non finisce su Google finché non è scritta. Quando i testi ci sono, entra in sitemap da sola.
 
 ## Segnaposto
 
