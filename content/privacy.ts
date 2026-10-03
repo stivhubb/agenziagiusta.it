@@ -28,9 +28,9 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
       ],
     },
     {
-      titolo: "Invio del brief alle agenzie",
+      titolo: "Invio del brief a un'agenzia",
       blocchi: [
-        "Inviamo il tuo brief e i tuoi contatti a 2-3 agenzie solo se ci dai un consenso esplicito alla fine del quiz. Senza consenso il brief resta a te.",
+        "Per generare il brief ti chiediamo il consenso esplicito a selezionare una sola agenzia e a inviarle il tuo brief e i tuoi contatti, perché possa contattarti. I tuoi dati non vanno ad altre agenzie.",
       ],
     },
     {
@@ -40,7 +40,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
     {
       titolo: "I tuoi diritti",
       blocchi: [
-        `Puoi chiedere in ogni momento di vedere, correggere o cancellare i tuoi dati e di revocare il consenso all'invio alle agenzie, scrivendo a ${sito.emailPrivacy}.`,
+        `Puoi chiedere in ogni momento di vedere, correggere o cancellare i tuoi dati e di revocare il consenso all'invio all'agenzia, scrivendo a ${sito.emailPrivacy}.`,
       ],
     },
     {

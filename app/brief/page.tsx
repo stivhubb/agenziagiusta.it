@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PulsanteContatti } from "@/components/PulsanteContatti";
 import { Quiz } from "@/components/Quiz";
 import { StrisciaAgenzie } from "@/components/StrisciaAgenzie";
 import { metadati } from "@/content/metadati";
@@ -12,12 +11,12 @@ export const metadata: Metadata = metadati({
   percorso: percorsi.quiz,
 });
 
+// Senza il pulsante contatti fisso: sul telefono copriva "Avanti".
 export default function Brief() {
   return (
     <>
       <Quiz />
       <StrisciaAgenzie />
-      <PulsanteContatti />
     </>
   );
 }

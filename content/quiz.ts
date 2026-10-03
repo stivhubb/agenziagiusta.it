@@ -25,6 +25,8 @@ export type Campo = {
   max?: number;
   aiuto?: string;
   facoltativo?: boolean;
+  // Suggerimento per la compilazione automatica del browser (name, email, tel...).
+  completamento?: string;
 };
 
 export type Passo = { nome: string; testo: string; campi: Campo[] };
@@ -39,9 +41,6 @@ const fasce = [
   "100.000-150.000 €",
   "Oltre 150.000 €",
 ];
-
-// Chi sceglie questa voce deve lasciare anche il telefono.
-export const INVIO_SI = "Sì, selezionate un'agenzia e inviatele i miei dati";
 
 export const passi: Passo[] = [
   {
@@ -100,7 +99,7 @@ export const passi: Passo[] = [
         tipo: "testo-lungo",
         aiuto: "Cosa offre l'azienda e cosa la distingue dai concorrenti.",
       },
-      { id: "sitoWeb", etichetta: "Sito web", tipo: "url", facoltativo: true },
+      { id: "sitoWeb", etichetta: "Sito web", tipo: "url", facoltativo: true, completamento: "url" },
     ],
   },
   {
@@ -141,7 +140,7 @@ export const passi: Passo[] = [
         id: "investimentoAnnuo",
         etichetta: "Investimento annuo in comunicazione",
         tipo: "singola",
-        aiuto: "Quanto spendete oggi in un anno, spesa per i mezzi inclusa.",
+        aiuto: "Quanto spendete oggi in un anno.",
         opzioni: fasce,
         facoltativo: true,
       },
@@ -222,7 +221,6 @@ export const passi: Passo[] = [
         id: "budgetAgenzia",
         etichetta: "Budget annuo per l'agenzia",
         tipo: "singola",
-        aiuto: "Esclusa la spesa per i mezzi.",
         opzioni: [...fasce, "Da definire"],
       },
       {
@@ -250,31 +248,35 @@ export const passi: Passo[] = [
     nome: "Contatti",
     testo: "Dove ti mandiamo il brief.",
     campi: [
-      { id: "referente", etichetta: "Referente", tipo: "testo", aiuto: "Nome e cognome." },
+      {
+        id: "referente",
+        etichetta: "Referente",
+        tipo: "testo",
+        aiuto: "Nome e cognome.",
+        completamento: "name",
+      },
       {
         id: "funzione",
         etichetta: "Funzione aziendale",
         tipo: "singola",
         opzioni: ["Titolare o amministratore", "Direzione marketing", "Direzione commerciale", ALTRO],
       },
-      { id: "ragioneSociale", etichetta: "Ragione sociale", tipo: "testo" },
-      { id: "email", etichetta: "Email", tipo: "email" },
       {
-        id: "invioAgenzie",
+        id: "ragioneSociale",
+        etichetta: "Ragione sociale",
+        tipo: "testo",
+        completamento: "organization",
+      },
+      { id: "email", etichetta: "Email", tipo: "email", completamento: "email" },
+      { id: "telefono", etichetta: "Telefono", tipo: "telefono", completamento: "tel" },
+      // Consenso obbligatorio per generare e ricevere il brief. Da verificare con il consulente privacy.
+      {
+        id: "consensoAgenzia",
         etichetta:
-          "Vuoi che selezioniamo un'agenzia creativa adatta al tuo progetto e le inviamo i tuoi dati per farti contattare?",
-        tipo: "singola",
-        aiuto:
-          "Selezioniamo una sola agenzia. Senza il tuo consenso i tuoi dati non vengono inviati a nessuno.",
-        opzioni: [INVIO_SI, "No, voglio solo ricevere il brief"],
+          "Acconsento alla selezione di una sola agenzia creativa adatta al mio progetto e all'invio dei miei dati a quell'agenzia, perché possa contattarmi.",
+        tipo: "casella",
       },
-      {
-        id: "telefono",
-        etichetta: "Telefono",
-        tipo: "telefono",
-        aiuto: "Obbligatorio solo se vuoi essere contattato dall'agenzia.",
-        facoltativo: true,
-      },
+      // Il testo di questa casella, con il link alla privacy, è nel componente del quiz.
       { id: "privacy", etichetta: "Consenso privacy", tipo: "casella" },
     ],
   },
@@ -290,7 +292,7 @@ export const quiz = {
   genera: {
     titolo: "Vuoi generare il tuo brief?",
     testo:
-      "Hai risposto a tutte le domande. Con le tue risposte prepariamo il brief e te lo mandiamo via email: ci servono solo i tuoi contatti.",
+      "Hai risposto a tutte le domande. Per generare il brief e mandartelo via email ci servono i tuoi contatti e il consenso a farti contattare da un'agenzia adatta al tuo progetto.",
     pulsante: "Genera il brief",
   },
   pulsanteFine: "Ricevi il brief",
@@ -299,13 +301,12 @@ export const quiz = {
     "[QUIZ COMPLETATO. GENERAZIONE DEL BRIEF, SALVATAGGIO E INVIO VIA EMAIL: DA COLLEGARE]",
   brief: {
     titolo: "Il tuo brief prende forma",
-    nota: "Alla fine ricevi il brief via email. Decidi tu se farci selezionare un'agenzia che ti contatti.",
+    nota: "Alla fine ricevi il brief via email e vieni contattato da un'agenzia adatta al tuo progetto.",
   },
   errori: {
     obbligatorio: "Campo obbligatorio.",
     altro: "Specifica la voce Altro.",
     email: "Inserisci un indirizzo email valido.",
-    telefono: "Per farti contattare dall'agenzia serve un numero di telefono.",
-    casella: "Per ricevere il brief devi accettare la privacy e policy.",
+    casella: "Consenso necessario per generare e ricevere il brief.",
   },
 };

@@ -33,7 +33,7 @@ export const verticali: Verticale[] = [
     seo: {
       title: "Agenzia pubblicitaria: cosa fa, costi e come sceglierla",
       description:
-        "Cosa fa un'agenzia pubblicitaria, quanto costa e come scegliere quella adatta alla tua azienda. Prepara il brief e fallo arrivare a 2-3 agenzie.",
+        "Cosa fa un'agenzia pubblicitaria, quanto costa e come scegliere quella adatta alla tua azienda. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
   },
   {
@@ -45,7 +45,7 @@ export const verticali: Verticale[] = [
     seo: {
       title: "Agenzia di marketing: cosa fa, costi e come sceglierla",
       description:
-        "Cosa fa un'agenzia di marketing, quando serve e quanto costa. Prepara il brief in pochi minuti e fallo arrivare a 2-3 agenzie adatte al tuo progetto.",
+        "Cosa fa un'agenzia di marketing, quando serve e quanto costa. Prepara il brief in pochi minuti e fatti contattare da un'agenzia adatta al tuo progetto.",
     },
   },
   {
@@ -57,7 +57,7 @@ export const verticali: Verticale[] = [
     seo: {
       title: "Agenzia di web marketing: cosa fa, costi e come sceglierla",
       description:
-        "Agenzia di web marketing: servizi, costi e criteri per scegliere. Prepara il brief in pochi minuti e fallo arrivare a 2-3 agenzie adatte a te.",
+        "Agenzia di web marketing: servizi, costi e criteri per scegliere. Prepara il brief in pochi minuti e fatti contattare da un'agenzia adatta a te.",
     },
   },
   {
@@ -68,7 +68,7 @@ export const verticali: Verticale[] = [
     seo: {
       title: "Web agency: cosa fa, quanto costa un sito e come sceglierla",
       description:
-        "Cosa fa una web agency, quanto costa un sito o un e-commerce e come scegliere. Prepara il brief e fallo arrivare a 2-3 agenzie adatte.",
+        "Cosa fa una web agency, quanto costa un sito o un e-commerce e come scegliere. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
   },
   {
@@ -80,7 +80,7 @@ export const verticali: Verticale[] = [
     seo: {
       title: "Agenzia di branding e grafica: cosa fa e come sceglierla",
       description:
-        "Logo, identità visiva, naming: cosa fa un'agenzia di branding, quanto costa e come sceglierla. Prepara il brief e fallo arrivare a 2-3 agenzie.",
+        "Logo, identità visiva, naming: cosa fa un'agenzia di branding, quanto costa e come sceglierla. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
   },
   {
@@ -93,7 +93,7 @@ export const verticali: Verticale[] = [
     seo: {
       title: "Agenzia social media marketing: cosa fa e come sceglierla",
       description:
-        "Cosa fa un'agenzia di social media marketing, quando serve e quanto costa. Prepara il brief e fallo arrivare a 2-3 agenzie adatte al tuo progetto.",
+        "Cosa fa un'agenzia di social media marketing, quando serve e quanto costa. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
     },
     pagina: {
       intro: [
@@ -141,7 +141,7 @@ export const verticali: Verticale[] = [
     seo: {
       title: "Agenzia PR e ufficio stampa: cosa fa e come sceglierla",
       description:
-        "Cosa fa un'agenzia PR, quando serve un ufficio stampa e quanto costa. Prepara il brief e fallo arrivare a 2-3 agenzie adatte alla tua azienda.",
+        "Cosa fa un'agenzia PR, quando serve un ufficio stampa e quanto costa. Prepara il brief e fatti contattare da un'agenzia adatta alla tua azienda.",
     },
   },
   {
@@ -153,7 +153,7 @@ export const verticali: Verticale[] = [
     seo: {
       title: "Agenzia SEO: cosa fa, quanto costa e come sceglierla",
       description:
-        "Cosa fa un'agenzia SEO, quanto costa e come capire se lavora bene. Prepara il brief e fallo arrivare a 2-3 agenzie adatte al tuo progetto.",
+        "Cosa fa un'agenzia SEO, quanto costa e come capire se lavora bene. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
     },
   },
   {
@@ -164,7 +164,7 @@ export const verticali: Verticale[] = [
     seo: {
       title: "Agenzia video e spot pubblicitari: cosa fa e come sceglierla",
       description:
-        "Video aziendali, spot e foto: cosa fa un'agenzia video, quanto costa e come sceglierla. Prepara il brief e fallo arrivare a 2-3 agenzie.",
+        "Video aziendali, spot e foto: cosa fa un'agenzia video, quanto costa e come sceglierla. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
   },
 ];

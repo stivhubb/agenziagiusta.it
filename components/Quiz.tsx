@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { province } from "@/content/province";
-import { ALTRO, INVIO_SI, passi, quiz, type Campo } from "@/content/quiz";
+import { ALTRO, passi, quiz, type Campo } from "@/content/quiz";
 import { percorsi } from "@/content/sito";
 import { Freccia, Spunta } from "./Icone";
 import { Segnaposto } from "./Testo";
@@ -42,9 +42,6 @@ function controlla(campo: Campo, risposte: Risposte): string | undefined {
   }
 
   const scritto = testo(valore).trim();
-  if (campo.tipo === "telefono" && !scritto) {
-    return risposte.invioAgenzie === INVIO_SI ? errori.telefono : undefined;
-  }
   if (!scritto) return campo.facoltativo ? undefined : errori.obbligatorio;
   if (campo.tipo === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(scritto)) return errori.email;
   return undefined;
@@ -161,6 +158,7 @@ export function Quiz() {
         {...comuni}
         type={tipiInput[campo.tipo as keyof typeof tipiInput]}
         list={campo.tipo === "provincia" ? "province" : undefined}
+        autoComplete={campo.completamento}
         onChange={(e) => imposta(campo.id, e.target.value)}
       />
     );
@@ -175,7 +173,14 @@ export function Quiz() {
           onChange={(e) => imposta(campo.id, e.target.checked)}
         />
         <span>
-          Accetto la <Link href={percorsi.privacy}>privacy e policy</Link> per ricevere il brief.
+          {campo.id === "privacy" ? (
+            <>
+              Accetto la <Link href={percorsi.privacy}>privacy e policy</Link> per ricevere il
+              brief.
+            </>
+          ) : (
+            campo.etichetta
+          )}
         </span>
       </label>
     );
@@ -256,7 +261,7 @@ export function Quiz() {
                             {campo.etichetta}
                           </label>
                         )}
-                        {campo.facoltativo && campo.tipo !== "telefono" && (
+                        {campo.facoltativo && (
                           <span className="quiz__nota"> (facoltativo)</span>
                         )}
                         {campo.max && <span className="quiz__nota"> (massimo {campo.max})</span>}

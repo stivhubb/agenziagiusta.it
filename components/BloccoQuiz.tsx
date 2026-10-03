@@ -5,14 +5,14 @@ import { Freccia } from "./Icone";
 // Blocco quiz completo: si usa solo in home.
 
 const passi = [
-  { titolo: "Rispondi al quiz", testo: "Attività, servizi richiesti, budget, tempi e città." },
+  { titolo: "Rispondi al quiz", testo: "Azienda, comunicazione attuale, obiettivi, servizi e budget." },
   {
     titolo: "Ricevi il brief via email",
     testo: "Un documento ordinato con le tue risposte, pronto da consegnare.",
   },
   {
-    titolo: "Decidi se farlo arrivare alle agenzie",
-    testo: "Solo con il tuo consenso lo inviamo a 2-3 agenzie adatte.",
+    titolo: "Ti contatta un'agenzia adatta",
+    testo: "Con il tuo consenso selezioniamo un'agenzia e le inviamo il brief.",
   },
 ];
 

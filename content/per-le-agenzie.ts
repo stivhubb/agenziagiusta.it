@@ -15,10 +15,10 @@ export const perLeAgenzie: Pagina & {
       "Ricevi brief già scritti da aziende in linea con i tuoi servizi, settori e budget. Nessun costo per i contatti: scopri come diventare partner.",
   },
   intro: [
-    "Le aziende che passano da AgenziaGiusta.it hanno già chiarito cosa cercano, con quale budget e in quali tempi. Ti inviamo solo i progetti in linea con quello che fai.",
+    "Le aziende che passano da AgenziaGiusta.it hanno già chiarito cosa cercano, con quali obiettivi e con quale budget. Ti inviamo solo i progetti in linea con quello che fai.",
     "Chi si occupa di nuovi clienti lo sa: buona parte del tempo va in richieste che non portano a nulla. Contatti senza budget, aziende che non sanno ancora cosa vogliono, preventivi chiesti a dieci agenzie insieme solo per confrontare i prezzi. Ogni risposta costa ore di lavoro, e la maggior parte non diventa un contratto.",
-    "AgenziaGiusta.it lavora sul passaggio precedente. Le aziende compilano un quiz guidato su attività, servizi richiesti, budget, tempi e città, e ricevono un brief ordinato. Solo chi dà il consenso esplicito viene messo in contatto con le agenzie, e ogni brief va a 2-3 strutture scelte in base al profilo, non a un elenco aperto.",
-    "Per te significa ricevere meno richieste, ma più vicine a quello che fai: sai già di cosa si parla, con quale budget e in che tempi, prima ancora della prima telefonata.",
+    "AgenziaGiusta.it lavora sul passaggio precedente. Le aziende compilano un quiz guidato su azienda, comunicazione attuale, obiettivi, servizi e budget, e ricevono un brief ordinato. Ogni azienda dà il consenso esplicito a essere contattata, e ogni brief va a una sola agenzia scelta in base al profilo, non a un elenco aperto.",
+    "Per te significa ricevere meno richieste, ma più vicine a quello che fai: sai già di cosa si parla, con quali obiettivi e con quale budget, prima ancora della prima telefonata.",
   ],
   blocco: {
     occhiello: "Diventa partner",
@@ -28,7 +28,7 @@ export const perLeAgenzie: Pagina & {
     vantaggi: [
       "Nessun costo per i contatti",
       "Compenso solo a contratto firmato",
-      "Ogni brief va a 2-3 agenzie, non di più",
+      "Ogni brief va a una sola agenzia",
     ],
   },
   modulo: {
@@ -47,7 +47,7 @@ export const perLeAgenzie: Pagina & {
     {
       titolo: "Come funziona",
       blocchi: [
-        "Le aziende compilano un quiz e ricevono un brief. Se danno il consenso, lo inviamo a 2-3 agenzie adatte al progetto. L'azienda sa fin dall'inizio che il brief non è in esclusiva.",
+        "Le aziende compilano un quiz e ricevono un brief. Con il loro consenso lo inviamo a una sola agenzia adatta al progetto: nessun'altra lo riceve.",
       ],
     },
     {
@@ -66,7 +66,7 @@ export const perLeAgenzie: Pagina & {
     {
       titolo: "Cosa ricevi",
       blocchi: [
-        "Un brief strutturato con attività del cliente, servizi richiesti, budget, tempi e città, insieme ai contatti per presentare la tua proposta.",
+        "Un brief strutturato con profilo dell'azienda, comunicazione attuale, obiettivi, servizi richiesti e budget, insieme ai contatti per presentare la tua proposta.",
       ],
     },
   ],
