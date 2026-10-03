@@ -10,6 +10,7 @@
   --bordo-su-sezione: #d9d3cf;
   --bordo-campo: #8a8480;
   --selezione: #fceff4;
+  --errore: #8f4700;
 
   --titoli: var(--font-titoli), sans-serif;
   --corpo: var(--font-testo), system-ui, sans-serif;
@@ -1063,4 +1064,94 @@ textarea {
   font-size: 15px;
   line-height: 1.5;
   color: var(--testo-secondario);
+}
+
+/* ---------- Quiz: campi ---------- */
+
+.quiz {
+  scroll-margin-top: 16px;
+}
+
+.quiz__campi {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.quiz__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz__etichetta {
+  display: inline;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.quiz__nota {
+  font-size: 15px;
+  color: var(--testo-secondario);
+}
+
+.quiz__aiuto {
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--testo-secondario);
+}
+
+.quiz__campo input:not([type="checkbox"]),
+.quiz__campo textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1.5px solid var(--bordo-campo);
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 16px;
+  color: var(--testo);
+}
+
+.quiz__campo textarea {
+  padding-block: 12px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.quiz__campo [aria-invalid="true"] {
+  border-color: var(--errore);
+}
+
+.quiz__opzione:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.quiz__casella {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.quiz__casella input {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0;
+  accent-color: var(--testo);
+}
+
+.quiz__casella a {
+  text-decoration: underline;
+}
+
+/* Errori: né magenta né un rosso vicino al marchio. */
+.quiz__errore {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--errore);
 }
