@@ -83,6 +83,48 @@ const gestori: Record<string, string> = {
 };
 const NESSUN_PRESIDIO = "Nessun presidio";
 
+// Per ogni tono: come si nomina nella frase e cosa significa.
+const toni: Record<string, [string, string]> = {
+  "Istituzionale e formale": [
+    "istituzionale e formale",
+    "un registro sobrio e misurato, che mette al centro la serietà e la solidità dell'azienda",
+  ],
+  "Tecnico e specialistico": [
+    "tecnico e specialistico",
+    "un linguaggio preciso e competente, rivolto a un pubblico che conosce la materia",
+  ],
+  Autorevole: [
+    "autorevole",
+    "una voce sicura e competente, che si propone come punto di riferimento nel settore",
+  ],
+  "Rassicurante ed empatico": [
+    "rassicurante ed empatico",
+    "un linguaggio vicino alle persone, che ascolta, accompagna e trasmette fiducia",
+  ],
+  "Amichevole e informale": [
+    "amichevole e informale",
+    "un linguaggio colloquiale e alla mano, che accorcia la distanza con il pubblico",
+  ],
+  "Ironico e leggero": [
+    "ironico e leggero",
+    "un registro brillante, che usa l'ironia per farsi notare e ricordare",
+  ],
+  Ispirazionale: [
+    "ispirazionale",
+    "un racconto che punta su valori e aspirazioni più che sulle caratteristiche del prodotto",
+  ],
+  "Diretto ed essenziale": [
+    "diretto ed essenziale",
+    "frasi brevi e concrete, che vanno al punto senza giri di parole",
+  ],
+  "Premium ed esclusivo": [
+    "premium ed esclusivo",
+    "un registro curato e selettivo, che comunica qualità e distinzione",
+  ],
+};
+const TONO_NON_DEFINITO = "Non definito";
+const TONO_DA_DEFINIRE = "Da definire con l'agenzia";
+
 const fasce: Record<string, string> = {
   "Meno di 20.000 €": "inferiore a 20.000 euro",
   "20.000-50.000 €": "compreso tra 20.000 e 50.000 euro",
@@ -182,6 +224,7 @@ const localizzazioni: Record<string, string> = {
 
 const numeri = ["", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci", "undici"];
 const ordinali = ["Il primo", "Il secondo", "Il terzo"];
+const ordinaliFemminili = ["La prima", "La seconda", "La terza"];
 const ALTRO = "Altro";
 
 // ---------- Attrezzi ----------
@@ -308,6 +351,15 @@ function contesto(r: Risposte, nome: string): BloccoBrief[] {
     }
   }
 
+  const attuali = toniAttuali(r).map(nomeDelTono);
+  comunicazione.push(
+    attuali.length === 0
+      ? "Il tone of voice attuale non è definito: la comunicazione non segue oggi un registro riconoscibile."
+      : attuali.length === 1
+        ? `L'azienda descrive il tone of voice attuale come ${attuali[0]}.`
+        : `L'azienda descrive il tone of voice attuale con queste definizioni: ${attuali.join(", ")}.`,
+  );
+
   const investimento = fasce[testo(r.investimentoAnnuo)];
   comunicazione.push(
     investimento
@@ -336,10 +388,66 @@ function raccontaObiettivi(piano: string, scelti: string[]): string {
     : `Sul piano ${piano} gli obiettivi sono ${numeroDi(scelti.length)}. ${frasi.join(" ")}`;
 }
 
+function toniAttuali(r: Risposte): string[] {
+  return voci(r, "toneAttuale").filter((tono) => tono !== TONO_NON_DEFINITO);
+}
+
+function nomeDelTono(tono: string): string {
+  return toni[tono]?.[0] ?? tono.toLowerCase();
+}
+
+// Il tono desiderato, raccontato voce per voce e messo a confronto con quello attuale.
+function raccontaTono(r: Risposte): string {
+  const tutti = voci(r, "toneDesiderato");
+  const desiderati = tutti.filter((tono) => tono !== TONO_DA_DEFINIRE);
+  const attuali = toniAttuali(r);
+  if (desiderati.length === 0) {
+    return "Il tone of voice desiderato non è ancora definito: l'azienda si aspetta dall'agenzia una proposta sul registro da adottare.";
+  }
+
+  const frasi = desiderati.map((tono, i) => {
+    const significato = toni[tono]?.[1];
+    const inizio = desiderati.length === 1 ? "" : `${ordinaliFemminili[i] ?? "Un'altra"} è `;
+    const frase = significato
+      ? `un tono ${nomeDelTono(tono)}: ${significato}.`
+      : `un tono ${nomeDelTono(tono)}.`;
+    return `${inizio}${frase}`;
+  });
+  const racconto = [
+    desiderati.length === 1
+      ? `Per il tone of voice l'azienda indica una direzione, ${frasi[0]}`
+      : `Per il tone of voice l'azienda indica ${numeroDi(desiderati.length)} direzioni. ${frasi.join(" ")}`,
+  ];
+
+  const comuni = desiderati.filter((tono) => attuali.includes(tono));
+  if (attuali.length === 0) {
+    racconto.push(
+      "Oggi un tone of voice definito non c'è: si tratta quindi di costruirlo, non di correggerlo.",
+    );
+  } else if (comuni.length === desiderati.length && comuni.length === attuali.length) {
+    racconto.push(
+      "È lo stesso registro che l'azienda usa oggi: la richiesta è di mantenerlo e di renderlo coerente su tutti i canali.",
+    );
+  } else if (comuni.length > 0) {
+    racconto.push(
+      "Rispetto al registro attuale si tratta di un'evoluzione: una parte del tono resta, una parte cambia.",
+    );
+  } else {
+    racconto.push(
+      `Rispetto al registro attuale (${attuali.map(nomeDelTono).join(", ")}) si tratta di un cambiamento netto, che l'agenzia dovrà accompagnare.`,
+    );
+  }
+  if (tutti.length > desiderati.length) {
+    racconto.push("Su questo punto l'azienda è aperta anche a una proposta dell'agenzia.");
+  }
+  return racconto.join(" ");
+}
+
 function obiettiviDelBrief(r: Risposte): BloccoBrief[] {
   const blocchi = [
     paragrafo(raccontaObiettivi("del marketing", scelte(r.obiettiviMarketing))),
     paragrafo(raccontaObiettivi("della comunicazione", scelte(r.obiettiviComunicazione))),
+    paragrafo(raccontaTono(r)),
   ];
   if (testo(r.kpi)) {
     blocchi.push(
@@ -405,11 +513,11 @@ function richiesta(r: Risposte): BloccoBrief[] {
   );
   if (testo(r.vincoli)) {
     blocchi.push(
-      paragrafo("L'agenzia dovrà tenere conto di queste guidelines e di questi mandatory:"),
+      paragrafo("L'agenzia dovrà tenere conto delle seguenti guidelines ed elementi mandatory:"),
       parole(testo(r.vincoli)),
     );
   } else {
-    blocchi.push(paragrafo("L'azienda non ha indicato guidelines o mandatory."));
+    blocchi.push(paragrafo("L'azienda non ha indicato guidelines o elementi mandatory."));
   }
   return blocchi;
 }

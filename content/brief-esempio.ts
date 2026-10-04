@@ -21,6 +21,7 @@ export const risposteEsempio: Risposte = {
   // Comunicazione attuale
   canali: ["Sito web", "Social media organico", "Eventi e fiere"],
   gestione: ["Risorsa interna dedicata", "Freelance"],
+  toneAttuale: ["Tecnico e specialistico"],
   investimentoAnnuo: "Meno di 20.000 €",
 
   // Obiettivi
@@ -30,6 +31,7 @@ export const risposteEsempio: Risposte = {
     "Sviluppo del canale e-commerce",
   ],
   obiettiviComunicazione: ["Brand awareness", "Posizionamento o riposizionamento"],
+  toneDesiderato: ["Tecnico e specialistico", "Autorevole"],
   target:
     "cantieri di piccola e media dimensione che costruiscono barche a vela tra 30 e 50 piedi, dove la scelta passa dall'ufficio tecnico, e armatori esperti che sostituiscono l'attrezzatura da soli e si informano su forum e riviste specializzate",
   kpi: "richieste di preventivo dai cantieri esteri, vendite dall'e-commerce, visite al sito da Francia e Germania",

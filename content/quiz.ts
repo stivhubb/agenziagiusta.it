@@ -42,6 +42,19 @@ const fasce = [
   "Oltre 150.000 €",
 ];
 
+// Voci del tone of voice, uguali per quello attuale e per quello desiderato.
+const toni = [
+  "Istituzionale e formale",
+  "Tecnico e specialistico",
+  "Autorevole",
+  "Rassicurante ed empatico",
+  "Amichevole e informale",
+  "Ironico e leggero",
+  "Ispirazionale",
+  "Diretto ed essenziale",
+  "Premium ed esclusivo",
+];
+
 export const passi: Passo[] = [
   {
     nome: "L'azienda",
@@ -143,6 +156,13 @@ export const passi: Passo[] = [
         ],
       },
       {
+        id: "toneAttuale",
+        etichetta: "Tone of voice attuale",
+        tipo: "multipla",
+        max: 3,
+        opzioni: [...toni, "Non definito", ALTRO],
+      },
+      {
         id: "investimentoAnnuo",
         etichetta: "Investimento annuo in comunicazione",
         tipo: "singola",
@@ -185,6 +205,13 @@ export const passi: Passo[] = [
           "Employer branding",
           "Comunicazione corporate",
         ],
+      },
+      {
+        id: "toneDesiderato",
+        etichetta: "Tone of voice desiderato",
+        tipo: "multipla",
+        max: 3,
+        opzioni: [...toni, "Da definire con l'agenzia", ALTRO],
       },
       {
         id: "target",
