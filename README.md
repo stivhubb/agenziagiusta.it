@@ -55,9 +55,22 @@ in `content/citta.ts`.
 I dati mancanti sono tra parentesi quadre e restano visibili nel sito. Ragione sociale,
 partita IVA ed email stanno in `content/sito.ts`; gli altri sono nei testi delle singole pagine.
 
-## Fuori dal primo giro
+## Quiz e brief
 
+Il quiz (`/brief/`) mostra un'area alla volta, poi chiede i contatti e i due consensi obbligatori
+e alla fine mostra il brief, che si può stampare o salvare in PDF.
+
+| File | Contenuto |
+|---|---|
+| `content/quiz.ts` | Aree, domande e voci del quiz |
+| `content/brief.ts` | Le regole che scrivono il brief dalle risposte, senza modello AI |
+| `content/correzioni.ts` | Correzione degli errori più comuni nelle risposte aperte |
+| `content/brief-esempio.ts` | Risposte di un'azienda inventata, per la pagina `/brief/esempio/` |
+
+Se si rinomina una voce in `content/quiz.ts` va rinominata anche nei dizionari di `content/brief.ts`.
+
+## Non ancora collegato
+
+- I contatti raccolti dal quiz non vengono salvati e il brief non viene inviato via email:
+  Supabase e Resend non sono collegati.
 - I moduli (Per le agenzie, Contatti) si vedono ma non inviano nulla.
-- Il quiz scorre tra i cinque passi ma non salva e non invia: domande, contenuto del brief,
-  raccolta dei contatti e consenso sono da definire.
-- Supabase e Resend non sono ancora collegati.

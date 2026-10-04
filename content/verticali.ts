@@ -138,7 +138,7 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "pr-ufficio-stampa",
-    nome: "PR, ufficio stampa e media",
+    nome: "PR e ufficio stampa",
     descrizione:
       "Rapporti con giornalisti e testate, comunicati, eventi e cura della reputazione.",
     titolo: titolo("Agenzia PR e ufficio stampa"),
