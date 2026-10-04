@@ -25,6 +25,18 @@ function titolo(inizio: string): Titolo {
 
 export const verticali: Verticale[] = [
   {
+    slug: "comunicazione",
+    nome: "Comunicazione",
+    descrizione:
+      "Strategia e gestione della comunicazione d'impresa nel suo insieme, online e offline, con un unico interlocutore.",
+    titolo: titolo("Agenzia di comunicazione"),
+    seo: {
+      title: "Agenzia di comunicazione: cosa fa, costi e come sceglierla",
+      description:
+        "Cosa fa un'agenzia di comunicazione, quando serve e quanto costa. Prepara il brief in pochi minuti e fatti contattare da un'agenzia adatta al tuo progetto.",
+    },
+  },
+  {
     slug: "pubblicita",
     nome: "Pubblicità e advertising",
     descrizione:
@@ -81,6 +93,18 @@ export const verticali: Verticale[] = [
       title: "Agenzia di branding e grafica: cosa fa e come sceglierla",
       description:
         "Logo, identità visiva, naming: cosa fa un'agenzia di branding, quanto costa e come sceglierla. Prepara il brief e fatti contattare da un'agenzia adatta.",
+    },
+  },
+  {
+    slug: "creativita",
+    nome: "Creatività e campagne",
+    descrizione:
+      "Idee, concept e campagne: dal messaggio alla direzione creativa di contenuti e materiali.",
+    titolo: titolo("Agenzia creativa"),
+    seo: {
+      title: "Agenzia creativa: cosa fa, quanto costa e come sceglierla",
+      description:
+        "Cosa fa un'agenzia creativa, in cosa è diversa dalle altre e quanto costa. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
     },
   },
   {
