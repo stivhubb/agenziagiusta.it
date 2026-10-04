@@ -3,9 +3,12 @@
 //
 // - Le risposte a scelta diventano testo con le frasi dei dizionari in cima al file.
 //   Per cambiare come viene raccontata una voce si modifica la sua frase.
-// - Le risposte aperte non vengono riscritte: entrano nel brief con le parole dell'azienda.
+// - Le risposte aperte non vengono riscritte: entrano nel brief con le parole dell'azienda,
+//   dopo la correzione degli errori più comuni (content/correzioni.ts).
 // - Le chiavi dei dizionari sono le voci del quiz (content/quiz.ts): se si rinomina una voce
 //   nel quiz va rinominata anche qui, altrimenti nel brief compare la voce così com'è.
+
+import { correggi } from "./correzioni";
 
 export type Risposte = Record<string, string | string[] | boolean | undefined>;
 
@@ -198,13 +201,8 @@ function elenca(voci: string[]): string {
   return `${voci.slice(0, -1).join(", ")} e ${voci[voci.length - 1]}`;
 }
 
-// Mette in ordine una risposta aperta: spazi, maiuscola iniziale, punto finale.
-function sistema(scritto: string): string {
-  const pulito = scritto.replace(/\s+/g, " ").trim();
-  if (!pulito) return "";
-  const maiuscola = pulito[0].toUpperCase() + pulito.slice(1);
-  return /[.!?…]$/.test(maiuscola) ? maiuscola : `${maiuscola}.`;
-}
+// Mette in ordine una risposta aperta: vedi content/correzioni.ts.
+const sistema = correggi;
 
 const paragrafo = (testo: string): BloccoBrief => ({ tipo: "paragrafo", testo });
 const parole = (testo: string): BloccoBrief => ({ tipo: "parole", testo: sistema(testo) });

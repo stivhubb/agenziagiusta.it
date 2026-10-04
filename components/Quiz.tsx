@@ -162,7 +162,16 @@ export function Quiz() {
       "aria-describedby": campo.aiuto ? `aiuto-${campo.id}` : undefined,
     };
     if (campo.tipo === "testo-lungo") {
-      return <textarea {...comuni} rows={5} onChange={(e) => imposta(campo.id, e.target.value)} />;
+      // Il browser segnala gli errori di ortografia mentre si scrive.
+      return (
+        <textarea
+          {...comuni}
+          rows={5}
+          lang="it"
+          spellCheck
+          onChange={(e) => imposta(campo.id, e.target.value)}
+        />
+      );
     }
     return (
       <input
