@@ -143,7 +143,7 @@ export function correggi(scritto: string): string {
 
   // "un agenzia" diventa "un'agenzia", per i nomi femminili più frequenti in un brief.
   testo = testo.replace(
-    /(?<!\p{L})(un) (agenzia|azienda|attivit[aà]|idea|immagine|offerta|esperienza|opportunit[aà]|identit[aà]|analisi|area)(?![\p{L}'])/giu,
+    /(?<!\p{L})(un) (agenzia|azienda|attivit[aà]|idea|immagine|offerta|esperienza|opportunit[aà]|identit[aà]|analisi|area)(?!\p{L})/giu,
     "$1'$2",
   );
 
