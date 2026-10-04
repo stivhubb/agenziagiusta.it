@@ -1,9 +1,10 @@
 // Testi della home.
 
 export const home = {
-  // "agenzia di comunicazione" non è nell'H1: sta nel title e nella description per Google.
+  // Il title porta il nome del sito: la parola chiave "agenzia di comunicazione" è lasciata
+  // alla pagina /comunicazione/, che ha il testo per reggerla.
   seo: {
-    title: "Trova l'agenzia di comunicazione giusta",
+    title: "AgenziaGiusta.it: trova l'agenzia giusta con un buon brief",
     description:
       "Rispondi a poche domande: ricevi un brief pronto e ti mettiamo in contatto con un'agenzia di comunicazione adatta al tuo progetto. Gratis per le aziende.",
   },

@@ -24,40 +24,18 @@ function titolo(inizio: string): Titolo {
 }
 
 export const verticali: Verticale[] = [
+  // Una pagina sola per le tre ricerche "agenzia di comunicazione", "di marketing" e
+  // "pubblicitaria": per una piccola o media impresa il bisogno è lo stesso.
   {
     slug: "comunicazione",
-    nome: "Comunicazione",
+    nome: "Comunicazione, marketing e pubblicità",
     descrizione:
-      "Strategia e gestione della comunicazione d'impresa nel suo insieme, online e offline, con un unico interlocutore.",
-    titolo: titolo("Agenzia di comunicazione"),
+      "L'agenzia a cui affidare l'immagine dell'azienda e le campagne, online e offline: strategia, creatività e pianificazione.",
+    titolo: titolo("Agenzia di comunicazione, marketing e pubblicità"),
     seo: {
-      title: "Agenzia di comunicazione: cosa fa, costi e come sceglierla",
+      title: "Agenzia di comunicazione, marketing e pubblicità: la guida",
       description:
-        "Cosa fa un'agenzia di comunicazione, quando serve e quanto costa. Prepara il brief in pochi minuti e fatti contattare da un'agenzia adatta al tuo progetto.",
-    },
-  },
-  {
-    slug: "pubblicita",
-    nome: "Pubblicità e advertising",
-    descrizione:
-      "Campagne su stampa, tv, radio, affissioni e online: dall'idea creativa alla pianificazione dei mezzi.",
-    titolo: titolo("Agenzia pubblicitaria"),
-    seo: {
-      title: "Agenzia pubblicitaria: cosa fa, costi e come sceglierla",
-      description:
-        "Cosa fa un'agenzia pubblicitaria, quanto costa e come scegliere quella adatta alla tua azienda. Prepara il brief e fatti contattare da un'agenzia adatta.",
-    },
-  },
-  {
-    slug: "marketing",
-    nome: "Marketing",
-    descrizione:
-      "Strategia, posizionamento e piano di attività per far crescere vendite e notorietà del marchio.",
-    titolo: titolo("Agenzia di marketing"),
-    seo: {
-      title: "Agenzia di marketing: cosa fa, costi e come sceglierla",
-      description:
-        "Cosa fa un'agenzia di marketing, quando serve e quanto costa. Prepara il brief in pochi minuti e fatti contattare da un'agenzia adatta al tuo progetto.",
+        "Agenzia di comunicazione, di marketing o pubblicitaria? Per una PMI spesso è lo stesso fornitore: cosa fa, quanto costa e come scegliere quella giusta.",
     },
   },
   // Unisce le due aree "digital e web marketing" e "web agency, siti ed e-commerce".

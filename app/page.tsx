@@ -8,11 +8,11 @@ import { StrisciaAgenzie } from "@/components/StrisciaAgenzie";
 import { TitoloPagina } from "@/components/Testo";
 import { home } from "@/content/home";
 import { metadati } from "@/content/metadati";
-import { percorsi, sito } from "@/content/sito";
+import { percorsi } from "@/content/sito";
 import { verticali } from "@/content/verticali";
 
 export const metadata: Metadata = metadati({
-  titolo: `${home.seo.title} | ${sito.nome}`,
+  titolo: home.seo.title,
   titoloIntero: true,
   descrizione: home.seo.description,
   percorso: percorsi.home,
