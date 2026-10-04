@@ -28,14 +28,20 @@ export function Intro({
   percorso,
   titolo,
   intro,
+  segnaposto = "[TESTO INTRODUTTIVO: DA SCRIVERE]",
   variante,
+  children,
 }: {
   occhiello?: string;
   // Voci dopo "Home": quelle con href sono link, l'ultima è la pagina in cui ci si trova.
   percorso?: { nome: string; href?: string }[];
   titolo: Titolo;
   intro?: string[];
+  // Cosa mostrare finché il testo manca.
+  segnaposto?: string;
   variante?: "contatti";
+  // Contenuto in più sotto il testo (ad esempio le fonti).
+  children?: React.ReactNode;
 }) {
   return (
     <section className={`contenitore intro${variante ? ` intro--${variante}` : ""}`}>
@@ -59,8 +65,9 @@ export function Intro({
           </p>
         ))
       ) : (
-        <Segnaposto>[TESTO INTRODUTTIVO: DA SCRIVERE]</Segnaposto>
+        <Segnaposto>{segnaposto}</Segnaposto>
       )}
+      {children}
     </section>
   );
 }

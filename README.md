@@ -48,7 +48,23 @@ un verticale e una città ha la sua pagina (`/web-agency/roma/`).
 
 Una pagina senza testi mostra i segnaposto, ha il `noindex` e resta fuori dalla sitemap,
 così non finisce su Google finché non è scritta. Quando i testi ci sono, entra in sitemap da sola.
-I testi di una pagina tipo + città stanno in `content/citta.ts`, nel campo `pagine` della città.
+
+Una pagina tipo + città è fatta di tre parti: il testo sul mercato locale (con le fonti),
+il blocco quiz e l'elenco delle agenzie di quel tipo nella città, con il link al loro sito.
+I contenuti stanno in `content/citta.ts`, nel campo `pagine` della città:
+
+```ts
+pagine: {
+  "seo-sem": {
+    testo: ["Primo paragrafo.", "Secondo paragrafo."],
+    fonti: [{ nome: "Nome della fonte", url: "https://..." }],
+    agenzie: [{ nome: "Nome agenzia", url: "https://...", servizi: "Una riga sui servizi." }],
+  },
+}
+```
+
+La pagina va su Google quando ha sia il testo sia almeno un'agenzia. L'elenco esce in ordine
+alfabetico.
 
 ## Title, H1 e description
 

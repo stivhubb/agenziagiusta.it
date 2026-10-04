@@ -22,5 +22,16 @@ export type Attivita = {
 export type Testi = { intro: string[]; sezioni: Sezione[]; attivita?: Attivita };
 export type Pagina = Testi & { titolo: Titolo };
 
+// Testi di una pagina tipo + città (/web-agency/roma/).
+// - testo: il mercato di quel tipo di agenzia in quella città, un paragrafo per voce
+// - fonti: da dove vengono dati e notizie citati nel testo
+// - agenzie: le agenzie di quel tipo nella città, con il link al loro sito
+export type Agenzia = { nome: string; url: string; servizi: string };
+export type TestiLocali = {
+  testo: string[];
+  fonti?: { nome: string; url: string }[];
+  agenzie: Agenzia[];
+};
+
 // Title e description per Google: title entro 60 caratteri, description entro 155.
 export type Seo = { title: string; description: string };

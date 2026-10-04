@@ -442,6 +442,37 @@ textarea {
   color: var(--testo);
 }
 
+/* ---------- Pagine tipo + città: fonti ed elenco delle agenzie ---------- */
+
+.fonti {
+  max-width: 720px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--testo-secondario);
+}
+
+.fonti a {
+  text-decoration: underline;
+}
+
+.agenzie {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 3vw, 40px);
+  padding-block: clamp(56px, 6vw, 88px);
+}
+
+.agenzie__elenco {
+  padding: 0;
+  list-style: none;
+}
+
+.agenzie__nota {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--testo-secondario);
+}
+
 /* ---------- Link alle città (pagine verticali) ---------- */
 
 .luoghi {
