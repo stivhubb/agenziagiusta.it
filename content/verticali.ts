@@ -1,4 +1,13 @@
-import type { Sezione, Seo, Titolo } from "./tipi";
+import type { Seo, Testi, Titolo } from "./tipi";
+import { branding } from "./testi-verticali/branding";
+import { comunicazione } from "./testi-verticali/comunicazione";
+import { creativita } from "./testi-verticali/creativita";
+import { media } from "./testi-verticali/media";
+import { prUfficioStampa } from "./testi-verticali/pr-ufficio-stampa";
+import { seoSem } from "./testi-verticali/seo-sem";
+import { socialMedia } from "./testi-verticali/social-media";
+import { videoFoto } from "./testi-verticali/video-foto";
+import { webAgency } from "./testi-verticali/web-agency";
 
 // Le pagine verticali. Aggiungere un verticale significa aggiungere una voce a questo elenco.
 // - slug: indirizzo della pagina (/social-media/)
@@ -6,7 +15,8 @@ import type { Sezione, Seo, Titolo } from "./tipi";
 // - percorso: voce nel percorso di navigazione in cima alla pagina (se manca, si usa il nome)
 // - titolo: H1 della pagina
 // - seo: title e description per Google (title entro 60 caratteri, description entro 155)
-// - pagina: i testi. Se manca, la pagina mostra i segnaposto e non viene indicizzata.
+// - pagina: i testi, uno per file nella cartella content/testi-verticali/.
+//   Se manca, la pagina mostra i segnaposto e non viene indicizzata.
 
 export type Verticale = {
   slug: string;
@@ -15,7 +25,7 @@ export type Verticale = {
   percorso?: string;
   titolo: Titolo;
   seo: Seo;
-  pagina?: { intro: string[]; sezioni: Sezione[] };
+  pagina?: Testi;
 };
 
 // Tutti gli H1 chiudono allo stesso modo.
@@ -33,10 +43,11 @@ export const verticali: Verticale[] = [
       "L'agenzia a cui affidare l'immagine dell'azienda e le campagne, online e offline: strategia, creatività e pianificazione.",
     titolo: titolo("Agenzia di comunicazione, marketing e pubblicità"),
     seo: {
-      title: "Agenzia di comunicazione, marketing e pubblicità: la guida",
+      title: "Agenzia di comunicazione, marketing e pubblicità: cosa fa",
       description:
-        "Agenzia di comunicazione, di marketing o pubblicitaria? Per una PMI spesso è lo stesso fornitore: cosa fa, quanto costa e come scegliere quella giusta.",
+        "Agenzia di comunicazione, di marketing o pubblicitaria? Per una PMI spesso è lo stesso fornitore: cosa fa, come lavora e tutte le attività che segue.",
     },
+    pagina: comunicazione,
   },
   {
     slug: "media",
@@ -45,10 +56,11 @@ export const verticali: Verticale[] = [
       "Pianificazione e acquisto degli spazi pubblicitari su tv, radio, stampa, affissioni e online.",
     titolo: titolo("Agenzia media"),
     seo: {
-      title: "Agenzia media e centro media: cosa fa e come sceglierla",
+      title: "Agenzia media e centro media: cosa fa e come lavora",
       description:
-        "Cosa fa un'agenzia media, dalla pianificazione all'acquisto degli spazi pubblicitari, e quanto costa. Prepara il brief e fatti contattare da un'agenzia.",
+        "Cosa fa un'agenzia media, dalla pianificazione all'acquisto degli spazi pubblicitari, e come lavora. Prepara il brief e fatti contattare da un'agenzia.",
     },
+    pagina: media,
   },
   // Unisce le due aree "digital e web marketing" e "web agency, siti ed e-commerce".
   {
@@ -58,10 +70,11 @@ export const verticali: Verticale[] = [
       "Siti, e-commerce e campagne online: dalla realizzazione alla promozione, con l'analisi dei dati.",
     titolo: titolo("Web agency e agenzia di digital marketing"),
     seo: {
-      title: "Web agency e digital marketing: cosa fa e come sceglierla",
+      title: "Web agency e digital marketing: cosa fa e come lavora",
       description:
-        "Cosa fa una web agency, dal sito all'e-commerce alle campagne online, e quanto costa. Prepara il brief e fatti contattare da un'agenzia adatta.",
+        "Cosa fa una web agency, dal sito all'e-commerce alle campagne online, e come lavora. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
+    pagina: webAgency,
   },
   {
     slug: "branding",
@@ -70,10 +83,11 @@ export const verticali: Verticale[] = [
       "Nome, logo, identità visiva e materiali coordinati per dare un volto riconoscibile al marchio.",
     titolo: titolo("Agenzia di branding e grafica"),
     seo: {
-      title: "Agenzia di branding e grafica: cosa fa e come sceglierla",
+      title: "Agenzia di branding e grafica: cosa fa e come lavora",
       description:
-        "Logo, identità visiva, naming: cosa fa un'agenzia di branding, quanto costa e come sceglierla. Prepara il brief e fatti contattare da un'agenzia adatta.",
+        "Logo, identità visiva, naming: cosa fa un'agenzia di branding e come lavora. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
     },
+    pagina: branding,
   },
   {
     slug: "creativita",
@@ -82,10 +96,11 @@ export const verticali: Verticale[] = [
       "Idee, concept e campagne: dal messaggio alla direzione creativa di contenuti e materiali.",
     titolo: titolo("Agenzia creativa"),
     seo: {
-      title: "Agenzia creativa: cosa fa, quanto costa e come sceglierla",
+      title: "Agenzia creativa: cosa fa, come lavora e tutte le attività",
       description:
-        "Cosa fa un'agenzia creativa, in cosa è diversa dalle altre e quanto costa. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
+        "Cosa fa un'agenzia creativa, dal concept alla produzione della campagna, e come lavora. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
+    pagina: creativita,
   },
   {
     slug: "social-media",
@@ -95,46 +110,11 @@ export const verticali: Verticale[] = [
     percorso: "Agenzie social media",
     titolo: titolo("Agenzia di social media marketing"),
     seo: {
-      title: "Agenzia social media marketing: cosa fa e come sceglierla",
+      title: "Agenzia social media marketing: cosa fa e come lavora",
       description:
-        "Cosa fa un'agenzia di social media marketing, quando serve e quanto costa. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
+        "Cosa fa un'agenzia di social media marketing, come lavora e tutte le attività che segue. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
-    pagina: {
-      intro: [
-        "Un'agenzia social media gestisce la presenza della tua azienda sulle piattaforme: decide cosa pubblicare, produce i contenuti, risponde alle persone e pianifica le campagne a pagamento.",
-        // DA VERIFICARE prima della pubblicazione: il calo della portata dei contenuti non sponsorizzati.
-        "Negli ultimi anni questo lavoro è cambiato molto. La portata dei contenuti non sponsorizzati si è ridotta su quasi tutte le piattaforme, i video brevi hanno preso il posto di buona parte dei post statici e i creator sono diventati un canale a sé. Per questo oggi un'agenzia social non si limita a \"fare i post\": tiene insieme strategia, produzione, gestione della community e investimento pubblicitario, e misura quanto ognuna di queste voci contribuisce ai risultati.",
-        "Non tutte le agenzie fanno tutto, e non tutte lo fanno allo stesso livello. Alcune sono forti nella creatività e nei contenuti, altre nelle campagne orientate alle vendite, altre ancora lavorano bene solo in certi settori o con certe fasce di budget. Capire quale di questi profili ti serve è il primo passo, e viene prima della ricerca dell'agenzia.",
-        "In questa pagina trovi cosa aspettarti da un'agenzia social media, quando ha senso affidarsi a una struttura esterna, da cosa dipende il costo e quali domande fare prima di firmare.",
-      ],
-      sezioni: [
-        {
-          titolo: "Cosa fa un'agenzia social media",
-          blocchi: [
-            "Parte dalla strategia: a chi parlare, su quali piattaforme e con quale tono. Poi costruisce il piano editoriale, realizza testi, grafiche e video, gestisce commenti e messaggi e misura i risultati. Molte agenzie seguono anche le campagne a pagamento e le collaborazioni con i creator.",
-          ],
-        },
-        {
-          titolo: "Quando serve davvero",
-          blocchi: [
-            "Quando i social sono un canale importante per farti conoscere o per vendere e in azienda mancano il tempo o le competenze per seguirli con continuità. Se ti serve solo qualche contenuto ogni tanto, può bastare un freelance.",
-          ],
-        },
-        {
-          titolo: "Quanto costa",
-          blocchi: [
-            "Il prezzo dipende dal numero di piattaforme, dalla quantità di contenuti e dalla presenza di campagne a pagamento, il cui budget va considerato a parte.",
-            { segnaposto: "[FASCE DI PREZZO INDICATIVE: DA DEFINIRE]" },
-          ],
-        },
-        {
-          titolo: "Come scegliere quella giusta",
-          blocchi: [
-            "Guarda i lavori fatti per aziende simili alla tua, chiedi chi seguirà il tuo account ogni giorno e come vengono misurati i risultati. Un brief chiaro ti permette di confrontare le proposte sugli stessi punti.",
-          ],
-        },
-      ],
-    },
+    pagina: socialMedia,
   },
   {
     slug: "pr-ufficio-stampa",
@@ -143,10 +123,11 @@ export const verticali: Verticale[] = [
       "Rapporti con giornalisti e testate, comunicati, eventi e cura della reputazione.",
     titolo: titolo("Agenzia PR e ufficio stampa"),
     seo: {
-      title: "Agenzia PR e ufficio stampa: cosa fa e come sceglierla",
+      title: "Agenzia PR e ufficio stampa: cosa fa e come lavora",
       description:
-        "Cosa fa un'agenzia PR, quando serve un ufficio stampa e quanto costa. Prepara il brief e fatti contattare da un'agenzia adatta alla tua azienda.",
+        "Cosa fa un'agenzia PR, come lavora un ufficio stampa e tutte le attività che segue. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
+    pagina: prUfficioStampa,
   },
   {
     slug: "seo-sem",
@@ -155,10 +136,11 @@ export const verticali: Verticale[] = [
       "Posizionamento sui motori di ricerca e campagne a pagamento sui risultati di Google.",
     titolo: titolo("Agenzia SEO"),
     seo: {
-      title: "Agenzia SEO: cosa fa, quanto costa e come sceglierla",
+      title: "Agenzia SEO: cosa fa, come lavora e tutte le attività",
       description:
-        "Cosa fa un'agenzia SEO, quanto costa e come capire se lavora bene. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
+        "Cosa fa un'agenzia SEO, come lavora e tutte le attività, dall'audit alle campagne a pagamento. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
+    pagina: seoSem,
   },
   {
     slug: "video-foto",
@@ -166,9 +148,10 @@ export const verticali: Verticale[] = [
     descrizione: "Video aziendali, spot, servizi fotografici e contenuti per i social.",
     titolo: titolo("Agenzia di produzione video e foto"),
     seo: {
-      title: "Agenzia di produzione video e foto: come sceglierla",
+      title: "Agenzia di produzione video e foto: cosa fa e come lavora",
       description:
-        "Video aziendali, spot e foto: cosa fa un'agenzia di produzione, quanto costa e come sceglierla. Prepara il brief e fatti contattare da un'agenzia adatta.",
+        "Video aziendali, spot e foto: cosa fa un'agenzia di produzione e come lavora. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
     },
+    pagina: videoFoto,
   },
 ];

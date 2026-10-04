@@ -15,6 +15,6 @@ export const home = {
   notaPulsante: "Gratis per le aziende. Il brief ti arriva via email.",
   verticali: {
     titolo: "Che tipo di agenzia cerchi?",
-    testo: "Ogni area ha la sua pagina: cosa fa l'agenzia, quando serve e come sceglierla.",
+    testo: "Ogni area ha la sua pagina: cosa fa l'agenzia, come lavora e tutte le attività che segue.",
   },
 };

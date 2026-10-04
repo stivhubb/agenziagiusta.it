@@ -11,8 +11,16 @@ export type Blocco =
 
 export type Sezione = { titolo: string; blocchi: Blocco[] };
 
+// Attività e lavorazioni di un tipo di agenzia: gruppi con titolo, ogni voce con nome e spiegazione.
+export type Attivita = {
+  titolo: string;
+  gruppi: { titolo: string; voci: { nome: string; testo: string }[] }[];
+};
+
 // intro: il primo paragrafo è l'apertura, gli altri sono l'intro lunga.
-export type Pagina = { titolo: Titolo; intro: string[]; sezioni: Sezione[] };
+// attivita: se c'è, la pagina mette il testo prima del blocco quiz e l'elenco dopo.
+export type Testi = { intro: string[]; sezioni: Sezione[]; attivita?: Attivita };
+export type Pagina = Testi & { titolo: Titolo };
 
 // Title e description per Google: title entro 60 caratteri, description entro 155.
 export type Seo = { title: string; description: string };

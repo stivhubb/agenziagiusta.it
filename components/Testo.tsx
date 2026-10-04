@@ -78,7 +78,14 @@ function BloccoTesto({ blocco }: { blocco: Blocco }) {
 }
 
 // Continuazione del testo: sezioni con titolo e blocchi.
-export function Testo({ sezioni, variante }: { sezioni?: Sezione[]; variante?: "privacy" }) {
+// "seguito": il testo continua subito dopo l'intro, senza il blocco quiz in mezzo.
+export function Testo({
+  sezioni,
+  variante,
+}: {
+  sezioni?: Sezione[];
+  variante?: "privacy" | "seguito";
+}) {
   return (
     <section
       className={`contenitore sezione-testo${variante ? ` sezione-testo--${variante}` : ""}`}

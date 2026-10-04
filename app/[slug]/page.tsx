@@ -4,7 +4,7 @@ import { DatiPercorso } from "@/components/DatiStrutturati";
 import { PaginaContenuto } from "@/components/PaginaContenuto";
 import { citta, seoCitta, titoloCitta } from "@/content/citta";
 import { metadati } from "@/content/metadati";
-import type { Seo, Sezione, Titolo } from "@/content/tipi";
+import type { Seo, Testi, Titolo } from "@/content/tipi";
 import { verticali } from "@/content/verticali";
 
 // Pagine verticali e pagine città: una pagina statica per ogni voce dei due elenchi
@@ -14,7 +14,7 @@ type Voce = {
   percorso: string;
   titolo: Titolo;
   seo: Seo;
-  pagina?: { intro: string[]; sezioni: Sezione[] };
+  pagina?: Testi;
 };
 
 function trova(slug: string): Voce | undefined {

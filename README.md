@@ -24,7 +24,7 @@ npm run build    # build di produzione
 | Indirizzo | Pagina | Testi |
 |---|---|---|
 | `/` | Home | `content/home.ts` |
-| `/social-media/`, `/comunicazione/`, ... | Verticali | `content/verticali.ts` |
+| `/social-media/`, `/comunicazione/`, ... | Verticali | `content/verticali.ts` (elenco, title, H1) e `content/testi-verticali/` (testi, un file per pagina) |
 | `/milano/`, `/roma/`, ... | Città | `content/citta.ts` |
 | `/guide/come-scegliere-agenzia/` | Guida | `content/guida.ts` |
 | `/brief/` | Quiz + brief | `content/quiz.ts` |
