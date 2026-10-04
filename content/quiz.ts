@@ -240,7 +240,6 @@ export const passi: Passo[] = [
         etichetta: "Vincoli e linee guida",
         tipo: "testo-lungo",
         aiuto: "Brand guideline esistenti, elementi obbligatori, vincoli normativi o interni.",
-        facoltativo: true,
       },
     ],
   },
