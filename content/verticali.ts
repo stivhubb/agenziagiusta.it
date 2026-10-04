@@ -15,8 +15,9 @@ import { webAgency } from "./testi-verticali/web-agency";
 // - percorso: voce nel percorso di navigazione in cima alla pagina (se manca, si usa il nome)
 // - titolo: H1 della pagina
 // - seo: title e description per Google (title entro 60 caratteri, description entro 155)
-// - locale: come si nomina il tipo nelle pagine con la città ("Web agency a Roma",
-//   "Cerchi una web agency a Roma?")
+// - locale: come si nomina il tipo nelle pagine con la città. "nome" è al singolare e va in
+//   title e H1 ("Agenzia SEO e SEM a Milano"); "plurale" va nella description e nel titolo
+//   dei link alle città ("Agenzie SEO per città")
 // - pagina: i testi, uno per file nella cartella content/testi-verticali/.
 //   Se manca, la pagina mostra i segnaposto e non viene indicizzata.
 
@@ -27,7 +28,7 @@ export type Verticale = {
   percorso?: string;
   titolo: Titolo;
   seo: Seo;
-  locale: { plurale: string; singolare: string };
+  locale: { nome: string; plurale: string };
   pagina?: Testi;
 };
 
@@ -50,7 +51,7 @@ export const verticali: Verticale[] = [
       description:
         "Agenzia di comunicazione, di marketing o pubblicitaria? Per una PMI spesso è lo stesso fornitore: cosa fa, come lavora e tutte le attività che segue.",
     },
-    locale: { plurale: "Agenzie di comunicazione", singolare: "un'agenzia di comunicazione" },
+    locale: { nome: "Agenzia di comunicazione, marketing e pubblicità", plurale: "Agenzie di comunicazione" },
     pagina: comunicazione,
   },
   {
@@ -64,7 +65,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fa un'agenzia media, dalla pianificazione all'acquisto degli spazi pubblicitari, e come lavora. Prepara il brief e fatti contattare da un'agenzia.",
     },
-    locale: { plurale: "Agenzie media", singolare: "un'agenzia media" },
+    locale: { nome: "Agenzia media", plurale: "Agenzie media" },
     pagina: media,
   },
   // Unisce le due aree "digital e web marketing" e "web agency, siti ed e-commerce".
@@ -79,7 +80,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fa una web agency, dal sito all'e-commerce alle campagne online, e come lavora. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
-    locale: { plurale: "Web agency", singolare: "una web agency" },
+    locale: { nome: "Web agency e digital marketing", plurale: "Web agency" },
     pagina: webAgency,
   },
   {
@@ -93,7 +94,7 @@ export const verticali: Verticale[] = [
       description:
         "Logo, identità visiva, naming: cosa fa un'agenzia di branding e come lavora. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
     },
-    locale: { plurale: "Agenzie di branding", singolare: "un'agenzia di branding" },
+    locale: { nome: "Agenzia di branding e grafica", plurale: "Agenzie di branding" },
     pagina: branding,
   },
   {
@@ -107,7 +108,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fa un'agenzia creativa, dal concept alla produzione della campagna, e come lavora. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
-    locale: { plurale: "Agenzie creative", singolare: "un'agenzia creativa" },
+    locale: { nome: "Agenzia creativa", plurale: "Agenzie creative" },
     pagina: creativita,
   },
   {
@@ -122,7 +123,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fa un'agenzia di social media marketing, come lavora e tutte le attività che segue. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
-    locale: { plurale: "Agenzie social media", singolare: "un'agenzia social media" },
+    locale: { nome: "Agenzia di social media marketing", plurale: "Agenzie social media" },
     pagina: socialMedia,
   },
   {
@@ -136,7 +137,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fa un'agenzia PR, come lavora un ufficio stampa e tutte le attività che segue. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
-    locale: { plurale: "Agenzie PR e uffici stampa", singolare: "un'agenzia PR" },
+    locale: { nome: "Agenzia PR e ufficio stampa", plurale: "Agenzie PR e uffici stampa" },
     pagina: prUfficioStampa,
   },
   {
@@ -150,7 +151,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fa un'agenzia SEO, come lavora e tutte le attività, dall'audit alle campagne a pagamento. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
-    locale: { plurale: "Agenzie SEO", singolare: "un'agenzia SEO" },
+    locale: { nome: "Agenzia SEO e SEM", plurale: "Agenzie SEO" },
     pagina: seoSem,
   },
   {
@@ -163,7 +164,7 @@ export const verticali: Verticale[] = [
       description:
         "Video aziendali, spot e foto: cosa fa un'agenzia di produzione e come lavora. Prepara il brief e fatti contattare da un'agenzia adatta al tuo progetto.",
     },
-    locale: { plurale: "Agenzie di produzione video", singolare: "un'agenzia di produzione video" },
+    locale: { nome: "Agenzia di produzione video e foto", plurale: "Agenzie di produzione video" },
     pagina: videoFoto,
   },
 ];

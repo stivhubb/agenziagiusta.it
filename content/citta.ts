@@ -26,15 +26,17 @@ export function percorsoLocale(verticale: Verticale, c: Citta): string {
   return `/${verticale.slug}/${c.slug}/`;
 }
 
-// Titolo, title e description seguono lo stesso schema per tutte le pagine tipo + città.
+// Titolo, title e description seguono lo stesso schema per tutte le pagine tipo + città:
+// il singolare in title e H1, il plurale nella description.
 export function titoloLocale(verticale: Verticale, c: Citta): Titolo {
-  return { testo: `${verticale.locale.plurale} ${a(c.nome)}: come trovare`, evidenza: "quella giusta." };
+  return { testo: `${verticale.locale.nome} ${a(c.nome)}: come trovare`, evidenza: "quella giusta." };
 }
 
 export function seoLocale(verticale: Verticale, c: Citta): Seo {
+  const plurale = verticale.locale.plurale;
   return {
-    title: `${verticale.locale.plurale} ${a(c.nome)}: guida alla scelta`,
-    description: `Cerchi ${verticale.locale.singolare} ${a(c.nome)}? Prepara il brief con il quiz e fatti contattare da un'agenzia adatta al tuo progetto.`,
+    title: `${verticale.locale.nome} ${a(c.nome)}`,
+    description: `Cerchi tra le ${plurale[0].toLowerCase()}${plurale.slice(1)} ${a(c.nome)}? Prepara il brief con il quiz e fatti contattare da un'agenzia adatta al tuo progetto.`,
   };
 }
 
