@@ -22,11 +22,13 @@ export function Footer() {
           </div>
           <div className="footer__colonna">
             <div className="footer__titolo">Agenzie per città</div>
-            {citta.map((c) => (
-              <Link key={c.slug} href={`/${c.slug}/`}>
-                {c.nome}
-              </Link>
-            ))}
+            {citta
+              .filter((c) => c.footer)
+              .map((c) => (
+                <Link key={c.slug} href={`/comunicazione/${c.slug}/`}>
+                  {c.nome}
+                </Link>
+              ))}
           </div>
           <div className="footer__colonna">
             <div className="footer__titolo">Informazioni</div>

@@ -15,7 +15,7 @@ export const metadata: Metadata = metadati({
 export default function Guida() {
   return (
     <>
-      <DatiPercorso nome="Guida" percorso={percorsi.guida} />
+      <DatiPercorso voci={[{ nome: "Guida", percorso: percorsi.guida }]} />
       <PaginaContenuto occhiello="Guida" titolo={guida.titolo} pagina={guida} />
     </>
   );

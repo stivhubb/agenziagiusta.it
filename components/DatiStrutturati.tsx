@@ -38,8 +38,8 @@ export function DatiSito() {
   );
 }
 
-// Pagine interne: percorso di navigazione (Home / pagina).
-export function DatiPercorso({ nome, percorso }: { nome: string; percorso: string }) {
+// Pagine interne: percorso di navigazione (Home / pagina, oppure Home / tipo / città).
+export function DatiPercorso({ voci }: { voci: { nome: string; percorso: string }[] }) {
   return (
     <Script
       dati={{
@@ -47,7 +47,12 @@ export function DatiPercorso({ nome, percorso }: { nome: string; percorso: strin
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: `${sito.url}/` },
-          { "@type": "ListItem", position: 2, name: nome, item: `${sito.url}${percorso}` },
+          ...voci.map((voce, i) => ({
+            "@type": "ListItem",
+            position: i + 2,
+            name: voce.nome,
+            item: `${sito.url}${voce.percorso}`,
+          })),
         ],
       }}
     />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Fragment } from "react";
 import { percorsi } from "@/content/sito";
 import type { Blocco, Sezione, Titolo } from "@/content/tipi";
 
@@ -30,7 +31,8 @@ export function Intro({
   variante,
 }: {
   occhiello?: string;
-  percorso?: string;
+  // Voci dopo "Home": quelle con href sono link, l'ultima è la pagina in cui ci si trova.
+  percorso?: { nome: string; href?: string }[];
   titolo: Titolo;
   intro?: string[];
   variante?: "contatti";
@@ -40,8 +42,12 @@ export function Intro({
       {percorso && (
         <nav aria-label="Percorso" className="percorso">
           <Link href={percorsi.home}>Home</Link>
-          <span>/</span>
-          <span>{percorso}</span>
+          {percorso.map((voce) => (
+            <Fragment key={voce.nome}>
+              <span>/</span>
+              {voce.href ? <Link href={voce.href}>{voce.nome}</Link> : <span>{voce.nome}</span>}
+            </Fragment>
+          ))}
         </nav>
       )}
       {occhiello && <div className="occhiello occhiello--punto">{occhiello}</div>}

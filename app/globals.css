@@ -337,6 +337,7 @@ textarea {
 
 .percorso {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   font-size: 14px;
@@ -439,6 +440,39 @@ textarea {
   display: block;
   font-weight: 600;
   color: var(--testo);
+}
+
+/* ---------- Link alle città (pagine verticali) ---------- */
+
+.luoghi {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: clamp(56px, 6vw, 88px);
+}
+
+.luoghi__voci {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.luoghi__voci a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--bordo-campo);
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.luoghi__voci a:hover {
+  border-color: var(--magenta);
+  color: var(--magenta);
 }
 
 /* ---------- Blocco magenta (quiz in home, partner in Per le agenzie) ---------- */
