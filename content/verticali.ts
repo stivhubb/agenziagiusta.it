@@ -38,6 +38,18 @@ export const verticali: Verticale[] = [
         "Agenzia di comunicazione, di marketing o pubblicitaria? Per una PMI spesso è lo stesso fornitore: cosa fa, quanto costa e come scegliere quella giusta.",
     },
   },
+  {
+    slug: "media",
+    nome: "Agenzia media",
+    descrizione:
+      "Pianificazione e acquisto degli spazi pubblicitari su tv, radio, stampa, affissioni e online.",
+    titolo: titolo("Agenzia media"),
+    seo: {
+      title: "Agenzia media e centro media: cosa fa e come sceglierla",
+      description:
+        "Cosa fa un'agenzia media, dalla pianificazione all'acquisto degli spazi pubblicitari, e quanto costa. Prepara il brief e fatti contattare da un'agenzia.",
+    },
+  },
   // Unisce le due aree "digital e web marketing" e "web agency, siti ed e-commerce".
   {
     slug: "web-agency",
