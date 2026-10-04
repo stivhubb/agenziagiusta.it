@@ -60,27 +60,17 @@ export const verticali: Verticale[] = [
         "Cosa fa un'agenzia di marketing, quando serve e quanto costa. Prepara il brief in pochi minuti e fatti contattare da un'agenzia adatta al tuo progetto.",
     },
   },
-  {
-    slug: "digital-marketing",
-    nome: "Digital e web marketing",
-    descrizione:
-      "Campagne online, email, automazioni e analisi dei dati per portare contatti e vendite dal web.",
-    titolo: titolo("Agenzia di web marketing"),
-    seo: {
-      title: "Agenzia di web marketing: cosa fa, costi e come sceglierla",
-      description:
-        "Agenzia di web marketing: servizi, costi e criteri per scegliere. Prepara il brief in pochi minuti e fatti contattare da un'agenzia adatta a te.",
-    },
-  },
+  // Unisce le due aree "digital e web marketing" e "web agency, siti ed e-commerce".
   {
     slug: "web-agency",
-    nome: "Web agency, siti ed e-commerce",
-    descrizione: "Progettazione e sviluppo di siti aziendali, landing page e negozi online.",
-    titolo: titolo("Web agency"),
+    nome: "Web agency e digital marketing",
+    descrizione:
+      "Siti, e-commerce e campagne online: dalla realizzazione alla promozione, con l'analisi dei dati.",
+    titolo: titolo("Web agency e agenzia di digital marketing"),
     seo: {
-      title: "Web agency: cosa fa, quanto costa un sito e come sceglierla",
+      title: "Web agency e digital marketing: cosa fa e come sceglierla",
       description:
-        "Cosa fa una web agency, quanto costa un sito o un e-commerce e come scegliere. Prepara il brief e fatti contattare da un'agenzia adatta.",
+        "Cosa fa una web agency, dal sito all'e-commerce alle campagne online, e quanto costa. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
   },
   {
@@ -182,13 +172,13 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "video-foto",
-    nome: "Video, foto e spot",
+    nome: "Produzione video e foto",
     descrizione: "Video aziendali, spot, servizi fotografici e contenuti per i social.",
-    titolo: titolo("Agenzia video"),
+    titolo: titolo("Agenzia di produzione video e foto"),
     seo: {
-      title: "Agenzia video e spot pubblicitari: cosa fa e come sceglierla",
+      title: "Agenzia di produzione video e foto: come sceglierla",
       description:
-        "Video aziendali, spot e foto: cosa fa un'agenzia video, quanto costa e come sceglierla. Prepara il brief e fatti contattare da un'agenzia adatta.",
+        "Video aziendali, spot e foto: cosa fa un'agenzia di produzione, quanto costa e come sceglierla. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
   },
 ];
