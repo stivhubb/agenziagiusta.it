@@ -309,9 +309,13 @@ export const quiz = {
     pulsante: "Genera il brief",
   },
   pulsanteFine: "Ricevi il brief",
-  // Primo giro: il quiz si compila ma non salva e non invia.
-  segnapostoFine:
-    "[QUIZ COMPLETATO. GENERAZIONE DEL BRIEF, SALVATAGGIO E INVIO VIA EMAIL: DA COLLEGARE]",
+  // Schermata finale: il brief scritto da content/brief.ts.
+  fine: {
+    titolo: "Il tuo brief è pronto.",
+    testo: "Lo trovi qui sotto: puoi stamparlo o salvarlo in PDF.",
+    // Il salvataggio dei contatti e l'invio via email non sono ancora collegati.
+    segnaposto: "[INVIO DEL BRIEF VIA EMAIL E SALVATAGGIO DEI CONTATTI: DA COLLEGARE]",
+  },
   brief: {
     titolo: "Il tuo brief prende forma",
     nota: "Alla fine ricevi il brief via email e vieni contattato da un'agenzia adatta al tuo progetto.",

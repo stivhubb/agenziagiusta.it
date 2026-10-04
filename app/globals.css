@@ -1228,19 +1228,10 @@ textarea {
   color: var(--testo-secondario);
 }
 
-.brief__sezione,
-.brief__gruppo {
+.brief__sezione {
   display: flex;
   flex-direction: column;
-}
-
-.brief__sezione {
-  gap: 18px;
-  break-inside: avoid;
-}
-
-.brief__gruppo {
-  gap: 8px;
+  gap: 14px;
 }
 
 .brief__titolo {
@@ -1258,15 +1249,6 @@ textarea {
   color: var(--magenta);
 }
 
-.brief__sotto {
-  margin: 0;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--testo-secondario);
-}
-
 .brief p,
 .brief__elenco {
   font-size: 17px;
@@ -1281,51 +1263,34 @@ textarea {
   padding: 0 0 0 20px;
 }
 
-.brief__scheda {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
-  gap: 16px 24px;
+.brief__parole {
   margin: 0;
-  padding: 20px 24px;
+  padding: 18px 22px;
   border-radius: 12px;
   background: var(--sfondo-sezione);
 }
 
-.brief__scheda dt {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--testo-secondario);
+.brief .brief__parole p {
+  color: var(--testo);
 }
 
-.brief__scheda dd {
-  margin: 4px 0 0;
-  font-size: 16px;
-  font-weight: 600;
-  overflow-wrap: anywhere;
-}
-
-.brief__colonne {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-  gap: 20px 32px;
-}
-
-.brief__etichette {
+.brief__voci {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 0;
-  list-style: none;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
 }
 
-.brief__etichette li {
-  padding: 6px 14px;
-  border: 1.5px solid var(--bordo);
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 500;
+.brief__voci dt {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.brief__voci dd {
+  margin: 2px 0 0;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--testo-lungo);
 }
 
 .brief__piede {
@@ -1341,7 +1306,7 @@ textarea {
   body > footer,
   .striscia,
   .pulsante-contatti,
-  .brief-pagina__azioni {
+  .brief-pagina > :not(.brief) {
     display: none;
   }
 
@@ -1370,8 +1335,8 @@ textarea {
     break-inside: auto;
   }
 
-  .brief__gruppo,
-  .brief__scheda {
+  .brief__parole,
+  .brief__voci div {
     break-inside: avoid;
   }
 
@@ -1385,18 +1350,13 @@ textarea {
     line-height: 1.5;
   }
 
-  .brief__scheda {
-    gap: 10px 20px;
+  .brief__voci dt,
+  .brief__voci dd {
+    font-size: 14px;
+  }
+
+  .brief__parole {
     padding: 12px 16px;
-  }
-
-  .brief__scheda dd,
-  .brief__etichette li {
-    font-size: 13px;
-  }
-
-  .brief__etichette li {
-    padding: 3px 10px;
   }
 
   body {

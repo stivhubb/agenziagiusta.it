@@ -2,14 +2,18 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { componiBrief, type BriefComposto } from "@/content/brief";
 import { province } from "@/content/province";
 import { ALTRO, passi, quiz, type Campo } from "@/content/quiz";
 import { percorsi } from "@/content/sito";
+import { Brief } from "./Brief";
 import { Freccia, Spunta } from "./Icone";
+import { PulsanteStampa } from "./PulsanteStampa";
 import { Segnaposto } from "./Testo";
 
 // Quiz + brief. Schermate e campi arrivano da content/quiz.ts.
-// Primo giro: le risposte restano nella pagina, non viene salvato né inviato nulla.
+// Alla fine il brief viene scritto da content/brief.ts e mostrato nella pagina.
+// Le risposte restano nel browser: non viene ancora salvato né inviato nulla.
 
 type Valore = string | string[] | boolean;
 type Risposte = Record<string, Valore>;
@@ -51,7 +55,9 @@ export function Quiz() {
   const [indice, setIndice] = useState(0);
   const [risposte, setRisposte] = useState<Risposte>({});
   const [errori, setErrori] = useState<Record<string, string>>({});
-  const [completato, setCompletato] = useState(false);
+  // Il brief, una volta completato il quiz.
+  const [brief, setBrief] = useState<BriefComposto | null>(null);
+  const completato = brief !== null;
   // I contatti si aprono solo dopo il clic su "Genera il brief".
   const [contattiAperti, setContattiAperti] = useState(false);
   const cima = useRef<HTMLElement>(null);
@@ -101,7 +107,12 @@ export function Quiz() {
       return;
     }
     if (ultimo) {
-      setCompletato(true);
+      const oggi = new Date().toLocaleDateString("it-IT", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      });
+      setBrief(componiBrief(risposte, oggi));
       requestAnimationFrame(() => cima.current?.scrollIntoView({ block: "start" }));
     } else {
       vai(indice + 1);
@@ -186,16 +197,28 @@ export function Quiz() {
     );
   }
 
+  if (brief) {
+    return (
+      <section className="contenitore brief-pagina" ref={cima}>
+        <div className="quiz__gruppo">
+          <h1 className="titolo-quiz">{quiz.fine.titolo}</h1>
+          <p className="sottotitolo">{quiz.fine.testo}</p>
+        </div>
+        <div className="brief-pagina__azioni">
+          <PulsanteStampa />
+        </div>
+        <Brief brief={brief} />
+        <Segnaposto>{quiz.fine.segnaposto}</Segnaposto>
+      </section>
+    );
+  }
+
   return (
     <section className="contenitore quiz" ref={cima}>
       <div className="quiz__domanda">
         <div className="quiz__gruppo">
           <div className="occhiello">
-            {completato
-              ? "Quiz completato"
-              : richiesta
-                ? "Domande completate"
-                : `Passo ${indice + 1} di ${passi.length}`}
+            {richiesta ? "Domande completate" : `Passo ${indice + 1} di ${passi.length}`}
           </div>
           <div
             role="progressbar"
@@ -209,9 +232,7 @@ export function Quiz() {
           </div>
         </div>
 
-        {completato ? (
-          <Segnaposto>{quiz.segnapostoFine}</Segnaposto>
-        ) : richiesta ? (
+        {richiesta ? (
           <>
             <div className="quiz__gruppo">
               <h1 className="titolo-quiz">{quiz.genera.titolo}</h1>

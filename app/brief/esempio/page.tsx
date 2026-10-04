@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Brief } from "@/components/Brief";
 import { PulsanteStampa } from "@/components/PulsanteStampa";
-import { briefEsempio } from "@/content/brief-esempio";
+import { componiBrief } from "@/content/brief";
+import { risposteEsempio } from "@/content/brief-esempio";
 import { metadati } from "@/content/metadati";
 
 // Pagina di prova per vedere il brief impaginato. Non è collegata dal sito e non va su Google.
@@ -18,7 +19,7 @@ export default function BriefEsempio() {
         <p className="nota">Esempio: azienda e dati sono inventati.</p>
         <PulsanteStampa />
       </div>
-      <Brief dati={briefEsempio} />
+      <Brief brief={componiBrief(risposteEsempio, "4 ottobre 2026")} />
     </div>
   );
 }
