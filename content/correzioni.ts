@@ -141,6 +141,12 @@ export function correggi(scritto: string): string {
     testo = testo.replace(regola, (trovata) => conMaiuscola(trovata, corretta));
   }
 
+  // "un agenzia" diventa "un'agenzia", per i nomi femminili più frequenti in un brief.
+  testo = testo.replace(
+    /(?<!\p{L})(un) (agenzia|azienda|attivit[aà]|idea|immagine|offerta|esperienza|opportunit[aà]|identit[aà]|analisi|area)(?![\p{L}'])/giu,
+    "$1'$2",
+  );
+
   // Apostrofo usato come accento: "qualita'" diventa "qualità".
   testo = testo.replace(/(\p{L}+)'(?!\p{L})/gu, (tutto, parola: string, posizione: number) => {
     const minuscola = parola.toLowerCase();
