@@ -237,7 +237,7 @@ export const passi: Passo[] = [
       },
       {
         id: "vincoli",
-        etichetta: "Vincoli e linee guida",
+        etichetta: "Guidelines e mandatory",
         tipo: "testo-lungo",
         aiuto: "Brand guideline esistenti, elementi obbligatori, vincoli normativi o interni.",
       },

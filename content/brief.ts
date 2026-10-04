@@ -405,11 +405,11 @@ function richiesta(r: Risposte): BloccoBrief[] {
   );
   if (testo(r.vincoli)) {
     blocchi.push(
-      paragrafo("L'agenzia dovrà tenere conto di questi vincoli e linee guida:"),
+      paragrafo("L'agenzia dovrà tenere conto di queste guidelines e di questi mandatory:"),
       parole(testo(r.vincoli)),
     );
   } else {
-    blocchi.push(paragrafo("L'azienda non ha indicato vincoli o linee guida esistenti."));
+    blocchi.push(paragrafo("L'azienda non ha indicato guidelines o mandatory."));
   }
   return blocchi;
 }
