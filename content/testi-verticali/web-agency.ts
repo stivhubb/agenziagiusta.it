@@ -17,6 +17,38 @@ export const webAgency: Testi = {
       ],
     },
   ],
+  mercato: {
+    testo: [
+      "Secondo Netcomm e l'Osservatorio eCommerce B2c del Politecnico di Milano, nel 2026 gli acquisti online degli italiani superano i 66,6 miliardi di euro (+6%) e valgono l'11,5% degli acquisti di prodotto al dettaglio. Le imprese italiane con un sito e-commerce sono 87.000, per oltre il 90% micro o piccole.",
+      "La diffusione tra le imprese resta limitata: secondo l'Istat nel 2025 vende online il 14,7% delle imprese con almeno 10 addetti, mentre il 59% usa i social media. Sul fronte della promozione, l'Osservatorio Internet Media del Politecnico di Milano stima per il 2025 investimenti in pubblicità online per 6,2 miliardi di euro (+11%).",
+    ],
+    fonti: [
+      { nome: "Netcomm e Osservatorio eCommerce B2c del Politecnico di Milano, maggio 2026", url: "https://www.consorzionetcomm.it/lecommerce-b2c-in-italia-supera-i-666-miliardi-di-e-nel-2026-6-con-35-milioni-di-consumatori-digitali/" },
+      { nome: "Istat, Imprese e Ict, dicembre 2025", url: "https://www.istat.it/comunicato-stampa/imprese-e-ict-anno-2025/" },
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
+    ],
+  },
+  costi: {
+    testo: [
+      "La realizzazione di un sito è remunerata a progetto. Per il sito aziendale di una piccola impresa il costo si colloca in genere tra 1.200 e 3.500 euro; per un e-commerce si parte in genere da 4.500 euro e si sale con il numero di prodotti e con le integrazioni richieste. Si aggiungono i costi ricorrenti di dominio, hosting e manutenzione.",
+      "Le attività di digital marketing sono remunerate con un canone mensile. Per la gestione delle campagne pubblicitarie online il compenso si colloca in genere tra 500 e 2.500 euro al mese, budget pubblicitario escluso.",
+    ],
+    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+  },
+  domande: [
+    {
+      domanda: "Il sito resta di proprietà dell'azienda?",
+      risposta: "Dipende dal contratto. Conviene verificare che dominio e hosting siano intestati all'azienda, che a fine lavori vengano consegnati gli accessi e i file del sito e che i diritti su testi, immagini e codice siano ceduti. Con le piattaforme in abbonamento il sito resta online finché si paga il canone.",
+    },
+    {
+      domanda: "Che differenza c'è tra un sito su CMS e uno sviluppato su misura?",
+      risposta: "Un CMS, cioè un sistema di gestione dei contenuti già pronto, riduce tempi e costi e permette all'azienda di aggiornare il sito in autonomia. Lo sviluppo su misura serve quando occorrono funzioni o integrazioni che le piattaforme esistenti non offrono, e comporta costi di realizzazione e di manutenzione più alti.",
+    },
+    {
+      domanda: "Come si misura il rendimento di un sito o di una campagna online?",
+      risposta: "Con gli strumenti di web analytics: visite per canale di provenienza, tasso di conversione, cioè la quota di visitatori che compie l'azione desiderata, e costo per contatto o per vendita. La misurazione richiede che il tracciamento delle conversioni sia configurato prima dell'avvio.",
+    },
+  ],
   attivita: {
     titolo: "Attività e lavorazioni di una web agency",
     gruppi: [

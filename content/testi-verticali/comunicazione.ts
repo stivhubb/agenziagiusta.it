@@ -17,6 +17,37 @@ export const comunicazione: Testi = {
       ],
     },
   ],
+  mercato: {
+    testo: [
+      "Secondo le stime di UNA, l'associazione delle aziende della comunicazione, nel 2026 il mercato italiano della comunicazione vale 17,8 miliardi di euro, il 4,4% in più del 2025. Il 71% è pubblicità sui mezzi, circa 12,6 miliardi; il restante 29%, pari a 5,2 miliardi, comprende eventi, sponsorizzazioni, influencer marketing e branded content, che sono le voci in maggiore crescita.",
+      "La crescita della pubblicità dipende in buona parte dagli investimenti delle piccole imprese e dei professionisti: con questi il mercato pubblicitario cresce del 2,9%, senza dello 0,9%. Secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2025 il 53% degli investimenti pubblicitari è passato dai canali digitali.",
+    ],
+    fonti: [
+      { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
+    ],
+  },
+  costi: {
+    testo: [
+      "Un'agenzia di comunicazione è remunerata con un canone mensile (retainer) per le attività continuative e con un compenso a progetto per gli incarichi che hanno un inizio e una fine, come una campagna o il rinnovo dell'identità. Per una piccola o media impresa il canone di un incarico continuativo su più canali si colloca in genere tra 2.000 e 5.000 euro al mese.",
+      "Il canone remunera il lavoro dell'agenzia. Restano a parte il budget pubblicitario, cioè l'acquisto degli spazi sui mezzi, e i costi di produzione di video, fotografie e materiali stampati.",
+    ],
+    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+  },
+  domande: [
+    {
+      domanda: "Meglio un'agenzia unica o più fornitori specializzati?",
+      risposta: "Un'agenzia di comunicazione coordina strategia, creatività e canali con un solo referente: è la soluzione adatta quando gli obiettivi coinvolgono più mezzi e serve una regia comune. Un fornitore specializzato è preferibile quando il bisogno è circoscritto, per esempio la sola SEO o il solo ufficio stampa. Spesso l'agenzia affida a sua volta alcune lavorazioni a specialisti, mantenendone il coordinamento.",
+    },
+    {
+      domanda: "Che cosa deve contenere il brief per un'agenzia di comunicazione?",
+      risposta: "Gli obiettivi commerciali e di comunicazione, il pubblico a cui ci si rivolge, il posizionamento dell'azienda e i principali concorrenti, le attività di comunicazione già svolte, il budget disponibile e i tempi. È utile distinguere nel budget il compenso dell'agenzia dall'investimento sui mezzi.",
+    },
+    {
+      domanda: "Come si misurano i risultati?",
+      risposta: "Con indicatori (KPI) definiti all'inizio dell'incarico e coerenti con gli obiettivi: copertura e ricordo per la notorietà, traffico e interazioni per l'interesse, contatti e vendite per la conversione. L'agenzia li riporta in report periodici.",
+    },
+  ],
   attivita: {
     titolo: "Attività e lavorazioni di un'agenzia di comunicazione",
     gruppi: [

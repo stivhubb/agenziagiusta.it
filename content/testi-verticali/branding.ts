@@ -17,6 +17,36 @@ export const branding: Testi = {
       ],
     },
   ],
+  mercato: {
+    testo: [
+      "Secondo il rapporto Design Economy 2026 di Fondazione Symbola, Deloitte Private, POLI.design e ADI, in Italia il design genera circa 4 miliardi di euro di valore aggiunto e impiega oltre 76 mila addetti, il 21,5% di quelli europei: è il primo paese dell'Unione per numero di addetti. Il dato riguarda l'intero settore del design, di cui la comunicazione visiva e il branding sono una parte.",
+      "L'attività è concentrata al Nord: la Lombardia ha il 28,7% degli occupati del settore e Milano, con oltre 7.300 imprese di design, produce il 19% del valore aggiunto nazionale.",
+    ],
+    fonti: [
+      { nome: "Fondazione Symbola, Deloitte Private, POLI.design e ADI, Design Economy 2026", url: "https://symbola.net/ricerca/design-economy-2026/" },
+    ],
+  },
+  costi: {
+    testo: [
+      "Un progetto di identità è remunerato a progetto, una sola volta. Per il solo logo il costo si colloca in genere tra 500 e 1.500 euro; per un'identità visiva completa, con logo, colori, caratteri e manuale d'uso, tra 1.500 e 6.500 euro. Quando il progetto comprende anche la strategia di marca e il naming si parte in genere da 6.000 euro.",
+      "Il costo dipende dal numero di applicazioni da progettare, come packaging, sito e materiali commerciali, e dall'eventuale ricerca su mercato e concorrenti. La registrazione del marchio è un costo distinto.",
+    ],
+    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+  },
+  domande: [
+    {
+      domanda: "Che differenza c'è tra logo, identità visiva e brand?",
+      risposta: "Il logo è il segno che identifica l'azienda. L'identità visiva è il sistema che lo comprende insieme a colori, caratteri tipografici, immagini e regole d'uso. Il brand è l'insieme delle associazioni che il pubblico collega all'azienda: l'identità visiva ne è lo strumento, il posizionamento ne definisce il contenuto.",
+    },
+    {
+      domanda: "A chi appartengono il marchio e i file prodotti dall'agenzia?",
+      risposta: "I diritti di utilizzazione devono essere ceduti all'azienda per contratto, insieme ai file in formato vettoriale e al manuale d'uso. La registrazione del marchio è un passaggio distinto, che si effettua presso l'Ufficio Italiano Brevetti e Marchi o, per l'Unione europea, presso l'EUIPO, dopo una ricerca sui marchi già registrati.",
+    },
+    {
+      domanda: "Che cosa contiene un manuale di identità?",
+      risposta: "Le regole per usare correttamente gli elementi della marca: versioni del logo e spazi di rispetto, colori con i relativi codici, caratteri tipografici, stile delle immagini, tono di voce ed esempi di applicazione sui diversi materiali. Serve a mantenere coerente la comunicazione anche quando viene realizzata da fornitori diversi.",
+    },
+  ],
   attivita: {
     titolo: "Attività e lavorazioni di un'agenzia di branding",
     gruppi: [

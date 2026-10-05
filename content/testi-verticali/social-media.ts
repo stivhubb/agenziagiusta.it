@@ -17,6 +17,37 @@ export const socialMedia: Testi = {
       ],
     },
   ],
+  mercato: {
+    testo: [
+      "Secondo l'Istat, nel 2025 il 59% delle imprese italiane con almeno 10 addetti usa i social media.",
+      "Cresce anche la collaborazione con i creator: UPA e UNA stimano gli investimenti in influencer marketing a 490 milioni di euro nel 2025 (+5%) e a 550 milioni nel 2026 (+12%). Gli influencer iscritti all'elenco tenuto dall'Autorità per le garanzie nelle comunicazioni (AGCOM) sono più di 5.200.",
+    ],
+    fonti: [
+      { nome: "Istat, Imprese e Ict, dicembre 2025", url: "https://www.istat.it/comunicato-stampa/imprese-e-ict-anno-2025/" },
+      { nome: "UPA e UNA, stima sull'influencer marketing, marzo 2026", url: "https://www.upa.it/static/upload/cs-/cs-im26.pdf" },
+    ],
+  },
+  costi: {
+    testo: [
+      "La gestione dei social media è remunerata con un canone mensile. Per una piccola impresa si colloca in genere tra 900 e 2.000 euro al mese; per un'azienda strutturata, con più piattaforme e produzione video, si parte in genere da 2.000 euro al mese.",
+      "Il canone non comprende il budget pubblicitario, cioè la spesa per le inserzioni, che viene pagata a parte alle piattaforme.",
+    ],
+    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+  },
+  domande: [
+    {
+      domanda: "Il canone comprende la pubblicità a pagamento?",
+      risposta: "No. Il canone remunera il lavoro dell'agenzia: strategia, contenuti, pubblicazione e moderazione. La spesa per le inserzioni è un budget separato, pagato alle piattaforme. La gestione delle campagne può essere compresa nel canone oppure quotata a parte: va chiarito nel preventivo.",
+    },
+    {
+      domanda: "Di chi sono i profili e i contenuti pubblicati?",
+      risposta: "I profili devono essere intestati all'azienda, che assegna all'agenzia un ruolo di gestione: in questo modo restano all'azienda anche alla fine del rapporto. Per i contenuti prodotti dall'agenzia la titolarità dei diritti va stabilita nel contratto.",
+    },
+    {
+      domanda: "Come si misurano i risultati dei social media?",
+      risposta: "Con le metriche fornite dalle piattaforme: copertura, cioè le persone raggiunte, interazioni, crescita della community, visite al sito. Per le campagne a pagamento si aggiungono contatti generati, vendite e costo per risultato. È utile distinguere le metriche di visibilità da quelle che indicano un effetto sul business.",
+    },
+  ],
   attivita: {
     titolo: "Attività e lavorazioni di un'agenzia social media",
     gruppi: [

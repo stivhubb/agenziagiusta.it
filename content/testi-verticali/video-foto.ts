@@ -17,6 +17,37 @@ export const videoFoto: Testi = {
       ],
     },
   ],
+  mercato: {
+    testo: [
+      "Secondo il 7° Rapporto di APA, l'associazione dei produttori audiovisivi, nel 2024 il settore audiovisivo italiano ha raggiunto un valore di 16,3 miliardi di euro (+9%) e coinvolge oltre 124.000 professionisti. Il dato riguarda l'intero settore, dalla televisione al cinema alle piattaforme: la produzione per le aziende ne è una parte.",
+      "La domanda di video da parte delle aziende è sostenuta dalla pubblicità online: secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2026 gli investimenti in video online raggiungono 2,9 miliardi di euro (+16%), il 41% della pubblicità su Internet.",
+    ],
+    fonti: [
+      { nome: "APA, 7° Rapporto sulla produzione audiovisiva nazionale, ottobre 2025", url: "https://www.apaonline.it/news/apa-presenta-il-7-rapporto-sulla-produzione-audiovisiva-nazionale/" },
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
+    ],
+  },
+  costi: {
+    testo: [
+      "La produzione di video e fotografie è remunerata a progetto. Per un video aziendale il costo si colloca in genere tra 1.000 e 4.000 euro; per produzioni più articolate, come uno spot, si parte in genere da 3.000 euro e si sale con le giornate di ripresa, la troupe e la post-produzione.",
+      "I servizi fotografici sono quotati di norma a giornata o a numero di immagini consegnate. In entrambi i casi il preventivo dovrebbe indicare che cosa è compreso: riprese, montaggio, musiche, revisioni e diritti d'uso.",
+    ],
+    nota: "Fasce per i video elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da case di produzione e agenzie italiane, ottobre 2026. Sono valori indicativi.",
+  },
+  domande: [
+    {
+      domanda: "Che cosa incide di più sul costo di un video?",
+      risposta: "Il numero di giornate di ripresa e la dimensione della troupe, la presenza di attori o speaker, le location, e la complessità della post-produzione: montaggio, grafica animata, correzione del colore, musiche. Un soggetto definito con precisione prima delle riprese riduce tempi e costi.",
+    },
+    {
+      domanda: "Di chi sono i diritti su video e fotografie?",
+      risposta: "Sono stabiliti dal contratto. Di norma l'azienda riceve una licenza d'uso per determinati mezzi, territori e periodi; per usi ulteriori può essere richiesto un compenso aggiuntivo. Musiche e interpreti hanno diritti propri, regolati da licenze e liberatorie. La consegna del girato originale non è sempre compresa e va concordata.",
+    },
+    {
+      domanda: "Che cosa deve contenere il brief per un video?",
+      risposta: "L'obiettivo del video e il pubblico a cui è destinato, il messaggio principale, i canali di diffusione con i relativi formati e durate, eventuali esempi di riferimento, il budget e la data di consegna. Sapere fin dall'inizio su quali canali uscirà il video permette di girare una sola volta i materiali per tutti i formati.",
+    },
+  ],
   attivita: {
     titolo: "Attività e lavorazioni di un'agenzia di produzione",
     gruppi: [

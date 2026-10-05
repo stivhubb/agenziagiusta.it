@@ -17,6 +17,36 @@ export const creativita: Testi = {
       ],
     },
   ],
+  mercato: {
+    testo: [
+      "Secondo le stime di UNA, l'associazione delle aziende della comunicazione, nel 2026 il mercato italiano della comunicazione vale 17,8 miliardi di euro (+4,4%). Tra le voci che crescono di più ci sono quelle in cui il contenuto creativo è il prodotto stesso: il branded content (+8%) e gli eventi (+14,9%).",
+      "Il formato prevalente è il video: secondo l'Osservatorio Internet Media del Politecnico di Milano, tra televisione e online raccoglie il 55% degli investimenti pubblicitari, e nel 2026 il video online cresce del 16%.",
+    ],
+    fonti: [
+      { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, luglio 2026", url: "https://www.osservatori.net/blog/internet-media-advertising/15-statistiche-sul-digital-advertising-in-italia-nel-2026-tutto-quello-che-devi-sapere/" },
+    ],
+  },
+  costi: {
+    testo: [
+      "Il lavoro creativo è remunerato di norma a progetto, con un compenso per l'ideazione che comprende strategia, concept e declinazione sui formati previsti. Per gli incarichi continuativi si usa un canone mensile.",
+      "Il compenso creativo è distinto dai costi di produzione dei materiali e dall'acquisto degli spazi pubblicitari. Dipende dal numero di formati e di mezzi, dal coinvolgimento di registi, fotografi o interpreti e dall'estensione dei diritti d'uso, cioè per quanto tempo, in quali paesi e su quali mezzi la campagna può essere diffusa.",
+    ],
+  },
+  domande: [
+    {
+      domanda: "Che differenza c'è tra agenzia creativa e agenzia di comunicazione?",
+      risposta: "L'agenzia creativa è specializzata nell'ideazione e nella realizzazione dei contenuti: concept, testi, immagini. L'agenzia di comunicazione ha un perimetro più ampio, che comprende anche la strategia complessiva e il coordinamento dei canali. Molte agenzie di comunicazione hanno un reparto creativo interno.",
+    },
+    {
+      domanda: "Che cosa viene presentato in una proposta creativa?",
+      risposta: "Il concept, cioè l'idea di fondo, con il ragionamento strategico che lo sostiene; il titolo e il trattamento visivo principale (key visual); alcuni esempi di declinazione sui mezzi previsti. Spesso l'agenzia presenta più proposte alternative, tra cui l'azienda sceglie quella da sviluppare.",
+    },
+    {
+      domanda: "Di chi sono i diritti sulla campagna?",
+      risposta: "Sono regolati dal contratto. Di norma l'azienda acquisisce i diritti di utilizzazione della proposta approvata e pagata, mentre quelle non scelte restano dell'agenzia. Fotografie, musiche e prestazioni degli interpreti sono concesse da terzi con limiti di durata, territorio e mezzi, che vanno verificati prima di riutilizzare i materiali.",
+    },
+  ],
   attivita: {
     titolo: "Attività e lavorazioni di un'agenzia creativa",
     gruppi: [

@@ -17,6 +17,38 @@ export const media: Testi = {
       ],
     },
   ],
+  mercato: {
+    testo: [
+      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2025 gli investimenti pubblicitari in Italia hanno raggiunto 11,8 miliardi di euro (+5%) e nel 2026 sono previsti a 12,7 miliardi. Il 53% passa da Internet, che nel 2026 dovrebbe arrivare a 7 miliardi (+12%); l'83% della raccolta online va ai grandi operatori internazionali.",
+      "Nelle stime di UNA, che per questo dato non considerano gli investimenti delle piccole imprese, nel 2026 la televisione, tra lineare e advanced TV, raccoglie il 46,3% della spesa, il digitale il 36,1%, la pubblicità esterna il 7,5% e la radio il 5%. UPA, l'associazione delle aziende che investono in pubblicità, prevede per il 2026 una chiusura del mercato a +1,2%.",
+    ],
+    fonti: [
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
+      { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },
+      { nome: "UPA, luglio 2026", url: "https://www.upa.it/static/upload/com/0000/comunicato-stampa-upa26.pdf" },
+    ],
+  },
+  costi: {
+    testo: [
+      "Il compenso di un'agenzia media è distinto dal budget pubblicitario, che viene speso sui mezzi. È calcolato come percentuale del budget gestito oppure come compenso fisso (fee); per le campagne digitali sono diffusi i compensi fissi e le formule miste.",
+      "Per la gestione delle campagne digitali di una piccola o media impresa il compenso si colloca in genere tra 500 e 2.500 euro al mese, budget pubblicitario escluso. Per le pianificazioni sui mezzi tradizionali il compenso si definisce sul singolo piano.",
+    ],
+    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+  },
+  domande: [
+    {
+      domanda: "Che differenza c'è tra agenzia media e agenzia creativa?",
+      risposta: "L'agenzia creativa idea e realizza il messaggio; l'agenzia media decide dove, quando e con quale investimento diffonderlo, e acquista gli spazi. Le due attività possono essere svolte da strutture diverse o da reparti della stessa agenzia.",
+    },
+    {
+      domanda: "Il budget pubblicitario viene pagato all'agenzia?",
+      risposta: "Dipende dal contratto. L'agenzia può acquistare gli spazi per conto del cliente e rifatturarli, oppure il cliente paga direttamente editori e piattaforme e riconosce all'agenzia il solo compenso. In entrambi i casi il piano mezzi dovrebbe indicare separatamente la spesa sui mezzi e il compenso dell'agenzia.",
+    },
+    {
+      domanda: "Come si valuta l'efficacia di una pianificazione?",
+      risposta: "Con indicatori definiti prima della campagna. Sui mezzi tradizionali si misurano la copertura, cioè la quota del pubblico raggiunta, la frequenza media di esposizione e il costo per contatto. Sui canali digitali si aggiungono impression visibili, clic e conversioni. A campagna conclusa l'agenzia confronta quanto pianificato con quanto erogato (post-valutazione).",
+    },
+  ],
   attivita: {
     titolo: "Attività e lavorazioni di un'agenzia media",
     gruppi: [

@@ -17,6 +17,36 @@ export const prUfficioStampa: Testi = {
       ],
     },
   ],
+  mercato: {
+    testo: [
+      "Nelle stime di UNA sul mercato italiano della comunicazione, che nel 2026 vale 17,8 miliardi di euro (+4,4%), crescono attività che rientrano anche nel lavoro delle agenzie PR: gli eventi (+14,9%) e le collaborazioni con gli influencer (+12%).",
+      "Le collaborazioni con gli influencer sono oggi regolate: secondo i dati diffusi da UPA e UNA a marzo 2026, gli iscritti all'elenco tenuto dall'Autorità per le garanzie nelle comunicazioni (AGCOM) sono più di 5.200.",
+    ],
+    fonti: [
+      { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },
+      { nome: "UPA e UNA, stima sull'influencer marketing, marzo 2026", url: "https://www.upa.it/static/upload/cs-/cs-im26.pdf" },
+    ],
+  },
+  costi: {
+    testo: [
+      "L'ufficio stampa è remunerato di norma con un canone mensile, perché i risultati dipendono dalla continuità dei rapporti con le redazioni. Lanci di prodotto, eventi e gestione di una crisi possono essere affidati a progetto.",
+      "Il compenso dipende dal numero di notizie e di iniziative previste, dall'ampiezza dei media da seguire (locali, nazionali, di settore) e dall'organizzazione di eventi. Non è legato al numero di articoli usciti, perché la pubblicazione è una decisione delle redazioni.",
+    ],
+  },
+  domande: [
+    {
+      domanda: "Un'agenzia PR può garantire la pubblicazione di un articolo?",
+      risposta: "No. La scelta di pubblicare una notizia spetta alla redazione, e l'agenzia può solo aumentarne le probabilità proponendo contenuti di interesse giornalistico ai giornalisti adatti. Gli spazi con pubblicazione garantita sono pubblicità o contenuti sponsorizzati, e come tali devono essere segnalati al lettore.",
+    },
+    {
+      domanda: "Che differenza c'è tra ufficio stampa e digital PR?",
+      risposta: "L'ufficio stampa gestisce i rapporti con i giornalisti e le testate. Le digital PR estendono lo stesso lavoro ai canali online: testate digitali, blog, creator e community. Oltre alla visibilità, hanno spesso l'obiettivo di ottenere citazioni e collegamenti verso il sito dell'azienda.",
+    },
+    {
+      domanda: "Come si misurano i risultati delle relazioni pubbliche?",
+      risposta: "Con la rassegna stampa, che raccoglie le uscite ottenute, e con la loro analisi: numero e rilevanza delle testate, tono degli articoli, presenza dei messaggi chiave, quota di visibilità rispetto ai concorrenti. Per le attività online si aggiungono le visite al sito e i collegamenti ottenuti.",
+    },
+  ],
   attivita: {
     titolo: "Attività e lavorazioni di un'agenzia PR",
     gruppi: [

@@ -17,6 +17,38 @@ export const seoSem: Testi = {
       ],
     },
   ],
+  mercato: {
+    testo: [
+      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, la pubblicità online in Italia vale 6,2 miliardi di euro nel 2025 e dovrebbe raggiungere i 7 miliardi nel 2026 (+12%). La pubblicità sui motori di ricerca rappresenta il 24% del totale ed è prevista in crescita del 9% nel 2026.",
+      "La ricerca è anche un canale di vendita: secondo Netcomm e il Politecnico di Milano, nel 2026 gli acquisti online degli italiani superano i 66,6 miliardi di euro (+6%).",
+    ],
+    fonti: [
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, luglio 2026", url: "https://www.osservatori.net/blog/internet-media-advertising/15-statistiche-sul-digital-advertising-in-italia-nel-2026-tutto-quello-che-devi-sapere/" },
+      { nome: "Netcomm e Osservatorio eCommerce B2c del Politecnico di Milano, maggio 2026", url: "https://www.consorzionetcomm.it/lecommerce-b2c-in-italia-supera-i-666-miliardi-di-e-nel-2026-6-con-35-milioni-di-consumatori-digitali/" },
+    ],
+  },
+  costi: {
+    testo: [
+      "La SEO è remunerata con un canone mensile, perché richiede un lavoro continuativo. Per una piccola impresa o per un progetto locale si colloca in genere tra 500 e 1.500 euro al mese; per un'azienda strutturata, un e-commerce o un settore molto competitivo si parte in genere da 2.500 euro al mese. L'analisi iniziale del sito (audit), se acquistata da sola, costa in genere tra 500 e 2.000 euro.",
+      "Per le campagne SEM il compenso dell'agenzia si colloca in genere tra 500 e 2.500 euro al mese e non comprende il budget pubblicitario, che viene pagato a parte alla piattaforma.",
+    ],
+    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+  },
+  domande: [
+    {
+      domanda: "In quanto tempo si vedono i risultati?",
+      risposta: "I primi risultati della SEO arrivano in genere tra tre e sei mesi dall'inizio del lavoro; per le ricerche più competitive ne servono da sei a dodici. Le campagne SEM producono visite dal giorno dell'attivazione e si fermano quando termina il budget.",
+    },
+    {
+      domanda: "È meglio investire in SEO o in SEM?",
+      risposta: "Le due attività rispondono a esigenze diverse e spesso si usano insieme. La SEM dà visibilità immediata e misurabile, a un costo per ogni clic. La SEO richiede tempo ma costruisce un traffico che non dipende dalla spesa pubblicitaria. Una scelta frequente è avviare le campagne SEM mentre il lavoro SEO matura.",
+    },
+    {
+      domanda: "Un'agenzia può garantire la prima posizione su Google?",
+      risposta: "No. L'ordine dei risultati organici è deciso dagli algoritmi dei motori di ricerca, che cambiano di frequente e non sono controllabili dall'esterno. Un'agenzia può impegnarsi sulle attività da svolgere e su obiettivi di traffico e di conversioni, non su una posizione. Negli annunci a pagamento la posizione dipende da un'asta, in cui contano l'offerta e la qualità dell'annuncio.",
+    },
+  ],
   attivita: {
     titolo: "Attività e lavorazioni di un'agenzia SEO",
     gruppi: [
