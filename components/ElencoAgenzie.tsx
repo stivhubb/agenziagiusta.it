@@ -2,7 +2,8 @@ import type { Agenzia } from "@/content/tipi";
 import { Freccia } from "./Icone";
 import { Segnaposto } from "./Testo";
 
-// Elenco delle agenzie di un tipo in una città, in ordine alfabetico, con il link al loro sito.
+// Elenco delle agenzie di un tipo in una città, in ordine alfabetico: nome, comune della sede
+// e link al sito.
 export function ElencoAgenzie({ titolo, agenzie }: { titolo: string; agenzie: Agenzia[] }) {
   const ordinate = [...agenzie].sort((a, b) => a.nome.localeCompare(b.nome, "it"));
   return (
@@ -14,7 +15,7 @@ export function ElencoAgenzie({ titolo, agenzie }: { titolo: string; agenzie: Ag
             {ordinate.map((agenzia) => (
               <li key={agenzia.url} className="scheda scheda--scelta">
                 <h3 className="titolo-scheda">{agenzia.nome}</h3>
-                <p className="scheda__testo">{agenzia.servizi}</p>
+                <p className="scheda__testo">{agenzia.comune}</p>
                 <a href={agenzia.url} target="_blank" rel="noopener" className="link-freccia">
                   Vai al sito
                   <Freccia size={16} />

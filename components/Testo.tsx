@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { percorsi } from "@/content/sito";
-import type { Blocco, Sezione, Titolo } from "@/content/tipi";
+import type { Blocco, Fonte, Sezione, Titolo } from "@/content/tipi";
+import { Freccia } from "./Icone";
 
 export function Segnaposto({ children, alto }: { children: React.ReactNode; alto?: boolean }) {
   return <div className={alto ? "segnaposto segnaposto--alto" : "segnaposto"}>{children}</div>;
@@ -72,12 +73,55 @@ export function Intro({
   );
 }
 
-function BloccoTesto({ blocco }: { blocco: Blocco }) {
+// Le fonti di un testo, citate per nome con il link.
+export function Fonti({ fonti }: { fonti: Fonte[] }) {
+  return (
+    <p className="fonti">
+      Fonti:{" "}
+      {fonti.map((fonte, i) => (
+        <span key={fonte.url}>
+          {i > 0 && ", "}
+          <a href={fonte.url} target="_blank" rel="noopener">
+            {fonte.nome}
+          </a>
+        </span>
+      ))}
+    </p>
+  );
+}
+
+export function BloccoTesto({ blocco }: { blocco: Blocco }) {
   if (typeof blocco === "string") {
     return <p className="paragrafo">{blocco}</p>;
   }
   if ("segnaposto" in blocco) {
     return <Segnaposto alto={blocco.alto}>{blocco.segnaposto}</Segnaposto>;
+  }
+  if ("fonti" in blocco) {
+    return <Fonti fonti={blocco.fonti} />;
+  }
+  if ("nota" in blocco) {
+    return <p className="fonti">{blocco.nota}</p>;
+  }
+  if ("domande" in blocco) {
+    return (
+      <div className="domande">
+        {blocco.domande.map((voce) => (
+          <div key={voce.domanda} className="domande__voce">
+            <h3 className="titolo-scheda">{voce.domanda}</h3>
+            <p className="paragrafo">{voce.risposta}</p>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  if ("link" in blocco) {
+    return (
+      <Link href={blocco.link.href} className="link-freccia">
+        {blocco.link.testo}
+        <Freccia size={16} />
+      </Link>
+    );
   }
   return (
     <ul className="elenco">

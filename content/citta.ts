@@ -10,6 +10,8 @@ import type { Verticale } from "./verticali";
 // - pagine: i contenuti, uno per tipo di agenzia (la chiave è lo slug del verticale):
 //   il testo sul mercato locale, le fonti e l'elenco delle agenzie.
 //   Una pagina senza testo o senza agenzie mostra i segnaposto e non viene indicizzata.
+// Struttura della pagina: intro (mercato locale e costi); blocco quiz; cosa fa e domande;
+// elenco delle agenzie. Costi, cosa fa e domande vengono dai testi del verticale.
 
 export type Citta = {
   slug: string;

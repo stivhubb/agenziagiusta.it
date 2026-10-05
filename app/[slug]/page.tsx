@@ -4,7 +4,7 @@ import { DatiPercorso } from "@/components/DatiStrutturati";
 import { PaginaContenuto } from "@/components/PaginaContenuto";
 import { citta, percorsoLocale } from "@/content/citta";
 import { metadati } from "@/content/metadati";
-import { verticali } from "@/content/verticali";
+import { completo, sezioniVerticale, verticali } from "@/content/verticali";
 
 // Pagine verticali: una pagina statica per ogni voce dell'elenco in content/verticali.ts.
 // Sotto ognuna ci sono le pagine delle città (app/[slug]/[citta]/page.tsx).
@@ -25,8 +25,8 @@ export async function generateMetadata({ params }: PageProps<"/[slug]">): Promis
     titoloIntero: true,
     descrizione: verticale.seo.description,
     percorso: `/${slug}/`,
-    // Le pagine ancora senza testi non vanno indicizzate.
-    indicizza: Boolean(verticale.pagina),
+    // Le pagine a cui manca un testo mostrano un segnaposto e non vanno indicizzate.
+    indicizza: completo(verticale),
   });
 }
 
@@ -41,7 +41,12 @@ export default async function Pagina({ params }: PageProps<"/[slug]">) {
       <PaginaContenuto
         percorso={[{ nome }]}
         titolo={verticale.titolo}
-        pagina={verticale.pagina}
+        pagina={
+          verticale.pagina && {
+            ...verticale.pagina,
+            sezioni: sezioniVerticale(verticale.pagina),
+          }
+        }
         luoghi={{
           titolo: `${verticale.locale.plurale} per città`,
           voci: citta.map((c) => ({ nome: c.nome, href: percorsoLocale(verticale, c) })),

@@ -1,4 +1,4 @@
-import type { Seo, Testi, Titolo } from "./tipi";
+import type { Blocco, Seo, Sezione, Testi, Titolo } from "./tipi";
 import { branding } from "./testi-verticali/branding";
 import { comunicazione } from "./testi-verticali/comunicazione";
 import { creativita } from "./testi-verticali/creativita";
@@ -20,6 +20,8 @@ import { webAgency } from "./testi-verticali/web-agency";
 //   dei link alle città ("Agenzie SEO per città")
 // - pagina: i testi, uno per file nella cartella content/testi-verticali/.
 //   Se manca, la pagina mostra i segnaposto e non viene indicizzata.
+//   Struttura della pagina: intro; mercato, costi, cosa fa e domande; blocco quiz;
+//   attività e lavorazioni; link alle città.
 
 export type Verticale = {
   slug: string;
@@ -31,6 +33,60 @@ export type Verticale = {
   locale: { nome: string; plurale: string };
   pagina?: Testi;
 };
+
+// Un verticale è completo, e quindi va su Google, quando oltre ai testi ha mercato, costi
+// e domande: finché ne manca uno la pagina mostra un segnaposto.
+export function completo(v: Verticale): boolean {
+  const p = v.pagina;
+  return Boolean(p && p.mercato && p.costi && p.domande && p.domande.length > 0);
+}
+
+// I costi di quel tipo di agenzia: stanno nella pagina del verticale e, uguali, nell'intro
+// di tutte le sue pagine con la città.
+export function blocchiCosti(pagina?: Testi): Blocco[] {
+  if (!pagina?.costi) return [{ segnaposto: "[COSTI: DA SCRIVERE]" }];
+  return [...pagina.costi.testo, ...(pagina.costi.nota ? [{ nota: pagina.costi.nota }] : [])];
+}
+
+function sezioneDomande(pagina?: Testi): Sezione {
+  return {
+    titolo: "Domande frequenti",
+    blocchi:
+      pagina?.domande && pagina.domande.length > 0
+        ? [{ domande: pagina.domande }]
+        : [{ segnaposto: "[TRE DOMANDE FREQUENTI: DA SCRIVERE]" }],
+  };
+}
+
+// Primo blocco della pagina di un verticale, sotto l'intro: mercato, costi, cosa fa, domande.
+export function sezioniVerticale(pagina: Testi): Sezione[] {
+  return [
+    {
+      titolo: "Il mercato",
+      blocchi: pagina.mercato
+        ? [...pagina.mercato.testo, ...(pagina.mercato.fonti ? [{ fonti: pagina.mercato.fonti }] : [])]
+        : [{ segnaposto: "[MERCATO: DA SCRIVERE]" }],
+    },
+    { titolo: "Quanto costa", blocchi: blocchiCosti(pagina) },
+    ...pagina.sezioni,
+    sezioneDomande(pagina),
+  ];
+}
+
+// Terzo blocco delle pagine tipo + città: cosa fa quel tipo di agenzia, in breve, con il link
+// alla pagina del verticale, e le stesse tre domande. È uguale in tutte le città.
+export function sezioniCosaFa(v: Verticale): Sezione[] {
+  return [
+    {
+      titolo: v.pagina?.sezioni[0]?.titolo ?? `Cosa fa: ${v.nome}`,
+      blocchi: [
+        ...(v.pagina ? v.pagina.intro : [{ segnaposto: "[COSA FA: DA SCRIVERE]" }]),
+        { link: { testo: "Vedi tutte le attività e le lavorazioni", href: `/${v.slug}/` } },
+      ],
+    },
+    sezioneDomande(v.pagina),
+  ];
+}
 
 // Tutti gli H1 chiudono allo stesso modo.
 function titolo(inizio: string): Titolo {

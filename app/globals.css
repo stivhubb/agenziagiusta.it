@@ -400,6 +400,23 @@ textarea {
   color: var(--testo);
 }
 
+/* Domande frequenti: domanda e risposta. */
+.domande {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.domande__voce {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.domande__voce .titolo-scheda {
+  font-size: 20px;
+}
+
 /* ---------- Attività e lavorazioni (pagine verticali) ---------- */
 
 .attivita {

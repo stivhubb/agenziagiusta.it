@@ -46,25 +46,52 @@ un verticale e una città ha la sua pagina (`/web-agency/roma/`).
 - **Città:** una riga in `content/citta.ts`. Nascono le sue pagine sotto tutti i verticali
   e il link in fondo a ogni verticale.
 
-Una pagina senza testi mostra i segnaposto, ha il `noindex` e resta fuori dalla sitemap,
-così non finisce su Google finché non è scritta. Quando i testi ci sono, entra in sitemap da sola.
+Una pagina a cui manca un testo mostra i segnaposto, ha il `noindex` e resta fuori dalla
+sitemap, così non finisce su Google finché non è scritta. Quando i testi ci sono, entra in
+sitemap da sola.
 
-Una pagina tipo + città è fatta di tre parti: il testo sul mercato locale (con le fonti),
-il blocco quiz e l'elenco delle agenzie di quel tipo nella città, con il link al loro sito.
-I contenuti stanno in `content/citta.ts`, nel campo `pagine` della città:
+### Pagina di un verticale
+
+Quattro parti: l'intro con il primo blocco di testo (mercato, costi, cosa fa, domande
+frequenti), il blocco quiz, le attività e lavorazioni, i link alle città. Mercato, costi e
+domande stanno nel file del verticale in `content/testi-verticali/`:
+
+```ts
+mercato: {
+  testo: ["Primo paragrafo."],
+  fonti: [{ nome: "Nome dell'ente", url: "https://..." }],
+},
+costi: {
+  testo: ["Fasce di costo, generiche."],
+  nota: "Fasce elaborate da AgenziaGiusta.it su listini pubblici di agenzie, ottobre 2026.",
+},
+domande: [{ domanda: "Domanda?", risposta: "Risposta." }],
+```
+
+Il verticale va su Google quando ha tutti e tre.
+
+### Pagina tipo + città
+
+Quattro blocchi: l'intro (mercato locale con le fonti, poi i costi), il blocco quiz, cosa fa
+quel tipo di agenzia con le domande frequenti, l'elenco delle agenzie di quel tipo nella città.
+Costi, cosa fa e domande vengono dal verticale e sono uguali in tutte le città. Mercato locale
+ed elenco stanno in `content/citta.ts`, nel campo `pagine` della città:
 
 ```ts
 pagine: {
   "seo-sem": {
     testo: ["Primo paragrafo.", "Secondo paragrafo."],
-    fonti: [{ nome: "Nome della fonte", url: "https://..." }],
-    agenzie: [{ nome: "Nome agenzia", url: "https://...", servizi: "Una riga sui servizi." }],
+    fonti: [{ nome: "Nome dell'ente", url: "https://..." }],
+    agenzie: [{ nome: "Nome agenzia", url: "https://...", comune: "Milano" }],
   },
 }
 ```
 
-La pagina va su Google quando ha sia il testo sia almeno un'agenzia. L'elenco esce in ordine
-alfabetico.
+La pagina va su Google quando ha il testo, almeno un'agenzia e il verticale completo. L'elenco
+esce in ordine alfabetico.
+
+Come fonti si citano per nome solo enti e associazioni. I dati presi da aziende e agenzie si
+aggregano da più fonti e si presentano come dato del sito, con la nota che lo dice.
 
 ## Title, H1 e description
 

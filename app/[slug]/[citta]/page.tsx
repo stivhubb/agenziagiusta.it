@@ -5,7 +5,7 @@ import { BloccoQuizCompatto } from "@/components/BloccoQuizCompatto";
 import { ElencoAgenzie } from "@/components/ElencoAgenzie";
 import { PulsanteContatti } from "@/components/PulsanteContatti";
 import { StrisciaAgenzie } from "@/components/StrisciaAgenzie";
-import { Intro } from "@/components/Testo";
+import { BloccoTesto, Fonti, Intro, Testo } from "@/components/Testo";
 import {
   a,
   citta,
@@ -15,12 +15,13 @@ import {
   titoloLocale,
 } from "@/content/citta";
 import { metadati } from "@/content/metadati";
-import { verticali } from "@/content/verticali";
+import { blocchiCosti, completo, sezioniCosaFa, verticali } from "@/content/verticali";
 
 // Pagine tipo + città (/web-agency/roma/): una pagina statica per ogni incrocio tra
 // i verticali di content/verticali.ts e le città di content/citta.ts.
-// Composizione: testo sul mercato locale (con le fonti), blocco quiz compatto,
-// elenco delle agenzie di quel tipo nella città.
+// Composizione: intro con il mercato locale (con le fonti) e i costi, blocco quiz compatto,
+// cosa fa quel tipo di agenzia con le domande frequenti, elenco delle agenzie di quel tipo
+// nella città. Costi, cosa fa e domande vengono dai testi del verticale.
 
 function trova(slug: string, slugCitta: string) {
   const verticale = verticali.find((v) => v.slug === slug);
@@ -47,8 +48,8 @@ export async function generateMetadata({
     titoloIntero: true,
     descrizione: seo.description,
     percorso: percorsoLocale(voce.verticale, voce.c),
-    // Le pagine senza testo o senza agenzie non vanno indicizzate.
-    indicizza: completa(voce.pagina),
+    // Le pagine a cui manca un testo o l'elenco delle agenzie non vanno indicizzate.
+    indicizza: completa(voce.pagina) && completo(voce.verticale),
   });
 }
 
@@ -67,23 +68,15 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
         percorso={[{ nome: genitore.nome, href: genitore.percorso }, { nome: c.nome }]}
         titolo={titoloLocale(verticale, c)}
         intro={testo.length > 0 ? testo : undefined}
-        segnaposto="[TESTO SUL MERCATO LOCALE: DA SCRIVERE]"
+        segnaposto="[MERCATO LOCALE: DA SCRIVERE]"
       >
-        {fonti.length > 0 && (
-          <p className="fonti">
-            Fonti:{" "}
-            {fonti.map((fonte, i) => (
-              <span key={fonte.url}>
-                {i > 0 && ", "}
-                <a href={fonte.url} target="_blank" rel="noopener">
-                  {fonte.nome}
-                </a>
-              </span>
-            ))}
-          </p>
-        )}
+        {fonti.length > 0 && <Fonti fonti={fonti} />}
+        {blocchiCosti(verticale.pagina).map((blocco, i) => (
+          <BloccoTesto key={i} blocco={blocco} />
+        ))}
       </Intro>
       <BloccoQuizCompatto />
+      <Testo sezioni={sezioniCosaFa(verticale)} />
       <ElencoAgenzie
         titolo={`${verticale.locale.plurale} ${a(c.nome)}`}
         agenzie={voce.pagina?.agenzie ?? []}
