@@ -23,8 +23,10 @@ export function ElencoAgenzie({ titolo, agenzie }: { titolo: string; agenzie: Ag
             ))}
           </ul>
           <p className="agenzie__nota">
-            Elenco in ordine alfabetico, compilato da fonti pubbliche. Non è una classifica né una
-            raccomandazione.
+            Tale elenco è una lista illustrativa ed esemplificativa del panorama di agenzie presenti
+            in città. Le informazioni sono raccolte da fonti pubbliche, a partire dai siti web delle
+            agenzie. La presenza in elenco non implica alcuna collaborazione tra le agenzie citate e
+            AgenziaGiusta.it.
           </p>
         </>
       ) : (
