@@ -195,8 +195,7 @@ export function Quiz() {
         <span>
           {campo.id === "privacy" ? (
             <>
-              Accetto la <Link href={percorsi.privacy}>privacy e policy</Link> per ricevere il
-              brief.
+              Ho letto l&apos;<Link href={percorsi.privacy}>informativa privacy</Link>.
             </>
           ) : (
             campo.etichetta

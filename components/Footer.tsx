@@ -34,7 +34,8 @@ export function Footer() {
             <div className="footer__titolo">Informazioni</div>
             <Link href={percorsi.perLeAgenzie}>Per le agenzie</Link>
             <Link href={percorsi.contatti}>Contatti</Link>
-            <Link href={percorsi.privacy}>Privacy e policy</Link>
+            <Link href={percorsi.privacy}>Privacy</Link>
+            <Link href={percorsi.cookie}>Cookie policy</Link>
           </div>
         </div>
         <div className="footer__note">

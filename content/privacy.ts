@@ -1,51 +1,172 @@
-import { sito } from "./sito";
+import { percorsi, sito } from "./sito";
 import type { Sezione } from "./tipi";
 
-// Testi della pagina Privacy e policy.
-// Testo provvisorio: va redatto con un consulente.
+// Informativa privacy (art. 13 del Regolamento UE 2016/679).
+// Descrive il funzionamento previsto del sito: quando si collegano Supabase e Resend, o si aggiunge
+// uno strumento di misurazione, il testo va controllato. Da far rivedere a un consulente.
 
 export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[] } = {
-  titolo: "Privacy e policy",
-  aggiornamento: "Ultimo aggiornamento: [DATA]",
+  titolo: "Informativa privacy",
+  aggiornamento: "Ultimo aggiornamento: 12 ottobre 2026",
   sezioni: [
     {
       titolo: "Titolare del trattamento",
       blocchi: [
-        `${sito.ragioneSociale}, ${sito.indirizzo}, P. IVA ${sito.partitaIva}. Per le richieste sui tuoi dati scrivi a ${sito.emailPrivacy}.`,
+        `Il titolare del trattamento dei dati raccolti da ${sito.nome} è ${sito.titolare}, ${sito.indirizzo}. Per qualsiasi richiesta sui tuoi dati scrivi a ${sito.emailPrivacy}.`,
       ],
     },
     {
       titolo: "Quali dati raccogliamo",
       blocchi: [
-        "Le risposte che dai nel quiz, i contatti che ci lasci per ricevere il brief e i messaggi che ci invii dai moduli del sito.",
+        {
+          elenco: [
+            {
+              termine: "Risposte al quiz.",
+              testo:
+                "Informazioni sull'azienda e sul progetto: settore, dimensione, sede, prodotti, concorrenti, comunicazione attuale, obiettivi, servizi cercati, fascia di budget, considerazioni. Nei campi liberi ti chiediamo di non inserire dati personali di altre persone.",
+            },
+            {
+              termine: "Dati di contatto del referente.",
+              testo: "Nome e cognome, ruolo in azienda, ragione sociale, email e telefono.",
+            },
+            {
+              termine: "Messaggi dal modulo Contatti.",
+              testo: "Nome, email e testo del messaggio.",
+            },
+            {
+              termine: "Candidature delle agenzie.",
+              testo:
+                "Nome dell'agenzia, email, servizi, settori, fascia di budget dei clienti e zona, inviati dalla pagina Per le agenzie.",
+            },
+            {
+              termine: "Dati di navigazione.",
+              testo:
+                "Indirizzo IP, data e ora, pagina richiesta e tipo di browser, registrati dai server del fornitore di hosting per far funzionare il sito e proteggerlo.",
+            },
+          ],
+        },
       ],
     },
     {
-      titolo: "Perché li trattiamo",
+      titolo: "Perché li trattiamo e su quale base",
       blocchi: [
-        "Per comporre il tuo brief e inviartelo via email e per rispondere alle tue richieste.",
-        { segnaposto: "[BASI GIURIDICHE DEL TRATTAMENTO: DA REDIGERE CON IL CONSULENTE]" },
+        {
+          elenco: [
+            {
+              termine: "Comporre il brief e inviartelo via email.",
+              testo:
+                "È il servizio che chiedi compilando il quiz (art. 6, par. 1, lett. b del Regolamento).",
+            },
+            {
+              termine: "Inviare il brief e i tuoi contatti a un'agenzia, perché possa contattarti.",
+              testo:
+                "Solo con il tuo consenso (art. 6, par. 1, lett. a), che puoi revocare in ogni momento. Mettere in contatto l'azienda con un'agenzia è lo scopo del servizio: per questo il consenso è richiesto per generare il brief.",
+            },
+            {
+              termine: "Rispondere ai messaggi del modulo Contatti.",
+              testo: "Per dare seguito alla tua richiesta (art. 6, par. 1, lett. b).",
+            },
+            {
+              termine: "Valutare le candidature delle agenzie.",
+              testo:
+                "Per avviare una possibile collaborazione richiesta dall'agenzia (art. 6, par. 1, lett. b).",
+            },
+            {
+              termine: "Far funzionare il sito e proteggerlo da abusi.",
+              testo: "Legittimo interesse del titolare (art. 6, par. 1, lett. f).",
+            },
+            {
+              termine: "Rispettare obblighi di legge e difendere i propri diritti.",
+              testo: "Obbligo di legge e legittimo interesse (art. 6, par. 1, lett. c e f).",
+            },
+          ],
+        },
+        "Non usiamo i tuoi dati per inviarti pubblicità e non li vendiamo.",
       ],
     },
     {
       titolo: "Invio del brief a un'agenzia",
       blocchi: [
-        "Per generare il brief ti chiediamo il consenso esplicito a selezionare una sola agenzia e a inviarle il tuo brief e i tuoi contatti, perché possa contattarti. I tuoi dati non vanno ad altre agenzie.",
+        "Con il tuo consenso selezioniamo una sola agenzia adatta al progetto e le inviamo il brief e i tuoi contatti. L'invio è fatto da una persona, non in automatico. I tuoi dati non vanno ad altre agenzie.",
+        "L'agenzia che riceve i dati è un'agenzia partner di AgenziaGiusta.it: le agenzie partner sono segnate con ★ negli elenchi del sito. Da quel momento l'agenzia tratta i tuoi dati come titolare autonomo, per contattarti e valutare il progetto, secondo la propria informativa.",
+      ],
+    },
+    {
+      titolo: "Chi altro può trattare i dati",
+      blocchi: [
+        "Fornitori che ci aiutano a far funzionare il sito e che trattano i dati per nostro conto, come responsabili del trattamento:",
+        {
+          elenco: [
+            { termine: "Vercel Inc.", testo: "hosting del sito." },
+            { termine: "Supabase Inc.", testo: "archivio delle risposte e dei contatti." },
+            { termine: "Resend Inc.", testo: "invio delle email con il brief." },
+          ],
+        },
+        "Vercel e Resend hanno sede negli Stati Uniti. Il trasferimento dei dati avviene sulla base del Data Privacy Framework UE-USA o delle clausole contrattuali tipo approvate dalla Commissione europea. I dati archiviati su Supabase sono conservati in un data center nell'Unione europea.",
+        "I dati possono essere comunicati alle autorità, quando la legge lo richiede.",
       ],
     },
     {
       titolo: "Per quanto tempo li conserviamo",
-      blocchi: [{ segnaposto: "[TEMPI DI CONSERVAZIONE: DA DEFINIRE]" }],
+      blocchi: [
+        {
+          elenco: [
+            {
+              termine: "Brief e contatti:",
+              testo: "24 mesi dall'invio del quiz, oppure fino alla revoca del consenso o a una tua richiesta di cancellazione.",
+            },
+            { termine: "Messaggi dal modulo Contatti:", testo: "12 mesi dall'ultima risposta." },
+            {
+              termine: "Candidature delle agenzie:",
+              testo: "24 mesi dall'invio, oppure per la durata della collaborazione.",
+            },
+            {
+              termine: "Dati di navigazione:",
+              testo: "per il tempo previsto dal fornitore di hosting, non oltre 30 giorni.",
+            },
+          ],
+        },
+        "Restano esclusi i dati che dobbiamo conservare più a lungo per legge. L'agenzia che riceve il brief li conserva secondo la propria informativa.",
+      ],
+    },
+    {
+      titolo: "Dati obbligatori",
+      blocchi: [
+        "I campi obbligatori del quiz e dei moduli servono a fornire il servizio: senza, non è possibile generare il brief o rispondere alla richiesta. I campi facoltativi puoi lasciarli vuoti.",
+      ],
+    },
+    {
+      titolo: "Composizione automatica del brief",
+      blocchi: [
+        "Il brief è scritto in automatico, con regole fisse, a partire dalle tue risposte. Non comporta decisioni automatizzate che producono effetti giuridici o ti riguardano in modo analogo (art. 22 del Regolamento).",
+      ],
     },
     {
       titolo: "I tuoi diritti",
       blocchi: [
-        `Puoi chiedere in ogni momento di vedere, correggere o cancellare i tuoi dati e di revocare il consenso all'invio all'agenzia, scrivendo a ${sito.emailPrivacy}.`,
+        `Puoi chiedere in ogni momento di accedere ai tuoi dati, correggerli, cancellarli, limitarne il trattamento, riceverli in un formato leggibile (portabilità) e opporti al trattamento basato sul legittimo interesse. Puoi revocare il consenso all'invio all'agenzia senza conseguenze sui trattamenti già fatti. Scrivi a ${sito.emailPrivacy}: rispondiamo entro un mese.`,
+        "Se ritieni che il trattamento non rispetti la legge puoi presentare reclamo al Garante per la protezione dei dati personali.",
+        { link: { testo: "Sito del Garante privacy", href: "https://www.garanteprivacy.it/" } },
+      ],
+    },
+    {
+      titolo: "Minori",
+      blocchi: [
+        "Il servizio è rivolto a imprese e professionisti e non è destinato ai minori di 18 anni.",
       ],
     },
     {
       titolo: "Cookie",
-      blocchi: [{ segnaposto: "[COOKIE E STRUMENTI DI MISURAZIONE USATI: DA DEFINIRE]" }],
+      blocchi: [
+        "Il sito non usa cookie di profilazione né strumenti di statistica. Tutti i dettagli sono nella cookie policy.",
+        { link: { testo: "Cookie policy", href: percorsi.cookie } },
+      ],
+    },
+    {
+      titolo: "Modifiche a questa informativa",
+      blocchi: [
+        "Se cambia il modo in cui trattiamo i dati, aggiorniamo questa pagina e la data in cima.",
+      ],
     },
   ],
 };

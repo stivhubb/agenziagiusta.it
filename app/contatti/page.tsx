@@ -63,7 +63,7 @@ export default function Contatti() {
             <div className="nota">Oppure scrivi a {sito.emailContatto}</div>
           </div>
           <div className="nota-modulo">
-            Inviando accetti la <Link href={percorsi.privacy}>privacy e policy</Link>.
+            Come trattiamo i dati è spiegato nell&apos;<Link href={percorsi.privacy}>informativa privacy</Link>.
           </div>
         </form>
       </section>

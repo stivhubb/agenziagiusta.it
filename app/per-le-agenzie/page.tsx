@@ -51,7 +51,7 @@ export default function PerLeAgenzie() {
               {modulo.pulsante}
             </button>
             <div className="nota-modulo">
-              Inviando accetti la <Link href={percorsi.privacy}>privacy e policy</Link>.
+              Come trattiamo i dati è spiegato nell&apos;<Link href={percorsi.privacy}>informativa privacy</Link>.
             </div>
           </form>
         </div>
