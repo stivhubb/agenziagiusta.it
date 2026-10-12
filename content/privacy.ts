@@ -115,7 +115,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
               termine: "Brief e contatti:",
               testo: "24 mesi dall'invio del quiz, oppure fino alla revoca del consenso o a una tua richiesta di cancellazione.",
             },
-            { termine: "Messaggi dal modulo Contatti:", testo: "12 mesi dall'ultima risposta." },
+            { termine: "Messaggi dal modulo Contatti:", testo: "24 mesi dall'ultima risposta." },
             {
               termine: "Candidature delle agenzie:",
               testo: "24 mesi dall'invio, oppure per la durata della collaborazione.",

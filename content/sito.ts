@@ -5,11 +5,9 @@ export const sito = {
   nome: "AgenziaGiusta.it",
   url: "https://agenziagiusta.it",
   motto: "Il punto di partenza per scegliere l'agenzia giusta.",
-  // Titolare del trattamento dei dati (persona fisica).
+  // Titolare del sito e del trattamento dei dati (persona fisica, senza partita IVA).
   titolare: "Stefano Abrescia",
-  ragioneSociale: "[RAGIONE SOCIALE]",
   indirizzo: "[INDIRIZZO]",
-  partitaIva: "[NUMERO]",
   emailContatto: "[EMAIL DI CONTATTO]",
   emailPrivacy: "[EMAIL PRIVACY]",
 };

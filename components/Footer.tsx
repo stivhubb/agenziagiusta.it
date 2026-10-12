@@ -39,7 +39,7 @@ export function Footer() {
           </div>
         </div>
         <div className="footer__note">
-          © 2026 {sito.nome} · {sito.ragioneSociale} · P. IVA {sito.partitaIva}
+          © 2026 {sito.nome} · {sito.titolare}
         </div>
       </div>
     </footer>
