@@ -12,7 +12,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
     {
       titolo: "Titolare del trattamento",
       blocchi: [
-        `Il titolare del trattamento dei dati raccolti da ${sito.nome} è ${sito.titolare}, ${sito.indirizzo}. Per qualsiasi richiesta sui tuoi dati scrivi a ${sito.emailPrivacy}.`,
+        `Il titolare del trattamento dei dati raccolti da ${sito.nome} è ${sito.titolare}. Per qualsiasi richiesta sui tuoi dati scrivi a ${sito.emailPrivacy}.`,
       ],
     },
     {
