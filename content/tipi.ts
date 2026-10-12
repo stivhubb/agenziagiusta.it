@@ -48,13 +48,16 @@ export type Pagina = Testi & { titolo: Titolo };
 // Testi di una pagina tipo + città (/web-agency/roma/).
 // - testo: il mercato di quel tipo di agenzia in quella città, un paragrafo per voce
 // - fonti: da dove vengono dati e notizie citati nel testo (solo enti e associazioni)
-// - agenzie: le agenzie di quel tipo nella città, con il comune della sede e il link al sito
+// - nota: come sono raccolti i dati del testo
+// - agenzie: l'elenco completo delle agenzie di quel tipo nella città, con il link al sito
 // I costi, "cosa fa" e le domande non stanno qui: sono uguali in tutte le città e vengono
 // dai testi del verticale.
-export type Agenzia = { nome: string; url: string; comune: string };
+// partner: agenzia che collabora con AgenziaGiusta.it (segnata con ★ nell'elenco).
+export type Agenzia = { nome: string; url: string; partner?: boolean };
 export type TestiLocali = {
   testo: string[];
   fonti?: Fonte[];
+  nota?: string;
   agenzie: Agenzia[];
 };
 

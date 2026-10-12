@@ -184,16 +184,16 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "pr-ufficio-stampa",
-    nome: "PR e ufficio stampa",
+    nome: "Agenzia di pubbliche relazioni",
     descrizione:
       "Rapporti con giornalisti e testate, comunicati, eventi e cura della reputazione.",
-    titolo: titolo("Agenzia PR e ufficio stampa"),
+    titolo: titolo("Agenzia di pubbliche relazioni e ufficio stampa"),
     seo: {
-      title: "Agenzia PR e ufficio stampa: cosa fa e come lavora",
+      title: "Agenzia di pubbliche relazioni e ufficio stampa: cosa fa",
       description:
-        "Cosa fa un'agenzia PR, come lavora un ufficio stampa e tutte le attività che segue. Prepara il brief e fatti contattare da un'agenzia adatta.",
+        "Cosa fa un'agenzia di pubbliche relazioni, come lavora un ufficio stampa e quali attività segue. Prepara il brief e fatti contattare.",
     },
-    locale: { nome: "Agenzia PR e ufficio stampa", plurale: "Agenzie PR e uffici stampa" },
+    locale: { nome: "Agenzia di pubbliche relazioni", plurale: "Agenzie di pubbliche relazioni" },
     pagina: prUfficioStampa,
   },
   {

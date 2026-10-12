@@ -15,13 +15,15 @@ import {
   titoloLocale,
 } from "@/content/citta";
 import { metadati } from "@/content/metadati";
+import { partnerDi } from "@/content/partner";
 import { blocchiCosti, completo, sezioniCosaFa, verticali } from "@/content/verticali";
 
 // Pagine tipo + città (/web-agency/roma/): una pagina statica per ogni incrocio tra
 // i verticali di content/verticali.ts e le città di content/citta.ts.
 // Composizione: intro con il mercato locale (con le fonti) e i costi, blocco quiz compatto,
 // cosa fa quel tipo di agenzia con le domande frequenti, elenco delle agenzie di quel tipo
-// nella città. Costi, cosa fa e domande vengono dai testi del verticale.
+// nella città (partner e agenzie a rotazione, più l'elenco completo). Costi, cosa fa e domande
+// vengono dai testi del verticale.
 
 function trova(slug: string, slugCitta: string) {
   const verticale = verticali.find((v) => v.slug === slug);
@@ -31,6 +33,9 @@ function trova(slug: string, slugCitta: string) {
 }
 
 export const dynamicParams = false;
+
+// La pagina si rigenera una volta al giorno: le agenzie in evidenza cambiano ogni settimana.
+export const revalidate = 86400;
 
 export function generateStaticParams() {
   return verticali.flatMap((v) => citta.map((c) => ({ slug: v.slug, citta: c.slug })));
@@ -70,6 +75,7 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
         intro={testo.length > 0 ? testo : undefined}
         segnaposto="[MERCATO LOCALE: DA SCRIVERE]"
       >
+        {voce.pagina?.nota && <BloccoTesto blocco={{ nota: voce.pagina.nota }} />}
         {fonti.length > 0 && <Fonti fonti={fonti} />}
         {blocchiCosti(verticale.pagina).map((blocco, i) => (
           <BloccoTesto key={i} blocco={blocco} />
@@ -80,6 +86,9 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
       <ElencoAgenzie
         titolo={`${verticale.locale.plurale} ${a(c.nome)}`}
         agenzie={voce.pagina?.agenzie ?? []}
+        partner={partnerDi(verticale.slug)}
+        citta={c.nome}
+        chiave={percorsoLocale(verticale, c)}
       />
       <StrisciaAgenzie />
       <PulsanteContatti />

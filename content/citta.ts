@@ -1,3 +1,4 @@
+import { datiCitta } from "./dati-citta";
 import type { Seo, TestiLocali, Titolo } from "./tipi";
 import type { Verticale } from "./verticali";
 
@@ -48,7 +49,7 @@ export function seoLocale(verticale: Verticale, c: Citta): Seo {
   };
 }
 
-export const citta: Citta[] = [
+const elenco: Citta[] = [
   {
     slug: "milano",
     nome: "Milano",
@@ -83,3 +84,16 @@ export const citta: Citta[] = [
   { slug: "pescara", nome: "Pescara" },
   { slug: "cagliari", nome: "Cagliari" },
 ];
+
+// Testi ed elenchi delle agenzie della rilevazione (content/dati-citta.ts): il testo si aggiunge
+// dopo quello già scritto nella pagina, l'elenco delle agenzie lo sostituisce.
+export const citta: Citta[] = elenco.map((c) => {
+  const dati = datiCitta(c.slug);
+  if (!dati) return c;
+  const pagine: Record<string, TestiLocali> = { ...c.pagine };
+  for (const [verticale, d] of Object.entries(dati)) {
+    const prima = pagine[verticale];
+    pagine[verticale] = { ...prima, ...d, testo: [...(prima?.testo ?? []), ...d.testo] };
+  }
+  return { ...c, pagine };
+});
