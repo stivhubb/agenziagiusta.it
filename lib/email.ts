@@ -1,7 +1,7 @@
 // Invio delle email del sito con Resend (https://resend.com), tramite la sua API.
 // La chiave sta nella variabile d'ambiente RESEND_API_KEY su Vercel, mai nel codice.
 
-export const MITTENTE = "AgenziaGiusta.it <brief@agenziagiusta.it>";
+export const MITTENTE = "AgenziaGiusta.it <info@agenziagiusta.it>";
 
 // Dove arrivano brief e messaggi dei moduli. Sta qui, e non in content/sito.ts, perché questo
 // file gira solo sul server e l'indirizzo non finisce nel codice scaricato dal browser.
