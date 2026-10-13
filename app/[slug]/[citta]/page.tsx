@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { DatiPercorso } from "@/components/DatiStrutturati";
 import { BloccoQuizCompatto } from "@/components/BloccoQuizCompatto";
 import { ElencoAgenzie } from "@/components/ElencoAgenzie";
+import { Luoghi } from "@/components/Luoghi";
 import { PulsanteContatti } from "@/components/PulsanteContatti";
 import { StrisciaAgenzie } from "@/components/StrisciaAgenzie";
 import { BloccoTesto, Fonti, Intro, Testo } from "@/components/Testo";
@@ -89,6 +90,14 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
         partner={partnerDi(verticale.slug)}
         citta={c.nome}
         chiave={percorsoLocale(verticale, c)}
+      />
+      <Luoghi
+        luoghi={{
+          titolo: `Altri tipi di agenzia ${a(c.nome)}`,
+          voci: verticali
+            .filter((v) => v.slug !== verticale.slug && completa(c.pagine?.[v.slug]))
+            .map((v) => ({ nome: v.nome, href: percorsoLocale(v, c) })),
+        }}
       />
       <StrisciaAgenzie />
       <PulsanteContatti />

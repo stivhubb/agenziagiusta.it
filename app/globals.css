@@ -289,6 +289,77 @@ textarea {
   font-weight: 500;
 }
 
+/* Menu "Tipi di agenzia" */
+.menu-tipi {
+  position: relative;
+}
+
+.menu-tipi summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.menu-tipi summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu-tipi summary::after {
+  content: " ▾";
+  font-size: 12px;
+}
+
+.menu-tipi__voci {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 280px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  border: 1px solid var(--bordo);
+  border-radius: 12px;
+  background: var(--sfondo);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.menu-tipi__voci a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.menu-tipi__voci a:hover {
+  background: var(--sfondo-sezione);
+  color: var(--magenta);
+}
+
+/* Ricerca tipo + città in home */
+.cerca-agenzia {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  padding: clamp(20px, 2.6vw, 28px);
+  border-radius: 16px;
+  background: var(--sfondo);
+}
+
+.cerca-agenzia .campo {
+  flex: 1 1 240px;
+}
+
+.cerca-agenzia select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 12px;
+  border: 1px solid var(--bordo-campo);
+  border-radius: 10px;
+  background: var(--sfondo);
+  font: inherit;
+  color: var(--testo);
+}
+
 /* ---------- Intro delle pagine ---------- */
 
 .hero-home {

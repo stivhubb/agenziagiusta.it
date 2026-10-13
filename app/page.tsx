@@ -10,6 +10,8 @@ import { home } from "@/content/home";
 import { metadati } from "@/content/metadati";
 import { percorsi } from "@/content/sito";
 import { verticali } from "@/content/verticali";
+import { cittaComplete } from "@/content/citta";
+import { CercaAgenzia } from "@/components/CercaAgenzia";
 
 export const metadata: Metadata = metadati({
   titolo: home.seo.title,
@@ -43,6 +45,10 @@ export default function Home() {
             <h2 className="titolo-blocco">{home.verticali.titolo}</h2>
             <p className="sottotitolo">{home.verticali.testo}</p>
           </div>
+          <CercaAgenzia
+            tipi={verticali.map((v) => ({ slug: v.slug, nome: v.nome }))}
+            citta={cittaComplete.map((c) => ({ slug: c.slug, nome: c.nome }))}
+          />
           <div className="griglia griglia--verticali">
             {verticali.map((verticale, i) => (
               <Link key={verticale.slug} href={`/${verticale.slug}/`} className="scheda">

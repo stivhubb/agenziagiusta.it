@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DatiPercorso } from "@/components/DatiStrutturati";
 import { PaginaContenuto } from "@/components/PaginaContenuto";
-import { citta, percorsoLocale } from "@/content/citta";
+import { citta, completa, percorsoLocale } from "@/content/citta";
 import { metadati } from "@/content/metadati";
 import { completo, sezioniVerticale, verticali } from "@/content/verticali";
 
@@ -49,7 +49,9 @@ export default async function Pagina({ params }: PageProps<"/[slug]">) {
         }
         luoghi={{
           titolo: `${verticale.locale.plurale} per città`,
-          voci: citta.map((c) => ({ nome: c.nome, href: percorsoLocale(verticale, c) })),
+          voci: citta
+            .filter((c) => completa(c.pagine?.[verticale.slug]))
+            .map((c) => ({ nome: c.nome, href: percorsoLocale(verticale, c) })),
         }}
       />
     </>

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { percorsi } from "@/content/sito";
+import { verticali } from "@/content/verticali";
+import { MenuTipi } from "./MenuTipi";
 
 export function Logo() {
   return (
@@ -17,6 +19,7 @@ export function Header() {
           <Logo />
         </Link>
         <nav aria-label="Navigazione principale" className="header__nav">
+          <MenuTipi tipi={verticali.map((v) => ({ slug: v.slug, nome: v.nome }))} />
           <Link href={percorsi.comeFunziona}>Come funziona</Link>
           <Link href={percorsi.guida}>Guida</Link>
           <Link href={percorsi.perLeAgenzie}>Per le agenzie</Link>

@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { citta } from "@/content/citta";
+import { cittaComplete } from "@/content/citta";
 import { percorsi, sito } from "@/content/sito";
+import { verticali } from "@/content/verticali";
 import { Logo } from "./Header";
 
 export function Footer() {
@@ -21,14 +22,20 @@ export function Footer() {
             <Link href={percorsi.guida}>{"Guida alla scelta dell'agenzia"}</Link>
           </div>
           <div className="footer__colonna">
+            <div className="footer__titolo">Tipi di agenzia</div>
+            {verticali.map((v) => (
+              <Link key={v.slug} href={`/${v.slug}/`}>
+                {v.nome}
+              </Link>
+            ))}
+          </div>
+          <div className="footer__colonna">
             <div className="footer__titolo">Agenzie per città</div>
-            {citta
-              .filter((c) => c.footer)
-              .map((c) => (
-                <Link key={c.slug} href={`/comunicazione/${c.slug}/`}>
-                  {c.nome}
-                </Link>
-              ))}
+            {cittaComplete.map((c) => (
+              <Link key={c.slug} href={`/comunicazione/${c.slug}/`}>
+                {c.nome}
+              </Link>
+            ))}
           </div>
           <div className="footer__colonna">
             <div className="footer__titolo">Informazioni</div>

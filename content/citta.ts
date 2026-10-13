@@ -97,3 +97,6 @@ export const citta: Citta[] = elenco.map((c) => {
   }
   return { ...c, pagine };
 });
+
+// Città con le pagine complete (quelle della rilevazione): sono le uniche linkate in menu e footer.
+export const cittaComplete: Citta[] = citta.filter((c) => completa(c.pagine?.comunicazione));
