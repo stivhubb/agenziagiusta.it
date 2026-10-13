@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { inviaBrief } from "@/app/azioni";
 import { componiBrief, type BriefComposto } from "@/content/brief";
 import { province } from "@/content/province";
 import { ALTRO, passi, quiz, type Campo } from "@/content/quiz";
@@ -9,11 +10,10 @@ import { percorsi } from "@/content/sito";
 import { Brief } from "./Brief";
 import { Freccia, Spunta } from "./Icone";
 import { PulsanteStampa } from "./PulsanteStampa";
-import { Segnaposto } from "./Testo";
 
 // Quiz + brief. Schermate e campi arrivano da content/quiz.ts.
-// Alla fine il brief viene scritto da content/brief.ts e mostrato nella pagina.
-// Le risposte restano nel browser: non viene ancora salvato né inviato nulla.
+// Alla fine il brief viene scritto da content/brief.ts e mostrato nella pagina; il server
+// (app/azioni.ts) lo manda via email all'azienda, in PDF, e al titolare del sito.
 
 type Valore = string | string[] | boolean;
 type Risposte = Record<string, Valore>;
@@ -60,6 +60,9 @@ export function Quiz() {
   const completato = brief !== null;
   // I contatti si aprono solo dopo il clic su "Genera il brief".
   const [contattiAperti, setContattiAperti] = useState(false);
+  // Invio del brief: in corso, ed eventuale errore.
+  const [invio, setInvio] = useState(false);
+  const [erroreInvio, setErroreInvio] = useState("");
   const cima = useRef<HTMLElement>(null);
 
   const passo = passi[indice];
@@ -94,7 +97,7 @@ export function Quiz() {
     requestAnimationFrame(() => cima.current?.scrollIntoView({ block: "start" }));
   }
 
-  function avanti() {
+  async function avanti() {
     const trovati: Record<string, string> = {};
     for (const campo of passo.campi) {
       const errore = controlla(campo, risposte);
@@ -112,6 +115,19 @@ export function Quiz() {
         month: "long",
         year: "numeric",
       });
+      setInvio(true);
+      setErroreInvio("");
+      let esito: Awaited<ReturnType<typeof inviaBrief>>;
+      try {
+        esito = await inviaBrief(risposte, oggi);
+      } catch {
+        esito = { ok: false, errore: quiz.errori.invio, ricevuto: false };
+      }
+      setInvio(false);
+      if (!esito.ok) {
+        setErroreInvio(esito.errore);
+        if (!esito.ricevuto) return;
+      }
       setBrief(componiBrief(risposte, oggi));
       requestAnimationFrame(() => cima.current?.scrollIntoView({ block: "start" }));
     } else {
@@ -215,8 +231,12 @@ export function Quiz() {
         <div className="brief-pagina__azioni">
           <PulsanteStampa />
         </div>
+        {erroreInvio && (
+          <p className="quiz__errore" role="alert">
+            {erroreInvio}
+          </p>
+        )}
         <Brief brief={brief} />
-        <Segnaposto>{quiz.fine.segnaposto}</Segnaposto>
       </section>
     );
   }
@@ -336,11 +356,17 @@ export function Quiz() {
                 type="button"
                 className="pulsante pulsante--magenta pulsante--medio quiz__avanti"
                 onClick={avanti}
+                disabled={invio}
               >
-                {ultimo ? quiz.pulsanteFine : "Avanti"}
+                {ultimo ? (invio ? quiz.invioInCorso : quiz.pulsanteFine) : "Avanti"}
                 <Freccia />
               </button>
             </div>
+            {ultimo && erroreInvio && (
+              <p className="quiz__errore" role="alert">
+                {erroreInvio}
+              </p>
+            )}
           </>
         )}
       </div>

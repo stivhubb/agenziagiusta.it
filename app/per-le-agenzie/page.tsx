@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Campo } from "@/components/Campo";
 import { Spunta } from "@/components/Icone";
 import { PulsanteContatti } from "@/components/PulsanteContatti";
 import { Intro, Testo } from "@/components/Testo";
@@ -14,7 +13,8 @@ export const metadata: Metadata = metadati({
   percorso: percorsi.perLeAgenzie,
 });
 
-// Questa pagina non ha la striscia agenzie: al posto del blocco quiz c'è il modulo per i partner.
+// Questa pagina non ha la striscia agenzie: al posto del blocco quiz c'è il rimando
+// al modulo per i partner della pagina Contatti.
 export default function PerLeAgenzie() {
   const { blocco, modulo } = perLeAgenzie;
   return (
@@ -37,23 +37,13 @@ export default function PerLeAgenzie() {
             </ul>
           </div>
 
-          {/* Primo giro: il modulo si vede ma non invia nulla. */}
-          <form className="modulo modulo--scheda">
-            {modulo.campi.slice(0, 2).map((campo) => (
-              <Campo key={campo.id} {...campo} />
-            ))}
-            <div className="modulo__griglia">
-              {modulo.campi.slice(2).map((campo) => (
-                <Campo key={campo.id} {...campo} />
-              ))}
-            </div>
-            <button type="button" className="pulsante pulsante--nero">
+          {/* La richiesta si invia dalla pagina Contatti, con lo switch già su "agenzia". */}
+          <div className="modulo modulo--scheda">
+            <p className="paragrafo">{modulo.testo}</p>
+            <Link href={`${percorsi.contatti}?per=agenzia`} className="pulsante pulsante--nero">
               {modulo.pulsante}
-            </button>
-            <div className="nota-modulo">
-              Come trattiamo i dati è spiegato nell&apos;<Link href={percorsi.privacy}>informativa privacy</Link>.
-            </div>
-          </form>
+            </Link>
+          </div>
         </div>
       </section>
 

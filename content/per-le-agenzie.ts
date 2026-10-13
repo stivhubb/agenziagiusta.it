@@ -1,11 +1,11 @@
 import type { Pagina, Seo } from "./tipi";
 
 // Testi della pagina Per le agenzie.
-// I campi del modulo sono una proposta: quelli definitivi sono da decidere.
+// Il modulo per diventare partner è nella pagina Contatti (switch "Sono un'agenzia").
 
 export const perLeAgenzie: Pagina & {
   blocco: { occhiello: string; titolo: string; testo: string; vantaggi: string[] };
-  modulo: { campi: { id: string; etichetta: string; tipo?: string }[]; pulsante: string };
+  modulo: { testo: string; pulsante: string };
   seo: Seo;
 } = {
   titolo: { testo: "Clienti che arrivano con", evidenza: "un brief già scritto." },
@@ -32,16 +32,9 @@ export const perLeAgenzie: Pagina & {
     ],
   },
   modulo: {
-    // I primi due campi occupano tutta la riga, gli altri vanno in griglia.
-    campi: [
-      { id: "ag-nome", etichetta: "Nome dell'agenzia" },
-      { id: "ag-email", etichetta: "Email", tipo: "email" },
-      { id: "ag-servizi", etichetta: "Servizi offerti" },
-      { id: "ag-settori", etichetta: "Settori" },
-      { id: "ag-budget", etichetta: "Fascia di budget dei clienti" },
-      { id: "ag-zona", etichetta: "Zona" },
-    ],
-    pulsante: "Invia la richiesta",
+    testo:
+      "Compila il modulo per le agenzie nella pagina Contatti: servizi, settori, fascia di budget dei clienti e zona.",
+    pulsante: "Diventa agenzia partner",
   },
   sezioni: [
     {

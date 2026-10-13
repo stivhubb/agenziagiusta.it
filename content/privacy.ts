@@ -2,8 +2,9 @@ import { percorsi, sito } from "./sito";
 import type { Sezione } from "./tipi";
 
 // Informativa privacy (art. 13 del Regolamento UE 2016/679).
-// Descrive il funzionamento previsto del sito: quando si collegano Supabase e Resend, o si aggiunge
-// uno strumento di misurazione, il testo va controllato. Da far rivedere a un consulente.
+// Funzionamento del sito: le richieste arrivano via email (Resend) alla casella del titolare (Gmail);
+// nessun database. Se si aggiunge un archivio o uno strumento di misurazione, il testo va aggiornato.
+// Da far rivedere a un consulente.
 
 export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[] } = {
   titolo: "Informativa privacy",
@@ -31,12 +32,12 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
             },
             {
               termine: "Messaggi dal modulo Contatti.",
-              testo: "Nome, email e testo del messaggio.",
+              testo: "Nome, azienda (se la indichi), email e testo del messaggio.",
             },
             {
               termine: "Candidature delle agenzie.",
               testo:
-                "Nome dell'agenzia, email, servizi, settori, fascia di budget dei clienti e zona, inviati dalla pagina Per le agenzie.",
+                "Nome dell'agenzia, email, sito, servizi, settori, fascia di budget dei clienti, zona e messaggio, inviati dal modulo Contatti scegliendo \"Sono un'agenzia\".",
             },
             {
               termine: "Dati di navigazione.",
@@ -98,11 +99,11 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
         {
           elenco: [
             { termine: "Vercel Inc.", testo: "hosting del sito." },
-            { termine: "Supabase Inc.", testo: "archivio delle risposte e dei contatti." },
-            { termine: "Resend Inc.", testo: "invio delle email con il brief." },
+            { termine: "Resend Inc.", testo: "invio delle email con il brief e con i messaggi dei moduli." },
+            { termine: "Google Ireland Ltd.", testo: "casella email (Gmail) in cui il titolare riceve e conserva le richieste." },
           ],
         },
-        "Vercel e Resend hanno sede negli Stati Uniti. Il trasferimento dei dati avviene sulla base del Data Privacy Framework UE-USA o delle clausole contrattuali tipo approvate dalla Commissione europea. I dati archiviati su Supabase sono conservati in un data center nell'Unione europea.",
+        "Il sito non usa un database: brief, contatti e messaggi arrivano via email al titolare e sono conservati nella sua casella. Vercel, Resend e Google possono trattare i dati anche negli Stati Uniti: il trasferimento avviene sulla base del Data Privacy Framework UE-USA o delle clausole contrattuali tipo approvate dalla Commissione europea.",
         "I dati possono essere comunicati alle autorità, quando la legge lo richiede.",
       ],
     },
@@ -113,7 +114,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
           elenco: [
             {
               termine: "Brief e contatti:",
-              testo: "24 mesi dall'invio del quiz, oppure fino alla revoca del consenso o a una tua richiesta di cancellazione.",
+              testo: "24 mesi dall'invio del quiz, oppure fino alla revoca del consenso o a una tua richiesta di cancellazione. Alla scadenza le email vengono cancellate.",
             },
             { termine: "Messaggi dal modulo Contatti:", testo: "24 mesi dall'ultima risposta." },
             {

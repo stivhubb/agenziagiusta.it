@@ -335,12 +335,12 @@ export const quiz = {
     pulsante: "Genera il brief",
   },
   pulsanteFine: "Ricevi il brief",
+  invioInCorso: "Invio in corso…",
   // Schermata finale: il brief scritto da content/brief.ts.
   fine: {
     titolo: "Il tuo brief è pronto.",
-    testo: "Lo trovi qui sotto: puoi stamparlo o salvarlo in PDF.",
-    // Il salvataggio dei contatti e l'invio via email non sono ancora collegati.
-    segnaposto: "[INVIO DEL BRIEF VIA EMAIL E SALVATAGGIO DEI CONTATTI: DA COLLEGARE]",
+    testo:
+      "Te l'abbiamo inviato via email in PDF e lo trovi anche qui sotto. Ora lo giriamo a un'agenzia adatta al tuo progetto, che ti contatterà.",
   },
   brief: {
     titolo: "Il tuo brief prende forma",
@@ -351,5 +351,6 @@ export const quiz = {
     altro: "Specifica la voce Altro.",
     email: "Inserisci un indirizzo email valido.",
     casella: "Consenso necessario per generare e ricevere il brief.",
+    invio: "Invio non riuscito. Riprova tra qualche minuto.",
   },
 };

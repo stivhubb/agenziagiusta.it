@@ -1,34 +1,26 @@
-import { percorsi } from "./sito";
-
-// Testi della pagina Contatti.
-// I campi del modulo sono una proposta: quelli definitivi sono da decidere.
+// Testi della pagina Contatti: un solo modulo, con lo switch tra azienda e agenzia.
 
 export const contatti = {
   titolo: { testo: "Come possiamo", evidenza: "aiutarti?" },
-  apertura: "Scegli il motivo per cui ci scrivi: ti portiamo subito nel posto giusto.",
-  // La terza scelta porta al modulo in fondo alla pagina.
-  scelte: [
-    {
-      titolo: "Cerco un'agenzia",
-      testo: "Parti dal quiz: in pochi minuti hai il tuo brief.",
-      link: "Vai al quiz",
-      href: percorsi.quiz,
-    },
-    {
-      titolo: "Sono un'agenzia",
-      testo: "Scopri come diventare partner e ricevere i brief.",
-      link: "Vai alla pagina per le agenzie",
-      href: percorsi.perLeAgenzie,
-    },
-    {
-      titolo: "Altro",
-      testo: "Per qualsiasi altra domanda, scrivici qui sotto.",
-      link: "Scrivici",
-      href: "#modulo",
-    },
-  ],
+  apertura:
+    "Scrivici: dicci se sei un'azienda che cerca informazioni o un'agenzia che vuole lavorare con noi.",
   modulo: {
-    titolo: "Scrivici",
-    pulsante: "Invia il messaggio",
+    azienda: {
+      etichetta: "Sono un'azienda",
+      titolo: "Scrivici",
+      testo: "Per qualsiasi domanda sul servizio. Se cerchi un'agenzia, il modo più rapido è il quiz:",
+      linkQuiz: "prepara il brief.",
+      pulsante: "Invia il messaggio",
+    },
+    agenzia: {
+      etichetta: "Sono un'agenzia",
+      titolo: "Diventa agenzia partner",
+      testo: "Raccontaci chi siete e che clienti seguite: ti ricontattiamo per spiegarti come funziona.",
+      pulsante: "Invia la richiesta",
+    },
+  },
+  inviato: {
+    titolo: "Messaggio inviato.",
+    testo: "Grazie: ti rispondiamo il prima possibile all'indirizzo email che ci hai lasciato.",
   },
 };
