@@ -7,8 +7,9 @@ export const sito = {
   motto: "Il punto di partenza per scegliere l'agenzia giusta.",
   // Titolare del sito e del trattamento dei dati (persona fisica, senza partita IVA).
   titolare: "Stefano Abrescia",
-  emailContatto: "stivhubb@gmail.com",
-  emailPrivacy: "stivhubb@gmail.com",
+  // Indirizzi pubblici del sito (inoltrati alla casella del titolare).
+  emailContatto: "info@agenziagiusta.it",
+  emailPrivacy: "info@agenziagiusta.it",
 };
 
 // Indirizzi delle pagine fisse: proposta del documento di struttura, non ancora confermata.

@@ -4,7 +4,7 @@ import { componiBrief, type Risposte } from "@/content/brief";
 import { passi } from "@/content/quiz";
 import { sito } from "@/content/sito";
 import { briefHtml, briefPdf, briefTesto } from "@/lib/brief-email";
-import { html, inviaEmail } from "@/lib/email";
+import { DESTINATARIO, html, inviaEmail } from "@/lib/email";
 
 // Azioni eseguite sul server: invio del brief e dei messaggi del modulo Contatti.
 // Non si salva niente in un database: ogni invio diventa un'email al titolare del sito.
@@ -64,7 +64,7 @@ export async function inviaBrief(grezze: Risposte, data: string): Promise<EsitoB
   });
 
   const titolare = await inviaEmail({
-    a: sito.emailContatto,
+    a: DESTINATARIO,
     oggetto: `Nuovo brief: ${brief.ragioneSociale}`,
     rispondiA: email,
     allegati,
@@ -126,7 +126,7 @@ export async function inviaContatto(_prima: EsitoContatto, dati: FormData): Prom
 
   const tipo = chi === "agenzia" ? "Candidatura agenzia" : "Messaggio da un'azienda";
   const ok = await inviaEmail({
-    a: sito.emailContatto,
+    a: DESTINATARIO,
     oggetto: `${tipo}: ${nome}`,
     rispondiA: email,
     testo: `${tipo} dal sito.\n\n${valori.map(([e, v]) => `${e}: ${v || "-"}`).join("\n")}`,

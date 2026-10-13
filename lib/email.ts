@@ -3,6 +3,10 @@
 
 export const MITTENTE = "AgenziaGiusta.it <brief@agenziagiusta.it>";
 
+// Dove arrivano brief e messaggi dei moduli. Sta qui, e non in content/sito.ts, perché questo
+// file gira solo sul server e l'indirizzo non finisce nel codice scaricato dal browser.
+export const DESTINATARIO = "stivhubb@gmail.com";
+
 type Allegato = { filename: string; content: Uint8Array };
 
 export async function inviaEmail(email: {
