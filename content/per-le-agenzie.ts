@@ -12,7 +12,7 @@ export const perLeAgenzie: Pagina & {
   seo: {
     title: "Per le agenzie: ricevi brief già scritti",
     description:
-      "Ricevi brief già scritti da aziende in linea con i tuoi servizi, settori e budget. Nessun costo per i contatti: scopri come diventare partner.",
+      "Ricevi brief già scritti da aziende in linea con i tuoi servizi, settori e budget. Scopri come diventare agenzia partner.",
   },
   intro: [
     "Le aziende che passano da AgenziaGiusta.it hanno già chiarito cosa cercano, con quali obiettivi e con quale budget. Ti inviamo solo i progetti in linea con quello che fai.",
@@ -26,8 +26,8 @@ export const perLeAgenzie: Pagina & {
     testo:
       "Ci servono poche informazioni per capire quali progetti fanno al caso tuo. Ti ricontattiamo noi.",
     vantaggi: [
-      "Nessun costo per i contatti",
-      "Compenso solo a contratto firmato",
+      "Brief già strutturati e completi",
+      "Condizioni definite con ogni agenzia",
       "Ogni brief va a una sola agenzia",
     ],
   },
@@ -44,10 +44,9 @@ export const perLeAgenzie: Pagina & {
       ],
     },
     {
-      titolo: "Quanto costa",
+      titolo: "Condizioni",
       blocchi: [
-        "Non paghi per ricevere i brief. Il compenso è dovuto solo quando firmi un contratto con il cliente.",
-        { segnaposto: "[IMPORTO E CONDIZIONI DEL COMPENSO: DA DEFINIRE]" },
+        "Le condizioni di collaborazione le definiamo direttamente con ogni agenzia partner, in base ai progetti e ai clienti che segue. Scrivici dal modulo per parlarne.",
       ],
     },
     {

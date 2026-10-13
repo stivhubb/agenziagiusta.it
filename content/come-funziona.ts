@@ -40,8 +40,8 @@ export const comeFunziona: Pagina & {
     {
       titolo: "Quanto costa",
       blocchi: [
-        // DA CONFERMARE: il compenso solo a contratto firmato.
-        "Per le aziende il servizio è gratuito. L'agenzia ci riconosce un compenso solo se firmi un contratto con lei.",
+        // Il compenso con le agenzie non si esplicita sul sito: si tratta con ogni agenzia.
+        "Per le aziende il servizio è gratuito.",
       ],
     },
     {
