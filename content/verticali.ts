@@ -26,6 +26,8 @@ import { webAgency } from "./testi-verticali/web-agency";
 export type Verticale = {
   slug: string;
   nome: string;
+  // Come compare il tipo nella ricerca in home quando si cerca per servizio.
+  servizio: string;
   descrizione: string;
   percorso?: string;
   titolo: Titolo;
@@ -98,6 +100,7 @@ export const verticali: Verticale[] = [
   // "pubblicitaria": per una piccola o media impresa il bisogno è lo stesso.
   {
     slug: "comunicazione",
+    servizio: "Strategia, campagne e comunicazione completa",
     nome: "Comunicazione, marketing e pubblicità",
     descrizione:
       "L'agenzia a cui affidare l'immagine dell'azienda e le campagne, online e offline: strategia, creatività e pianificazione.",
@@ -112,6 +115,7 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "media",
+    servizio: "Pubblicità su TV, radio, stampa e affissioni",
     nome: "Agenzia media",
     descrizione:
       "Pianificazione e acquisto degli spazi pubblicitari su tv, radio, stampa, affissioni e online.",
@@ -127,6 +131,7 @@ export const verticali: Verticale[] = [
   // Unisce le due aree "digital e web marketing" e "web agency, siti ed e-commerce".
   {
     slug: "web-agency",
+    servizio: "Siti web, e-commerce e campagne online",
     nome: "Web agency e digital marketing",
     descrizione:
       "Siti, e-commerce e campagne online: dalla realizzazione alla promozione, con l'analisi dei dati.",
@@ -141,6 +146,7 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "branding",
+    servizio: "Logo, immagine coordinata, grafica e packaging",
     nome: "Branding, grafica e design",
     descrizione:
       "Nome, logo, identità visiva e materiali coordinati per dare un volto riconoscibile al marchio.",
@@ -155,6 +161,7 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "creativita",
+    servizio: "Idee e concept per le campagne",
     nome: "Creatività e campagne",
     descrizione:
       "Idee, concept e campagne: dal messaggio alla direzione creativa di contenuti e materiali.",
@@ -169,6 +176,7 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "social-media",
+    servizio: "Gestione dei social e influencer",
     nome: "Social media e influencer",
     descrizione:
       "Piani editoriali, gestione delle pagine, campagne a pagamento e collaborazioni con i creator.",
@@ -184,6 +192,7 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "pr-ufficio-stampa",
+    servizio: "Ufficio stampa e rapporti con i giornali",
     nome: "Agenzia di pubbliche relazioni",
     descrizione:
       "Rapporti con giornalisti e testate, comunicati, eventi e cura della reputazione.",
@@ -198,6 +207,7 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "seo-sem",
+    servizio: "Posizionamento su Google e Google Ads",
     nome: "SEO e SEM",
     descrizione:
       "Posizionamento sui motori di ricerca e campagne a pagamento sui risultati di Google.",
@@ -212,6 +222,7 @@ export const verticali: Verticale[] = [
   },
   {
     slug: "video-foto",
+    servizio: "Video, spot e servizi fotografici",
     nome: "Produzione video e foto",
     descrizione: "Video aziendali, spot, servizi fotografici e contenuti per i social.",
     titolo: titolo("Agenzia di produzione video e foto"),

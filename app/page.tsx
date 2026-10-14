@@ -28,6 +28,10 @@ export default function Home() {
         <div className="occhiello occhiello--punto">{home.occhiello}</div>
         <TitoloPagina titolo={home.titolo} className="titolo-home" />
         <p className="apertura">{home.apertura}</p>
+        <CercaAgenzia
+          tipi={verticali.map((v) => ({ slug: v.slug, nome: v.nome, servizio: v.servizio }))}
+          citta={cittaComplete.map((c) => ({ slug: c.slug, nome: c.nome }))}
+        />
         <div className="hero-home__azioni">
           <Link href={percorsi.quiz} className="pulsante pulsante--magenta">
             Inizia il quiz
@@ -45,10 +49,6 @@ export default function Home() {
             <h2 className="titolo-blocco">{home.verticali.titolo}</h2>
             <p className="sottotitolo">{home.verticali.testo}</p>
           </div>
-          <CercaAgenzia
-            tipi={verticali.map((v) => ({ slug: v.slug, nome: v.nome }))}
-            citta={cittaComplete.map((c) => ({ slug: c.slug, nome: c.nome }))}
-          />
           <div className="griglia griglia--verticali">
             {verticali.map((verticale, i) => (
               <Link key={verticale.slug} href={`/${verticale.slug}/`} className="scheda">

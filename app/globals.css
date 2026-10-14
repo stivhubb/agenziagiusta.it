@@ -334,30 +334,48 @@ textarea {
   color: var(--magenta);
 }
 
-/* Ricerca tipo + città in home */
+/* Ricerca in home: switch agenzia/servizio, cosa e dove */
 .cerca-agenzia {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 980px;
+  padding: clamp(16px, 2.2vw, 24px);
+  border: 1px solid var(--bordo);
+  border-radius: 20px;
+  background: var(--sfondo);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.cerca-agenzia__campi {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  gap: 16px;
-  padding: clamp(20px, 2.6vw, 28px);
-  border-radius: 16px;
-  background: var(--sfondo);
+  gap: 12px;
 }
 
 .cerca-agenzia .campo {
-  flex: 1 1 240px;
+  flex: 1 1 200px;
+}
+
+.cerca-agenzia__cosa {
+  flex: 2 1 280px !important;
 }
 
 .cerca-agenzia select {
   width: 100%;
-  min-height: 48px;
+  min-height: 52px;
   padding: 0 12px;
   border: 1px solid var(--bordo-campo);
-  border-radius: 10px;
+  border-radius: 12px;
   background: var(--sfondo);
   font: inherit;
   color: var(--testo);
+}
+
+.cerca-agenzia .pulsante {
+  min-height: 52px;
 }
 
 /* ---------- Intro delle pagine ---------- */
