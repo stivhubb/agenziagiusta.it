@@ -259,6 +259,7 @@ textarea {
 /* ---------- Header ---------- */
 
 .header {
+  position: relative;
   border-bottom: 1px solid var(--bordo);
   background: var(--sfondo);
 }
@@ -287,6 +288,87 @@ textarea {
   gap: 8px 32px;
   font-size: 16px;
   font-weight: 500;
+}
+
+/* Menu ☰ per telefono e tablet */
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .header__interno {
+    flex-wrap: nowrap;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  .menu-mobile__pulsante {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--bordo);
+    border-radius: 12px;
+    background: var(--sfondo);
+    font-size: 22px;
+    line-height: 1;
+    color: var(--testo);
+    cursor: pointer;
+  }
+
+  .menu-mobile__pannello {
+    position: absolute;
+    z-index: 30;
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 20px 20px;
+    border-bottom: 1px solid var(--bordo);
+    background: var(--sfondo);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .menu-mobile__pannello > a,
+  .menu-mobile__tipi summary {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--bordo);
+  }
+
+  .menu-mobile__tipi summary {
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .menu-mobile__tipi summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .menu-mobile__tipi summary::after {
+    content: " ▾";
+    font-size: 14px;
+  }
+
+  .menu-mobile__tipi ul {
+    margin: 0;
+    padding: 4px 0 8px 12px;
+    list-style: none;
+    border-bottom: 1px solid var(--bordo);
+  }
+
+  .menu-mobile__tipi li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--testo-secondario);
+  }
 }
 
 /* Menu "Tipi di agenzia" */
