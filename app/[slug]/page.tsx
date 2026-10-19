@@ -44,7 +44,7 @@ export default async function Pagina({ params }: PageProps<"/[slug]">) {
         pagina={
           verticale.pagina && {
             ...verticale.pagina,
-            sezioni: sezioniVerticale(verticale.pagina),
+            sezioni: sezioniVerticale(verticale),
           }
         }
         luoghi={{

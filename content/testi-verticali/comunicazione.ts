@@ -4,7 +4,7 @@ import { gruppo } from "./gruppo";
 export const comunicazione: Testi = {
   intro: [
     "Un'agenzia di comunicazione è la struttura a cui un'azienda affida la gestione della propria immagine e delle attività con cui si fa conoscere dal mercato: posizionamento, messaggi, campagne e canali.",
-    "Le denominazioni agenzia di marketing e agenzia pubblicitaria indicano, per una piccola o media impresa, lo stesso tipo di fornitore: un interlocutore unico che parte dagli obiettivi commerciali dell'azienda e li traduce in un piano di comunicazione integrato, cioè coordinato su più mezzi.",
+    "Agenzie di comunicazione, agenzie di marketing e agenzie pubblicitarie offrono spesso servizi simili, ma partono da punti diversi: l'agenzia di marketing dagli obiettivi commerciali, l'agenzia di pubblicità dalla campagna, l'agenzia di comunicazione dall'immagine e dai messaggi dell'azienda. Il suo tratto distintivo è la regia: un interlocutore unico che traduce gli obiettivi in un piano di comunicazione integrato, cioè coordinato su più mezzi.",
   ],
   sezioni: [
     {

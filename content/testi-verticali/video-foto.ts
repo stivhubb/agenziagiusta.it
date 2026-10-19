@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const videoFoto: Testi = {
   intro: [
-    "Un'agenzia di produzione video e foto, o casa di produzione, realizza i contenuti audiovisivi e fotografici di un'azienda: spot, video istituzionali, contenuti per il web e i social media, servizi fotografici di prodotto e di campagna.",
+    "Un'agenzia video, cioè un'agenzia di produzione video e foto o casa di produzione, realizza i contenuti audiovisivi e fotografici di un'azienda: spot pubblicitari, video istituzionali, contenuti per il web e i social media, servizi fotografici di prodotto e di campagna.",
     "Segue l'intero processo, dall'ideazione alla consegna dei file definitivi, oppure interviene sulla sola realizzazione, a partire da un progetto creativo già definito dall'azienda o dalla sua agenzia.",
   ],
   sezioni: [

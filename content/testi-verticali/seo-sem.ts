@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const seoSem: Testi = {
   intro: [
-    "Un'agenzia SEO lavora sulla visibilità di un sito nei motori di ricerca. La SEO (Search Engine Optimization) è l'insieme degli interventi che migliorano il posizionamento nei risultati organici, cioè non a pagamento.",
+    "Un'agenzia SEO, o SEO agency, lavora sulla visibilità di un sito nei motori di ricerca. La SEO (Search Engine Optimization) è l'insieme degli interventi che migliorano il posizionamento nei risultati organici, cioè non a pagamento.",
     "A questa si affianca la SEM (Search Engine Marketing), che comprende gli annunci a pagamento nelle pagine dei risultati. Le due attività sono complementari: entrambe intercettano utenti che stanno già cercando un prodotto, un servizio o un'informazione.",
   ],
   sezioni: [

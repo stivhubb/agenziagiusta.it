@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const media: Testi = {
   intro: [
-    "Un'agenzia media, detta anche centro media, è la struttura specializzata nella pianificazione e nell'acquisto degli spazi pubblicitari: stabilisce su quali mezzi, in quali periodi e con quale investimento una campagna deve uscire per raggiungere il pubblico previsto.",
+    "Un'agenzia media, detta anche centro media o media agency, è la struttura specializzata nella pianificazione e nell'acquisto degli spazi pubblicitari: stabilisce su quali mezzi, in quali periodi e con quale investimento una campagna deve uscire per raggiungere il pubblico previsto.",
     "Non realizza i contenuti della campagna, che restano di competenza dell'agenzia creativa o dell'azienda: interviene sulla loro diffusione, con l'obiettivo di ottenere la massima efficacia dal budget disponibile.",
   ],
   sezioni: [

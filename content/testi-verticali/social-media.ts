@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const socialMedia: Testi = {
   intro: [
-    "Un'agenzia di social media marketing gestisce la presenza di un'azienda sulle piattaforme social: definisce la strategia, produce i contenuti, cura il rapporto con gli utenti e pianifica le campagne a pagamento.",
+    "Un'agenzia di social media marketing, o social media agency, gestisce la presenza di un'azienda sulle piattaforme social: definisce la strategia, produce i contenuti, cura il rapporto con gli utenti e pianifica le campagne a pagamento.",
     "L'attività comprende una componente organica, cioè i contenuti pubblicati sui profili senza investimento pubblicitario, e una componente a pagamento, il social advertising, che ne estende la diffusione verso pubblici definiti.",
   ],
   sezioni: [

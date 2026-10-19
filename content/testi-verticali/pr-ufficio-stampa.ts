@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const prUfficioStampa: Testi = {
   intro: [
-    "Un'agenzia di PR e ufficio stampa gestisce le relazioni tra un'azienda e i suoi pubblici di riferimento: giornalisti, media, istituzioni, comunità locali, opinione pubblica.",
+    "Un'agenzia PR, o agenzia di pubbliche relazioni e ufficio stampa, gestisce le relazioni tra un'azienda e i suoi pubblici di riferimento: giornalisti, media, istituzioni, comunità locali, opinione pubblica.",
     "Non opera attraverso l'acquisto di spazi pubblicitari: la visibilità deriva dall'interesse giornalistico delle notizie e dalla credibilità delle fonti che le riportano (earned media). L'obiettivo principale è la reputazione dell'azienda.",
   ],
   sezioni: [

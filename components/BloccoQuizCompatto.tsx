@@ -11,9 +11,8 @@ export function BloccoQuizCompatto() {
     <section id="quiz-brief" className="contenitore">
       <div className="blocco-compatto">
         <div className="blocco-compatto__testo">
-          <h2 className="titolo-testo">
-            Rispondi a poche domande e costruisci il tuo brief perfetto.
-          </h2>
+          {/* Non è un titolo di sezione: resta fuori dagli H2 della pagina, che portano le parole chiave. */}
+          <p className="titolo-testo">Rispondi a poche domande e costruisci il tuo brief perfetto.</p>
           <ol className="passi-compatti">
             {passi.map((passo, i) => (
               <li key={passo}>

@@ -3,12 +3,12 @@ import { gruppo } from "./gruppo";
 
 export const branding: Testi = {
   intro: [
-    "Un'agenzia di branding definisce e costruisce l'identità di una marca: il posizionamento, il nome, l'aspetto visivo e il linguaggio con cui un'azienda, un prodotto o un servizio si presentano al mercato.",
+    "Un'agenzia di grafica e branding, o branding agency, definisce e costruisce l'identità di una marca: il posizionamento, il nome, l'aspetto visivo e il linguaggio con cui un'azienda, un prodotto o un servizio si presentano al mercato. Si parla anche di agenzia di design o studio grafico, soprattutto quando il lavoro riguarda la parte visiva.",
     "Il suo lavoro precede e orienta tutte le attività di comunicazione successive: campagne, sito, materiali commerciali e packaging applicano le regole stabilite dal progetto di identità.",
   ],
   sezioni: [
     {
-      titolo: "Cosa fa un'agenzia di branding",
+      titolo: "Cosa fa un'agenzia di grafica e branding",
       blocchi: [
         "Il progetto ha una componente strategica e una visiva. La prima riguarda la brand strategy: l'agenzia analizza l'azienda, il mercato e i concorrenti e definisce il posizionamento, cioè lo spazio che la marca intende occupare nella percezione del pubblico, insieme a valori, personalità e promessa. Rientrano in questa fase il naming, l'ideazione del nome, e la brand architecture, che regola i rapporti tra marca principale, linee e prodotti.",
         "La seconda componente è la brand identity, la traduzione della strategia in un sistema visivo e verbale: logo, palette colori, tipografia, stile fotografico e illustrativo, tone of voice. Il sistema viene poi applicato ai diversi supporti: immagine coordinata, packaging, materiali commerciali, interfacce digitali, segnaletica.",

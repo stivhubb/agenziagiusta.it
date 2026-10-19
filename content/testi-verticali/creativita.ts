@@ -3,12 +3,12 @@ import { gruppo } from "./gruppo";
 
 export const creativita: Testi = {
   intro: [
-    "Un'agenzia creativa idea e realizza i contenuti della comunicazione: il concept di una campagna, i testi, le immagini e i formati con cui un messaggio viene trasmesso al pubblico.",
+    "Un'agenzia creativa, o creative agency, idea e realizza i contenuti della comunicazione: il concept di una campagna, i testi, le immagini e i formati con cui un messaggio viene trasmesso al pubblico.",
     "La sua competenza specifica è la traduzione di un obiettivo di marketing in un'idea riconoscibile e memorabile, declinata in modo coerente su tutti i mezzi previsti.",
   ],
   sezioni: [
     {
-      titolo: "Cosa fa un'agenzia creativa",
+      titolo: "Cosa fa una creative agency",
       blocchi: [
         "Il lavoro prende avvio dal brief dell'azienda, da cui l'agenzia ricava un insight: un'osservazione sul pubblico o sul prodotto su cui costruire il messaggio. Dall'insight nasce il concept creativo, l'idea di fondo della campagna, che viene espressa in un titolo (headline), in un trattamento visivo e in un tono di voce.",
         "Il concept viene poi declinato nei singoli materiali: annunci stampa, spot televisivi e radiofonici, affissioni, video per il web, contenuti per i social media, materiali per il punto vendita, attivazioni ed eventi. L'agenzia cura la direzione creativa della produzione, coordinando registi, fotografi, illustratori e case di produzione, e verifica che ogni esecuzione rispetti l'idea approvata.",
