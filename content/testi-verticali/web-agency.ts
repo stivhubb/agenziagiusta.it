@@ -32,7 +32,7 @@ export const webAgency: Testi = {
       "La realizzazione di un sito è remunerata a progetto. Per il sito aziendale di una piccola impresa il costo si colloca in genere tra 1.200 e 3.500 euro; per un e-commerce si parte in genere da 4.500 euro e si sale con il numero di prodotti e con le integrazioni richieste. Si aggiungono i costi ricorrenti di dominio, hosting e manutenzione.",
       "Il costo dipende dal numero di pagine e di lingue, dalla produzione di testi e immagini, dalle funzioni richieste e dalle integrazioni con i sistemi aziendali. Un preventivo chiaro indica che cosa è compreso: progettazione, sviluppo, contenuti, SEO tecnica, formazione per l'aggiornamento e manutenzione.",
     ],
-    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+    nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
   domande: [
     {

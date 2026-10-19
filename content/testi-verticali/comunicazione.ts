@@ -32,7 +32,7 @@ export const comunicazione: Testi = {
       "Un'agenzia di comunicazione è remunerata con un canone mensile (retainer) per le attività continuative e con un compenso a progetto per gli incarichi che hanno un inizio e una fine, come una campagna o il rinnovo dell'identità. Per una piccola o media impresa il canone di un incarico continuativo su più canali si colloca in genere tra 2.000 e 5.000 euro al mese.",
       "Il canone remunera il lavoro dell'agenzia. Restano a parte il budget pubblicitario, cioè l'acquisto degli spazi sui mezzi, e i costi di produzione di video, fotografie e materiali stampati.",
     ],
-    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+    nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
   domande: [
     {

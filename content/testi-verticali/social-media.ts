@@ -32,7 +32,7 @@ export const socialMedia: Testi = {
       "La gestione dei social media è remunerata con un canone mensile. Per una piccola impresa si colloca in genere tra 900 e 2.000 euro al mese; per un'azienda strutturata, con più piattaforme e produzione video, si parte in genere da 2.000 euro al mese.",
       "Il canone non comprende il budget pubblicitario, cioè la spesa per le inserzioni, che viene pagata a parte alle piattaforme.",
     ],
-    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+    nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
   domande: [
     {

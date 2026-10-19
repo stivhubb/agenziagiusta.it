@@ -33,7 +33,7 @@ export type Attivita = {
 // Solo per i verticali:
 // - mercato: il mercato di quel tipo di agenzia in Italia, con le fonti
 // - costi: fasce generiche, uguali in tutte le città; "nota" dice da dove viene il dato
-//   ("Fasce elaborate da AgenziaGiusta.it su listini pubblici di agenzie, ottobre 2026")
+//   ("Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative…")
 // - domande: le tre domande più probabili di un cliente, con la risposta
 export type Testi = {
   intro: string[];

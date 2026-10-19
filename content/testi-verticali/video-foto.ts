@@ -32,7 +32,7 @@ export const videoFoto: Testi = {
       "La produzione di video e fotografie è remunerata a progetto. Per un video aziendale il costo si colloca in genere tra 1.000 e 4.000 euro; per produzioni più articolate, come uno spot, si parte in genere da 3.000 euro e si sale con le giornate di ripresa, la troupe e la post-produzione.",
       "I servizi fotografici sono quotati di norma a giornata o a numero di immagini consegnate. In entrambi i casi il preventivo dovrebbe indicare che cosa è compreso: riprese, montaggio, musiche, revisioni e diritti d'uso.",
     ],
-    nota: "Fasce per i video elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da case di produzione e agenzie italiane, ottobre 2026. Sono valori indicativi.",
+    nota: "Fasce per i video elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
   domande: [
     {

@@ -31,7 +31,7 @@ export const branding: Testi = {
       "Un progetto di identità è remunerato a progetto, una sola volta. Per il solo logo il costo si colloca in genere tra 500 e 1.500 euro; per un'identità visiva completa, con logo, colori, caratteri e manuale d'uso, tra 1.500 e 6.500 euro. Quando il progetto comprende anche la strategia di marca e il naming si parte in genere da 6.000 euro.",
       "Il costo dipende dal numero di applicazioni da progettare, come packaging, sito e materiali commerciali, e dall'eventuale ricerca su mercato e concorrenti. La registrazione del marchio è un costo distinto.",
     ],
-    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+    nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
   domande: [
     {

@@ -33,7 +33,7 @@ export const webMarketing: Testi = {
       "Le attività di web marketing sono remunerate con un canone mensile. Per la gestione delle campagne pubblicitarie online di una piccola o media impresa il compenso si colloca in genere tra 500 e 2.500 euro al mese, budget pubblicitario escluso.",
       "Il budget pubblicitario si paga a parte alle piattaforme, come Google e Meta. Il compenso dipende dal numero di canali e di campagne, dalla produzione di annunci e contenuti e dalla frequenza dei report; alcune agenzie applicano una percentuale sul budget gestito o formule miste.",
     ],
-    nota: "Fasce elaborate da AgenziaGiusta.it su listini e guide ai prezzi pubblicati da agenzie italiane, ottobre 2026. Sono valori indicativi.",
+    nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
   domande: [
     {
