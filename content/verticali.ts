@@ -335,7 +335,7 @@ export const verticali: Verticale[] = [
     descrizione: "Video aziendali, spot, servizi fotografici e contenuti per i social.",
     titolo: titolo("Agenzie video e di produzione", "fanno"),
     seo: {
-      title: "Agenzie video: produzione video, spot pubblicitari e foto",
+      title: "Società di produzione video e shooting fotografico",
       description:
         "Cosa fa un'agenzia di produzione video, dagli spot pubblicitari ai video aziendali e alle foto, e quanto costa. Prepara il brief e fatti contattare.",
     },
