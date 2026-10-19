@@ -31,7 +31,7 @@ export const seoSem: Testi = {
   costi: {
     testo: [
       "La SEO è remunerata con un canone mensile, perché richiede un lavoro continuativo. Per una piccola impresa o per un progetto locale si colloca in genere tra 500 e 1.500 euro al mese; per un'azienda strutturata, un e-commerce o un settore molto competitivo si parte in genere da 2.500 euro al mese. L'analisi iniziale del sito (audit), se acquistata da sola, costa in genere tra 500 e 2.000 euro.",
-      "Per le campagne SEM il compenso dell'agenzia si colloca in genere tra 500 e 2.500 euro al mese e non comprende il budget pubblicitario, che viene pagato a parte alla piattaforma.",
+      "Per le campagne SEM il compenso dell'agenzia ha di norma una parte fissa, cioè un costo di setting iniziale e un canone mensile (flat fee) di gestione, e una fee sull'investimento, cioè una percentuale del budget gestito. La parte fissa si colloca in genere tra 500 e 2.500 euro al mese e varia con l'impegno richiesto: numero di campagne, competenze necessarie ed entità del budget. Il budget pubblicitario si paga a parte alla piattaforma.",
     ],
     nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
