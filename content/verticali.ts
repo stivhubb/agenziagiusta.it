@@ -230,7 +230,7 @@ export const verticali: Verticale[] = [
   {
     slug: "branding",
     servizio: "Logo, immagine coordinata, grafica e packaging",
-    nome: "Grafica e branding",
+    nome: "Agenzia di grafica e branding",
     descrizione:
       "Nome, logo, identità visiva e materiali coordinati per dare un volto riconoscibile al marchio.",
     titolo: titolo("Agenzia di grafica e branding"),
@@ -270,7 +270,7 @@ export const verticali: Verticale[] = [
   {
     slug: "social-media",
     servizio: "Gestione dei social e influencer",
-    nome: "Social media e influencer",
+    nome: "Agenzia social media",
     descrizione:
       "Piani editoriali, gestione delle pagine, campagne a pagamento e collaborazioni con i creator.",
     percorso: "Agenzie social media",
@@ -311,7 +311,7 @@ export const verticali: Verticale[] = [
   {
     slug: "seo-sem",
     servizio: "Posizionamento su Google e Google Ads",
-    nome: "SEO e SEM",
+    nome: "Agenzia SEO",
     descrizione:
       "Posizionamento sui motori di ricerca e campagne a pagamento sui risultati di Google.",
     titolo: titolo("Agenzie SEO", "fanno"),
