@@ -273,7 +273,6 @@ export const verticali: Verticale[] = [
     nome: "Agenzia social media",
     descrizione:
       "Piani editoriali, gestione delle pagine, campagne a pagamento e collaborazioni con i creator.",
-    percorso: "Agenzie social media",
     titolo: titolo("Agenzia di social media marketing"),
     seo: {
       title: "Agenzia social media marketing: cosa fa e come lavora",
