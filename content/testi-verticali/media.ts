@@ -30,8 +30,8 @@ export const media: Testi = {
   },
   costi: {
     testo: [
-      "Il compenso di un'agenzia media è distinto dal budget pubblicitario, che viene speso sui mezzi. È calcolato come percentuale del budget gestito oppure come compenso fisso (fee); per le campagne digitali sono diffusi i compensi fissi e le formule miste.",
-      "Per la gestione delle campagne digitali di una piccola o media impresa il compenso si colloca in genere tra 500 e 2.500 euro al mese, budget pubblicitario escluso. Per le pianificazioni sui mezzi tradizionali il compenso si definisce sul singolo piano.",
+      "Il compenso di un'agenzia media è distinto dal budget pubblicitario, che viene speso sui mezzi, e di norma ha due componenti. La prima è fissa: un costo di setting iniziale e un compenso mensile (flat fee) per la pianificazione e la gestione del budget e delle campagne. La seconda è una fee sull'investimento, cioè una percentuale del budget gestito, che si aggiunge alla parte fissa.",
+      "Per la gestione delle campagne digitali di una piccola o media impresa la parte fissa si colloca in genere tra 500 e 2.500 euro al mese, esclusi il budget pubblicitario e la fee sull'investimento. Anche la parte fissa varia con l'impegno richiesto: il numero di canali da gestire, le competenze necessarie, la complessità della pianificazione e l'entità del budget. Per le pianificazioni sui mezzi tradizionali il compenso si definisce sul singolo piano.",
     ],
     nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
