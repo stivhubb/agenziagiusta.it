@@ -333,17 +333,17 @@ export const verticali: Verticale[] = [
     servizio: "Video, spot e servizi fotografici",
     nome: "Produzione video e foto",
     descrizione: "Video aziendali, spot, servizi fotografici e contenuti per i social.",
-    titolo: titolo("Agenzie video e di produzione", "fanno"),
+    titolo: titolo("Società di produzione video e foto"),
     seo: {
       title: "Società di produzione video e shooting fotografico",
       description:
-        "Cosa fa un'agenzia di produzione video, dagli spot pubblicitari ai video aziendali e alle foto, e quanto costa. Prepara il brief e fatti contattare.",
+        "Cosa fa una società di produzione video, dagli spot ai video aziendali agli shooting fotografici, e quanto costa. Prepara il brief e fatti contattare.",
     },
-    locale: { nome: "Agenzia di produzione video", plurale: "Agenzie di produzione video" },
+    locale: { nome: "Società di produzione video", plurale: "Società di produzione video" },
     h2: {
       mercato: "Il mercato dell'audiovisivo in Italia",
       costi: "Quanto costa un video aziendale",
-      domande: "Domande frequenti sulle agenzie video",
+      domande: "Domande frequenti sulle società di produzione video",
     },
     pagina: videoFoto,
   },

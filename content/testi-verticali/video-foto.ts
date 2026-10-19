@@ -3,16 +3,16 @@ import { gruppo } from "./gruppo";
 
 export const videoFoto: Testi = {
   intro: [
-    "Un'agenzia video, cioè un'agenzia di produzione video e foto o casa di produzione, realizza i contenuti audiovisivi e fotografici di un'azienda: spot pubblicitari, video istituzionali, contenuti per il web e i social media, servizi fotografici di prodotto e di campagna.",
+    "Una società di produzione video e foto, o casa di produzione, realizza i contenuti audiovisivi e fotografici di un'azienda: spot pubblicitari, video istituzionali, contenuti per il web e i social media, servizi fotografici di prodotto e di campagna.",
     "Segue l'intero processo, dall'ideazione alla consegna dei file definitivi, oppure interviene sulla sola realizzazione, a partire da un progetto creativo già definito dall'azienda o dalla sua agenzia.",
   ],
   sezioni: [
     {
-      titolo: "Cosa fa un'agenzia di produzione video e foto",
+      titolo: "Cosa fa una società di produzione video e foto",
       blocchi: [
         "Il lavoro si svolge in tre fasi. La pre-produzione comprende tutto ciò che precede le riprese: sviluppo del soggetto e della sceneggiatura, storyboard, scelta del regista o del fotografo, selezione degli interpreti (casting) e dei luoghi (location scouting), piano di lavorazione e preventivo.",
         "La produzione è la fase delle riprese o degli scatti, in studio o in esterni, con una troupe dimensionata sul progetto: regia, direzione della fotografia, operatori, fonici, scenografia, trucco e costumi. La post-produzione trasforma il materiale girato nel prodotto finito: montaggio, correzione del colore (color grading), grafica animata, effetti visivi, sonorizzazione e, per le fotografie, selezione e ritocco.",
-        "Il progetto parte da un brief che indica obiettivo, pubblico, canali di diffusione e budget: la destinazione del contenuto determina durata, formato e modalità di ripresa. L'agenzia presenta un trattamento, il documento che descrive l'impostazione creativa e tecnica, e un preventivo. Dopo l'approvazione procede alla realizzazione, sottopone al cliente le versioni di lavorazione e consegna i file definitivi nei formati richiesti, con le licenze d'uso di musiche, immagini e interpreti.",
+        "Il progetto parte da un brief che indica obiettivo, pubblico, canali di diffusione e budget: la destinazione del contenuto determina durata, formato e modalità di ripresa. La società di produzione presenta un trattamento, il documento che descrive l'impostazione creativa e tecnica, e un preventivo. Dopo l'approvazione procede alla realizzazione, sottopone al cliente le versioni di lavorazione e consegna i file definitivi nei formati richiesti, con le licenze d'uso di musiche, immagini e interpreti.",
         "Le figure coinvolte sono il producer, responsabile dell'organizzazione e del budget; il regista o il fotografo; il direttore della fotografia; il montatore; il motion designer, che realizza le animazioni; il sound designer.",
       ],
     },
@@ -32,7 +32,7 @@ export const videoFoto: Testi = {
       "La produzione di video e fotografie è remunerata a progetto. Per un video aziendale il costo si colloca in genere tra 1.000 e 4.000 euro; per produzioni più articolate, come uno spot, si parte in genere da 3.000 euro e si sale con le giornate di ripresa, la troupe e la post-produzione.",
       "I servizi fotografici sono quotati di norma a giornata o a numero di immagini consegnate. In entrambi i casi il preventivo dovrebbe indicare che cosa è compreso: riprese, montaggio, musiche, revisioni e diritti d'uso.",
     ],
-    nota: "Fasce per i video elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
+    nota: "Fasce per i video elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e della società di produzione coinvolta.",
   },
   domande: [
     {
@@ -49,7 +49,7 @@ export const videoFoto: Testi = {
     },
   ],
   attivita: {
-    titolo: "Attività e lavorazioni di un'agenzia di produzione",
+    titolo: "Attività e lavorazioni di una società di produzione",
     gruppi: [
       gruppo("Pre-produzione", [
         ["Soggetto e sceneggiatura", "L'idea e il testo del video."],
