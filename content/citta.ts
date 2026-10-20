@@ -4,7 +4,9 @@ import type { Verticale } from "./verticali";
 
 // Le città. Ogni città ha una pagina sotto ogni tipo di agenzia:
 // /comunicazione/milano/, /web-agency/milano/, /seo-sem/milano/...
-// Aggiungere una città significa aggiungere una voce a questo elenco.
+// Aggiungere una città significa aggiungere una voce a questo elenco. Ci sono solo le città con
+// i dati della rilevazione: le altre (Brescia, Bergamo, Genova, Treviso, Bolzano, Udine, Ancona,
+// Pescara, Catania, Cagliari) sono state tolte il 20 ottobre 2026 e si aggiungono quando sono pronte.
 // - slug: l'ultima parte dell'indirizzo
 // - nome: usato nel titolo e nel percorso di navigazione
 // - footer: se la città compare nel footer (con il link alla pagina sotto Comunicazione)
@@ -66,23 +68,13 @@ const elenco: Citta[] = [
   },
   { slug: "roma", nome: "Roma", footer: true },
   { slug: "padova", nome: "Padova", footer: true },
-  { slug: "bergamo", nome: "Bergamo", footer: true },
   { slug: "torino", nome: "Torino" },
   { slug: "napoli", nome: "Napoli" },
   { slug: "bologna", nome: "Bologna" },
   { slug: "firenze", nome: "Firenze" },
-  { slug: "genova", nome: "Genova" },
   { slug: "verona", nome: "Verona" },
-  { slug: "brescia", nome: "Brescia" },
   { slug: "bari", nome: "Bari" },
   { slug: "palermo", nome: "Palermo" },
-  { slug: "catania", nome: "Catania" },
-  { slug: "treviso", nome: "Treviso" },
-  { slug: "udine", nome: "Udine" },
-  { slug: "bolzano", nome: "Bolzano" },
-  { slug: "ancona", nome: "Ancona" },
-  { slug: "pescara", nome: "Pescara" },
-  { slug: "cagliari", nome: "Cagliari" },
 ];
 
 // Testi ed elenchi delle agenzie della rilevazione (content/dati-citta.ts): il testo si aggiunge
