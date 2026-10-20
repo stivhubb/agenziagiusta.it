@@ -8,7 +8,7 @@ import type { Sezione } from "./tipi";
 
 export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[] } = {
   titolo: "Informativa privacy",
-  aggiornamento: "Ultimo aggiornamento: 12 ottobre 2026",
+  aggiornamento: "Ultimo aggiornamento: 20 ottobre 2026",
   sezioni: [
     {
       titolo: "Titolare del trattamento",
@@ -98,7 +98,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
         "Fornitori che ci aiutano a far funzionare il sito e che trattano i dati per nostro conto, come responsabili del trattamento:",
         {
           elenco: [
-            { termine: "Vercel Inc.", testo: "hosting del sito." },
+            { termine: "Vercel Inc.", testo: "hosting del sito e misurazione delle visite in forma aggregata e anonima (Vercel Web Analytics, senza cookie)." },
             { termine: "Resend Inc.", testo: "invio delle email con il brief e con i messaggi dei moduli." },
             { termine: "Google Ireland Ltd.", testo: "casella email (Gmail) in cui il titolare riceve e conserva le richieste." },
           ],
