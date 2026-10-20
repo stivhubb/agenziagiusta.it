@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const marketing: Testi = {
   intro: [
-    "Un'agenzia di marketing aiuta un'azienda a decidere come vendere: a quali clienti rivolgersi, con quale offerta e attraverso quali canali, e mette in pratica le attività che portano contatti e vendite.",
+    "Un'agenzia di marketing aiuta un'azienda a decidere come vendere: a quali clienti rivolgersi, con quale offerta e attraverso quali canali, e mette in pratica le attività che portano contatti e vendite. Si parla anche di società o azienda di marketing, di società di consulenza marketing quando l'incarico è soprattutto strategico, e di agenzia di marketing e comunicazione quando le due competenze sono insieme.",
     "Rispetto a un'agenzia di comunicazione, che lavora soprattutto su immagine e messaggi, un'agenzia marketing parte dagli obiettivi commerciali: il lancio di un prodotto, l'ingresso in un nuovo mercato, l'aumento dei contatti. Le agenzie di marketing lavorano online e offline; quelle che lavorano solo sui canali digitali si chiamano di solito agenzie di web marketing.",
   ],
   sezioni: [
@@ -45,6 +45,10 @@ export const marketing: Testi = {
     {
       domanda: "Un'agenzia di marketing può sostituire il responsabile marketing interno?",
       risposta: "In parte. Molte piccole imprese affidano all'agenzia la pianificazione e il coordinamento delle attività, come farebbe un responsabile marketing. Serve comunque un referente in azienda che conosca prodotti, clienti e numeri di vendita e che prenda le decisioni.",
+    },
+    {
+      domanda: "Meglio un'agenzia di marketing vicino a me o di un'altra città?",
+      risposta: "Per la strategia e le attività online la distanza conta poco: molte agenzie di marketing lavorano con clienti in tutta Italia. Un'agenzia vicina è utile quando servono incontri frequenti, attività sul territorio come eventi e punti vendita, o la conoscenza del mercato locale. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie di marketing con sede in zona.",
     },
   ],
   attivita: {

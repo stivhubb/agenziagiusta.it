@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const seoSem: Testi = {
   intro: [
-    "Un'agenzia SEO, o SEO agency, lavora sulla visibilità di un sito nei motori di ricerca. La SEO (Search Engine Optimization) è l'insieme degli interventi che migliorano il posizionamento nei risultati organici, cioè non a pagamento.",
+    "Un'agenzia SEO, o SEO agency, lavora sulla visibilità di un sito nei motori di ricerca. La SEO (Search Engine Optimization) è l'insieme degli interventi che migliorano il posizionamento nei risultati organici, cioè non a pagamento. Le agenzie SEO seguono spesso anche la SEM, e molte web agency offrono la SEO tra i loro servizi.",
     "A questa si affianca la SEM (Search Engine Marketing), che comprende gli annunci a pagamento nelle pagine dei risultati. Le due attività sono complementari: entrambe intercettano utenti che stanno già cercando un prodotto, un servizio o un'informazione.",
   ],
   sezioni: [
@@ -47,6 +47,10 @@ export const seoSem: Testi = {
     {
       domanda: "Un'agenzia può garantire la prima posizione su Google?",
       risposta: "No. L'ordine dei risultati organici è deciso dagli algoritmi dei motori di ricerca, che cambiano di frequente e non sono controllabili dall'esterno. Un'agenzia può impegnarsi sulle attività da svolgere e su obiettivi di traffico e di conversioni, non su una posizione. Negli annunci a pagamento la posizione dipende da un'asta, in cui contano l'offerta e la qualità dell'annuncio.",
+    },
+    {
+      domanda: "Come scegliere tra le agenzie SEO?",
+      risposta: "Conviene chiedere casi concreti con i dati di traffico prima e dopo l'intervento, un'analisi iniziale del sito, un piano con le attività mensili e report chiari. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie SEO con sede in zona.",
     },
   ],
   attivita: {

@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const socialMedia: Testi = {
   intro: [
-    "Un'agenzia di social media marketing, o social media agency, gestisce la presenza di un'azienda sulle piattaforme social: definisce la strategia, produce i contenuti, cura il rapporto con gli utenti e pianifica le campagne a pagamento.",
+    "Un'agenzia di social media marketing, o social media agency, gestisce la presenza di un'azienda sulle piattaforme social: definisce la strategia, produce i contenuti, cura il rapporto con gli utenti e pianifica le campagne a pagamento. Si cercano anche come agenzie social, agenzie di social media advertising quando il lavoro riguarda soprattutto le campagne a pagamento, o agenzie per influencer quando servono collaborazioni con i creator.",
     "L'attività comprende una componente organica, cioè i contenuti pubblicati sui profili senza investimento pubblicitario, e una componente a pagamento, il social advertising, che ne estende la diffusione verso pubblici definiti.",
   ],
   sezioni: [
@@ -46,6 +46,10 @@ export const socialMedia: Testi = {
     {
       domanda: "Come si misurano i risultati dei social media?",
       risposta: "Con le metriche fornite dalle piattaforme: copertura, cioè le persone raggiunte, interazioni, crescita della community, visite al sito. Per le campagne a pagamento si aggiungono contatti generati, vendite e costo per risultato. È utile distinguere le metriche di visibilità da quelle che indicano un effetto sul business.",
+    },
+    {
+      domanda: "Come scegliere un'agenzia social media?",
+      risposta: "Conviene guardare i profili che l'agenzia gestisce già, chiedere chi produce i contenuti e con quale frequenza, se le campagne a pagamento sono comprese e come vengono misurati i risultati. Per l'influencer marketing conviene chiedere come vengono scelti i creator e come si rispettano le regole AGCOM. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie social media con sede in zona.",
     },
   ],
   attivita: {

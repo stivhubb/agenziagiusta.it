@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const pubblicita: Testi = {
   intro: [
-    "Un'agenzia di pubblicità, o agenzia pubblicitaria, idea e realizza le campagne con cui un'azienda promuove marchio, prodotti e servizi sui mezzi: televisione, radio, stampa, affissioni e canali online.",
+    "Un'agenzia di pubblicità, o agenzia pubblicitaria, idea e realizza le campagne con cui un'azienda promuove marchio, prodotti e servizi sui mezzi: televisione, radio, stampa, affissioni e canali online. Le agenzie di pubblicità si chiamano anche agenzie di advertising (advertising agency), società o aziende pubblicitarie e, quelle più piccole, studi pubblicitari.",
     "Rispetto a un'agenzia di comunicazione, che segue l'immagine dell'azienda nel suo insieme, l'agenzia di pubblicità lavora sulla campagna: il messaggio, la sua forma creativa e la sua diffusione sui mezzi scelti. Molte agenzie pubblicitarie offrono entrambe le cose; la differenza sta nel punto di partenza dell'incarico.",
   ],
   sezioni: [
@@ -45,6 +45,10 @@ export const pubblicita: Testi = {
     {
       domanda: "Con quanto anticipo va contattata un'agenzia di pubblicità?",
       risposta: "Dipende dai mezzi. Gli spazi su televisione, stampa e affissioni vanno prenotati in anticipo, soprattutto nei periodi più richiesti, e uno spot richiede tempi di produzione. Conviene coinvolgere l'agenzia appena sono chiari obiettivo, periodo e budget, così che strategia, creatività, produzione e prenotazione degli spazi procedano in ordine.",
+    },
+    {
+      domanda: "Come scegliere tra le agenzie pubblicitarie?",
+      risposta: "Non esiste una classifica ufficiale delle migliori agenzie pubblicitarie italiane. Conviene confrontarne alcune sullo stesso brief: campagne realizzate per aziende simili, esperienza sui mezzi che servono, dagli spot pubblicitari alle affissioni alla pubblicità online, persone che seguiranno il lavoro e preventivo con le voci separate. Per la sola parte grafica può bastare un'agenzia grafica pubblicitaria. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie di pubblicità con sede in zona.",
     },
   ],
   attivita: {

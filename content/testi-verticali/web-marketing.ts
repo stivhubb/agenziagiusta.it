@@ -4,7 +4,7 @@ import { gruppo } from "./gruppo";
 export const webMarketing: Testi = {
   intro: [
     "Un'agenzia di web marketing, detta anche agenzia di digital marketing o digital agency, porta sui canali online di un'azienda un pubblico qualificato e lo trasforma in contatti e vendite: campagne su Google e sui social, SEO, email marketing e analisi dei dati.",
-    "Il sito è il punto d'arrivo delle campagne, ma realizzarlo è il mestiere di una web agency. Molte agenzie digitali fanno entrambe le cose; quando l'obiettivo è aumentare traffico, contatti o vendite online, il fornitore da cercare è un'agenzia di web marketing.",
+    "Il sito è il punto d'arrivo delle campagne, ma realizzarlo è il mestiere di una web agency. Molte agenzie digitali fanno entrambe le cose; quando l'obiettivo è aumentare traffico, contatti o vendite online, il fornitore da cercare è un'agenzia di web marketing. Si parla anche di agenzia digitale, agenzia di marketing digitale, digital marketing agency o, quando lavora soprattutto sugli annunci a pagamento, di agenzia di digital advertising.",
   ],
   sezioni: [
     {
@@ -47,6 +47,10 @@ export const webMarketing: Testi = {
     {
       domanda: "Come si misura il rendimento delle campagne online?",
       risposta: "Con il costo per contatto o per vendita e con il ritorno sulla spesa pubblicitaria (ROAS), cioè il fatturato generato per ogni euro investito. Gli indicatori vanno concordati all'inizio, e l'agenzia dovrebbe dare all'azienda l'accesso diretto agli account pubblicitari e agli strumenti di analisi.",
+    },
+    {
+      domanda: "Come scegliere tra le agenzie di web marketing?",
+      risposta: "Conviene chiedere risultati misurati su campagne simili, l'accesso diretto agli account pubblicitari, report chiari e un referente dedicato, e diffidare di chi promette risultati senza conoscere i dati di partenza. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie di web marketing e digital agency con sede in zona.",
     },
   ],
   attivita: {

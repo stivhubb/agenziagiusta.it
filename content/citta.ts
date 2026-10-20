@@ -59,7 +59,7 @@ const elenco: Citta[] = [
     pagine: {
       comunicazione: {
         testo: [
-          "Milano è il principale mercato italiano della comunicazione, con agenzie di ogni dimensione e specializzazione.",
+          "Chi cerca un'agenzia di comunicazione a Milano trova il principale mercato italiano della comunicazione, con agenzie di ogni dimensione e specializzazione.",
           "In città hanno sede le filiali italiane dei grandi gruppi internazionali della pubblicità, molte agenzie indipendenti di medie dimensioni e una rete fitta di studi specializzati in un solo servizio: branding, social media, ufficio stampa, produzione video. A questi si aggiungono i freelance, che spesso lavorano per le agenzie stesse.",
         ],
         agenzie: [],

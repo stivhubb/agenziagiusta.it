@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const media: Testi = {
   intro: [
-    "Un'agenzia media, detta anche centro media o media agency, è la struttura specializzata nella pianificazione e nell'acquisto degli spazi pubblicitari: stabilisce su quali mezzi, in quali periodi e con quale investimento una campagna deve uscire per raggiungere il pubblico previsto.",
+    "Un'agenzia media, detta anche centro media o media agency, è la struttura specializzata nella pianificazione e nell'acquisto degli spazi pubblicitari: stabilisce su quali mezzi, in quali periodi e con quale investimento una campagna deve uscire per raggiungere il pubblico previsto. Le agenzie media più grandi si presentano come centri media; quelle che lavorano solo online come media agency digitali.",
     "Non realizza i contenuti della campagna, che restano di competenza dell'agenzia creativa o dell'azienda: interviene sulla loro diffusione, con l'obiettivo di ottenere la massima efficacia dal budget disponibile.",
   ],
   sezioni: [
@@ -47,6 +47,10 @@ export const media: Testi = {
     {
       domanda: "Come si valuta l'efficacia di una pianificazione?",
       risposta: "Con indicatori definiti prima della campagna. Sui mezzi tradizionali si misurano la copertura, cioè la quota del pubblico raggiunta, la frequenza media di esposizione e il costo per contatto. Sui canali digitali si aggiungono impression visibili, clic e conversioni. A campagna conclusa l'agenzia confronta quanto pianificato con quanto erogato (post-valutazione).",
+    },
+    {
+      domanda: "Come scegliere un'agenzia media?",
+      risposta: "Conviene chiedere su quali mezzi l'agenzia ha esperienza, con quali dati pianifica, se acquista gli spazi direttamente e come è calcolato il compenso. Per budget contenuti e solo digitali può bastare una media agency specializzata nelle campagne online; per campagne su televisione, radio e affissioni serve un centro media. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie media con sede in zona.",
     },
   ],
   attivita: {

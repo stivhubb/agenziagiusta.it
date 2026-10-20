@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const branding: Testi = {
   intro: [
-    "Un'agenzia di grafica e branding, o branding agency, definisce e costruisce l'identità di una marca: il posizionamento, il nome, l'aspetto visivo e il linguaggio con cui un'azienda, un prodotto o un servizio si presentano al mercato. Si parla anche di agenzia di design o studio grafico, soprattutto quando il lavoro riguarda la parte visiva.",
+    "Un'agenzia di grafica e branding, o branding agency, definisce e costruisce l'identità di una marca: il posizionamento, il nome, l'aspetto visivo e il linguaggio con cui un'azienda, un prodotto o un servizio si presentano al mercato. Si parla anche di agenzia grafica, studio grafico, agenzia di design o design agency, soprattutto quando il lavoro riguarda la parte visiva; un'agenzia grafica pubblicitaria si occupa in particolare dei materiali per le campagne.",
     "Il suo lavoro precede e orienta tutte le attività di comunicazione successive: campagne, sito, materiali commerciali e packaging applicano le regole stabilite dal progetto di identità.",
   ],
   sezioni: [
@@ -45,6 +45,10 @@ export const branding: Testi = {
     {
       domanda: "Che cosa contiene un manuale di identità?",
       risposta: "Le regole per usare correttamente gli elementi della marca: versioni del logo e spazi di rispetto, colori con i relativi codici, caratteri tipografici, stile delle immagini, tono di voce ed esempi di applicazione sui diversi materiali. Serve a mantenere coerente la comunicazione anche quando viene realizzata da fornitori diversi.",
+    },
+    {
+      domanda: "Agenzia grafica o agenzia di branding: a chi rivolgersi?",
+      risposta: "Un'agenzia grafica realizza i materiali: logo, impaginati, packaging, grafica pubblicitaria. Un'agenzia di branding parte prima, dalla strategia di marca, e progetta l'intera identità. Se serve un logo o un catalogo basta un'agenzia grafica; se serve definire o rinnovare il marchio conviene un'agenzia di branding. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie grafiche e di branding con sede in zona.",
     },
   ],
   attivita: {

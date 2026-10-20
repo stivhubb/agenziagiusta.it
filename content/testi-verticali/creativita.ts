@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const creativita: Testi = {
   intro: [
-    "Un'agenzia creativa, o creative agency, idea e realizza i contenuti della comunicazione: il concept di una campagna, i testi, le immagini e i formati con cui un messaggio viene trasmesso al pubblico.",
+    "Un'agenzia creativa, o creative agency, idea e realizza i contenuti della comunicazione: il concept di una campagna, i testi, le immagini e i formati con cui un messaggio viene trasmesso al pubblico. Le agenzie creative che lavorano soprattutto sui canali online si presentano spesso come digital creative agency.",
     "La sua competenza specifica è la traduzione di un obiettivo di marketing in un'idea riconoscibile e memorabile, declinata in modo coerente su tutti i mezzi previsti.",
   ],
   sezioni: [
@@ -45,6 +45,10 @@ export const creativita: Testi = {
     {
       domanda: "Di chi sono i diritti sulla campagna?",
       risposta: "Sono regolati dal contratto. Di norma l'azienda acquisisce i diritti di utilizzazione della proposta approvata e pagata, mentre quelle non scelte restano dell'agenzia. Fotografie, musiche e prestazioni degli interpreti sono concesse da terzi con limiti di durata, territorio e mezzi, che vanno verificati prima di riutilizzare i materiali.",
+    },
+    {
+      domanda: "Come scegliere tra le agenzie creative?",
+      risposta: "Il portfolio è il criterio principale: campagne realizzate, coerenza tra idea e risultato, esperienza nel settore o con un pubblico simile. Conviene chiedere chi lavorerà al progetto e come vengono presentate le proposte creative. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie creative con sede in zona.",
     },
   ],
   attivita: {

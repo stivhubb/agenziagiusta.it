@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const webAgency: Testi = {
   intro: [
-    "Una web agency, o agenzia web, progetta, realizza e gestisce la presenza online di un'azienda: sito, e-commerce e applicazioni web, dalla progettazione grafica (web design) allo sviluppo e alla manutenzione.",
+    "Una web agency, o agenzia web, progetta, realizza e gestisce la presenza online di un'azienda: sito, e-commerce e applicazioni web, dalla progettazione grafica (web design) allo sviluppo e alla manutenzione. Si cercano anche come agenzie web, agenzie di web design, agenzie per la realizzazione di siti web o, per i negozi online, agenzie e-commerce.",
     "La realizzazione di siti è il centro del suo lavoro. Molte web agency offrono anche SEO e campagne online, che servono a portare visitatori sul sito: quando l'obiettivo principale è aumentare contatti e vendite, il fornitore da cercare è un'agenzia di web marketing.",
   ],
   sezioni: [
@@ -46,6 +46,10 @@ export const webAgency: Testi = {
     {
       domanda: "Una web agency si occupa anche della promozione del sito?",
       risposta: "Spesso sì: molte web agency offrono anche SEO e campagne online. Quando la promozione è l'obiettivo principale conviene cercare un'agenzia di web marketing. In ogni caso un sito nuovo dovrebbe andare online con la SEO tecnica impostata e il tracciamento delle conversioni configurato, così che le attività successive partano dai dati.",
+    },
+    {
+      domanda: "Come scegliere la migliore web agency?",
+      risposta: "Non esiste una classifica ufficiale delle web agency italiane. Conviene guardare i siti già realizzati, chiedere a chi resteranno dominio, file e accessi, verificare che il preventivo indichi pagine, funzioni e manutenzione, e chiedere come il sito sarà impostato per i motori di ricerca. Una web agency vicino a te è comoda per gli incontri, ma per realizzare un sito non è indispensabile. AgenziaGiusta.it pubblica, città per città, l'elenco delle web agency con sede in zona.",
     },
   ],
   attivita: {

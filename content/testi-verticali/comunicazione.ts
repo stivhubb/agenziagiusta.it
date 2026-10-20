@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const comunicazione: Testi = {
   intro: [
-    "Un'agenzia di comunicazione è la struttura a cui un'azienda affida la gestione della propria immagine e delle attività con cui si fa conoscere dal mercato: posizionamento, messaggi, campagne e canali.",
+    "Un'agenzia di comunicazione è la struttura a cui un'azienda affida la gestione della propria immagine e delle attività con cui si fa conoscere dal mercato: posizionamento, messaggi, campagne e canali. Si parla anche di studio, società o azienda di comunicazione: sono nomi diversi per lo stesso tipo di fornitore.",
     "Agenzie di comunicazione, agenzie di marketing e agenzie pubblicitarie offrono spesso servizi simili, ma partono da punti diversi: l'agenzia di marketing dagli obiettivi commerciali, l'agenzia di pubblicità dalla campagna, l'agenzia di comunicazione dall'immagine e dai messaggi dell'azienda. Il suo tratto distintivo è la regia: un interlocutore unico che traduce gli obiettivi in un piano di comunicazione integrato, cioè coordinato su più mezzi.",
   ],
   sezioni: [
@@ -46,6 +46,14 @@ export const comunicazione: Testi = {
     {
       domanda: "Come si misurano i risultati?",
       risposta: "Con indicatori (KPI) definiti all'inizio dell'incarico e coerenti con gli obiettivi: copertura e ricordo per la notorietà, traffico e interazioni per l'interesse, contatti e vendite per la conversione. L'agenzia li riporta in report periodici.",
+    },
+    {
+      domanda: "Agenzia di marketing e comunicazione, agenzia di comunicazione digitale: che differenza c'è?",
+      risposta: "Sono denominazioni che dicono su cosa si concentra l'agenzia. Un'agenzia di marketing e comunicazione unisce ai messaggi gli obiettivi commerciali; un'agenzia di comunicazione digitale lavora soprattutto online; un'agenzia grafica e di comunicazione parte dall'identità visiva. Il servizio di base è lo stesso: conviene guardare le attività offerte più del nome.",
+    },
+    {
+      domanda: "Come scegliere tra le agenzie di comunicazione?",
+      risposta: "Non esiste una classifica ufficiale delle migliori agenzie di comunicazione italiane. Conviene confrontarne tre o quattro partendo dallo stesso brief: esperienza nel settore, lavori per aziende simili, persone che seguiranno il progetto e chiarezza del preventivo. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie di comunicazione con sede in zona.",
     },
   ],
   attivita: {

@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const videoFoto: Testi = {
   intro: [
-    "Una società di produzione video e foto, o casa di produzione, realizza i contenuti audiovisivi e fotografici di un'azienda: spot pubblicitari, video istituzionali, contenuti per il web e i social media, servizi fotografici di prodotto e di campagna.",
+    "Una società di produzione video e foto, o casa di produzione, realizza i contenuti audiovisivi e fotografici di un'azienda: spot pubblicitari, video istituzionali, contenuti per il web e i social media, servizi fotografici di prodotto e di campagna. Per gli spot pubblicitari e gli shooting fotografici ci si rivolge di solito a una società di produzione; per le sole fotografie ci sono anche studi e agenzie fotografiche.",
     "Segue l'intero processo, dall'ideazione alla consegna dei file definitivi, oppure interviene sulla sola realizzazione, a partire da un progetto creativo già definito dall'azienda o dalla sua agenzia.",
   ],
   sezioni: [
@@ -46,6 +46,10 @@ export const videoFoto: Testi = {
     {
       domanda: "Che cosa deve contenere il brief per un video?",
       risposta: "L'obiettivo del video e il pubblico a cui è destinato, il messaggio principale, i canali di diffusione con i relativi formati e durate, eventuali esempi di riferimento, il budget e la data di consegna. Sapere fin dall'inizio su quali canali uscirà il video permette di girare una sola volta i materiali per tutti i formati.",
+    },
+    {
+      domanda: "Come scegliere una società di produzione video?",
+      risposta: "Il criterio principale è lo showreel, cioè la raccolta dei lavori: conviene cercare video o shooting fotografici simili a quelli che servono, per formato e settore. Poi chiedere un preventivo con giornate di ripresa, troupe, post-produzione e diritti d'uso. AgenziaGiusta.it pubblica, città per città, l'elenco delle società di produzione video e foto con sede in zona.",
     },
   ],
   attivita: {

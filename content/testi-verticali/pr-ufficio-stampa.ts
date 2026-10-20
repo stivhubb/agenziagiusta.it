@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const prUfficioStampa: Testi = {
   intro: [
-    "Un'agenzia PR, o agenzia di pubbliche relazioni e ufficio stampa, gestisce le relazioni tra un'azienda e i suoi pubblici di riferimento: giornalisti, media, istituzioni, comunità locali, opinione pubblica.",
+    "Un'agenzia PR, o agenzia di pubbliche relazioni e ufficio stampa, gestisce le relazioni tra un'azienda e i suoi pubblici di riferimento: giornalisti, media, istituzioni, comunità locali, opinione pubblica. Si cercano anche come agenzie di PR, PR agency o agenzie di ufficio stampa; quelle che lavorano soprattutto con siti, blog e creator si occupano di digital PR.",
     "Non opera attraverso l'acquisto di spazi pubblicitari: la visibilità deriva dall'interesse giornalistico delle notizie e dalla credibilità delle fonti che le riportano (earned media). L'obiettivo principale è la reputazione dell'azienda.",
   ],
   sezioni: [
@@ -45,6 +45,10 @@ export const prUfficioStampa: Testi = {
     {
       domanda: "Come si misurano i risultati delle relazioni pubbliche?",
       risposta: "Con la rassegna stampa, che raccoglie le uscite ottenute, e con la loro analisi: numero e rilevanza delle testate, tono degli articoli, presenza dei messaggi chiave, quota di visibilità rispetto ai concorrenti. Per le attività online si aggiungono le visite al sito e i collegamenti ottenuti.",
+    },
+    {
+      domanda: "Come scegliere un'agenzia di pubbliche relazioni?",
+      risposta: "Conviene chiedere con quali testate e giornalisti l'agenzia lavora abitualmente, esempi di uscite ottenute per aziende simili, chi segue i rapporti con la stampa e come vengono rendicontati i risultati. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie PR e di pubbliche relazioni con sede in zona.",
     },
   ],
   attivita: {
