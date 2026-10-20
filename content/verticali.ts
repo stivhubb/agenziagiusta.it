@@ -328,7 +328,7 @@ export const verticali: Verticale[] = [
     pagina: seoSem,
   },
   {
-    slug: "video-foto",
+    slug: "societa-produzione-video-foto",
     servizio: "Video, spot e servizi fotografici",
     nome: "Produzione video e foto",
     descrizione: "Video aziendali, spot, servizi fotografici e contenuti per i social.",
@@ -338,7 +338,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fa una società di produzione video, dagli spot ai video aziendali agli shooting fotografici, e quanto costa. Prepara il brief e fatti contattare.",
     },
-    locale: { nome: "Società di produzione video", plurale: "Società di produzione video" },
+    locale: { nome: "Società di produzione video e foto", plurale: "Società di produzione video e foto" },
     h2: {
       mercato: "Il mercato dell'audiovisivo in Italia",
       costi: "Quanto costa un video aziendale",
