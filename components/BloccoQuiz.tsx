@@ -12,7 +12,7 @@ const passi = [
   },
   {
     titolo: "Ti contatta un'agenzia adatta",
-    testo: "Con il tuo consenso selezioniamo un'agenzia e le inviamo il brief.",
+    testo: "Su tua richiesta selezioniamo un'agenzia e le inviamo il brief.",
   },
 ];
 

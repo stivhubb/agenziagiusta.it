@@ -33,7 +33,7 @@ export const comeFunziona: Pagina & {
     {
       titolo: "Ti contatta un'agenzia adatta",
       testo:
-        "Con il tuo consenso selezioniamo un'agenzia adatta al tuo progetto e le inviamo il brief. Sarà lei a contattarti con una proposta.",
+        "Su tua richiesta selezioniamo un'agenzia adatta al tuo progetto e le inviamo il brief. Sarà lei a contattarti con una proposta.",
     },
   ],
   sezioni: [

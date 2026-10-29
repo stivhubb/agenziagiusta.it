@@ -17,7 +17,7 @@ export const perLeAgenzie: Pagina & {
   intro: [
     "Le aziende che passano da AgenziaGiusta.it hanno già chiarito cosa cercano, con quali obiettivi e con quale budget. Ti inviamo solo i progetti in linea con quello che fai.",
     "Chi si occupa di nuovi clienti lo sa: buona parte del tempo va in richieste che non portano a nulla. Contatti senza budget, aziende che non sanno ancora cosa vogliono, preventivi chiesti a dieci agenzie insieme solo per confrontare i prezzi. Ogni risposta costa ore di lavoro, e la maggior parte non diventa un contratto.",
-    "AgenziaGiusta.it lavora sul passaggio precedente. Le aziende compilano un quiz guidato su azienda, comunicazione attuale, obiettivi, servizi e budget, e ricevono un brief ordinato. Ogni azienda dà il consenso esplicito a essere contattata, e ogni brief va a una sola agenzia scelta in base al profilo, non a un elenco aperto.",
+    "AgenziaGiusta.it lavora sul passaggio precedente. Le aziende compilano un quiz guidato su azienda, comunicazione attuale, obiettivi, servizi e budget, e ricevono un brief ordinato. Ogni azienda chiede esplicitamente di essere contattata, e ogni brief va a una sola agenzia scelta in base al profilo, non a un elenco aperto.",
     "Per te significa ricevere meno richieste, ma più vicine a quello che fai: sai già di cosa si parla, con quali obiettivi e con quale budget, prima ancora della prima telefonata.",
   ],
   blocco: {
@@ -40,7 +40,7 @@ export const perLeAgenzie: Pagina & {
     {
       titolo: "Come funziona",
       blocchi: [
-        "Le aziende compilano un quiz e ricevono un brief. Con il loro consenso lo inviamo a una sola agenzia adatta al progetto: nessun'altra lo riceve.",
+        "Le aziende compilano un quiz e ricevono un brief. Su loro richiesta lo inviamo a una sola agenzia adatta al progetto: nessun'altra lo riceve.",
       ],
     },
     {

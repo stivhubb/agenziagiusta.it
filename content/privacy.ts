@@ -8,7 +8,7 @@ import type { Sezione } from "./tipi";
 
 export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[] } = {
   titolo: "Informativa privacy",
-  aggiornamento: "Ultimo aggiornamento: 20 ottobre 2026",
+  aggiornamento: "Ultimo aggiornamento: 29 ottobre 2026",
   sezioni: [
     {
       titolo: "Titolare del trattamento",
@@ -61,7 +61,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
             {
               termine: "Inviare il brief e i tuoi contatti a un'agenzia, perché possa contattarti.",
               testo:
-                "Solo con il tuo consenso (art. 6, par. 1, lett. a), che puoi revocare in ogni momento. Mettere in contatto l'azienda con un'agenzia è lo scopo del servizio: per questo il consenso è richiesto per generare il brief.",
+                "È il servizio che chiedi compilando il quiz: metterti in contatto con un'agenzia adatta al progetto (art. 6, par. 1, lett. b).",
             },
             {
               termine: "Rispondere ai messaggi del modulo Contatti.",
@@ -88,7 +88,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
     {
       titolo: "Invio del brief a un'agenzia",
       blocchi: [
-        "Con il tuo consenso selezioniamo una sola agenzia adatta al progetto e le inviamo il brief e i tuoi contatti. L'invio è fatto da una persona, non in automatico. I tuoi dati non vanno ad altre agenzie.",
+        "Su tua richiesta selezioniamo una sola agenzia adatta al progetto e le inviamo il brief e i tuoi contatti. L'invio è fatto da una persona, non in automatico. I tuoi dati non vanno ad altre agenzie.",
         "L'agenzia che riceve i dati è un'agenzia partner di AgenziaGiusta.it: le agenzie partner sono segnate con ★ negli elenchi del sito. Da quel momento l'agenzia tratta i tuoi dati come titolare autonomo, per contattarti e valutare il progetto, secondo la propria informativa.",
       ],
     },
@@ -114,7 +114,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
           elenco: [
             {
               termine: "Brief e contatti:",
-              testo: "24 mesi dall'invio del quiz, oppure fino alla revoca del consenso o a una tua richiesta di cancellazione. Alla scadenza le email vengono cancellate.",
+              testo: "24 mesi dall'invio del quiz, oppure fino a una tua richiesta di cancellazione. Alla scadenza le email vengono cancellate.",
             },
             { termine: "Messaggi dal modulo Contatti:", testo: "24 mesi dall'ultima risposta." },
             {
@@ -145,7 +145,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
     {
       titolo: "I tuoi diritti",
       blocchi: [
-        `Puoi chiedere in ogni momento di accedere ai tuoi dati, correggerli, cancellarli, limitarne il trattamento, riceverli in un formato leggibile (portabilità) e opporti al trattamento basato sul legittimo interesse. Puoi revocare il consenso all'invio all'agenzia senza conseguenze sui trattamenti già fatti. Scrivi a ${sito.emailPrivacy}: rispondiamo entro un mese.`,
+        `Puoi chiedere in ogni momento di accedere ai tuoi dati, correggerli, cancellarli, limitarne il trattamento, riceverli in un formato leggibile (portabilità) e opporti al trattamento basato sul legittimo interesse. Se non vuoi più essere contattato, scrivici: se il brief non è ancora stato inviato non lo inviamo, se è già stato inviato lo comunichiamo all'agenzia. Scrivi a ${sito.emailPrivacy}: rispondiamo entro un mese.`,
         "Se ritieni che il trattamento non rispetti la legge puoi presentare reclamo al Garante per la protezione dei dati personali.",
         { link: { testo: "Sito del Garante privacy", href: "https://www.garanteprivacy.it/" } },
       ],

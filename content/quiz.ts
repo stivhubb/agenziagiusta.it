@@ -308,15 +308,15 @@ export const passi: Passo[] = [
       },
       { id: "email", etichetta: "Email", tipo: "email", completamento: "email" },
       { id: "telefono", etichetta: "Telefono", tipo: "telefono", completamento: "tel" },
-      // Consenso obbligatorio per generare e ricevere il brief. Da verificare con il consulente privacy.
+      // Richiesta del servizio (art. 6.1.b GDPR), non un consenso: per questo può essere obbligatoria.
       {
         id: "consensoAgenzia",
         etichetta:
-          "Acconsento alla selezione di una sola agenzia creativa adatta al mio progetto e all'invio dei miei dati a quell'agenzia, perché possa contattarmi.",
+          "Voglio essere contattato da un'agenzia adatta al mio progetto, selezionata da AgenziaGiusta.it, a cui verranno inviati il brief e i miei contatti.",
         tipo: "casella",
       },
       // Il testo di questa casella, con il link alla privacy, è nel componente del quiz.
-      { id: "privacy", etichetta: "Consenso privacy", tipo: "casella" },
+      { id: "privacy", etichetta: "Informativa privacy", tipo: "casella" },
     ],
   },
 ];
@@ -331,7 +331,7 @@ export const quiz = {
   genera: {
     titolo: "Vuoi generare il tuo brief?",
     testo:
-      "Hai risposto a tutte le domande. Per generare il brief e mandartelo via email ci servono i tuoi contatti e il consenso a farti contattare da un'agenzia adatta al tuo progetto.",
+      "Hai risposto a tutte le domande. Per generare il brief e mandartelo via email ci servono i tuoi contatti. Poi lo inviamo a un'agenzia adatta al tuo progetto, che ti contatterà.",
     pulsante: "Genera il brief",
   },
   pulsanteFine: "Ricevi il brief",
@@ -350,7 +350,7 @@ export const quiz = {
     obbligatorio: "Campo obbligatorio.",
     altro: "Specifica la voce Altro.",
     email: "Inserisci un indirizzo email valido.",
-    casella: "Consenso necessario per generare e ricevere il brief.",
+    casella: "Seleziona la casella per proseguire.",
     invio: "Invio non riuscito. Riprova tra qualche minuto.",
   },
 };

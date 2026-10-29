@@ -42,7 +42,7 @@ export async function inviaBrief(grezze: Risposte, data: string): Promise<EsitoB
   const r = ripulisci(grezze);
   const email = typeof r.email === "string" ? r.email : "";
   if (!EMAIL.test(email) || r.consensoAgenzia !== true || r.privacy !== true || !r.ragioneSociale) {
-    return { ok: false, errore: "Mancano dati o consensi necessari per inviare il brief.", ricevuto: false };
+    return { ok: false, errore: "Mancano dati necessari per inviare il brief.", ricevuto: false };
   }
 
   const brief = componiBrief(r, taglia(data));
@@ -55,10 +55,10 @@ export async function inviaBrief(grezze: Risposte, data: string): Promise<EsitoB
     oggetto: "Il tuo brief di comunicazione",
     rispondiA: sito.emailContatto,
     allegati,
-    testo: `Ciao ${brief.referente},\n\nin allegato trovi il brief preparato con AgenziaGiusta.it. Come da tuo consenso, lo inviamo a un'agenzia adatta al progetto, che ti contatterà.\n\nPer qualsiasi domanda rispondi a questa email.\n\nAgenziaGiusta.it\n\n---\n\n${briefTesto(brief)}`,
+    testo: `Ciao ${brief.referente},\n\nin allegato trovi il brief preparato con AgenziaGiusta.it. Come da tua richiesta, lo inviamo a un'agenzia adatta al progetto, che ti contatterà.\n\nPer qualsiasi domanda rispondi a questa email.\n\nAgenziaGiusta.it\n\n---\n\n${briefTesto(brief)}`,
     html: `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5;color:#1B1B1B">
 <p>Ciao ${html(brief.referente)},</p>
-<p>in allegato trovi il brief preparato con AgenziaGiusta.it. Come da tuo consenso, lo inviamo a un'agenzia adatta al progetto, che ti contatterà.</p>
+<p>in allegato trovi il brief preparato con AgenziaGiusta.it. Come da tua richiesta, lo inviamo a un'agenzia adatta al progetto, che ti contatterà.</p>
 <p>Per qualsiasi domanda rispondi a questa email.</p>
 <p>AgenziaGiusta.it</p></div><hr style="border:0;border-top:1px solid #E8E4E1;margin:24px 0">${briefHtml(brief)}`,
   });
@@ -68,10 +68,10 @@ export async function inviaBrief(grezze: Risposte, data: string): Promise<EsitoB
     oggetto: `Nuovo brief: ${brief.ragioneSociale}`,
     rispondiA: email,
     allegati,
-    testo: `Nuovo brief dal sito.\n\nAzienda: ${brief.ragioneSociale}\nReferente: ${brief.referente}\nEmail: ${email}\nTelefono: ${taglia(r.telefono)}\nConsenso all'invio a un'agenzia: sì\nInvio all'azienda: ${all ? "riuscito" : "NON riuscito"}\n\n${briefTesto(brief)}`,
+    testo: `Nuovo brief dal sito.\n\nAzienda: ${brief.ragioneSociale}\nReferente: ${brief.referente}\nEmail: ${email}\nTelefono: ${taglia(r.telefono)}\nRichiesta di contatto da un'agenzia: sì\nInvio all'azienda: ${all ? "riuscito" : "NON riuscito"}\n\n${briefTesto(brief)}`,
     html: `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5">
 <p><strong>Nuovo brief dal sito.</strong></p>
-<p>Azienda: ${html(brief.ragioneSociale)}<br>Referente: ${html(brief.referente)}<br>Email: ${html(email)}<br>Telefono: ${html(taglia(r.telefono))}<br>Consenso all'invio a un'agenzia: sì<br>Invio all'azienda: ${all ? "riuscito" : "<strong>NON riuscito</strong>"}</p></div>
+<p>Azienda: ${html(brief.ragioneSociale)}<br>Referente: ${html(brief.referente)}<br>Email: ${html(email)}<br>Telefono: ${html(taglia(r.telefono))}<br>Richiesta di contatto da un'agenzia: sì<br>Invio all'azienda: ${all ? "riuscito" : "<strong>NON riuscito</strong>"}</p></div>
 <hr style="border:0;border-top:1px solid #E8E4E1;margin:24px 0">${briefHtml(brief)}`,
   });
 
