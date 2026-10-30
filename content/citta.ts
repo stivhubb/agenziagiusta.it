@@ -47,7 +47,7 @@ export function seoLocale(verticale: Verticale, c: Citta): Seo {
   const plurale = verticale.locale.plurale;
   return {
     title: `${verticale.locale.nome} ${a(c.nome)}`,
-    description: `Cerchi tra le ${plurale[0].toLowerCase()}${plurale.slice(1)} ${a(c.nome)}? Prepara il brief con il quiz e fatti contattare da un'agenzia adatta al tuo progetto.`,
+    description: `Cerchi tra le ${plurale[0].toLowerCase()}${plurale.slice(1)} ${a(c.nome)}? Compila il brief online e fatti contattare da un'agenzia adatta al tuo progetto.`,
   };
 }
 

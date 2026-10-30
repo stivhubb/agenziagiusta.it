@@ -22,7 +22,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
         {
           elenco: [
             {
-              termine: "Risposte al quiz.",
+              termine: "Risposte al brief guidato.",
               testo:
                 "Informazioni sull'azienda e sul progetto: settore, dimensione, sede, prodotti, concorrenti, comunicazione attuale, obiettivi, servizi cercati, fascia di budget, considerazioni. Nei campi liberi ti chiediamo di non inserire dati personali di altre persone.",
             },
@@ -56,12 +56,12 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
             {
               termine: "Comporre il brief e inviartelo via email.",
               testo:
-                "È il servizio che chiedi compilando il quiz (art. 6, par. 1, lett. b del Regolamento).",
+                "È il servizio che chiedi compilando il brief guidato (art. 6, par. 1, lett. b del Regolamento).",
             },
             {
               termine: "Inviare il brief e i tuoi contatti a un'agenzia, perché possa contattarti.",
               testo:
-                "È il servizio che chiedi compilando il quiz: metterti in contatto con un'agenzia adatta al progetto (art. 6, par. 1, lett. b).",
+                "È il servizio che chiedi compilando il brief guidato: metterti in contatto con un'agenzia adatta al progetto (art. 6, par. 1, lett. b).",
             },
             {
               termine: "Rispondere ai messaggi del modulo Contatti.",
@@ -114,7 +114,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
           elenco: [
             {
               termine: "Brief e contatti:",
-              testo: "24 mesi dall'invio del quiz, oppure fino a una tua richiesta di cancellazione. Alla scadenza le email vengono cancellate.",
+              testo: "24 mesi dall'invio del brief, oppure fino a una tua richiesta di cancellazione. Alla scadenza le email vengono cancellate.",
             },
             { termine: "Messaggi dal modulo Contatti:", testo: "24 mesi dall'ultima risposta." },
             {
@@ -133,7 +133,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
     {
       titolo: "Dati obbligatori",
       blocchi: [
-        "I campi obbligatori del quiz e dei moduli servono a fornire il servizio: senza, non è possibile generare il brief o rispondere alla richiesta. I campi facoltativi puoi lasciarli vuoti.",
+        "I campi obbligatori del brief guidato e dei moduli servono a fornire il servizio: senza, non è possibile generare il brief o rispondere alla richiesta. I campi facoltativi puoi lasciarli vuoti.",
       ],
     },
     {

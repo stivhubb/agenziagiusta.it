@@ -250,7 +250,7 @@ export function Quiz() {
           </div>
           <div
             role="progressbar"
-            aria-label="Avanzamento del quiz"
+            aria-label="Avanzamento del brief"
             aria-valuenow={Math.round(avanzamento)}
             aria-valuemin={0}
             aria-valuemax={100}

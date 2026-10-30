@@ -4,7 +4,7 @@ import { Freccia } from "./Icone";
 
 // Blocco quiz compatto: si usa nelle pagine verticali, nelle pagine città e nella guida.
 
-const passi = ["Rispondi al quiz", "Ricevi il brief via email", "Ti contatta un'agenzia adatta"];
+const passi = ["Compila il brief", "Ricevi il brief via email", "Ti contatta un'agenzia adatta"];
 
 export function BloccoQuizCompatto() {
   return (

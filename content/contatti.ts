@@ -8,8 +8,8 @@ export const contatti = {
     azienda: {
       etichetta: "Sono un'azienda",
       titolo: "Scrivici",
-      testo: "Per qualsiasi domanda sul servizio. Se cerchi un'agenzia, il modo più rapido è il quiz:",
-      linkQuiz: "prepara il brief.",
+      testo: "Per qualsiasi domanda sul servizio. Se cerchi un'agenzia, il modo più rapido è compilare il brief:",
+      linkQuiz: "inizia da qui.",
       pulsante: "Invia il messaggio",
     },
     agenzia: {

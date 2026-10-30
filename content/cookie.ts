@@ -19,7 +19,7 @@ export const cookie: { titolo: string; aggiornamento: string; sezioni: Sezione[]
       blocchi: [
         `${sito.nome} non usa cookie di profilazione, cookie di statistica o di terze parti, né strumenti simili. I caratteri sono serviti dal sito stesso e non ci sono video, mappe o pulsanti di social network incorporati.`,
         "Le visite sono misurate con Vercel Web Analytics, che non usa cookie e non salva dati nel browser: conta le pagine viste in forma aggregata, senza identificare chi visita il sito.",
-        "Le risposte che dai nel quiz restano nella pagina mentre la compili e non vengono salvate nel browser.",
+        "Le risposte che dai nel brief guidato restano nella pagina mentre la compili e non vengono salvate nel browser.",
         "Per questo il sito non mostra un banner: il consenso è richiesto solo per i cookie che non sono tecnici.",
       ],
     },

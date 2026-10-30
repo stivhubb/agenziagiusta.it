@@ -7,21 +7,21 @@ export const comeFunziona: Pagina & {
   fascia: string;
   seo: Seo;
 } = {
-  titolo: { testo: "Dal quiz all'agenzia giusta,", evidenza: "in tre passi." },
+  titolo: { testo: "Dal brief all'agenzia giusta,", evidenza: "in tre passi." },
   seo: {
-    title: "Come funziona AgenziaGiusta.it: dal quiz al brief",
+    title: "Come funziona AgenziaGiusta.it: dal brief all'agenzia",
     description:
-      "Rispondi al quiz, ricevi il brief via email e vieni contattato da un'agenzia adatta al tuo progetto. Per le aziende è gratis: ecco come funziona.",
+      "Compila il brief, ricevilo via email e vieni contattato da un'agenzia adatta al tuo progetto. Per le aziende è gratis: ecco come funziona.",
   },
   intro: [
     "AgenziaGiusta.it non è un'agenzia. Ti aiuta a mettere per iscritto cosa ti serve e ti mette in contatto con un'agenzia adatta.",
     "Chi cerca un'agenzia di solito parte da una ricerca online, apre una decina di siti che si somigliano e manda qualche richiesta di contatto. Poi aspetta, ripete la stessa spiegazione a ogni telefonata e riceve preventivi che non riesce a confrontare. È un percorso lungo, e il risultato dipende più dal caso che dal merito.",
-    "Noi partiamo dall'altro capo: prima di cercare l'agenzia, mettiamo in ordine la richiesta. Il quiz ti fa le domande che un'agenzia ti farebbe al primo incontro e con le tue risposte costruisce un brief, cioè il documento che descrive il progetto. Il brief è tuo e puoi usarlo come vuoi; noi lo inviamo a un'agenzia adatta, che ti contatta per presentarti la sua proposta.",
+    "Noi partiamo dall'altro capo: prima di cercare l'agenzia, mettiamo in ordine la richiesta. Il brief guidato ti fa le domande che un'agenzia ti farebbe al primo incontro e con le tue risposte costruisce un brief, cioè il documento che descrive il progetto. Il brief è tuo e puoi usarlo come vuoi; noi lo inviamo a un'agenzia adatta, che ti contatta per presentarti la sua proposta.",
     "Qui sotto trovi i tre passi, quanto costa il servizio e cosa succede dopo l'invio del brief.",
   ],
   passi: [
     {
-      titolo: "Rispondi al quiz",
+      titolo: "Compila il brief",
       testo:
         "Poche domande su azienda, comunicazione attuale, obiettivi, servizi e budget. Non servono competenze di marketing.",
     },

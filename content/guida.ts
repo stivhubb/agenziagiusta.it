@@ -7,7 +7,7 @@ export const guida: Pagina & { seo: Seo } = {
   seo: {
     title: "Come scegliere un'agenzia e scrivere un buon brief",
     description:
-      "Cosa chiarire prima di cercare un'agenzia, cosa scrivere nel brief e come confrontare le proposte. Con il quiz che prepara il brief per te.",
+      "Cosa chiarire prima di cercare un'agenzia, cosa scrivere nel brief e come confrontare le proposte. Con il brief guidato da compilare online.",
   },
   intro: [
     "Scegliere un'agenzia è più semplice se sai già cosa chiedere. Il brief serve a questo: mette per iscritto cosa ti serve, con quale budget e in quali tempi, così ogni agenzia risponde alla stessa domanda.",

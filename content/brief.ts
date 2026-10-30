@@ -494,7 +494,7 @@ function richiesta(r: Risposte): BloccoBrief[] {
         voci: aree.map((area) => ({
           nome: area,
           testo: sistema(
-            servizi[area] ?? "area indicata dall'azienda oltre a quelle previste dal quiz",
+            servizi[area] ?? "area indicata dall'azienda oltre a quelle previste",
           ),
         })),
       },
