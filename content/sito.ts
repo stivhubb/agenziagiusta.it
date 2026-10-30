@@ -19,6 +19,7 @@ export const percorsi = {
   quiz: "/brief/",
   comeFunziona: "/come-funziona/",
   guida: "/guide/come-scegliere-agenzia/",
+  guidaBrief: "/guide/come-fare-un-brief/",
   perLeAgenzie: "/per-le-agenzie/",
   contatti: "/contatti/",
   privacy: "/privacy/",
