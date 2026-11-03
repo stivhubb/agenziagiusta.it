@@ -141,7 +141,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fa un'agenzia pubblicitaria, dalla campagna allo spot e alle affissioni, come lavora e quanto costa. Prepara il brief e fatti contattare.",
     },
-    locale: { nome: "Agenzia pubblicitaria", plurale: "Agenzie pubblicitarie" },
+    locale: { nome: "Agenzia di pubblicità", plurale: "Agenzie pubblicitarie" },
     h2: {
       mercato: "Il mercato della pubblicità in Italia",
       costi: "Quanto costa un'agenzia pubblicitaria",
