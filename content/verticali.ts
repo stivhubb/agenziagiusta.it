@@ -141,7 +141,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fa un'agenzia pubblicitaria, dalla campagna allo spot e alle affissioni, come lavora e quanto costa. Prepara il brief e fatti contattare.",
     },
-    locale: { nome: "Agenzia di pubblicità", plurale: "Agenzie pubblicitarie" },
+    locale: { nome: "Agenzia pubblicitaria", plurale: "Agenzie pubblicitarie" },
     h2: {
       mercato: "Il mercato della pubblicità in Italia",
       costi: "Quanto costa un'agenzia pubblicitaria",
@@ -319,7 +319,7 @@ export const verticali: Verticale[] = [
       description:
         "Cosa fanno le agenzie SEO, dall'audit alle campagne su Google, e quanto costa una SEO agency. Prepara il brief e fatti contattare da un'agenzia adatta.",
     },
-    locale: { nome: "Agenzia SEO", plurale: "Agenzie SEO" },
+    locale: { nome: "Agenzia SEO e SEM", plurale: "Agenzie SEO" },
     h2: {
       mercato: "Il mercato della ricerca online in Italia",
       costi: "Quanto costa un'agenzia SEO",

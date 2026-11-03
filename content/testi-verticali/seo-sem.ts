@@ -3,17 +3,17 @@ import { gruppo } from "./gruppo";
 
 export const seoSem: Testi = {
   intro: [
-    "Un'agenzia SEO, o SEO agency, lavora sulla visibilità di un sito nei motori di ricerca. La SEO (Search Engine Optimization) è l'insieme degli interventi che migliorano il posizionamento nei risultati organici, cioè non a pagamento. Le agenzie SEO seguono spesso anche la SEM, e molte web agency offrono la SEO tra i loro servizi.",
-    "A questa si affianca la SEM (Search Engine Marketing), che comprende gli annunci a pagamento nelle pagine dei risultati. Le due attività sono complementari: entrambe intercettano utenti che stanno già cercando un prodotto, un servizio o un'informazione.",
+    "Un'agenzia SEO, o SEO agency, lavora sulla visibilità di un sito nei motori di ricerca. La SEO (Search Engine Optimization) è l'insieme degli interventi che migliorano il posizionamento nei risultati organici, cioè non a pagamento. Le agenzie SEO seguono spesso anche le campagne a pagamento sui motori di ricerca, e molte web agency offrono la SEO tra i loro servizi.",
+    "SEO e campagne a pagamento insieme formano la SEM (Search Engine Marketing), cioè il marketing sui motori di ricerca. La parte a pagamento, gli annunci nelle pagine dei risultati, si chiama propriamente SEA (Search Engine Advertising), ma nel linguaggio comune viene spesso chiamata anch'essa SEM, oppure PPC (pay per click). Le due attività sono complementari: entrambe intercettano utenti che stanno già cercando un prodotto, un servizio o un'informazione.",
   ],
   sezioni: [
     {
       titolo: "Cosa fa un'agenzia SEO",
       blocchi: [
         "L'attività SEO si articola in tre ambiti. La SEO tecnica interviene sulla struttura del sito perché i motori di ricerca possano scansionarlo e indicizzarlo correttamente: velocità, compatibilità con i dispositivi mobili, architettura delle pagine. La SEO on-page riguarda i contenuti: attraverso la ricerca delle parole chiave l'agenzia individua le ricerche effettuate dagli utenti e ottimizza testi, titoli e struttura delle pagine per rispondere a quell'intento. La SEO off-page lavora sull'autorevolezza del sito, in particolare attraverso i collegamenti provenienti da altri siti (link building).",
-        "L'attività SEM consiste nella gestione delle campagne sulle piattaforme pubblicitarie dei motori di ricerca: scelta delle parole chiave, redazione degli annunci, definizione delle offerte e delle pagine di destinazione, controllo del costo per clic e del costo per conversione.",
-        "Il lavoro inizia con un audit, un'analisi dello stato del sito, del suo posizionamento e dei concorrenti, da cui deriva un piano di interventi ordinati per priorità. La SEO produce risultati progressivi e richiede un'attività continuativa di ottimizzazione e di produzione di contenuti; le campagne SEM hanno effetto immediato e durano quanto l'investimento. Entrambe sono misurate con report periodici su posizionamenti, traffico e conversioni.",
-        "Le figure coinvolte sono il SEO specialist; il SEO copywriter, che redige i contenuti ottimizzati; lo specialista delle campagne sui motori di ricerca (SEM o PPC specialist); il web analyst; per gli interventi tecnici, lo sviluppatore.",
+        "La SEA consiste nella gestione delle campagne sulle piattaforme pubblicitarie dei motori di ricerca: scelta delle parole chiave, redazione degli annunci, definizione delle offerte e delle pagine di destinazione, controllo del costo per clic e del costo per conversione.",
+        "Il lavoro inizia con un audit, un'analisi dello stato del sito, del suo posizionamento e dei concorrenti, da cui deriva un piano di interventi ordinati per priorità. La SEO produce risultati progressivi e richiede un'attività continuativa di ottimizzazione e di produzione di contenuti; le campagne a pagamento hanno effetto immediato e durano quanto l'investimento. Entrambe sono misurate con report periodici su posizionamenti, traffico e conversioni.",
+        "Le figure coinvolte sono il SEO specialist; il SEO copywriter, che redige i contenuti ottimizzati; lo specialista delle campagne sui motori di ricerca (SEA, SEM o PPC specialist); il web analyst; per gli interventi tecnici, lo sviluppatore.",
       ],
     },
   ],
@@ -31,18 +31,18 @@ export const seoSem: Testi = {
   costi: {
     testo: [
       "La SEO è remunerata con un canone mensile, perché richiede un lavoro continuativo. Per una piccola impresa o per un progetto locale si colloca in genere tra 500 e 1.500 euro al mese; per un'azienda strutturata, un e-commerce o un settore molto competitivo si parte in genere da 2.500 euro al mese. L'analisi iniziale del sito (audit), se acquistata da sola, costa in genere tra 500 e 2.000 euro.",
-      "Per le campagne SEM il compenso dell'agenzia ha di norma una parte fissa, cioè un costo di setting iniziale e un canone mensile (flat fee) di gestione, e una fee sull'investimento, cioè una percentuale del budget gestito. La parte fissa si colloca in genere tra 500 e 2.500 euro al mese e varia con l'impegno richiesto: numero di campagne, competenze necessarie ed entità del budget. Il budget pubblicitario si paga a parte alla piattaforma.",
+      "Per le campagne a pagamento (SEA) il compenso dell'agenzia ha di norma una parte fissa, cioè un costo di setting iniziale e un canone mensile (flat fee) di gestione, e una fee sull'investimento, cioè una percentuale del budget gestito. La parte fissa si colloca in genere tra 500 e 2.500 euro al mese e varia con l'impegno richiesto: numero di campagne, competenze necessarie ed entità del budget. Il budget pubblicitario si paga a parte alla piattaforma.",
     ],
     nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
   domande: [
     {
       domanda: "In quanto tempo si vedono i risultati?",
-      risposta: "I primi risultati della SEO arrivano in genere tra tre e sei mesi dall'inizio del lavoro; per le ricerche più competitive ne servono da sei a dodici. Le campagne SEM producono visite dal giorno dell'attivazione e si fermano quando termina il budget.",
+      risposta: "I primi risultati della SEO arrivano in genere tra tre e sei mesi dall'inizio del lavoro; per le ricerche più competitive ne servono da sei a dodici. Le campagne a pagamento producono visite dal giorno dell'attivazione e si fermano quando termina il budget.",
     },
     {
       domanda: "È meglio investire in SEO o in SEM?",
-      risposta: "Le due attività rispondono a esigenze diverse e spesso si usano insieme. La SEM dà visibilità immediata e misurabile, a un costo per ogni clic. La SEO richiede tempo ma costruisce un traffico che non dipende dalla spesa pubblicitaria. Una scelta frequente è avviare le campagne SEM mentre il lavoro SEO matura.",
+      risposta: "Qui SEM sta per gli annunci a pagamento, cioè la SEA. Le due attività rispondono a esigenze diverse e spesso si usano insieme. La SEA dà visibilità immediata e misurabile, a un costo per ogni clic. La SEO richiede tempo ma costruisce un traffico che non dipende dalla spesa pubblicitaria. Una scelta frequente è avviare le campagne a pagamento mentre il lavoro SEO matura.",
     },
     {
       domanda: "Un'agenzia può garantire la prima posizione su Google?",
@@ -54,7 +54,7 @@ export const seoSem: Testi = {
     },
   ],
   attivita: {
-    titolo: "Attività e lavorazioni di un'agenzia SEO",
+    titolo: "Attività e lavorazioni di un'agenzia SEO e SEM",
     gruppi: [
       gruppo("Analisi", [
         ["Audit SEO", "Analisi tecnica, dei contenuti e dell'autorevolezza del sito."],
@@ -87,7 +87,7 @@ export const seoSem: Testi = {
         ["Citazioni locali", "Presenza coerente dei dati aziendali su mappe ed elenchi."],
         ["Gestione delle recensioni", "Monitoraggio e risposta alle recensioni degli utenti."],
       ]),
-      gruppo("SEM", [
+      gruppo("SEA (annunci a pagamento)", [
         ["Campagne sulla rete di ricerca", "Annunci testuali nei risultati di ricerca."],
         ["Campagne Shopping", "Annunci di prodotto con immagine e prezzo."],
         ["Display e remarketing", "Annunci rivolti a chi ha già visitato il sito."],
