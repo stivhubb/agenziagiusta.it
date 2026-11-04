@@ -35,6 +35,9 @@ export default async function Pagina({ params }: PageProps<"/[slug]">) {
   const verticale = verticali.find((v) => v.slug === slug);
   if (!verticale) notFound();
   const nome = verticale.percorso ?? verticale.nome;
+  const vociCitta = citta
+    .filter((c) => completa(c.pagine?.[verticale.slug]))
+    .map((c) => ({ nome: c.nome, href: percorsoLocale(verticale, c) }));
   return (
     <>
       <DatiPercorso voci={[{ nome, percorso: `/${slug}/` }]} />
@@ -47,12 +50,8 @@ export default async function Pagina({ params }: PageProps<"/[slug]">) {
             sezioni: sezioniVerticale(verticale),
           }
         }
-        luoghi={{
-          titolo: `${verticale.locale.plurale} per città`,
-          voci: citta
-            .filter((c) => completa(c.pagine?.[verticale.slug]))
-            .map((c) => ({ nome: c.nome, href: percorsoLocale(verticale, c) })),
-        }}
+        luoghi={{ titolo: `${verticale.locale.plurale} per città`, voci: vociCitta }}
+        luoghiInAlto={{ titolo: "Cerca nella tua città:", voci: vociCitta }}
       />
     </>
   );

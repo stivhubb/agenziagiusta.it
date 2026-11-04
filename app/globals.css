@@ -712,6 +712,25 @@ textarea {
   font-weight: 500;
 }
 
+.luoghi--compatto {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding-bottom: clamp(24px, 3vw, 40px);
+}
+
+.luoghi__titolo {
+  margin: 0;
+  font-weight: 600;
+}
+
+.luoghi--compatto .luoghi__voci a {
+  min-height: 36px;
+  padding: 0 14px;
+  font-size: 15px;
+}
+
 .luoghi__voci a:hover {
   border-color: var(--magenta);
   color: var(--magenta);

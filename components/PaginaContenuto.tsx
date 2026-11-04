@@ -7,7 +7,7 @@ import { StrisciaAgenzie } from "./StrisciaAgenzie";
 import { Intro, Testo } from "./Testo";
 
 // Template delle pagine di contenuto (verticali, città, guida).
-// - Verticali: intro, testo (mercato, costi, cosa fa, domande), blocco quiz compatto,
+// - Verticali: intro, riga compatta delle città, testo (mercato, costi, cosa fa, domande), blocco quiz compatto,
 //   attività e lavorazioni, link alle città.
 // - Guida: intro, blocco quiz compatto, continuazione del testo.
 // Le pagine tipo + città hanno la loro composizione in app/[slug]/[citta]/page.tsx.
@@ -18,16 +18,19 @@ export function PaginaContenuto({
   titolo,
   pagina,
   luoghi,
+  luoghiInAlto,
 }: {
   occhiello?: string;
   percorso?: { nome: string; href?: string }[];
   titolo: Titolo;
   pagina?: Testi;
   luoghi?: DatiLuoghi;
+  luoghiInAlto?: DatiLuoghi;
 }) {
   return (
     <>
       <Intro occhiello={occhiello} percorso={percorso} titolo={titolo} intro={pagina?.intro} />
+      {luoghiInAlto && luoghiInAlto.voci.length > 0 && <Luoghi luoghi={luoghiInAlto} compatto />}
       {pagina?.attivita ? (
         <>
           <Testo sezioni={pagina.sezioni} variante="seguito" />
