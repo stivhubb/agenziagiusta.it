@@ -1,3 +1,4 @@
+import { ai, nomenclatura } from "./ai-verticali";
 import type { Blocco, Seo, Sezione, Testi, Titolo } from "./tipi";
 import { branding } from "./testi-verticali/branding";
 import { comunicazione } from "./testi-verticali/comunicazione";
@@ -69,7 +70,7 @@ function sezioneDomande(v: Verticale): Sezione {
   };
 }
 
-// Primo blocco della pagina di un verticale, sotto l'intro: mercato, costi, cosa fa, domande.
+// Primo blocco della pagina di un verticale, sotto l'intro: mercato, costi, cosa fa, AI, domande.
 export function sezioniVerticale(v: Verticale): Sezione[] {
   const pagina = v.pagina;
   if (!pagina) return [];
@@ -81,7 +82,10 @@ export function sezioniVerticale(v: Verticale): Sezione[] {
         : [{ segnaposto: "[MERCATO: DA SCRIVERE]" }],
     },
     { titolo: v.h2.costi, blocchi: blocchiCosti(pagina) },
-    ...pagina.sezioni,
+    // "Cosa fa", con in coda il paragrafo sui nomi delle agenzie; poi il blocco sull'AI
+    // (content/ai-verticali.ts).
+    ...pagina.sezioni.map((sez, i) => (i === 0 ? { ...sez, blocchi: [...sez.blocchi, nomenclatura] } : sez)),
+    ...(ai[v.slug] ? [ai[v.slug]] : []),
     sezioneDomande(v),
   ];
 }

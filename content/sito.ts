@@ -20,6 +20,7 @@ export const percorsi = {
   comeFunziona: "/come-funziona/",
   guida: "/guide/come-scegliere-agenzia/",
   guidaBrief: "/guide/come-fare-un-brief/",
+  guidaAi: "/guide/agenzia-o-intelligenza-artificiale/",
   perLeAgenzie: "/per-le-agenzie/",
   contatti: "/contatti/",
   privacy: "/privacy/",

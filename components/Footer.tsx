@@ -21,6 +21,7 @@ export function Footer() {
             <Link href={percorsi.comeFunziona}>Come funziona</Link>
             <Link href={percorsi.guida}>{"Guida alla scelta dell'agenzia"}</Link>
             <Link href={percorsi.guidaBrief}>{"Come fare un brief"}</Link>
+            <Link href={percorsi.guidaAi}>{"Agenzia o intelligenza artificiale"}</Link>
           </div>
           <div className="footer__colonna">
             <div className="footer__titolo">Tipi di agenzia</div>
