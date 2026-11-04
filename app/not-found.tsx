@@ -28,7 +28,7 @@ export default function NonTrovata() {
             <Freccia />
           </Link>
           <Link href={percorsi.quiz} className="pulsante pulsante--contorno">
-            Inizia il quiz
+            Compila il brief
           </Link>
         </div>
       </section>

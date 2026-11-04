@@ -34,7 +34,7 @@ export default function Home() {
         />
         <div className="hero-home__azioni">
           <Link href={percorsi.quiz} className="pulsante pulsante--magenta">
-            Inizia il quiz
+            Compila il brief
             <Freccia />
           </Link>
           <span className="nota">{home.notaPulsante}</span>

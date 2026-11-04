@@ -17,11 +17,13 @@ import {
 } from "@/content/citta";
 import { metadati } from "@/content/metadati";
 import { partnerDi } from "@/content/partner";
+import { fonteTerritorio, territorio } from "@/content/territorio";
 import { blocchiCosti, completo, sezioniCosaFa, verticali } from "@/content/verticali";
 
 // Pagine tipo + città (/web-agency/roma/): una pagina statica per ogni incrocio tra
 // i verticali di content/verticali.ts e le città di content/citta.ts.
-// Composizione: intro con il mercato locale (con le fonti) e i costi, blocco quiz compatto,
+// Composizione: intro con i dati della rilevazione sul tipo di agenzia nella città, il blocco sulla
+// città con i dati Istat (content/territorio.ts) e i costi, blocco quiz compatto,
 // cosa fa quel tipo di agenzia con le domande frequenti, elenco delle agenzie di quel tipo
 // nella città (partner e agenzie a rotazione, più l'elenco completo). Costi, cosa fa e domande
 // vengono dai testi del verticale.
@@ -77,6 +79,10 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
         segnaposto="[MERCATO LOCALE: DA SCRIVERE]"
       >
         {voce.pagina?.nota && <BloccoTesto blocco={{ nota: voce.pagina.nota }} />}
+        {(territorio[c.slug] ?? []).map((paragrafo, i) => (
+          <BloccoTesto key={`territorio-${i}`} blocco={paragrafo} />
+        ))}
+        {territorio[c.slug] && <Fonti fonti={[fonteTerritorio]} />}
         {fonti.length > 0 && <Fonti fonti={fonti} />}
         {blocchiCosti(verticale.pagina).map((blocco, i) => (
           <BloccoTesto key={i} blocco={blocco} />

@@ -88,7 +88,7 @@ export function BloccoQuiz() {
             ))}
           </ol>
           <Link href={percorsi.quiz} className="pulsante pulsante--nero">
-            Inizia il quiz
+            Compila il brief
             <Freccia />
           </Link>
         </div>

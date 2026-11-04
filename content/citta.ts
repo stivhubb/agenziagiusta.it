@@ -1,4 +1,5 @@
 import { datiCitta } from "./dati-citta";
+import { clienti } from "./territorio";
 import type { Seo, TestiLocali, Titolo } from "./tipi";
 import type { Verticale } from "./verticali";
 
@@ -85,7 +86,15 @@ export const citta: Citta[] = elenco.map((c) => {
   const pagine: Record<string, TestiLocali> = { ...c.pagine };
   for (const [verticale, d] of Object.entries(dati)) {
     const prima = pagine[verticale];
-    pagine[verticale] = { ...prima, ...d, testo: [...(prima?.testo ?? []), ...d.testo] };
+    // La frase sui clienti delle agenzie (content/territorio.ts) va dopo i dati sui servizi,
+    // prima dell'eventuale rimando all'elenco ("Più in basso trovi…").
+    const testo = [...d.testo];
+    const frase = clienti[c.slug]?.[verticale];
+    if (frase) {
+      const i = testo.findIndex((p) => p.startsWith("Più in basso"));
+      testo.splice(i === -1 ? testo.length : i, 0, frase);
+    }
+    pagine[verticale] = { ...prima, ...d, testo: [...(prima?.testo ?? []), ...testo] };
   }
   return { ...c, pagine };
 });
