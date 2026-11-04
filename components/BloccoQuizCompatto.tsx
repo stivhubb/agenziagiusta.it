@@ -23,7 +23,7 @@ export function BloccoQuizCompatto() {
           </ol>
         </div>
         <Link href={percorsi.quiz} className="pulsante pulsante--nero">
-          Compila il brief
+          Inizia il brief
           <Freccia />
         </Link>
       </div>

@@ -38,7 +38,7 @@ export default function ComeFunziona() {
         <div className="contenitore fascia">
           <h2 className="titolo-fascia">{comeFunziona.fascia}</h2>
           <Link href={percorsi.quiz} className="pulsante pulsante--magenta">
-            Compila il brief
+            Inizia il brief
             <Freccia />
           </Link>
         </div>
