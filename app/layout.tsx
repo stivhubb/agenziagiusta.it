@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ProviderConsenso } from "@/components/Consenso";
 import { sito } from "@/content/sito";
 import "./globals.css";
 
@@ -28,9 +29,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="it" className={`${titoli.variable} ${testo.variable}`}>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {/* Consenso ai cookie di terze parti: l'avviso compare solo nelle pagine con video di YouTube. */}
+        <ProviderConsenso>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ProviderConsenso>
         {/* Misurazione delle visite di Vercel: senza cookie, dati aggregati. */}
         <Analytics />
       </body>

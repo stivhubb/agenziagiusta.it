@@ -8,7 +8,7 @@ import type { Sezione } from "./tipi";
 
 export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[] } = {
   titolo: "Informativa privacy",
-  aggiornamento: "Ultimo aggiornamento: 29 ottobre 2026",
+  aggiornamento: "Ultimo aggiornamento: 7 novembre 2026",
   sezioni: [
     {
       titolo: "Titolare del trattamento",
@@ -159,7 +159,7 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
     {
       titolo: "Cookie",
       blocchi: [
-        "Il sito non usa cookie di profilazione né strumenti di statistica. Tutti i dettagli sono nella cookie policy.",
+        "Il sito non usa cookie di profilazione propri e misura le visite senza cookie. Nelle pagine con video di YouTube, YouTube (Google) installa i suoi cookie solo se accetti. Tutti i dettagli sono nella cookie policy.",
         { link: { testo: "Cookie policy", href: percorsi.cookie } },
       ],
     },

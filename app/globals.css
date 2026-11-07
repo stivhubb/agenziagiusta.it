@@ -1166,6 +1166,133 @@ textarea {
   box-shadow: 0 8px 24px rgba(27, 27, 27, 0.22);
 }
 
+/* ---------- Avviso cookie e video ---------- */
+
+.avviso-cookie {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 20;
+  transform: translateX(-50%);
+  width: min(560px, calc(100% - 32px));
+  padding: 22px 52px 22px 24px;
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--testo);
+  box-shadow: 0 12px 40px rgba(27, 27, 27, 0.22);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.avviso-cookie p {
+  margin: 0 0 14px;
+}
+
+.avviso-cookie a {
+  color: var(--magenta);
+  text-decoration: underline;
+}
+
+.avviso-cookie__titolo {
+  font-family: var(--font-titoli);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.avviso-cookie__accetta {
+  min-height: 48px;
+  background: var(--magenta);
+  color: #ffffff;
+}
+
+.avviso-cookie__chiudi {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--testo-secondario);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.avviso-cookie__chiudi:hover {
+  background: var(--sfondo-sezione);
+}
+
+.footer__link-pulsante {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin-block: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--testo);
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video--bloccato {
+  aspect-ratio: auto;
+  min-height: min(56vw, 420px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.video--bloccato p {
+  margin: 0;
+}
+
+.video__titolo {
+  font-family: var(--font-titoli);
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 700;
+}
+
+.video__testo {
+  max-width: 420px;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.video--bloccato .pulsante {
+  min-height: 48px;
+  margin-top: 6px;
+  background: var(--magenta);
+  color: #ffffff;
+}
+
+.video__link {
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 /* ---------- Moduli ---------- */
 
 .modulo {
@@ -1685,6 +1812,7 @@ textarea {
   body > footer,
   .striscia,
   .pulsante-contatti,
+  .avviso-cookie,
   .brief-pagina > :not(.brief) {
     display: none;
   }

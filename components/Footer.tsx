@@ -2,6 +2,7 @@ import Link from "next/link";
 import { cittaComplete } from "@/content/citta";
 import { percorsi, sito } from "@/content/sito";
 import { verticali } from "@/content/verticali";
+import { PreferenzeCookie } from "./Consenso";
 import { Logo } from "./Header";
 
 export function Footer() {
@@ -45,6 +46,7 @@ export function Footer() {
             <Link href={percorsi.contatti}>Contatti</Link>
             <Link href={percorsi.privacy}>Privacy</Link>
             <Link href={percorsi.cookie}>Cookie policy</Link>
+            <PreferenzeCookie />
           </div>
         </div>
         <div className="footer__note">
