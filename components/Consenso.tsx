@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { percorsi } from "@/content/sito";
@@ -7,7 +8,8 @@ import { percorsi } from "@/content/sito";
 // Consenso ai cookie di terze parti (oggi solo i video di YouTube), secondo le linee guida
 // del Garante privacy del 10 giugno 2021:
 // - l'avviso compare solo nelle pagine che contengono un video, perché solo lì si
-//   installerebbero cookie di terze parti; finché non c'è il consenso YouTube non viene caricato;
+//   installerebbero cookie di terze parti; finché non c'è il consenso YouTube non viene caricato
+//   (la copertina è un'immagine del nostro sito, non la miniatura di YouTube);
 // - "Accetta" dà il consenso; chiudere con la X equivale a rifiutare e mantiene solo i cookie tecnici;
 // - la scelta si cambia in qualsiasi momento da "Preferenze cookie" nel footer;
 // - dopo un rifiuto l'avviso non si ripropone per 6 mesi.
@@ -95,19 +97,18 @@ export function useConsenso() {
 function AvvisoCookie({ onAccetta, onChiudi }: { onAccetta: () => void; onChiudi: () => void }) {
   return (
     <div className="avviso-cookie" role="dialog" aria-labelledby="avviso-cookie-titolo">
-      <button type="button" className="avviso-cookie__chiudi" onClick={onChiudi} aria-label="Chiudi e continua senza accettare">
-        ×
-      </button>
       <p className="avviso-cookie__titolo" id="avviso-cookie-titolo">
         Video di YouTube
       </p>
-      <p>
-        Per guardare i video in questa pagina, YouTube (Google) può installare cookie e strumenti di tracciamento di
-        terze parti. Chiudendo questo avviso continui senza: i video restano disponibili su YouTube.{" "}
+      <p className="avviso-cookie__testo">
+        I video di questa pagina sono su YouTube, che usa cookie di terze parti. Chiudendo con la X continui senza.{" "}
         <Link href={percorsi.cookie}>Cookie policy</Link>
       </p>
       <button type="button" className="pulsante avviso-cookie__accetta" onClick={onAccetta}>
         Accetta
+      </button>
+      <button type="button" className="avviso-cookie__chiudi" onClick={onChiudi} aria-label="Chiudi e continua senza accettare">
+        ×
       </button>
     </div>
   );
@@ -123,29 +124,49 @@ export function PreferenzeCookie() {
   );
 }
 
-// Video di YouTube: caricato (in modalità privacy avanzata) solo dopo il consenso.
-export function VideoYoutube({ id, titolo }: { id: string; titolo: string }) {
+// Video di YouTube, caricato (in modalità privacy avanzata) solo dopo il consenso.
+// - Nessuna scelta: copertina del nostro sito con il tasto play; cliccarlo vale come "Accetta".
+// - Rifiutato (X sull'avviso): riquadro scuro con "Accetta e guarda il video" e link a YouTube.
+// - Accettato: il video.
+// `copertina` è un'immagine in public/ (16:9), la stessa usata come copertina su YouTube.
+export function VideoYoutube({ id, titolo, copertina }: { id: string; titolo: string; copertina: string }) {
   const { scelta, accetta, richiedi } = useConsenso();
+  const [avviato, setAvviato] = useState(false);
   useEffect(() => richiedi(), []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const guarda = () => {
+    setAvviato(true);
+    accetta();
+  };
 
   if (scelta === "accettato") {
     return (
       <div className="video">
         <iframe
-          src={`https://www.youtube-nocookie.com/embed/${id}`}
+          src={`https://www.youtube-nocookie.com/embed/${id}${avviato ? "?autoplay=1" : ""}`}
           title={titolo}
           loading="lazy"
-          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
       </div>
     );
   }
+
+  if (scelta === null) {
+    return (
+      <button type="button" className="video video--copertina" onClick={guarda} aria-label={`Accetta e guarda il video: ${titolo}`}>
+        <Image src={copertina} alt="" fill sizes="(max-width: 800px) 100vw, 760px" />
+        <span className="video__play" aria-hidden="true" />
+      </button>
+    );
+  }
+
   return (
     <div className="video video--bloccato">
       <p className="video__titolo">{titolo}</p>
       <p className="video__testo">Il video è ospitato su YouTube, che può installare cookie di terze parti.</p>
-      <button type="button" className="pulsante" onClick={accetta}>
+      <button type="button" className="pulsante" onClick={guarda}>
         Accetta e guarda il video
       </button>
       <a className="video__link" href={`https://www.youtube.com/watch?v=${id}`} target="_blank" rel="noopener noreferrer">

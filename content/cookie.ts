@@ -28,8 +28,8 @@ export const cookie: { titolo: string; aggiornamento: string; sezioni: Sezione[]
       titolo: "Video di YouTube",
       blocchi: [
         "Alcune pagine contengono video ospitati su YouTube, servizio di Google Ireland Limited. Usiamo la modalità di privacy avanzata (youtube-nocookie.com), ma guardando il video YouTube può comunque installare cookie e strumenti simili, anche per misurare le visualizzazioni e per finalità pubblicitarie proprie.",
-        "Per questo il video non viene caricato finché non accetti: prima vedi solo un riquadro con il titolo, senza alcun collegamento ai server di Google. Nelle pagine con video un avviso ti chiede se accettare; chiudendolo con la X continui senza questi cookie, e puoi sempre guardare il video direttamente su YouTube.",
-        "Se accetti, la scelta vale per 12 mesi. Se chiudi l'avviso, non te lo riproponiamo per 6 mesi; puoi comunque accettare in ogni momento dal riquadro del video.",
+        "Per questo il video non viene caricato finché non accetti: prima vedi solo un'immagine di copertina servita dal nostro sito, senza alcun collegamento ai server di Google. Nelle pagine con video un avviso ti chiede se accettare; chiudendolo con la X continui senza questi cookie, e puoi sempre guardare il video direttamente su YouTube.",
+        "Se accetti, la scelta vale per 12 mesi. Se chiudi l'avviso, non te lo riproponiamo per 6 mesi; puoi comunque accettare in ogni momento dal riquadro del video. Cliccare il tasto play sulla copertina vale come accettazione.",
         "Come Google tratta i dati è spiegato nella sua informativa.",
         { link: { testo: "Informativa privacy di Google", href: "https://policies.google.com/privacy?hl=it" } },
       ],
