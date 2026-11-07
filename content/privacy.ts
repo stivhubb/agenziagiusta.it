@@ -1,3 +1,4 @@
+import { marketingAttivo } from "./consenso";
 import { percorsi, sito } from "./sito";
 import type { Sezione } from "./tipi";
 
@@ -80,9 +81,17 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
               termine: "Rispettare obblighi di legge e difendere i propri diritti.",
               testo: "Obbligo di legge e legittimo interesse (art. 6, par. 1, lett. c e f).",
             },
+            ...(marketingAttivo
+              ? [
+                  {
+                    termine: "Misurare le campagne pubblicitarie e mostrare i nostri annunci a chi ha visitato il sito.",
+                    testo: "Solo se accetti i cookie di marketing; puoi revocare il consenso in qualsiasi momento (art. 6, par. 1, lett. a).",
+                  },
+                ]
+              : []),
           ],
         },
-        "Non usiamo i tuoi dati per inviarti pubblicità e non li vendiamo.",
+        "Non ti inviamo pubblicità via email e non vendiamo i tuoi dati.",
       ],
     },
     {
@@ -159,7 +168,9 @@ export const privacy: { titolo: string; aggiornamento: string; sezioni: Sezione[
     {
       titolo: "Cookie",
       blocchi: [
-        "Il sito non usa cookie di profilazione propri e misura le visite senza cookie. Nelle pagine con video di YouTube, YouTube (Google) installa i suoi cookie solo se accetti. Tutti i dettagli sono nella cookie policy.",
+        marketingAttivo
+          ? "Il sito misura le visite senza cookie. YouTube (per i video) e i fornitori delle nostre campagne pubblicitarie (Meta e Google) installano i loro cookie solo se accetti; per la raccolta tramite il pixel di Meta, Meta è contitolare del trattamento con noi. Tutti i dettagli sono nella cookie policy."
+          : "Il sito non usa cookie di profilazione propri e misura le visite senza cookie. Nelle pagine con video di YouTube, YouTube (Google) installa i suoi cookie solo se accetti. Tutti i dettagli sono nella cookie policy.",
         { link: { testo: "Cookie policy", href: percorsi.cookie } },
       ],
     },
