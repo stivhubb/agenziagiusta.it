@@ -126,7 +126,9 @@ const TONO_NON_DEFINITO = "Non definito";
 const TONO_DA_DEFINIRE = "Da definire con l'agenzia";
 
 const fasce: Record<string, string> = {
-  "Meno di 20.000 €": "inferiore a 20.000 euro",
+  "Meno di 5.000 €": "inferiore a 5.000 euro",
+  "5.000-10.000 €": "compreso tra 5.000 e 10.000 euro",
+  "10.000-20.000 €": "compreso tra 10.000 e 20.000 euro",
   "20.000-50.000 €": "compreso tra 20.000 e 50.000 euro",
   "50.000-100.000 €": "compreso tra 50.000 e 100.000 euro",
   "100.000-150.000 €": "compreso tra 100.000 e 150.000 euro",

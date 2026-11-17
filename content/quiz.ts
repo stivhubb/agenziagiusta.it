@@ -35,7 +35,9 @@ export const ALTRO = "Altro";
 
 // Fasce di budget annuo, usate in due campi.
 const fasce = [
-  "Meno di 20.000 €",
+  "Meno di 5.000 €",
+  "5.000-10.000 €",
+  "10.000-20.000 €",
   "20.000-50.000 €",
   "50.000-100.000 €",
   "100.000-150.000 €",

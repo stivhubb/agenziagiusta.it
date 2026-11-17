@@ -22,7 +22,7 @@ export const risposteEsempio: Risposte = {
   canali: ["Sito web", "Social media organico", "Eventi e fiere"],
   gestione: ["Risorsa interna dedicata", "Freelance"],
   toneAttuale: ["Tecnico e specialistico"],
-  investimentoAnnuo: "Meno di 20.000 €",
+  investimentoAnnuo: "10.000-20.000 €",
 
   // Obiettivi
   obiettiviMarketing: [
