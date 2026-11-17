@@ -17,6 +17,7 @@ export const risposteEsempio: Risposte = {
   concorrenti:
     "due produttori italiani di attrezzatura di coperta e i grandi marchi francesi e inglesi, più presenti nella distribuzione e sulle riviste di settore",
   sitoWeb: "officinemarea.example",
+  profiloSocial: "instagram.com/officinemarea",
 
   // Comunicazione attuale
   canali: ["Sito web", "Social media organico", "Eventi e fiere"],

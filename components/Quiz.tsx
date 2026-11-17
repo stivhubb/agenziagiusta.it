@@ -45,6 +45,8 @@ function controlla(campo: Campo, risposte: Risposte): string | undefined {
     return undefined;
   }
 
+  if (campo.assente && risposte[`${campo.id}Assente`] === true) return undefined;
+
   const scritto = testo(valore).trim();
   if (!scritto) return campo.facoltativo ? undefined : errori.obbligatorio;
   if (campo.tipo === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(scritto)) return errori.email;
@@ -176,6 +178,7 @@ export function Quiz() {
       value: testo(risposte[campo.id]),
       "aria-invalid": Boolean(errori[campo.id]),
       "aria-describedby": campo.aiuto ? `aiuto-${campo.id}` : undefined,
+      disabled: campo.assente ? risposte[`${campo.id}Assente`] === true : undefined,
     };
     if (campo.tipo === "testo-lungo") {
       // Il browser segnala gli errori di ortografia mentre si scrive.
@@ -197,6 +200,24 @@ export function Quiz() {
         autoComplete={campo.completamento}
         onChange={(e) => imposta(campo.id, e.target.value)}
       />
+    );
+  }
+
+  // Casella "non esiste" sotto un campo da scrivere: spuntata, svuota e disattiva il campo.
+  function campoAssente(campo: Campo) {
+    const id = `${campo.id}Assente`;
+    return (
+      <label className="quiz__casella">
+        <input
+          type="checkbox"
+          checked={risposte[id] === true}
+          onChange={(e) => {
+            imposta(id, e.target.checked);
+            if (e.target.checked) imposta(campo.id, "");
+          }}
+        />
+        <span>{campo.assente}</span>
+      </label>
     );
   }
 
@@ -326,6 +347,7 @@ export function Quiz() {
                       : scelta
                         ? campoScelta(campo)
                         : campoTesto(campo)}
+                    {campo.assente && campoAssente(campo)}
                     {errori[campo.id] && (
                       <p className="quiz__errore" role="alert">
                         {errori[campo.id]}

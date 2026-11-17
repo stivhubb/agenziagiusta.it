@@ -7,6 +7,8 @@
 // - provincia: testo con i suggerimenti delle province
 // - casella: una spunta da accettare
 // La voce "Altro" apre un campo per specificare.
+// "assente" aggiunge sotto un campo da scrivere una casella per dire che la cosa non esiste
+// (es. "Non esiste un sito aziendale"): spuntata, il campo non è più obbligatorio.
 
 export type Campo = {
   id: string;
@@ -27,6 +29,8 @@ export type Campo = {
   facoltativo?: boolean;
   // Suggerimento per la compilazione automatica del browser (name, email, tel...).
   completamento?: string;
+  // Testo della casella "non esiste" (vedi sopra). La risposta si salva in `${id}Assente`.
+  assente?: string;
 };
 
 export type Passo = { nome: string; testo: string; campi: Campo[] };
@@ -120,7 +124,20 @@ export const passi: Passo[] = [
         tipo: "testo-lungo",
         aiuto: "I principali concorrenti, diretti e indiretti.",
       },
-      { id: "sitoWeb", etichetta: "Sito web", tipo: "url", facoltativo: true, completamento: "url" },
+      {
+        id: "sitoWeb",
+        etichetta: "Sito web",
+        tipo: "url",
+        completamento: "url",
+        assente: "Non esiste un sito aziendale",
+      },
+      {
+        id: "profiloSocial",
+        etichetta: "Profilo social di riferimento",
+        tipo: "testo",
+        aiuto: "Il profilo che l'azienda usa di più (Instagram, Facebook, LinkedIn, TikTok...): il link o il nome del profilo.",
+        assente: "Non esiste un profilo social aziendale",
+      },
     ],
   },
   {

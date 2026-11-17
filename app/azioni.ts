@@ -31,6 +31,10 @@ function ripulisci(grezze: Risposte): Risposte {
       const altro = grezze[`${campo.id}Altro`];
       if (typeof altro === "string") pulite[`${campo.id}Altro`] = taglia(altro);
     }
+    // Casella "non esiste" (es. "sitoWebAssente").
+    for (const campo of passo.campi) {
+      if (campo.assente && grezze[`${campo.id}Assente`] === true) pulite[`${campo.id}Assente`] = true;
+    }
   }
   return pulite;
 }

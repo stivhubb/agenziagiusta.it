@@ -288,9 +288,7 @@ function contesto(r: Risposte, nome: string): BloccoBrief[] {
   // Prodotto e posizionamento
   blocchi.push(
     paragrafo(
-      testo(r.sitoWeb)
-        ? `Così l'azienda descrive ciò che offre e ciò che la distingue dai concorrenti (sito di riferimento: ${testo(r.sitoWeb)}):`
-        : "Così l'azienda descrive ciò che offre e ciò che la distingue dai concorrenti:",
+      "Così l'azienda descrive ciò che offre e ciò che la distingue dai concorrenti:",
     ),
     parole(testo(r.prodottoPosizionamento)),
   );
@@ -369,6 +367,27 @@ function contesto(r: Risposte, nome: string): BloccoBrief[] {
       : "L'investimento annuo attuale in comunicazione non è stato indicato.",
   );
   blocchi.push(paragrafo(comunicazione.join(" ")));
+
+  // Presenza online
+  const sitoWeb = r.sitoWebAssente === true ? "" : testo(r.sitoWeb);
+  const social = r.profiloSocialAssente === true ? "" : testo(r.profiloSocial);
+  const presenza: string[] = [];
+  if (sitoWeb && social) {
+    presenza.push(`Online l'azienda è presente con il sito ${sitoWeb} e con il profilo social ${social}.`);
+  } else if (sitoWeb) {
+    presenza.push(
+      `Online l'azienda è presente con il sito ${sitoWeb}, mentre non ha un profilo social aziendale.`,
+    );
+  } else if (social) {
+    presenza.push(
+      `L'azienda non ha un sito aziendale: la sua presenza online passa dal profilo social ${social}.`,
+    );
+  } else {
+    presenza.push(
+      "L'azienda non ha né un sito né un profilo social aziendale: la presenza online è tutta da costruire.",
+    );
+  }
+  blocchi.push(paragrafo(presenza.join(" ")));
 
   return blocchi;
 }
