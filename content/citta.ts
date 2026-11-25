@@ -21,6 +21,8 @@ export type Citta = {
   slug: string;
   nome: string;
   footer?: boolean;
+  // Paragrafi scritti a mano sulla città, in testa alla pagina /agenzie/[citta]/.
+  intro?: string[];
   pagine?: Record<string, TestiLocali>;
 };
 
@@ -32,6 +34,11 @@ export function a(nome: string): string {
 // Una pagina è completa, e quindi va su Google, quando ha sia il testo sia le agenzie.
 export function completa(pagina?: TestiLocali): boolean {
   return Boolean(pagina && pagina.testo.length > 0 && pagina.agenzie.length > 0);
+}
+
+// Pagina della città: i dati che riguardano tutta la città, con i link alle pagine servizio + città.
+export function percorsoCitta(c: Citta): string {
+  return `/agenzie/${c.slug}/`;
 }
 
 export function percorsoLocale(verticale: Verticale, c: Citta): string {
@@ -57,15 +64,11 @@ const elenco: Citta[] = [
     slug: "milano",
     nome: "Milano",
     footer: true,
-    pagine: {
-      comunicazione: {
-        testo: [
-          "Chi cerca un'agenzia di comunicazione a Milano trova il principale mercato italiano della comunicazione, con agenzie di ogni dimensione e specializzazione.",
-          "In città hanno sede le filiali italiane dei grandi gruppi internazionali della pubblicità, molte agenzie indipendenti di medie dimensioni e una rete fitta di studi specializzati in un solo servizio: branding, social media, ufficio stampa, produzione video. A questi si aggiungono i freelance, che spesso lavorano per le agenzie stesse.",
-        ],
-        agenzie: [],
-      },
-    },
+    // Testo scritto a mano sulla città: sta nella pagina /agenzie/milano/.
+    intro: [
+      "Chi cerca un'agenzia di comunicazione a Milano trova il principale mercato italiano della comunicazione, con agenzie di ogni dimensione e specializzazione.",
+      "In città hanno sede le filiali italiane dei grandi gruppi internazionali della pubblicità, molte agenzie indipendenti di medie dimensioni e una rete fitta di studi specializzati in un solo servizio: branding, social media, ufficio stampa, produzione video. A questi si aggiungono i freelance, che spesso lavorano per le agenzie stesse.",
+    ],
   },
   { slug: "roma", nome: "Roma", footer: true },
   { slug: "padova", nome: "Padova", footer: true },

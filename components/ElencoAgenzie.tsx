@@ -98,12 +98,9 @@ export function ElencoAgenzie({
             </ul>
           </details>
           <p className="agenzie__nota">
-            Le agenzie in evidenza sono scelte a rotazione, in modo casuale, dall&apos;elenco completo
-            delle agenzie con sede a {citta} e provincia che offrono questo servizio; l&apos;elenco
-            completo è consultabile qui sopra. Le informazioni sono raccolte dai siti web delle
-            agenzie e la presenza in elenco non implica alcuna collaborazione con AgenziaGiusta.it.
-            {partner.length > 0 &&
-              " ★ Fanno eccezione le agenzie partner, che collaborano con AgenziaGiusta.it, possono ricevere le richieste inviate tramite il sito e possono avere sede in un'altra città."}
+            Elenco illustrativo, con le agenzie in evidenza scelte a caso ogni settimana. Dati presi
+            dai siti delle agenzie; essere in elenco non implica collaborazione con AgenziaGiusta.it
+            {partner.length > 0 ? ", tranne per le agenzie partner ★, che possono ricevere le richieste inviate dal sito." : "."}
           </p>
         </>
       ) : (

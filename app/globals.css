@@ -1750,3 +1750,104 @@ textarea {
     -webkit-print-color-adjust: exact;
   }
 }
+
+/* ---------- Pagine città e servizio + città: tabelle e grafici dei dati ---------- */
+
+.dati-locali {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-block: clamp(24px, 3vw, 40px);
+}
+
+.dati-locali .paragrafo {
+  max-width: 720px;
+}
+
+.dati-tabella {
+  width: 100%;
+  max-width: 720px;
+  border-collapse: collapse;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.dati-tabella th,
+.dati-tabella td {
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid var(--bordo);
+  text-align: left;
+  vertical-align: top;
+}
+
+.dati-tabella thead th {
+  font-weight: 600;
+  color: var(--testo-secondario);
+}
+
+.dati-tabella tbody th {
+  font-weight: 500;
+  color: var(--testo-lungo);
+}
+
+.dati-locali__grafici {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+}
+
+.grafico {
+  margin: 0;
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--sfondo-sezione);
+}
+
+.grafico__titolo {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--testo);
+}
+
+.grafico__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grafico__etichetta,
+.grafico__valore {
+  font-size: 13px;
+  fill: var(--testo-secondario);
+}
+
+.grafico__etichetta--attiva {
+  font-weight: 700;
+  fill: var(--testo);
+}
+
+.grafico__legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: var(--testo-secondario);
+}
+
+.grafico__legenda span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+.grafico__nota {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--testo-secondario);
+}

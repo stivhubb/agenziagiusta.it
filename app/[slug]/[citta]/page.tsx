@@ -1,38 +1,40 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DatiPercorso } from "@/components/DatiStrutturati";
 import { BloccoQuizCompatto } from "@/components/BloccoQuizCompatto";
 import { ElencoAgenzie } from "@/components/ElencoAgenzie";
+import { GraficoClienti, GraficoQuote } from "@/components/Grafici";
 import { Luoghi } from "@/components/Luoghi";
 import { PulsanteContatti } from "@/components/PulsanteContatti";
 import { StrisciaAgenzie } from "@/components/StrisciaAgenzie";
-import { BloccoTesto, Fonti, Intro, Testo } from "@/components/Testo";
+import { Intro } from "@/components/Testo";
 import {
   a,
   citta,
   completa,
+  percorsoCitta,
   percorsoLocale,
   seoLocale,
   titoloLocale,
 } from "@/content/citta";
 import { metadati } from "@/content/metadati";
 import { partnerDi } from "@/content/partner";
-import { fonteTerritorio, territorio } from "@/content/territorio";
-import { blocchiCosti, completo, sezioniCosaFa, verticali } from "@/content/verticali";
+import { medie, statistiche, su10 } from "@/content/statistiche";
+import { completo, verticali } from "@/content/verticali";
 
-// Pagine tipo + città (/web-agency/roma/): una pagina statica per ogni incrocio tra
+// Pagine servizio + città (/web-agency/roma/): una pagina statica per ogni incrocio tra
 // i verticali di content/verticali.ts e le città di content/citta.ts.
-// Composizione: intro con i dati della rilevazione sul tipo di agenzia nella città, il blocco sulla
-// città con i dati Istat (content/territorio.ts) e i costi, blocco quiz compatto,
-// cosa fa quel tipo di agenzia con le domande frequenti, elenco delle agenzie di quel tipo
-// nella città (partner e agenzie a rotazione, più l'elenco completo). Costi, cosa fa e domande
-// vengono dai testi del verticale.
+// Regola (25 novembre 2026): qui stanno solo i dati che cambiano con il servizio e con la città
+// (content/statistiche.ts) e l'elenco delle agenzie. Ciò che riguarda solo il servizio sta nella
+// pagina del servizio, ciò che riguarda solo la città nella pagina /agenzie/[citta]/: qui ci sono
+// i rimandi a entrambe.
 
 function trova(slug: string, slugCitta: string) {
   const verticale = verticali.find((v) => v.slug === slug);
   const c = citta.find((v) => v.slug === slugCitta);
   if (!verticale || !c) return undefined;
-  return { verticale, c, pagina: c.pagine?.[verticale.slug] };
+  return { verticale, c, pagina: c.pagine?.[verticale.slug], dati: statistiche[verticale.slug]?.[c.slug] };
 }
 
 export const dynamicParams = false;
@@ -57,7 +59,7 @@ export async function generateMetadata({
     descrizione: seo.description,
     percorso: percorsoLocale(voce.verticale, voce.c),
     // Le pagine a cui manca un testo o l'elenco delle agenzie non vanno indicizzate.
-    indicizza: completa(voce.pagina) && completo(voce.verticale),
+    indicizza: completa(voce.pagina) && completo(voce.verticale) && Boolean(voce.dati),
   });
 }
 
@@ -65,33 +67,101 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
   const { slug, citta: slugCitta } = await params;
   const voce = trova(slug, slugCitta);
   if (!voce) notFound();
-  const { verticale, c } = voce;
+  const { verticale, c, dati } = voce;
   const genitore = { nome: verticale.percorso ?? verticale.nome, percorso: `/${verticale.slug}/` };
-  const testo = voce.pagina?.testo ?? [];
-  const fonti = voce.pagina?.fonti ?? [];
+  const media = medie[verticale.slug];
+  const quote = citta
+    .map((x) => ({ nome: x.nome, quota: statistiche[verticale.slug]?.[x.slug]?.quota ?? 0 }))
+    .filter((x) => x.quota > 0);
+  const plurale = verticale.locale.plurale;
+  const conClienti = dati && dati.clienti.n >= 15;
   return (
     <>
       <DatiPercorso voci={[genitore, { nome: c.nome, percorso: percorsoLocale(verticale, c) }]} />
       <Intro
         percorso={[{ nome: genitore.nome, href: genitore.percorso }, { nome: c.nome }]}
         titolo={titoloLocale(verticale, c)}
-        intro={testo.length > 0 ? testo : undefined}
-        segnaposto="[MERCATO LOCALE: DA SCRIVERE]"
+        intro={dati?.testo}
+        segnaposto="[DATI DELLA RILEVAZIONE: DA GENERARE]"
       >
-        {voce.pagina?.nota && <BloccoTesto blocco={{ nota: voce.pagina.nota }} />}
-        {(territorio[c.slug] ?? []).map((paragrafo, i) => (
-          <BloccoTesto key={`territorio-${i}`} blocco={paragrafo} />
-        ))}
-        {territorio[c.slug] && <Fonti fonti={[fonteTerritorio]} />}
-        {fonti.length > 0 && <Fonti fonti={fonti} />}
-        {blocchiCosti(verticale.pagina).map((blocco, i) => (
-          <BloccoTesto key={i} blocco={blocco} />
-        ))}
+        <p className="paragrafo">
+          <Link href={percorsoCitta(c)}>Le agenzie {a(c.nome)}: il quadro della città →</Link>
+        </p>
       </Intro>
+
+      {dati && (
+        <section className="contenitore dati-locali">
+          <h2 className="titolo-blocco">
+            {plurale} {a(c.nome)} in numeri
+          </h2>
+          <table className="dati-tabella">
+            <tbody>
+              <tr>
+                <th scope="row">Agenzie che offrono il servizio</th>
+                <td>
+                  {dati.agenzie} su {dati.base} ({su10(dati.quota)})
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Media delle dieci città</th>
+                <td>{su10(media.quota)}</td>
+              </tr>
+              {dati.agenzie >= 15 && (
+                <tr>
+                  <th scope="row">Sede nel comune di {c.nome}</th>
+                  <td>{su10(dati.inCitta)}</td>
+                </tr>
+              )}
+              {conClienti && (
+                <tr>
+                  <th scope="row">Clienti soprattutto PMI</th>
+                  <td>
+                    {su10(dati.clienti.pmi)} (media: {su10(media.clienti.pmi)})
+                  </td>
+                </tr>
+              )}
+              {dati.agenzie >= 15 && dati.abbinati.length > 0 && (
+                <tr>
+                  <th scope="row">Servizi offerti più spesso insieme</th>
+                  <td>{dati.abbinati.map(([nome, p]) => `${nome} (${Math.round(p * 10)}/10)`).join(", ")}</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+          <div className="dati-locali__grafici">
+            <GraficoQuote
+              titolo={`Quante agenzie offrono il servizio, città per città (su 10)`}
+              voci={quote}
+              evidenza={c.nome}
+              didascalia={`${c.nome}: ${su10(dati.quota)} agenzie analizzate offrono il servizio; nella media delle dieci città sono ${su10(media.quota)}.`}
+            />
+            {conClienti && (
+              <GraficoClienti
+                titolo="Con che clienti lavorano"
+                citta={c.nome}
+                clienti={dati.clienti}
+                media={media.clienti}
+                didascalia=""
+              />
+            )}
+          </div>
+          <p className="fonti">
+            Dati della rilevazione AgenziaGiusta.it, ottobre 2026.{" "}
+            <Link href={percorsoCitta(c)}>Come sono raccolti</Link>
+          </p>
+        </section>
+      )}
+
+      <section className="contenitore dati-locali">
+        <h2 className="titolo-blocco">Quanto costa e cosa fa</h2>
+        <p className="paragrafo">
+          <Link href={`/${verticale.slug}/`}>Prezzi, attività e domande frequenti →</Link>
+        </p>
+      </section>
+
       <BloccoQuizCompatto />
-      <Testo sezioni={sezioniCosaFa(verticale)} />
       <ElencoAgenzie
-        titolo={`${verticale.locale.plurale} ${a(c.nome)}`}
+        titolo={`${plurale} ${a(c.nome)}`}
         agenzie={voce.pagina?.agenzie ?? []}
         partner={partnerDi(verticale.slug)}
         citta={c.nome}

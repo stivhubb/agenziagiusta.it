@@ -34,7 +34,7 @@ export function Footer() {
           <div className="footer__colonna">
             <div className="footer__titolo">Agenzie per città</div>
             {cittaComplete.map((c) => (
-              <Link key={c.slug} href={`/comunicazione/${c.slug}/`}>
+              <Link key={c.slug} href={`/agenzie/${c.slug}/`}>
                 {c.nome}
               </Link>
             ))}
