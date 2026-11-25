@@ -1851,3 +1851,11 @@ textarea {
   font-size: 14px;
   color: var(--testo-secondario);
 }
+
+.dati-tabella__titolo {
+  caption-side: top;
+  padding-bottom: 8px;
+  font-size: 14px;
+  text-align: left;
+  color: var(--testo-secondario);
+}

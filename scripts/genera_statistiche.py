@@ -1,7 +1,8 @@
 # Genera content/statistiche.ts: i dati delle pagine città (/agenzie/[citta]/) e delle pagine
 # servizio + città, dalla classificazione delle agenzie (rilevazione di ottobre 2026).
-# Uso: python3 scripts/genera_statistiche.py <classificazione.csv> > content/statistiche.ts
-# Il CSV è claude/agenziagiusta_classificazione_agenzie.csv del progetto.
+# Uso: python3 scripts/genera_statistiche.py <classificazione.csv> <istat.csv> > content/statistiche.ts
+# I CSV sono claude/agenziagiusta_classificazione_agenzie.csv e claude/agenziagiusta_istat_asia_2024.csv
+# del progetto.
 #
 # Regola delle pagine (decisa il 25 novembre 2026): ogni dato sta in una sola pagina.
 # - Cambia solo con la città -> pagina città.
@@ -86,7 +87,8 @@ for s, (voce, _, _) in SERVIZI.items():
         }
     medie[s] = {"quota": round(len(tutti_offerenti) / tutti_righe, 3), "clienti": clienti(tutti_offerenti)}
 
-# --- testi delle pagine servizio + città (solo dati che cambiano con servizio e città)
+# --- schema delle pagine servizio + città: solo stime (niente numeri assoluti), dati che cambiano
+# con servizio e città. Il testo è una frase di apertura; il resto è uno schema di voci.
 testi = {}
 for s, (voce, fanno, breve) in SERVIZI.items():
     testi[s] = {}
@@ -95,73 +97,65 @@ for s, (voce, fanno, breve) in SERVIZI.items():
         d = servizi[s][slug]
         m = medie[s]
         pos = [c for _, c in quote].index(slug) + 1
-        diff = d["quota"] - m["quota"]
         uguale = su10(d["quota"]) == su10(m["quota"])
-        if pos == 1: confronto = ("di poco " if uguale else "") + "la quota più alta tra le dieci città analizzate"
-        elif pos == 10: confronto = ("di poco " if uguale else "") + "la quota più bassa tra le dieci città analizzate"
+        if pos == 1: confronto = ("di poco " if uguale else "") + "la quota più alta tra le dieci città"
+        elif pos == 10: confronto = ("di poco " if uguale else "") + "la quota più bassa tra le dieci città"
         elif uguale: confronto = "in linea con la media delle dieci città"
-        elif diff > 0: confronto = "sopra la media delle dieci città"
+        elif d["quota"] > m["quota"]: confronto = "sopra la media delle dieci città"
         else: confronto = "sotto la media delle dieci città"
-        media_txt = su10(m["quota"])
-        v = variante(s, slug)
-        par = []
-        if v == 0:
-            par.append(f"AgenziaGiusta.it ha analizzato {d['base']} agenzie con sede a {nome} e provincia: {d['agenzie']} {fanno}, {su10(d['quota'])}. " + (f"È {confronto} ({media_txt})." if "media" in confronto else f"È {confronto}; la media è {media_txt}."))
-        elif v == 1:
-            par.append(f"Delle {d['base']} agenzie di {nome} e provincia analizzate da AgenziaGiusta.it, {d['agenzie']} {fanno}: {su10(d['quota'])}, {confronto} (la media è {media_txt}).")
-        else:
-            par.append(f"A {nome} e provincia {d['agenzie']} agenzie su {d['base']} tra quelle analizzate da AgenziaGiusta.it {fanno}, {su10(d['quota'])}: {confronto}" + (f", dove sono {media_txt}." if "media" in confronto else f" (la media è {media_txt})."))
-        if d["agenzie"] < 15:
-            # Con meno di 15 agenzie si dà solo la quota (regola della rilevazione).
-            testi[s][slug] = par
-            continue
-        # sede
-        ic = d["inCitta"]
-        if ic >= 0.95: sede = f"Quasi tutte hanno sede nel comune di {nome}."
-        elif ic < 0.5: sede = f"Più di metà ha sede in altri comuni della provincia; nel comune di {nome} lavorano {su10(ic)}."
-        else: sede = f"{su10(ic).capitalize()} hanno sede nel comune di {nome}, le altre in provincia."
-        # abbinati
-        if d["abbinati"]:
-            (a1, p1), *resto = d["abbinati"]
-            abb = f"{su10(p1).capitalize()} offrono anche {a1}"
-            if resto:
-                a2, p2 = resto[0]
-                abb += f" e {su10(p2)} {a2}" if su10(p2) != su10(p1) else f" e {a2}"
-            abb += "."
-        else:
-            abb = ""
-        par.append(" ".join(t for t in [sede, abb] if t))
-        # clienti
-        cl, cm = d["clienti"], m["clienti"]
-        if cl["n"] >= MIN_CLIENTI:
-            agg = AGGETTIVI[slug]
-            dp = cl["pmi"] - cm["pmi"]
-            tendenza = ("più orientate alle piccole imprese rispetto alla media" if dp >= 0.08 else
-                        "meno orientate alle piccole imprese rispetto alla media" if dp <= -0.08 else
-                        "in linea con la media sul tipo di clienti")
-            vc = variante(s, slug, "clienti")
-            if vc == 0:
-                par.append(f"Tra quelle che mostrano i clienti sul sito, {su10(cl['pmi'])} lavorano soprattutto con piccole e medie imprese e {su10(cl['grandi'])} soprattutto con grandi marchi: sono {tendenza}, dove le PMI pesano {su10(cm['pmi']).replace('circa ', 'circa ')}.")
-            elif vc == 1:
-                par.append(f"Le agenzie {agg} che indicano i propri clienti sono {tendenza}: {su10(cl['pmi'])} hanno come clienti principali PMI (media delle dieci città: {su10(cm['pmi'])}), {su10(cl['misto'])} aziende di ogni dimensione.")
-            else:
-                par.append(f"Sul tipo di clienti, dove il dato è indicato, le agenzie {agg} sono {tendenza}: soprattutto PMI per {su10(cl['pmi'])}, contro {su10(cm['pmi'])} nella media delle dieci città.")
-        testi[s][slug] = par
+        schema = [["Agenzie che " + fanno, f"{su10(d['quota'])}, {confronto} ({su10(m['quota'])})"]]
+        if d["agenzie"] >= 15:
+            ic = d["inCitta"]
+            schema.append([f"Sede nel comune di {nome}", "quasi tutte" if ic >= 0.95 else f"{su10(ic)}, le altre in provincia"])
+            cl, cm = d["clienti"], m["clienti"]
+            if cl["n"] >= MIN_CLIENTI:
+                schema.append(["Clienti soprattutto piccole e medie imprese", f"{su10(cl['pmi'])} (media delle dieci città: {su10(cm['pmi'])})"])
+                schema.append(["Clienti soprattutto grandi marchi", f"{su10(cl['grandi'])} (media: {su10(cm['grandi'])})"])
+            if d["abbinati"]:
+                schema.append(["Servizi offerti più spesso insieme", ", ".join(f"{a} ({su10(p)})" for a, p in d["abbinati"])])
+        testi[s][slug] = schema
 
-# --- pagine città: dati che cambiano solo con la città
+# --- pagine città: dati che cambiano solo con la città (rilevazione e Istat ASIA 2024)
+SEZIONI = {"B": "Estrazione di minerali", "C": "Manifattura", "D": "Energia", "E": "Acqua e rifiuti",
+           "F": "Costruzioni", "G": "Commercio", "H": "Trasporti e magazzinaggio", "I": "Alloggio e ristorazione",
+           "J": "Informazione e comunicazione", "K": "Finanza e assicurazioni", "L": "Attività immobiliari",
+           "M": "Attività professionali, scientifiche e tecniche", "N": "Noleggio e servizi alle imprese",
+           "P": "Istruzione", "Q": "Sanità e assistenza sociale", "R": "Arte, sport e intrattenimento",
+           "S": "Altri servizi"}
+CODICI = [("73110", "Agenzie pubblicitarie"), ("73120", "Concessionarie pubblicitarie"),
+          ("70210", "Pubbliche relazioni e comunicazione"), ("73200", "Ricerche di mercato"),
+          ("74102", "Studi di grafica"), ("74201", "Studi fotografici"),
+          ("59110", "Produzione video e cinema"), ("63120", "Portali web")]
+ist = {x[0]: x for x in csv.reader(open(sys.argv[2], encoding="utf-8-sig"))}
+testa = next(csv.reader(open(sys.argv[2], encoding="utf-8-sig")))
+def iv(code, terr, ind="unita_locali"):
+    x = ist.get(code); i = testa.index(f"{terr}_{ind}")
+    return float(x[i]) if x and x[i] else 0.0
+
 pagine_citta = {}
+pmi_citta = {slug: clienti(base[slug])["pmi"] for slug, _ in CITTA}
+ordine_pmi = sorted(pmi_citta, key=lambda c: -pmi_citta[c])
+media_clienti = clienti([x for slug, _ in CITTA for x in base[slug]])
 for slug, nome in CITTA:
     b = base[slug]
     inc = sum(1 for x in b if x["in_citta"][slug])
     cl = clienti(b)
-    quote = sorted(((servizi[s][slug]["quota"], s) for s in SERVIZI), reverse=True)
+    nserv = [len(x["S"] - {"comunicazione"}) for x in b]
+    tot, tot_it = iv("0010", nome), iv("0010", "Italia")
+    settori = sorted(((iv(k, nome), k) for k in SEZIONI), reverse=True)
     pagine_citta[slug] = {
-        "agenzie": len(b), "inCitta": inc, "inProvincia": len(b) - inc, "clienti": cl,
-        "testo": [
-            f"AgenziaGiusta.it ha analizzato {len(b)} agenzie di comunicazione, marketing e web con sede a {nome} e provincia: {su10(inc / len(b))} hanno sede nel comune, le altre in provincia. "
-            f"Tra quelle che mostrano i clienti sul sito, {su10(cl['pmi'])} lavorano soprattutto con piccole e medie imprese, {su10(cl['misto'])} con aziende di ogni dimensione e {su10(cl['grandi'])} soprattutto con grandi marchi.",
-            f"Quasi nessuna agenzia offre un solo servizio. I servizi più diffusi a {nome} sono {SERVIZI[quote[0][1]][2]} e {SERVIZI[quote[1][1]][2]}; i meno diffusi {SERVIZI[quote[-2][1]][2]} e {SERVIZI[quote[-1][1]][2]}. La tabella riporta, servizio per servizio, quante agenzie lo offrono, con il link alla pagina dedicata.",
-        ],
+        "inCitta": round(inc / len(b), 3), "clienti": cl,
+        "posizionePmi": ordine_pmi.index(slug) + 1, "mediaClienti": media_clienti,
+        "fino3": round(sum(1 for n in nserv if n <= 3) / len(b), 3),
+        "almeno7": round(sum(1 for n in nserv if n >= 7) / len(b), 3),
+        "servizi": [[s, servizi[s][slug]["quota"], medie[s]["quota"]] for s in SERVIZI],
+        "istat": {
+            "unita": tot, "addettiMedi": round(iv("0010", nome, "addetti") / tot, 2),
+            "addettiMediItalia": round(iv("0010", "Italia", "addetti") / tot_it, 2),
+            "settori": [[SEZIONI[k], v, round(v / tot, 4), round(iv(k, "Italia") / tot_it, 4)] for v, k in settori[:8]],
+            "comunicazione": [[nome_c, iv(c, nome), round(iv(c, nome, "addetti") / iv(c, nome), 2) if iv(c, nome) else 0,
+                               round(iv(c, nome) / iv(c, "Italia"), 4) if iv(c, "Italia") else 0] for c, nome_c in CODICI],
+        },
     }
 
 r = lambda x: round(x, 3)
@@ -171,11 +165,9 @@ for s in servizi:
         d["quota"], d["inCitta"] = r(d["quota"]), r(d["inCitta"])
         d["clienti"] = {k: (v if k == "n" else r(v)) for k, v in d["clienti"].items()}
         d["abbinati"] = [[a, r(p)] for a, p in d["abbinati"]]
-        d["testo"] = testi[s][c]
+        d["schema"] = testi[s][c]
 for s in medie:
     medie[s] = {"quota": r(medie[s]["quota"]), "clienti": {k: (v if k == "n" else r(v)) for k, v in medie[s]["clienti"].items()}}
-for c in pagine_citta:
-    pagine_citta[c]["clienti"] = {k: (v if k == "n" else r(v)) for k, v in pagine_citta[c]["clienti"].items()}
 
 j = lambda o: json.dumps(o, ensure_ascii=False)
 print("""// Dati delle pagine città (/agenzie/[citta]/) e delle pagine servizio + città.
@@ -186,10 +178,15 @@ print("""// Dati delle pagine città (/agenzie/[citta]/) e delle pagine servizio
 export type Clienti = { n: number; pmi: number; misto: number; grandi: number };
 export type DatoServizioCitta = {
   agenzie: number; base: number; quota: number; inCitta: number; clienti: Clienti;
-  abbinati: [string, number][]; testo: string[];
+  abbinati: [string, number][]; schema: [string, string][];
 };
+// Una riga Istat: [nome, unità locali, quota sul totale della provincia, quota in Italia]
+// per i settori; [nome, unità locali, addetti medi, quota sul totale nazionale] per la comunicazione.
 export type DatoCitta = {
-  agenzie: number; inCitta: number; inProvincia: number; clienti: Clienti; testo: string[];
+  inCitta: number; clienti: Clienti; posizionePmi: number; mediaClienti: Clienti; fino3: number; almeno7: number;
+  servizi: [string, number, number][];
+  istat: { unita: number; addettiMedi: number; addettiMediItalia: number;
+    settori: [string, number, number, number][]; comunicazione: [string, number, number, number][] };
 };
 """)
 print(f"export const statistiche: Record<string, Record<string, DatoServizioCitta>> = {j(servizi)};\n")
@@ -202,4 +199,18 @@ print("""export function su10(p: number): string {
   if (p >= 0.15) return `circa ${Math.round(p * 10)} su 10`;
   if (p >= 0.075) return "circa una su dieci";
   return "meno di una su dieci";
+}""")
+print("""
+// Numeri Istat come nei testi: arrotondati alle decine sotto mille, alle centinaia sopra.
+export function circa(n: number): string {
+  const r = n < 1000 ? Math.round(n / 10) * 10 : Math.round(n / 100) * 100;
+  return `circa ${r.toLocaleString("it-IT")}`;
+}
+
+export function percento(p: number): string {
+  return `${(p * 100).toLocaleString("it-IT", { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;
+}
+
+export function ordinale(n: number): string {
+  return ["prima", "seconda", "terza", "quarta", "quinta", "sesta", "settima", "ottava", "nona", "decima"][n - 1];
 }""")

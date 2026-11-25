@@ -12,15 +12,17 @@ export function GraficoQuote({
   voci,
   evidenza,
   didascalia,
+  etichetta = 92,
 }: {
   titolo: string;
   voci: { nome: string; quota: number }[];
   evidenza: string;
   didascalia: string;
+  // Spazio a sinistra per i nomi: più largo quando le voci sono i tipi di agenzia.
+  etichetta?: number;
 }) {
   const ordinate = [...voci].sort((a, b) => b.quota - a.quota);
   const riga = 30;
-  const etichetta = 92;
   const larghezza = 560;
   const barra = larghezza - etichetta - 64;
   const altezza = ordinate.length * riga;

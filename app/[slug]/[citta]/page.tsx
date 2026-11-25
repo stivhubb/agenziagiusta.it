@@ -81,7 +81,13 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
       <Intro
         percorso={[{ nome: genitore.nome, href: genitore.percorso }, { nome: c.nome }]}
         titolo={titoloLocale(verticale, c)}
-        intro={dati?.testo}
+        intro={
+          dati
+            ? [
+                `I dati di questa pagina sono stime di AgenziaGiusta.it sulle ${plurale.toLowerCase()} con sede ${a(c.nome)} e provincia, ricavate dall'analisi dei loro siti (rilevazione di ottobre 2026).`,
+              ]
+            : undefined
+        }
         segnaposto="[DATI DELLA RILEVAZIONE: DA GENERARE]"
       >
         <p className="paragrafo">
@@ -95,37 +101,14 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
             {plurale} {a(c.nome)} in numeri
           </h2>
           <table className="dati-tabella">
+            <caption className="dati-tabella__titolo">Stima AgenziaGiusta.it, rilevazione di ottobre 2026</caption>
             <tbody>
-              <tr>
-                <th scope="row">Agenzie che offrono il servizio</th>
-                <td>
-                  {dati.agenzie} su {dati.base} ({su10(dati.quota)})
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">Media delle dieci città</th>
-                <td>{su10(media.quota)}</td>
-              </tr>
-              {dati.agenzie >= 15 && (
-                <tr>
-                  <th scope="row">Sede nel comune di {c.nome}</th>
-                  <td>{su10(dati.inCitta)}</td>
+              {dati.schema.map(([voce, valore]) => (
+                <tr key={voce}>
+                  <th scope="row">{voce}</th>
+                  <td>{valore}</td>
                 </tr>
-              )}
-              {conClienti && (
-                <tr>
-                  <th scope="row">Clienti soprattutto PMI</th>
-                  <td>
-                    {su10(dati.clienti.pmi)} (media: {su10(media.clienti.pmi)})
-                  </td>
-                </tr>
-              )}
-              {dati.agenzie >= 15 && dati.abbinati.length > 0 && (
-                <tr>
-                  <th scope="row">Servizi offerti più spesso insieme</th>
-                  <td>{dati.abbinati.map(([nome, p]) => `${nome} (${Math.round(p * 10)}/10)`).join(", ")}</td>
-                </tr>
-              )}
+              ))}
             </tbody>
           </table>
           <div className="dati-locali__grafici">
@@ -133,7 +116,7 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
               titolo={`Quante agenzie offrono il servizio, città per città (su 10)`}
               voci={quote}
               evidenza={c.nome}
-              didascalia={`${c.nome}: ${su10(dati.quota)} agenzie analizzate offrono il servizio; nella media delle dieci città sono ${su10(media.quota)}.`}
+              didascalia={`${c.nome}: ${su10(dati.quota)}; media delle dieci città: ${su10(media.quota)}.`}
             />
             {conClienti && (
               <GraficoClienti
