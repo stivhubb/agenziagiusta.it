@@ -41,7 +41,7 @@ export function GraficoQuote({
               </text>
               <rect x={etichetta} y={y + 6} width={w} height={18} rx={4} fill={attiva ? MAGENTA : GRIGIO} />
               <text x={etichetta + w + 8} y={y + 19} className="grafico__valore">
-                {Math.round(v.quota * 10)}/10
+                {Math.round(v.quota * 20) * 5}%
               </text>
             </g>
           );

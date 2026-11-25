@@ -10,7 +10,7 @@ import { BloccoTesto, Fonti, Intro } from "@/components/Testo";
 import { a, citta, percorsoCitta, percorsoLocale } from "@/content/citta";
 import { notaMetodo } from "@/content/dati-citta";
 import { metadati } from "@/content/metadati";
-import { circa, datiCittaPagina, ordinale, percento, su10 } from "@/content/statistiche";
+import { circa, datiCittaPagina, ordinale, percento, stima } from "@/content/statistiche";
 import { fonteTerritorio } from "@/content/territorio";
 import { verticali } from "@/content/verticali";
 
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps<"/agenzie/[citta]">
 }
 
 function confronto(p: number, media: number): string {
-  if (su10(p) === su10(media)) return "in linea";
+  if (stima(p) === stima(media)) return "in linea";
   return p > media ? "sopra la media" : "sotto la media";
 }
 
@@ -70,29 +70,29 @@ export default async function Pagina({ params }: PageProps<"/agenzie/[citta]">) 
           <tbody>
             <tr>
               <th scope="row">Sede nel comune di {c.nome}</th>
-              <td>{d.inCitta >= 0.95 ? "quasi tutte" : `${su10(d.inCitta)}, le altre in provincia`}</td>
+              <td>{d.inCitta >= 0.95 ? "quasi tutte" : `${stima(d.inCitta)}, le altre in provincia`}</td>
             </tr>
             <tr>
               <th scope="row">Clienti soprattutto piccole e medie imprese</th>
               <td>
-                {su10(d.clienti.pmi)}: {ordinale(d.posizionePmi)} tra le dieci città (media: {su10(d.mediaClienti.pmi)})
+                {stima(d.clienti.pmi)}: {ordinale(d.posizionePmi)} tra le dieci città (media: {stima(d.mediaClienti.pmi)})
               </td>
             </tr>
             <tr>
               <th scope="row">Clienti di ogni dimensione</th>
-              <td>{su10(d.clienti.misto)}</td>
+              <td>{stima(d.clienti.misto)}</td>
             </tr>
             <tr>
               <th scope="row">Clienti soprattutto grandi marchi</th>
-              <td>{su10(d.clienti.grandi)}</td>
+              <td>{stima(d.clienti.grandi)}</td>
             </tr>
             <tr>
               <th scope="row">Agenzie con al massimo tre servizi</th>
-              <td>{su10(d.fino3)}</td>
+              <td>{stima(d.fino3)}</td>
             </tr>
             <tr>
               <th scope="row">Agenzie con sette servizi o più</th>
-              <td>{su10(d.almeno7)}</td>
+              <td>{stima(d.almeno7)}</td>
             </tr>
           </tbody>
         </table>
@@ -105,7 +105,7 @@ export default async function Pagina({ params }: PageProps<"/agenzie/[citta]">) 
             didascalia=""
           />
           <GraficoQuote
-            titolo="Quante agenzie offrono ogni servizio (su 10)"
+            titolo="Quante agenzie offrono ogni servizio"
             voci={servizi.map((x) => ({ nome: x.v.nome, quota: x.quota }))}
             evidenza=""
             etichetta={200}
@@ -131,7 +131,7 @@ export default async function Pagina({ params }: PageProps<"/agenzie/[citta]">) 
                 <th scope="row">
                   <Link href={percorsoLocale(v, c)}>{v.locale.nome}</Link>
                 </th>
-                <td>{su10(quota)}</td>
+                <td>{stima(quota)}</td>
                 <td>{confronto(quota, media)}</td>
               </tr>
             ))}

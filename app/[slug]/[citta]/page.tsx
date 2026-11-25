@@ -20,7 +20,7 @@ import {
 } from "@/content/citta";
 import { metadati } from "@/content/metadati";
 import { partnerDi } from "@/content/partner";
-import { medie, statistiche, su10 } from "@/content/statistiche";
+import { medie, statistiche, stima } from "@/content/statistiche";
 import { completo, verticali } from "@/content/verticali";
 
 // Pagine servizio + città (/web-agency/roma/): una pagina statica per ogni incrocio tra
@@ -113,10 +113,10 @@ export default async function Pagina({ params }: PageProps<"/[slug]/[citta]">) {
           </table>
           <div className="dati-locali__grafici">
             <GraficoQuote
-              titolo={`Quante agenzie offrono il servizio, città per città (su 10)`}
+              titolo={`Quante agenzie offrono il servizio, città per città`}
               voci={quote}
               evidenza={c.nome}
-              didascalia={`${c.nome}: ${su10(dati.quota)}; media delle dieci città: ${su10(media.quota)}.`}
+              didascalia={`${c.nome}: ${stima(dati.quota)}; media delle dieci città: ${stima(media.quota)}.`}
             />
             {conClienti && (
               <GraficoClienti

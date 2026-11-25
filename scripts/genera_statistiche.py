@@ -37,12 +37,11 @@ VOCE_A_SLUG = {v[0]: k for k, v in SERVIZI.items()}
 MIN_CLIENTI = 15  # agenzie con i clienti indicati, sotto non si scrive la frase
 
 
-def su10(p):
-    if p >= 0.95: return "quasi tutte"
-    if p >= 0.85: return "circa 9 su 10"
-    if p >= 0.15: return f"circa {round(p * 10)} su 10"
-    if p >= 0.075: return "circa una su dieci"
-    return "meno di una su dieci"
+def stima(p):
+    # Percentuale arrotondata al 5 (decisione del 25 novembre 2026): "circa 65%".
+    if p >= 0.975: return "quasi tutte"
+    if p < 0.05: return "meno del 5%"
+    return f"circa {round(p * 20) * 5}%"
 
 
 def variante(*chiavi, n=3):
@@ -97,22 +96,22 @@ for s, (voce, fanno, breve) in SERVIZI.items():
         d = servizi[s][slug]
         m = medie[s]
         pos = [c for _, c in quote].index(slug) + 1
-        uguale = su10(d["quota"]) == su10(m["quota"])
+        uguale = stima(d["quota"]) == stima(m["quota"])
         if pos == 1: confronto = ("di poco " if uguale else "") + "la quota più alta tra le dieci città"
         elif pos == 10: confronto = ("di poco " if uguale else "") + "la quota più bassa tra le dieci città"
         elif uguale: confronto = "in linea con la media delle dieci città"
         elif d["quota"] > m["quota"]: confronto = "sopra la media delle dieci città"
         else: confronto = "sotto la media delle dieci città"
-        schema = [["Agenzie che " + fanno, f"{su10(d['quota'])}, {confronto} ({su10(m['quota'])})"]]
+        schema = [["Agenzie che " + fanno, f"{stima(d['quota'])}, {confronto} ({stima(m['quota'])})"]]
         if d["agenzie"] >= 15:
             ic = d["inCitta"]
-            schema.append([f"Sede nel comune di {nome}", "quasi tutte" if ic >= 0.95 else f"{su10(ic)}, le altre in provincia"])
+            schema.append([f"Sede nel comune di {nome}", "quasi tutte" if ic >= 0.95 else f"{stima(ic)}, le altre in provincia"])
             cl, cm = d["clienti"], m["clienti"]
             if cl["n"] >= MIN_CLIENTI:
-                schema.append(["Clienti soprattutto piccole e medie imprese", f"{su10(cl['pmi'])} (media delle dieci città: {su10(cm['pmi'])})"])
-                schema.append(["Clienti soprattutto grandi marchi", f"{su10(cl['grandi'])} (media: {su10(cm['grandi'])})"])
+                schema.append(["Clienti soprattutto piccole e medie imprese", f"{stima(cl['pmi'])} (media delle dieci città: {stima(cm['pmi'])})"])
+                schema.append(["Clienti soprattutto grandi marchi", f"{stima(cl['grandi'])} (media: {stima(cm['grandi'])})"])
             if d["abbinati"]:
-                schema.append(["Servizi offerti più spesso insieme", ", ".join(f"{a} ({su10(p)})" for a, p in d["abbinati"])])
+                schema.append(["Servizi offerti più spesso insieme", ", ".join(f"{a} ({stima(p)})" for a, p in d["abbinati"])])
         testi[s][slug] = schema
 
 # --- pagine città: dati che cambiano solo con la città (rilevazione e Istat ASIA 2024)
@@ -192,8 +191,8 @@ export type DatoCitta = {
 print(f"export const statistiche: Record<string, Record<string, DatoServizioCitta>> = {j(servizi)};\n")
 print(f"export const medie: Record<string, {{ quota: number; clienti: Clienti }}> = {j(medie)};\n")
 print(f"export const datiCittaPagina: Record<string, DatoCitta> = {j(pagine_citta)};\n")
-print("// Dicitura delle quote, come nei testi: \"circa 7 su 10\", \"quasi tutte\"...")
-print("""export function su10(p: number): string {
+print("// Stime: percentuale arrotondata al 5 (\"circa 65%\"), \"quasi tutte\" sopra il 97,5%.")
+print("""export function stima(p: number): string {
   if (p >= 0.95) return "quasi tutte";
   if (p >= 0.85) return "circa 9 su 10";
   if (p >= 0.15) return `circa ${Math.round(p * 10)} su 10`;
