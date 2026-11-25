@@ -19,12 +19,12 @@ export const prUfficioStampa: Testi = {
   ],
   mercato: {
     testo: [
-      "Nelle stime di UNA sul mercato italiano della comunicazione, che nel 2026 vale 17,8 miliardi di euro (+4,4%), crescono attività che rientrano anche nel lavoro delle agenzie PR: gli eventi (+14,9%) e le collaborazioni con gli influencer (+12%).",
-      "Le collaborazioni con gli influencer sono oggi regolate: secondo i dati diffusi da UPA e UNA a marzo 2026, gli iscritti all'elenco tenuto dall'Autorità per le garanzie nelle comunicazioni (AGCOM) sono più di 5.200.",
+      "Non esistono stime istituzionali recenti del solo mercato delle relazioni pubbliche. Le stime di UNA sulla comunicazione non pubblicitaria danno però il peso di due attività vicine al lavoro delle agenzie PR: nel 2026 gli eventi valgono il 25% di questa spesa, in crescita del 14,9%, la voce più dinamica; le sponsorizzazioni il 16,4%, in crescita del 5%.",
+      "Le agenzie PR sono relativamente poche: nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), circa 2 su 10 offrono relazioni pubbliche o ufficio stampa, con una presenza più alta a Milano. Più di 9 su 10 di queste gestiscono anche i social media, segno che il lavoro sui media tradizionali e quello sui canali digitali vanno ormai insieme.",
+      "Rispetto ad altri servizi lavorano più spesso con aziende di dimensioni diverse: tra quelle che mostrano i propri clienti, le più numerose seguono sia piccole imprese sia aziende più grandi, e quasi 2 su 10 lavorano soprattutto con grandi marchi.",
     ],
     fonti: [
       { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },
-      { nome: "UPA e UNA, stima sull'influencer marketing, marzo 2026", url: "https://www.upa.it/static/upload/cs-/cs-im26.pdf" },
     ],
   },
   costi: {

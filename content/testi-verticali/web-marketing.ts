@@ -19,13 +19,13 @@ export const webMarketing: Testi = {
   ],
   mercato: {
     testo: [
-      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2025 la pubblicità online in Italia vale 6,2 miliardi di euro (+11%), il 53% degli investimenti pubblicitari, e nel 2026 dovrebbe arrivare a 7 miliardi (+12%). L'83% della raccolta online va ai grandi operatori internazionali.",
-      "La domanda viene anche dal commercio online: secondo Netcomm e l'Osservatorio eCommerce B2c del Politecnico di Milano, nel 2026 gli acquisti online degli italiani superano i 66,6 miliardi di euro (+6%). Secondo l'Istat, nel 2025 il 59% delle imprese con almeno 10 addetti usa i social media, ma solo il 14,7% vende online.",
+      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2025 la pubblicità online in Italia vale 6,2 miliardi di euro (+11%), il 53% degli investimenti pubblicitari, e nel 2026 dovrebbe arrivare a 7 miliardi (+12%). L'83% della raccolta va ai grandi operatori internazionali.",
+      "Nel 2026 il video raccoglie il 41% della pubblicità online, banner, formati nativi e display programmatico il 26% (+10%), la ricerca a pagamento il 24% (+9%) e la pubblicità sui siti di e-commerce e di annunci l'8% (+12%), spinta dal retail media.",
+      "Il web marketing è tra i servizi più offerti: nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), lo offrono circa tre agenzie su quattro, e quasi tutte realizzano anche siti; circa 8 su 10 seguono anche la SEO. Tra quelle che mostrano i propri clienti, circa 6 su 10 lavorano soprattutto con piccole e medie imprese.",
     ],
     fonti: [
       { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
-      { nome: "Netcomm e Osservatorio eCommerce B2c del Politecnico di Milano, maggio 2026", url: "https://www.consorzionetcomm.it/lecommerce-b2c-in-italia-supera-i-666-miliardi-di-e-nel-2026-6-con-35-milioni-di-consumatori-digitali/" },
-      { nome: "Istat, Imprese e Ict, dicembre 2025", url: "https://www.istat.it/comunicato-stampa/imprese-e-ict-anno-2025/" },
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, luglio 2026", url: "https://www.osservatori.net/blog/internet-media-advertising/15-statistiche-sul-digital-advertising-in-italia-nel-2026-tutto-quello-che-devi-sapere/" },
     ],
   },
   costi: {

@@ -19,13 +19,13 @@ export const seoSem: Testi = {
   ],
   mercato: {
     testo: [
-      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, la pubblicità online in Italia vale 6,2 miliardi di euro nel 2025 e dovrebbe raggiungere i 7 miliardi nel 2026 (+12%). La pubblicità sui motori di ricerca rappresenta il 24% del totale ed è prevista in crescita del 9% nel 2026.",
-      "La ricerca è anche un canale di vendita: secondo Netcomm e il Politecnico di Milano, nel 2026 gli acquisti online degli italiani superano i 66,6 miliardi di euro (+6%).",
+      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, la pubblicità sui motori di ricerca rappresenta il 24% della pubblicità online in Italia ed è prevista in crescita del 9% nel 2026. La crescita avviene in controtendenza rispetto al traffico organico: gli investimenti si spostano verso nuove forme di visibilità, comprese le prime sperimentazioni sui motori di ricerca generativi.",
+      "Per un'azienda vuol dire che la visibilità nelle ricerche si gioca sempre di più su due fronti: la SEO, che oggi deve tenere conto anche delle risposte degli assistenti AI, e gli annunci a pagamento.",
+      "Nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), più di 6 su 10 offrono SEO o campagne sui motori di ricerca, e quasi tutte realizzano anche siti web. È il servizio più orientato alle piccole imprese: tra le agenzie che mostrano i propri clienti, circa 6 su 10 lavorano soprattutto con PMI.",
     ],
     fonti: [
-      { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
       { nome: "Osservatorio Internet Media del Politecnico di Milano, luglio 2026", url: "https://www.osservatori.net/blog/internet-media-advertising/15-statistiche-sul-digital-advertising-in-italia-nel-2026-tutto-quello-che-devi-sapere/" },
-      { nome: "Netcomm e Osservatorio eCommerce B2c del Politecnico di Milano, maggio 2026", url: "https://www.consorzionetcomm.it/lecommerce-b2c-in-italia-supera-i-666-miliardi-di-e-nel-2026-6-con-35-milioni-di-consumatori-digitali/" },
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
     ],
   },
   costi: {

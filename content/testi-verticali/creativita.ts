@@ -19,8 +19,9 @@ export const creativita: Testi = {
   ],
   mercato: {
     testo: [
-      "Secondo le stime di UNA, l'associazione delle aziende della comunicazione, nel 2026 il mercato italiano della comunicazione vale 17,8 miliardi di euro (+4,4%). Tra le voci che crescono di più ci sono quelle in cui il contenuto creativo è il prodotto stesso: il branded content (+8%) e gli eventi (+14,9%).",
-      "Il formato prevalente è il video: secondo l'Osservatorio Internet Media del Politecnico di Milano, tra televisione e online raccoglie il 55% degli investimenti pubblicitari, e nel 2026 il video online cresce del 16%.",
+      "Nelle stime di UNA per il 2026, il branded content, cioè i contenuti prodotti dalle marche al di fuori degli spazi pubblicitari classici, è la voce principale della comunicazione non pubblicitaria: il 47,8% della spesa, in crescita dell'8%.",
+      "Il formato che pesa di più è il video: secondo l'Osservatorio Internet Media del Politecnico di Milano, tra televisione, online e schermi in esterna raccoglie il 55% degli investimenti pubblicitari.",
+      "Tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città (ottobre 2026), circa 4 su 10 si presentano come agenzie creative o offrono ideazione di campagne; circa 9 su 10 di queste seguono anche grafica e social media. Rispetto agli altri servizi lavorano più spesso con aziende di dimensioni diverse: tra quelle che mostrano i clienti, circa 2 su 10 lavorano soprattutto con grandi marchi.",
     ],
     fonti: [
       { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },

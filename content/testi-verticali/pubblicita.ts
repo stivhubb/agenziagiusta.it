@@ -19,12 +19,12 @@ export const pubblicita: Testi = {
   ],
   mercato: {
     testo: [
-      "Secondo le stime di UNA, l'associazione delle aziende della comunicazione, nel 2026 la pubblicità sui mezzi in Italia vale circa 12,6 miliardi di euro, il 71% di un mercato della comunicazione di 17,8 miliardi. La crescita dipende in buona parte dalle piccole imprese e dai professionisti: con i loro investimenti il mercato pubblicitario cresce del 2,9%, senza dello 0,9%.",
-      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2025 gli investimenti pubblicitari hanno raggiunto 11,8 miliardi di euro (+5%) e il 53% è passato dai canali digitali. Nelle stime di UNA, che per questo dato non considerano gli investimenti delle piccole imprese, nel 2026 la televisione raccoglie il 46,3% della spesa, la pubblicità esterna il 7,5% e la radio il 5%.",
+      "Secondo le stime di UNA, nel 2026 la pubblicità sui mezzi in Italia vale circa 12,6 miliardi di euro. Le piccole imprese e i professionisti pesano sempre di più: con i loro investimenti il mercato cresce del 2,9%, senza dello 0,9%. Secondo un'elaborazione di AgenziaGiusta.it sui dati UNA, la loro spesa vale circa 3,5 miliardi, poco più di un quarto del totale.",
+      "Contando anche le piccole imprese, nel 2026 il digitale raccoglie il 53,7% della spesa, la televisione tra lineare e advanced TV il 33,6%, la pubblicità esterna il 5,4%, la radio il 3,7%, i quotidiani il 2,2% e i periodici l'1,4%.",
+      "Nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), circa 4 su 10 offrono servizi di pubblicità. Sono tra le agenzie più complete: offrono in media circa sette servizi, e quasi 9 su 10 seguono anche grafica e siti web.",
     ],
     fonti: [
       { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },
-      { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
     ],
   },
   costi: {

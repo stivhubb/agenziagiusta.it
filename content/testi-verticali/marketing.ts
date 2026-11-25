@@ -19,8 +19,9 @@ export const marketing: Testi = {
   ],
   mercato: {
     testo: [
-      "Secondo le stime di UNA, l'associazione delle aziende della comunicazione, nel 2026 il mercato italiano della comunicazione vale 17,8 miliardi di euro (+4,4%). Oltre alla pubblicità sui mezzi, circa 5,2 miliardi vanno ad attività che rientrano spesso in un piano di marketing: eventi (+14,9%), sponsorizzazioni, influencer marketing e branded content (+8%).",
-      "Le piccole imprese sono una parte decisiva della domanda: con i loro investimenti e quelli dei professionisti il mercato pubblicitario cresce del 2,9%, senza dello 0,9%. Resta ampio lo spazio sui canali di vendita digitali: secondo l'Istat, nel 2025 vende online il 14,7% delle imprese con almeno 10 addetti.",
+      "Una parte crescente degli investimenti delle aziende va oltre la pubblicità sui mezzi. Secondo UNA, l'associazione delle aziende della comunicazione, la spesa per eventi, sponsorizzazioni, influencer marketing e branded content è passata da 2,9 miliardi di euro nel 2021 a 5,2 miliardi nel 2026, con una crescita media del 12,4% l'anno dal 2023.",
+      "Cambiano anche gli strumenti: secondo l'Istat, nel 2025 usa l'intelligenza artificiale il 16,4% delle imprese con almeno 10 addetti, il doppio dell'anno prima, e marketing e vendite sono il primo ambito d'uso.",
+      "Tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città (ottobre 2026), circa 4 su 10 offrono servizi di marketing, e circa 9 su 10 di queste seguono anche siti, social media e web marketing. Tra quelle che mostrano i propri clienti, metà lavora soprattutto con piccole e medie imprese e meno di una su dieci soprattutto con grandi marchi.",
     ],
     fonti: [
       { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },

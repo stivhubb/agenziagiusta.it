@@ -19,11 +19,13 @@ export const media: Testi = {
   ],
   mercato: {
     testo: [
-      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2025 gli investimenti pubblicitari in Italia hanno raggiunto 11,8 miliardi di euro (+5%) e nel 2026 sono previsti a 12,7 miliardi. Il 53% passa da Internet, che nel 2026 dovrebbe arrivare a 7 miliardi (+12%); l'83% della raccolta online va ai grandi operatori internazionali.",
-      "Nelle stime di UNA, che per questo dato non considerano gli investimenti delle piccole imprese, nel 2026 la televisione, tra lineare e advanced TV, raccoglie il 46,3% della spesa, il digitale il 36,1%, la pubblicità esterna il 7,5% e la radio il 5%. UPA, l'associazione delle aziende che investono in pubblicità, prevede per il 2026 una chiusura del mercato a +1,2%.",
+      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2025 gli investimenti pubblicitari in Italia hanno raggiunto 11,8 miliardi di euro (+5%) e nel 2026 sono previsti a 12,7 miliardi, circa 900 milioni in più. UPA, l'associazione delle aziende che investono in pubblicità, è più prudente e prevede per il 2026 una crescita dell'1,2%.",
+      "Nelle stime di UNA, che per questo dato non considerano le piccole imprese, nel 2026 la televisione tra lineare e advanced TV raccoglie il 46,3% della spesa, il digitale il 36,1%, la pubblicità esterna il 7,5% e la radio il 5%. Il confine tra i mezzi si assottiglia: la pubblicità sulle TV connesse vale circa 832 milioni (+19%), il 18% del video visto sul televisore, e quasi metà delle aziende gestisce ormai il budget video in modo unico tra televisione e online.",
+      "I centri media sono pochi: tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città (ottobre 2026), circa una su dieci offre pianificazione e acquisto media, con una presenza più alta a Milano. È il servizio con la quota più alta di agenzie che lavorano soprattutto con grandi marchi, circa 2 su 10 tra quelle che mostrano i clienti.",
     ],
     fonti: [
       { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
+      { nome: "Osservatorio Internet Media del Politecnico di Milano, luglio 2026", url: "https://www.osservatori.net/blog/internet-media-advertising/15-statistiche-sul-digital-advertising-in-italia-nel-2026-tutto-quello-che-devi-sapere/" },
       { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },
       { nome: "UPA, luglio 2026", url: "https://www.upa.it/static/upload/com/0000/comunicato-stampa-upa26.pdf" },
     ],
