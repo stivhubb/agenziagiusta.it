@@ -21,7 +21,7 @@ export const webAgency: Testi = {
     testo: [
       "Secondo Netcomm e l'Osservatorio eCommerce B2c del Politecnico di Milano, nel 2026 gli acquisti online degli italiani superano i 66,6 miliardi di euro (+6%) e valgono l'11,5% degli acquisti di prodotto al dettaglio. Le imprese italiane con un sito e-commerce sono 87.000, per oltre il 90% micro o piccole. La diffusione resta però limitata: secondo l'Istat, nel 2025 vende online il 14,7% delle imprese con almeno 10 addetti.",
       "La realizzazione di siti è il servizio più diffuso tra le agenzie: nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), più di 8 su 10 realizzano siti web o e-commerce, e circa 8 su 10 di queste gestiscono anche social media e web marketing.",
-      "È anche uno dei servizi più orientati alle piccole imprese: tra le agenzie che mostrano i propri clienti, circa 6 su 10 lavorano soprattutto con PMI e meno di una su dieci soprattutto con grandi marchi.",
+      "È anche uno dei servizi più orientati alle piccole imprese: dai clienti mostrati online, circa 6 agenzie su 10 lavorano in prevalenza con PMI e meno di una su dieci con grandi marchi.",
     ],
     fonti: [
       { nome: "Netcomm e Osservatorio eCommerce B2c del Politecnico di Milano, maggio 2026", url: "https://www.consorzionetcomm.it/lecommerce-b2c-in-italia-supera-i-666-miliardi-di-e-nel-2026-6-con-35-milioni-di-consumatori-digitali/" },

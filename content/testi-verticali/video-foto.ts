@@ -21,7 +21,7 @@ export const videoFoto: Testi = {
     testo: [
       "Secondo il 7° Rapporto di APA, l'associazione dei produttori audiovisivi, nel 2024 il settore audiovisivo italiano ha raggiunto un valore di 16,3 miliardi di euro (+9%) e coinvolge oltre 124.000 professionisti. Il dato riguarda l'intero settore, dalla televisione al cinema alle piattaforme: la produzione per le aziende ne è una parte.",
       "La domanda di video da parte delle aziende è sostenuta dalla pubblicità online: secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2026 gli investimenti in video online raggiungono 2,9 miliardi di euro (+16%), il 41% della pubblicità su Internet.",
-      "Tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città (ottobre 2026), circa metà produce video o foto, e circa 9 su 10 di queste offrono anche siti, grafica e social media: il video è spesso parte di un servizio più ampio. Tra quelle che mostrano i propri clienti, circa metà lavora soprattutto con piccole e medie imprese.",
+      "Su circa 930 agenzie di dieci città, AgenziaGiusta.it ha rilevato a ottobre 2026 che circa metà produce video o foto, e circa 9 su 10 di queste offrono anche siti, grafica e social media: il video è spesso parte di un servizio più ampio. Nei lavori mostrati sui siti, circa metà ha come committenti soprattutto aziende piccole e medie.",
     ],
     fonti: [
       { nome: "APA, 7° Rapporto sulla produzione audiovisiva nazionale, ottobre 2025", url: "https://www.apaonline.it/news/apa-presenta-il-7-rapporto-sulla-produzione-audiovisiva-nazionale/" },

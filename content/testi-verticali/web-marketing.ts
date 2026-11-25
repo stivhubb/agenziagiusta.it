@@ -21,7 +21,7 @@ export const webMarketing: Testi = {
     testo: [
       "Secondo l'Osservatorio Internet Media del Politecnico di Milano, nel 2025 la pubblicità online in Italia vale 6,2 miliardi di euro (+11%), il 53% degli investimenti pubblicitari, e nel 2026 dovrebbe arrivare a 7 miliardi (+12%). L'83% della raccolta va ai grandi operatori internazionali.",
       "Nel 2026 il video raccoglie il 41% della pubblicità online, banner, formati nativi e display programmatico il 26% (+10%), la ricerca a pagamento il 24% (+9%) e la pubblicità sui siti di e-commerce e di annunci l'8% (+12%), spinta dal retail media.",
-      "Il web marketing è tra i servizi più offerti: nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), lo offrono circa tre agenzie su quattro, e quasi tutte realizzano anche siti; circa 8 su 10 seguono anche la SEO. Tra quelle che mostrano i propri clienti, circa 6 su 10 lavorano soprattutto con piccole e medie imprese.",
+      "Il web marketing è tra i servizi più offerti: secondo l'analisi che AgenziaGiusta.it ha fatto a ottobre 2026 su circa 930 agenzie di dieci città, lo offrono circa tre agenzie su quattro, e quasi tutte realizzano anche siti; circa 8 su 10 seguono anche la SEO. Chi pubblica le proprie referenze lavora, in circa 6 casi su 10, soprattutto per PMI.",
     ],
     fonti: [
       { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },

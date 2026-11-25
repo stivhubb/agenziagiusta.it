@@ -21,7 +21,7 @@ export const socialMedia: Testi = {
     testo: [
       "Secondo l'Istat, nel 2025 il 59% delle imprese italiane con almeno 10 addetti usa i social media.",
       "Cresce anche la collaborazione con i creator: UPA e UNA stimano gli investimenti in influencer marketing a 490 milioni di euro nel 2025 (+5%) e a 550 milioni nel 2026 (+12%). Gli influencer iscritti all'elenco tenuto dall'Autorità per le garanzie nelle comunicazioni (AGCOM) sono più di 5.200.",
-      "La gestione dei social è uno dei servizi più offerti: nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), circa 8 su 10 la propongono, ma quasi nessuna si occupa solo di quello: circa 9 su 10 realizzano anche siti e circa 8 su 10 offrono web marketing. Tra quelle che mostrano i propri clienti, circa metà lavora soprattutto con piccole e medie imprese.",
+      "La gestione dei social è uno dei servizi più offerti: sui siti delle circa 930 agenzie che AgenziaGiusta.it ha esaminato in dieci città nell'ottobre 2026, circa 8 su 10 la propongono, ma quasi nessuna si occupa solo di quello: circa 9 su 10 realizzano anche siti e circa 8 su 10 offrono web marketing. Circa metà, a giudicare dai clienti presentati online, segue soprattutto aziende di piccole dimensioni.",
     ],
     fonti: [
       { nome: "Istat, Imprese e Ict, dicembre 2025", url: "https://www.istat.it/comunicato-stampa/imprese-e-ict-anno-2025/" },

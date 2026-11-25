@@ -21,7 +21,7 @@ export const marketing: Testi = {
     testo: [
       "Una parte crescente degli investimenti delle aziende va oltre la pubblicità sui mezzi. Secondo UNA, l'associazione delle aziende della comunicazione, la spesa per eventi, sponsorizzazioni, influencer marketing e branded content è passata da 2,9 miliardi di euro nel 2021 a 5,2 miliardi nel 2026, con una crescita media del 12,4% l'anno dal 2023.",
       "Cambiano anche gli strumenti: secondo l'Istat, nel 2025 usa l'intelligenza artificiale il 16,4% delle imprese con almeno 10 addetti, il doppio dell'anno prima, e marketing e vendite sono il primo ambito d'uso.",
-      "Tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città (ottobre 2026), circa 4 su 10 offrono servizi di marketing, e circa 9 su 10 di queste seguono anche siti, social media e web marketing. Tra quelle che mostrano i propri clienti, metà lavora soprattutto con piccole e medie imprese e meno di una su dieci soprattutto con grandi marchi.",
+      "I dati di AgenziaGiusta.it, raccolti a ottobre 2026 sui siti di circa 930 agenzie in dieci città, dicono che circa 4 su 10 offrono servizi di marketing, e circa 9 su 10 di queste seguono anche siti, social media e web marketing. Dai clienti indicati sui siti, metà lavora in prevalenza per aziende piccole e medie, mentre meno di una su dieci ha soprattutto grandi marchi.",
     ],
     fonti: [
       { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },

@@ -21,7 +21,7 @@ export const branding: Testi = {
     testo: [
       "Secondo il rapporto Design Economy 2026 di Fondazione Symbola, Deloitte Private, POLI.design e ADI, in Italia il design genera circa 4 miliardi di euro di valore aggiunto e impiega oltre 76 mila addetti, il 21,5% di quelli europei: è il primo paese dell'Unione per numero di addetti. Il dato riguarda l'intero settore del design, di cui la comunicazione visiva e il branding sono una parte.",
       "L'attività è concentrata al Nord: la Lombardia ha il 28,7% degli occupati del settore e Milano, con oltre 7.300 imprese di design, produce il 19% del valore aggiunto nazionale.",
-      "Tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città (ottobre 2026), circa 7 su 10 offrono grafica e branding, quasi sempre insieme ad altro: circa 9 su 10 realizzano anche siti e circa 8 su 10 gestiscono i social media. Tra quelle che mostrano i propri clienti, circa metà lavora soprattutto con piccole e medie imprese.",
+      "Contando le circa 930 agenzie di dieci città analizzate da AgenziaGiusta.it (ottobre 2026), circa 7 su 10 offrono grafica e branding, quasi sempre insieme ad altro: circa 9 su 10 realizzano anche siti e circa 8 su 10 gestiscono i social media. Nei portfolio pubblicati, circa metà di queste agenzie ha come clienti soprattutto piccole imprese.",
     ],
     fonti: [
       { nome: "Fondazione Symbola, Deloitte Private, POLI.design e ADI, Design Economy 2026", url: "https://symbola.net/ricerca/design-economy-2026/" },

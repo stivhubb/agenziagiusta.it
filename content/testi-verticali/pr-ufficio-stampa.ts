@@ -20,8 +20,8 @@ export const prUfficioStampa: Testi = {
   mercato: {
     testo: [
       "Non esistono stime istituzionali recenti del solo mercato delle relazioni pubbliche. Le stime di UNA sulla comunicazione non pubblicitaria danno però il peso di due attività vicine al lavoro delle agenzie PR: nel 2026 gli eventi valgono il 25% di questa spesa, in crescita del 14,9%, la voce più dinamica; le sponsorizzazioni il 16,4%, in crescita del 5%.",
-      "Le agenzie PR sono relativamente poche: nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), circa 2 su 10 offrono relazioni pubbliche o ufficio stampa, con una presenza più alta a Milano. Più di 9 su 10 di queste gestiscono anche i social media, segno che il lavoro sui media tradizionali e quello sui canali digitali vanno ormai insieme.",
-      "Rispetto ad altri servizi lavorano più spesso con aziende di dimensioni diverse: tra quelle che mostrano i propri clienti, le più numerose seguono sia piccole imprese sia aziende più grandi, e quasi 2 su 10 lavorano soprattutto con grandi marchi.",
+      "Le agenzie PR sono relativamente poche: a ottobre 2026 AgenziaGiusta.it ha contato circa 2 agenzie su 10, tra le circa 930 analizzate in dieci città, che offrono relazioni pubbliche o ufficio stampa, con una presenza più alta a Milano. Più di 9 su 10 di queste gestiscono anche i social media, segno che il lavoro sui media tradizionali e quello sui canali digitali vanno ormai insieme.",
+      "Rispetto ad altri servizi lavorano più spesso con aziende di dimensioni diverse: nei portafogli clienti visibili online prevalgono le agenzie che seguono sia piccole imprese sia aziende più grandi, e quasi 2 su 10 servono soprattutto grandi marchi.",
     ],
     fonti: [
       { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },

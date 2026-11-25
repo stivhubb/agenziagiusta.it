@@ -21,7 +21,7 @@ export const comunicazione: Testi = {
     testo: [
       "Secondo le stime di UNA, l'associazione delle aziende della comunicazione, nel 2026 il mercato italiano della comunicazione vale 17,8 miliardi di euro, il 4,4% in più del 2025. Il 71% è pubblicità sui mezzi, circa 12,6 miliardi; il restante 29%, pari a 5,2 miliardi, comprende eventi, sponsorizzazioni, influencer marketing e branded content, che sono le voci in maggiore crescita.",
       "Il nome \"agenzia di comunicazione\" è il più diffuso: tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città (rilevazione di ottobre 2026), circa 7 su 10 indicano la comunicazione tra i propri servizi. Quasi sempre è un'etichetta ampia: circa 8 su 10 di queste agenzie offrono anche grafica e branding, siti web e gestione dei social media.",
-      "Tra quelle che mostrano i propri clienti sul sito, circa metà lavora soprattutto con piccole e medie imprese e circa 4 su 10 con aziende di ogni dimensione. Per una PMI significa che il nome dice poco: conviene guardare quali servizi l'agenzia segue davvero e per quali clienti.",
+      "Tra le agenzie che rendono pubblici i propri clienti, circa metà si rivolge in prevalenza a PMI e circa 4 su 10 ad aziende di ogni dimensione. Per una PMI significa che il nome dice poco: conviene guardare quali servizi l'agenzia segue davvero e per quali clienti.",
     ],
     fonti: [
       { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },

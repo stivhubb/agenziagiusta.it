@@ -21,7 +21,7 @@ export const creativita: Testi = {
     testo: [
       "Nelle stime di UNA per il 2026, il branded content, cioè i contenuti prodotti dalle marche al di fuori degli spazi pubblicitari classici, è la voce principale della comunicazione non pubblicitaria: il 47,8% della spesa, in crescita dell'8%.",
       "Il formato che pesa di più è il video: secondo l'Osservatorio Internet Media del Politecnico di Milano, tra televisione, online e schermi in esterna raccoglie il 55% degli investimenti pubblicitari.",
-      "Tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città (ottobre 2026), circa 4 su 10 si presentano come agenzie creative o offrono ideazione di campagne; circa 9 su 10 di queste seguono anche grafica e social media. Rispetto agli altri servizi lavorano più spesso con aziende di dimensioni diverse: tra quelle che mostrano i clienti, circa 2 su 10 lavorano soprattutto con grandi marchi.",
+      "Nel campione di AgenziaGiusta.it, circa 930 agenzie di dieci città esaminate a ottobre 2026, circa 4 su 10 si presentano come agenzie creative o offrono ideazione di campagne; circa 9 su 10 di queste seguono anche grafica e social media. Rispetto agli altri servizi lavorano più spesso con aziende di dimensioni diverse: dove i clienti sono indicati, circa 2 agenzie creative su 10 hanno come committenti principali grandi marchi.",
     ],
     fonti: [
       { nome: "UNA, Media Hub: stime sul mercato della comunicazione, giugno 2026", url: "https://www.primaonline.it/wp-content/uploads/2026/06/Una-chart.pdf" },
