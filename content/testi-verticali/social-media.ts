@@ -58,14 +58,14 @@ export const socialMedia: Testi = {
     gruppi: [
       gruppo("Strategia", [
         ["Audit dei profili", "Analisi dello stato attuale dei canali e dei risultati."],
-        ["Analisi dei concorrenti", "Presenza e attività social delle aziende del settore."],
+        ["Analisi dei concorrenti", "Su quali piattaforme sono presenti i concorrenti, cosa pubblicano, con che frequenza e quali contenuti ottengono più interazioni."],
         ["Scelta delle piattaforme", "Su quali social essere presenti, e con quali obiettivi."],
         ["Linea editoriale", "Temi, rubriche e tone of voice."],
         ["Social media policy", "Regole per la gestione dei profili e delle situazioni critiche."],
       ]),
       gruppo("Contenuti", [
         ["Piano editoriale", "Calendario delle pubblicazioni per ciascuna piattaforma."],
-        ["Copywriting", "Testi dei post e delle didascalie."],
+        ["Copywriting", "Didascalie, testi delle storie e risposte ai commenti, scritti per la piattaforma e per il formato di ciascun contenuto."],
         ["Grafiche", "Immagini statiche, caroselli e modelli."],
         ["Video brevi", "Reel, short e video verticali."],
         ["Servizi fotografici e riprese", "Produzione di materiale originale."],
@@ -83,7 +83,7 @@ export const socialMedia: Testi = {
         ["Creatività per gli annunci", "Formati e messaggi pensati per la pubblicità."],
         ["Gestione delle campagne", "Attivazione e ottimizzazione sulle piattaforme pubblicitarie."],
         ["Remarketing", "Annunci rivolti a chi ha già interagito con l'azienda."],
-        ["Tracciamento", "Configurazione degli strumenti che rilevano le conversioni."],
+        ["Tracciamento", "Pixel delle piattaforme ed eventi sul sito, per sapere quali post e quali sponsorizzate portano contatti e vendite."],
       ]),
       gruppo("Influencer marketing", [
         ["Selezione dei creator", "Individuazione dei profili coerenti con marca e target."],
@@ -92,7 +92,7 @@ export const socialMedia: Testi = {
       ]),
       gruppo("Misurazione", [
         ["Social listening", "Rilevazione di ciò che viene detto online su marca e settore."],
-        ["Report periodici", "Risultati rispetto ai KPI concordati."],
+        ["Report periodici", "Crescita della community, copertura, interazioni e risultati delle sponsorizzate, confrontati con i KPI concordati."],
       ]),
     ],
   },

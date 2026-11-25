@@ -57,7 +57,7 @@ export const branding: Testi = {
     gruppi: [
       gruppo("Ricerca e strategia", [
         ["Brand audit", "Analisi dello stato attuale della marca e della sua percezione."],
-        ["Analisi dei concorrenti", "Studio del posizionamento e dell'identità delle marche concorrenti."],
+        ["Analisi dei concorrenti", "Come si presentano le marche concorrenti: nome, logo, colori, tono e promessa, per trovare uno spazio riconoscibile."],
         ["Posizionamento", "Definizione dello spazio distintivo della marca nel mercato."],
         ["Valori e personalità", "I principi e il carattere che la marca esprime."],
         ["Brand architecture", "Organizzazione di marca principale, linee e prodotti."],

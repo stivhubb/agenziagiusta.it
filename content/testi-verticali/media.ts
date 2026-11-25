@@ -87,7 +87,7 @@ export const media: Testi = {
       gruppo("Controllo e misurazione", [
         ["Monitoraggio delle uscite", "Verifica che gli spazi acquistati escano come previsto."],
         ["Ottimizzazione", "Correzione della pianificazione durante la campagna."],
-        ["Tracciamento", "Configurazione degli strumenti che rilevano i risultati online."],
+        ["Tracciamento", "Pixel, tag e parametri che collegano ogni uscita digitale ai risultati, per confrontare i mezzi tra loro."],
         ["Reportistica", "Risultati per mezzo rispetto ai KPI concordati."],
         ["Analisi post-campagna", "Valutazione complessiva e indicazioni per le pianificazioni successive."],
       ]),

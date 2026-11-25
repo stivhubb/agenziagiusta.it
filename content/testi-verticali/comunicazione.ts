@@ -99,7 +99,7 @@ export const comunicazione: Testi = {
         ["Influencer marketing", "Collaborazioni con creator seguiti dal pubblico di riferimento."],
       ]),
       gruppo("Contenuti e produzione", [
-        ["Copywriting", "Scrittura dei testi per campagne, sito e materiali."],
+        ["Copywriting", "Testi coerenti tra campagne, sito, brochure e comunicati, con lo stesso tono su tutti i canali."],
         ["Video", "Spot, video aziendali e contenuti brevi per il web."],
         ["Fotografia", "Servizi fotografici di prodotto, aziendali e di campagna."],
         ["Brochure e cataloghi", "Materiali istituzionali e commerciali, stampati o digitali."],
@@ -112,8 +112,8 @@ export const comunicazione: Testi = {
         ["Sponsorizzazioni", "Selezione e gestione delle iniziative da sostenere."],
       ]),
       gruppo("Misurazione", [
-        ["Report periodici", "Sintesi dei risultati delle attività."],
-        ["Analisi dei risultati", "Lettura dei dati rispetto ai KPI e indicazioni per le attività successive."],
+        ["Report periodici", "Un quadro unico, di solito mensile o trimestrale, di tutte le attività: campagne, social, ufficio stampa, eventi."],
+        ["Analisi dei risultati", "Cosa ha funzionato tra canali e messaggi, e come spostare budget e sforzi nel periodo successivo."],
       ]),
     ],
   },

@@ -58,7 +58,7 @@ export const seoSem: Testi = {
       gruppo("Analisi", [
         ["Audit SEO", "Analisi tecnica, dei contenuti e dell'autorevolezza del sito."],
         ["Ricerca delle parole chiave", "Individuazione delle ricerche rilevanti e dei relativi volumi."],
-        ["Analisi dei concorrenti", "Posizionamento e strategie dei siti concorrenti."],
+        ["Analisi dei concorrenti", "Quali siti si posizionano sulle stesse ricerche, per quali parole chiave, con quali contenuti e quanti link ricevono."],
         ["Analisi dell'intento di ricerca", "Che cosa si aspetta di trovare l'utente per ciascuna ricerca."],
       ]),
       gruppo("SEO tecnica", [
@@ -96,7 +96,7 @@ export const seoSem: Testi = {
       gruppo("Misurazione", [
         ["Tracciamento delle conversioni", "Configurazione degli strumenti di analisi."],
         ["Monitoraggio dei posizionamenti", "Andamento delle parole chiave nel tempo."],
-        ["Report periodici", "Traffico, conversioni e ritorno dell'investimento."],
+        ["Report periodici", "Andamento delle posizioni, del traffico organico, delle conversioni e della spesa in annunci, con il confronto rispetto al mese precedente."],
       ]),
     ],
   },

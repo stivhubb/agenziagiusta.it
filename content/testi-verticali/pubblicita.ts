@@ -57,12 +57,12 @@ export const pubblicita: Testi = {
       gruppo("Strategia della campagna", [
         ["Analisi del brief", "Obiettivi, prodotto, pubblico, periodo e budget della campagna."],
         ["Strategia di campagna", "Il messaggio principale e il ruolo di ciascun mezzo."],
-        ["Definizione del target", "Individuazione e descrizione del pubblico da raggiungere."],
+        ["Definizione del target", "Chi deve vedere la campagna, con quali abitudini di consumo dei mezzi, per scegliere dove e come uscire."],
       ]),
       gruppo("Creatività", [
         ["Concept creativo", "L'idea di fondo da cui derivano tutti i materiali della campagna."],
         ["Headline e payoff", "Il titolo della campagna e la frase che accompagna il marchio."],
-        ["Copywriting", "Testi di annunci, spot e materiali."],
+        ["Copywriting", "Titoli, slogan e testi di annunci, copioni di spot radio e TV, costruiti attorno al concept della campagna."],
         ["Art direction", "Impostazione visiva della campagna."],
         ["Storyboard", "La sequenza delle scene di uno spot, prima delle riprese."],
       ]),

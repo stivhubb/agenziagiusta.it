@@ -57,7 +57,7 @@ export const marketing: Testi = {
     gruppi: [
       gruppo("Analisi", [
         ["Ricerche di mercato", "Indagini su clienti, domanda e tendenze del settore."],
-        ["Analisi dei concorrenti", "Offerta, prezzi, canali e comunicazione dei competitor."],
+        ["Analisi dei concorrenti", "Prodotti, prezzi, canali di vendita e promozioni dei concorrenti, per capire dove l'offerta dell'azienda è più forte o più debole."],
         ["Segmentazione dei clienti", "Suddivisione del pubblico in gruppi con bisogni simili."],
         ["Analisi dei dati di vendita", "Lettura di vendite, clienti e canali per individuare le priorità."],
       ]),
@@ -87,7 +87,7 @@ export const marketing: Testi = {
       gruppo("Affiancamento e misurazione", [
         ["Responsabile marketing esterno", "Un professionista dell'agenzia che svolge il ruolo per un periodo (temporary marketing manager)."],
         ["KPI e report", "Indicatori concordati e sintesi periodica dei risultati."],
-        ["Analisi dei risultati", "Lettura dei dati e indicazioni per le attività successive."],
+        ["Analisi dei risultati", "Vendite, contatti e costo di acquisizione per canale, per correggere il piano di marketing."],
       ]),
     ],
   },
