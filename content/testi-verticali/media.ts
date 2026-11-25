@@ -77,8 +77,8 @@ export const media: Testi = {
         ["Negoziazione", "Trattativa su prezzi e posizioni con editori e concessionarie."],
       ]),
       gruppo("Acquisto digitale", [
-        ["Search advertising", "Annunci a pagamento sui motori di ricerca."],
-        ["Social advertising", "Campagne sulle piattaforme social."],
+        ["Search advertising", "Annunci a pagamento sui motori di ricerca.", "/web-marketing/#attivita"],
+        ["Social advertising", "Campagne sulle piattaforme social.", "/web-marketing/#attivita"],
         ["Display e video online", "Banner e video su siti e piattaforme di streaming."],
         ["Programmatic advertising", "Acquisto automatizzato degli spazi in base ai dati sul pubblico."],
         ["Digital audio", "Annunci su podcast e piattaforme di streaming musicale."],
@@ -87,7 +87,7 @@ export const media: Testi = {
       gruppo("Controllo e misurazione", [
         ["Monitoraggio delle uscite", "Verifica che gli spazi acquistati escano come previsto."],
         ["Ottimizzazione", "Correzione della pianificazione durante la campagna."],
-        ["Tracciamento", "Pixel, tag e parametri che collegano ogni uscita digitale ai risultati, per confrontare i mezzi tra loro."],
+        ["Tracciamento", "Pixel, tag e parametri che collegano ogni uscita digitale ai risultati, per confrontare i mezzi tra loro.", "/web-marketing/#attivita"],
         ["Reportistica", "Risultati per mezzo rispetto ai KPI concordati."],
         ["Analisi post-campagna", "Valutazione complessiva e indicazioni per le pianificazioni successive."],
       ]),

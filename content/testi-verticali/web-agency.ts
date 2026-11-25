@@ -77,7 +77,7 @@ export const webAgency: Testi = {
         ["Gestione dei contenuti", "Inserimento e aggiornamento di testi, immagini e schede prodotto."],
       ]),
       gruppo("Misurazione", [
-        ["Web analytics", "Configurazione degli strumenti di analisi e del tracciamento."],
+        ["Web analytics", "Configurazione degli strumenti di analisi e del tracciamento.", "/web-marketing/#attivita"],
         ["Gestione del consenso", "Banner cookie e conformità alla normativa sulla privacy."],
       ]),
     ],

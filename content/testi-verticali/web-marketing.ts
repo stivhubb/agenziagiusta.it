@@ -62,14 +62,14 @@ export const webMarketing: Testi = {
         ["Analisi dei concorrenti online", "Ricerche, annunci e contenuti dei competitor."],
       ]),
       gruppo("Acquisizione di traffico", [
-        ["SEO", "Ottimizzazione per il posizionamento organico sui motori di ricerca."],
+        ["SEO", "Ottimizzazione per il posizionamento organico sui motori di ricerca.", "/seo-sem/#attivita"],
         ["Search advertising", "Annunci a pagamento nei risultati di ricerca."],
         ["Social advertising", "Campagne a pagamento sulle piattaforme social."],
         ["Display e remarketing", "Annunci rivolti a chi ha già visitato il sito."],
         ["Marketplace", "Gestione della presenza e delle campagne sui marketplace."],
       ]),
       gruppo("Conversione e fidelizzazione", [
-        ["Landing page", "Pagine dedicate a una campagna o a un'offerta."],
+        ["Landing page", "Pagine costruite per una singola campagna, da cui misurare quanti contatti porta.", "/web-agency/#attivita"],
         ["Ottimizzazione del tasso di conversione (CRO)", "Test e interventi per aumentare contatti e vendite."],
         ["Email marketing", "Newsletter e campagne rivolte a clienti e contatti."],
         ["Marketing automation", "Comunicazioni automatiche attivate dal comportamento dell'utente."],

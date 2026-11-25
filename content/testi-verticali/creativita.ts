@@ -78,7 +78,7 @@ export const creativita: Testi = {
       ]),
       gruppo("Contenuti e attivazioni", [
         ["Branded content", "Contenuti editoriali o di intrattenimento prodotti dalla marca."],
-        ["Contenuti per i social media", "Formati pensati per le singole piattaforme."],
+        ["Contenuti per i social media", "Formati pensati per le singole piattaforme.", "/societa-produzione-video-foto/#attivita"],
         ["Attivazioni ed eventi", "Iniziative che coinvolgono direttamente il pubblico."],
         ["Materiali per il punto vendita", "Espositori, vetrine e allestimenti."],
         ["Direct marketing", "Comunicazioni indirizzate a destinatari selezionati."],
@@ -86,7 +86,7 @@ export const creativita: Testi = {
       gruppo("Produzione", [
         ["Direzione creativa della produzione", "Supervisione di riprese, scatti e post-produzione."],
         ["Selezione dei fornitori", "Scelta di registi, fotografi, illustratori e case di produzione."],
-        ["Adattamenti", "Declinazione dei materiali in formati, durate e lingue diverse."],
+        ["Adattamenti", "Declinazione dei materiali in formati, durate e lingue diverse.", "/societa-produzione-video-foto/#attivita"],
         ["Esecutivi", "Preparazione dei file definitivi per la stampa e la pubblicazione."],
       ]),
     ],

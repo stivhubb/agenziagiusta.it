@@ -90,7 +90,7 @@ export const seoSem: Testi = {
         ["Campagne sulla rete di ricerca", "Annunci testuali nei risultati di ricerca."],
         ["Campagne Shopping", "Annunci di prodotto con immagine e prezzo."],
         ["Remarketing", "Annunci mostrati di nuovo, nelle ricerche e sui siti partner, a chi ha già visto il sito."],
-        ["Landing page", "Pagine di destinazione costruite per la conversione."],
+        ["Landing page", "Pagine di destinazione costruite per la conversione.", "/web-agency/#attivita"],
         ["Gestione delle offerte", "Controllo del costo per clic e del budget."],
       ]),
       gruppo("Misurazione", [

@@ -75,8 +75,8 @@ export const marketing: Testi = {
       ]),
       gruppo("Acquisizione dei clienti", [
         ["Lead generation", "Campagne e strumenti per raccogliere contatti di potenziali clienti."],
-        ["Email marketing", "Newsletter e comunicazioni a clienti e contatti."],
-        ["Marketing automation", "Comunicazioni automatiche attivate dal comportamento dell'utente."],
+        ["Email marketing", "Newsletter e comunicazioni a clienti e contatti.", "/web-marketing/#attivita"],
+        ["Marketing automation", "Messaggi inviati in automatico in base a ciò che il cliente fa, collegati al CRM.", "/web-marketing/#attivita"],
         ["Campagne online", "Annunci a pagamento su motori di ricerca e social."],
       ]),
       gruppo("Fidelizzazione", [

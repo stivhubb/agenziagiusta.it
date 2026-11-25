@@ -65,7 +65,7 @@ export const socialMedia: Testi = {
       ]),
       gruppo("Contenuti", [
         ["Piano editoriale", "Calendario delle pubblicazioni per ciascuna piattaforma."],
-        ["Copywriting", "Didascalie, testi delle storie e risposte ai commenti, scritti per la piattaforma e per il formato di ciascun contenuto."],
+        ["Copywriting", "Didascalie, testi delle storie e risposte ai commenti, scritti per la piattaforma e per il formato di ciascun contenuto.", "/creativita/#attivita"],
         ["Grafiche", "Immagini statiche, caroselli e modelli."],
         ["Video brevi", "Reel, short e video verticali."],
         ["Servizi fotografici e riprese", "Produzione di materiale originale."],
@@ -82,8 +82,8 @@ export const socialMedia: Testi = {
         ["Strategia delle campagne", "Obiettivi, pubblici e ripartizione del budget."],
         ["Creatività per gli annunci", "Formati e messaggi pensati per la pubblicità."],
         ["Gestione delle campagne", "Attivazione e ottimizzazione sulle piattaforme pubblicitarie."],
-        ["Remarketing", "Annunci rivolti a chi ha già interagito con l'azienda."],
-        ["Tracciamento", "Pixel delle piattaforme ed eventi sul sito, per sapere quali post e quali sponsorizzate portano contatti e vendite."],
+        ["Remarketing", "Annunci rivolti a chi ha già interagito con l'azienda.", "/seo-sem/#attivita"],
+        ["Tracciamento", "Pixel delle piattaforme ed eventi sul sito, per sapere quali post e quali sponsorizzate portano contatti e vendite.", "/web-marketing/#attivita"],
       ]),
       gruppo("Influencer marketing", [
         ["Selezione dei creator", "Individuazione dei profili coerenti con marca e target."],

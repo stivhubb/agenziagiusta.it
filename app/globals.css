@@ -630,6 +630,13 @@ textarea {
   color: var(--testo);
 }
 
+.attivita__voci strong a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 /* ---------- Pagine tipo + città: fonti ed elenco delle agenzie ---------- */
 
 .fonti {
