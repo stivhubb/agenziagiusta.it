@@ -1,4 +1,4 @@
-import { ai, nomenclatura } from "./ai-verticali";
+import { ai } from "./ai-verticali";
 import type { Blocco, Seo, Sezione, Testi, Titolo } from "./tipi";
 import { branding } from "./testi-verticali/branding";
 import { comunicazione } from "./testi-verticali/comunicazione";
@@ -82,9 +82,8 @@ export function sezioniVerticale(v: Verticale): Sezione[] {
         : [{ segnaposto: "[MERCATO: DA SCRIVERE]" }],
     },
     { titolo: v.h2.costi, blocchi: blocchiCosti(pagina) },
-    // "Cosa fa", con in coda il paragrafo sui nomi delle agenzie; poi il blocco sull'AI
-    // (content/ai-verticali.ts).
-    ...pagina.sezioni.map((sez, i) => (i === 0 ? { ...sez, blocchi: [...sez.blocchi, nomenclatura] } : sez)),
+    // "Cosa fa"; poi il blocco sull'AI (content/ai-verticali.ts).
+    ...pagina.sezioni,
     ...(ai[v.slug] ? [ai[v.slug]] : []),
     sezioneDomande(v),
   ];

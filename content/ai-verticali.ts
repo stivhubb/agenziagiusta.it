@@ -2,13 +2,10 @@ import type { Sezione } from "./tipi";
 import { percorsi } from "./sito";
 
 // Testi aggiunti a novembre 2026 nelle pagine di tipologia, dopo "Cosa fa":
-// - nomenclatura: uguale in tutte le pagine, con i dati della rilevazione di ottobre 2026
-//   (929 agenzie in dieci città; servizi contati senza la voce generica "comunicazione");
 // - ai: come l'intelligenza artificiale cambia il lavoro di quel tipo di agenzia.
 // Il testo sull'AI va ricontrollato almeno ogni sei mesi: norme e strumenti cambiano in fretta.
-
-export const nomenclatura =
-  "I nomi con cui si presentano le agenzie, come agenzia di comunicazione, web agency, digital agency o agenzia di marketing, raramente corrispondono a un solo servizio. Tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città, ciascuna offre in media circa sei servizi diversi, e solo circa 3 su 100 si dedicano a un'unica attività: più di 8 web agency su 10 seguono anche campagne online e social, e quasi tutte le agenzie SEO realizzano anche siti. Per questo conviene scegliere un'agenzia guardando i servizi effettivamente offerti e i lavori già realizzati, più che il nome con cui si presenta.";
+// Il paragrafo sui nomi delle agenzie, prima uguale in tutte le pagine di tipologia, è stato
+// spostato (25 novembre 2026) nella guida alla scelta dell'agenzia (content/guida.ts).
 
 const linkGuida = {
   link: { testo: "Agenzia o intelligenza artificiale: cosa conviene a un'azienda", href: percorsi.guidaAi },

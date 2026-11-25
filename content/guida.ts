@@ -21,6 +21,9 @@ export const guida: Pagina & { seo: Seo } = {
       titolo: "Prima di cercare: chiarisci cosa ti serve",
       blocchi: [
         "Parti dall'obiettivo, non dal servizio. \"Voglio più richieste di preventivo\" è un obiettivo; \"voglio una campagna social\" è già una soluzione, e forse non la migliore. Un'agenzia seria ti aiuta a scegliere la strada, ma ha bisogno di sapere dove vuoi arrivare.",
+        // Dati della rilevazione di ottobre 2026 (929 agenzie in dieci città; servizi contati senza
+        // la voce generica "comunicazione"). Prima era ripetuto in tutte le pagine di tipologia.
+        "I nomi con cui si presentano le agenzie, come agenzia di comunicazione, web agency, digital agency o agenzia di marketing, raramente corrispondono a un solo servizio. Tra le circa 930 agenzie analizzate da AgenziaGiusta.it in dieci città, ciascuna offre in media circa sei servizi diversi, e solo circa 3 su 100 si dedicano a un'unica attività: più di 8 web agency su 10 seguono anche campagne online e social, e quasi tutte le agenzie SEO realizzano anche siti. Per questo conviene scegliere un'agenzia guardando i servizi effettivamente offerti e i lavori già realizzati, più che il nome con cui si presenta.",
       ],
     },
     {
