@@ -13,7 +13,7 @@ export const comunicazione: Testi = {
         "L'attività parte dalla fase di analisi: l'agenzia esamina l'azienda, il mercato di riferimento, i concorrenti e il pubblico, e definisce una strategia di comunicazione, cioè che cosa comunicare, a chi e attraverso quali canali. Su questa base sviluppa o aggiorna la brand identity, l'insieme degli elementi che rendono riconoscibile il marchio, elabora il concept creativo delle campagne e produce i materiali: annunci stampa, spot, sito, contenuti per i social media.",
         "La seconda area è la diffusione. L'agenzia pianifica e acquista gli spazi pubblicitari, online e sui mezzi tradizionali, gestisce i canali proprietari dell'azienda, cura le relazioni con i media e organizza eventi. Alcune strutture svolgono tutte le lavorazioni al proprio interno; altre coordinano fornitori specializzati per le attività più tecniche, come la produzione video o lo sviluppo web.",
         "Un progetto si articola di norma in quattro fasi. Il punto di partenza è il brief, il documento con cui l'azienda indica obiettivi, target e budget. L'agenzia risponde con una proposta strategica e creativa, che viene discussa e affinata con il cliente. Seguono la produzione dei materiali e la loro pubblicazione sui canali previsti. L'ultima fase è la misurazione dei risultati rispetto agli indicatori concordati (KPI), da cui dipendono le decisioni successive.",
-        "Al progetto lavorano figure con competenze diverse: l'account, referente del cliente e responsabile del coordinamento; lo strategist, che imposta il piano; il copywriter e l'art director, che sviluppano testi e immagini; il media planner, che definisce dove e quando investire; gli specialisti dei singoli canali.",
+        "Al progetto lavorano figure con competenze diverse: l'account, referente del cliente e responsabile del coordinamento; lo strategist, che imposta il piano; chi scrive i testi e chi cura la parte visiva; il pianificatore dei mezzi, che sceglie canali e tempi delle uscite; gli specialisti dei singoli canali.",
       ],
     },
   ],
@@ -30,7 +30,7 @@ export const comunicazione: Testi = {
   costi: {
     testo: [
       "Un'agenzia di comunicazione è remunerata con un canone mensile (retainer) per le attività continuative e con un compenso a progetto per gli incarichi che hanno un inizio e una fine, come una campagna o il rinnovo dell'identità. Per una piccola o media impresa il canone di un incarico continuativo su più canali si colloca in genere tra 2.000 e 5.000 euro al mese.",
-      "Il canone remunera il lavoro dell'agenzia. Restano a parte il budget pubblicitario, cioè l'acquisto degli spazi sui mezzi, e i costi di produzione di video, fotografie e materiali stampati.",
+      "Il canone remunera il lavoro dell'agenzia. Restano a parte il budget pubblicitario, cioè quanto si spende per comprare spazi su giornali, TV, radio e online, e i costi di produzione di video, fotografie e materiali stampati.",
     ],
     nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
@@ -53,7 +53,7 @@ export const comunicazione: Testi = {
     },
     {
       domanda: "Come scegliere tra le agenzie di comunicazione?",
-      risposta: "Non esiste una classifica ufficiale delle migliori agenzie di comunicazione italiane. Conviene confrontarne tre o quattro partendo dallo stesso brief: esperienza nel settore, lavori per aziende simili, persone che seguiranno il progetto e chiarezza del preventivo. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie di comunicazione con sede in zona.",
+      risposta: "Una graduatoria ufficiale delle agenzie di comunicazione in Italia non c'è. Conviene confrontarne tre o quattro partendo dallo stesso brief: esperienza nel settore, lavori per aziende simili, persone che seguiranno il progetto e chiarezza del preventivo. AgenziaGiusta.it pubblica, città per città, l'elenco delle agenzie di comunicazione con sede in zona.",
     },
   ],
   attivita: {
@@ -64,7 +64,7 @@ export const comunicazione: Testi = {
         ["Posizionamento del marchio", "Definizione di ciò che distingue il marchio e di come deve essere percepito."],
         ["Piano di marketing", "Obiettivi commerciali, leve e attività per raggiungerli."],
         ["Piano di comunicazione", "Messaggi, canali, tempi e budget delle attività."],
-        ["Definizione del target", "Individuazione e descrizione dei pubblici a cui rivolgersi."],
+        ["Definizione del target", "Chi sono le persone da raggiungere e come parlare a ciascun gruppo."],
         ["Tone of voice", "Il registro con cui il marchio si esprime su tutti i canali."],
       ]),
       gruppo("Identità del marchio", [
@@ -75,14 +75,14 @@ export const comunicazione: Testi = {
         ["Packaging", "Progettazione grafica delle confezioni."],
       ]),
       gruppo("Campagne pubblicitarie", [
-        ["Concept creativo", "L'idea di fondo da cui derivano tutti i materiali della campagna."],
-        ["Campagne stampa", "Annunci per quotidiani, periodici e riviste di settore."],
+        ["Concept creativo", "L'idea centrale che tiene insieme messaggi e materiali."],
+        ["Campagne stampa", "Pagine pubblicitarie su giornali e riviste, generaliste o specializzate."],
         ["Spot tv e radio", "Ideazione e realizzazione di comunicati video e audio."],
         ["Affissioni", "Manifesti e impianti pubblicitari esterni (out of home)."],
         ["Campagne digitali e social", "Annunci su motori di ricerca, siti e piattaforme social."],
       ]),
       gruppo("Pianificazione media", [
-        ["Piano mezzi", "Scelta dei mezzi e ripartizione del budget pubblicitario."],
+        ["Piano mezzi", "Quali canali usare e come dividere l'investimento tra loro."],
         ["Acquisto degli spazi", "Negoziazione e prenotazione con editori e concessionarie."],
         ["Monitoraggio e ottimizzazione", "Controllo delle uscite e correzione della campagna in corso."],
       ]),
@@ -103,7 +103,7 @@ export const comunicazione: Testi = {
         ["Video", "Spot, video aziendali e contenuti brevi per il web."],
         ["Fotografia", "Servizi fotografici di prodotto, aziendali e di campagna."],
         ["Brochure e cataloghi", "Materiali istituzionali e commerciali, stampati o digitali."],
-        ["Materiali per il punto vendita", "Espositori, cartelli e allestimenti."],
+        ["Materiali per il punto vendita", "Vetrofanie, totem ed elementi d'arredo per il negozio."],
       ]),
       gruppo("PR ed eventi", [
         ["Ufficio stampa", "Comunicati e rapporti con giornalisti e testate."],

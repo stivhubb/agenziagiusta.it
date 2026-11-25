@@ -19,7 +19,7 @@ export const pubblicita: Testi = {
   ],
   mercato: {
     testo: [
-      "Secondo le stime di UNA, nel 2026 la pubblicità sui mezzi in Italia vale circa 12,6 miliardi di euro. Le piccole imprese e i professionisti pesano sempre di più: con i loro investimenti il mercato cresce del 2,9%, senza dello 0,9%. Secondo un'elaborazione di AgenziaGiusta.it sui dati UNA, la loro spesa vale circa 3,5 miliardi, poco più di un quarto del totale.",
+      "Nel 2026 la pubblicità sui mezzi in Italia vale circa 12,6 miliardi di euro, secondo le stime di UNA. Le piccole imprese e i professionisti pesano sempre di più: con i loro investimenti il mercato cresce del 2,9%, senza dello 0,9%. Secondo un'elaborazione di AgenziaGiusta.it sui dati UNA, la loro spesa vale circa 3,5 miliardi, poco più di un quarto del totale.",
       "Contando anche le piccole imprese, nel 2026 il digitale raccoglie il 53,7% della spesa, la televisione tra lineare e advanced TV il 33,6%, la pubblicità esterna il 5,4%, la radio il 3,7%, i quotidiani il 2,2% e i periodici l'1,4%.",
       "Nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), circa 4 su 10 offrono servizi di pubblicità. Sono tra le agenzie più complete: offrono in media circa sette servizi, e quasi 9 su 10 seguono anche grafica e siti web.",
     ],

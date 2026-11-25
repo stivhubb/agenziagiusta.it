@@ -3,7 +3,7 @@ import { gruppo } from "./gruppo";
 
 export const seoSem: Testi = {
   intro: [
-    "Un'agenzia SEO, o SEO agency, lavora sulla visibilità di un sito nei motori di ricerca. La SEO (Search Engine Optimization) è l'insieme degli interventi che migliorano il posizionamento nei risultati organici, cioè non a pagamento. Le agenzie SEO seguono spesso anche le campagne a pagamento sui motori di ricerca, e molte web agency offrono la SEO tra i loro servizi.",
+    "Un'agenzia SEO, o SEO agency, lavora sulla visibilità di un sito nei motori di ricerca. La SEO (Search Engine Optimization) è l'insieme degli interventi che migliorano il posizionamento nei risultati organici, cioè non a pagamento. Le agenzie SEO seguono spesso anche gli annunci a pagamento su Google e Bing, e molte web agency offrono la SEO tra i loro servizi.",
     "SEO e campagne a pagamento insieme formano la SEM (Search Engine Marketing), cioè il marketing sui motori di ricerca. La parte a pagamento, gli annunci nelle pagine dei risultati, si chiama propriamente SEA (Search Engine Advertising), ma nel linguaggio comune viene spesso chiamata anch'essa SEM, oppure PPC (pay per click). Le due attività sono complementari: entrambe intercettano utenti che stanno già cercando un prodotto, un servizio o un'informazione.",
   ],
   sezioni: [
@@ -19,19 +19,18 @@ export const seoSem: Testi = {
   ],
   mercato: {
     testo: [
-      "Secondo l'Osservatorio Internet Media del Politecnico di Milano, la pubblicità sui motori di ricerca rappresenta il 24% della pubblicità online in Italia ed è prevista in crescita del 9% nel 2026. La crescita avviene in controtendenza rispetto al traffico organico: gli investimenti si spostano verso nuove forme di visibilità, comprese le prime sperimentazioni sui motori di ricerca generativi.",
+      "La ricerca a pagamento vale il 24% della pubblicità online nel nostro paese, secondo i dati dell'Osservatorio Internet Media del Politecnico di Milano, ed è prevista in crescita del 9% nel 2026. La crescita avviene in controtendenza rispetto al traffico organico: gli investimenti si spostano verso nuove forme di visibilità, comprese le prime sperimentazioni sui motori di ricerca generativi.",
       "Per un'azienda vuol dire che la visibilità nelle ricerche si gioca sempre di più su due fronti: la SEO, che oggi deve tenere conto anche delle risposte degli assistenti AI, e gli annunci a pagamento.",
-      "Nella rilevazione di AgenziaGiusta.it su circa 930 agenzie in dieci città (ottobre 2026), più di 6 su 10 offrono SEO o campagne sui motori di ricerca, e quasi tutte realizzano anche siti web. È il servizio più orientato alle piccole imprese: tra le agenzie che mostrano i propri clienti, circa 6 su 10 lavorano soprattutto con PMI.",
+      "Delle circa 930 agenzie che AgenziaGiusta.it ha analizzato in dieci città a ottobre 2026, più di 6 su 10 offrono SEO o pubblicità sui motori di ricerca, praticamente sempre insieme alla realizzazione di siti. È il servizio più orientato alle piccole imprese: guardando i clienti dichiarati sui siti, circa 6 agenzie SEO su 10 servono in prevalenza PMI.",
     ],
     fonti: [
       { nome: "Osservatorio Internet Media del Politecnico di Milano, luglio 2026", url: "https://www.osservatori.net/blog/internet-media-advertising/15-statistiche-sul-digital-advertising-in-italia-nel-2026-tutto-quello-che-devi-sapere/" },
-      { nome: "Osservatorio Internet Media del Politecnico di Milano, giugno 2026", url: "https://www.osservatori.net/comunicato/internet-media/internet-advertising-italia-in-crescita/" },
     ],
   },
   costi: {
     testo: [
-      "La SEO è remunerata con un canone mensile, perché richiede un lavoro continuativo. Per una piccola impresa o per un progetto locale si colloca in genere tra 500 e 1.500 euro al mese; per un'azienda strutturata, un e-commerce o un settore molto competitivo si parte in genere da 2.500 euro al mese. L'analisi iniziale del sito (audit), se acquistata da sola, costa in genere tra 500 e 2.000 euro.",
-      "Per le campagne a pagamento (SEA) il compenso dell'agenzia ha di norma una parte fissa, cioè un costo di setting iniziale e un canone mensile (flat fee) di gestione, e una fee sull'investimento, cioè una percentuale del budget gestito. La parte fissa si colloca in genere tra 500 e 2.500 euro al mese e varia con l'impegno richiesto: numero di campagne, competenze necessarie ed entità del budget. Il budget pubblicitario si paga a parte alla piattaforma.",
+      "La SEO è remunerata con un canone mensile, perché richiede un lavoro continuativo. Per una piccola impresa o per un progetto locale il canone va in genere da 500 a 1.500 euro al mese; per un'azienda strutturata, un e-commerce o un settore molto competitivo si parte in genere da 2.500 euro al mese. L'analisi iniziale del sito (audit), se acquistata da sola, costa in genere tra 500 e 2.000 euro.",
+      "Gli annunci sui motori di ricerca (SEA) si pagano in un altro modo: all'agenzia va un importo per l'avvio e poi una cifra mensile per seguirli, a cui di solito si somma una quota in percentuale della spesa in annunci. La sola gestione costa in genere da 500 a 2.500 euro mensili, a seconda di quante campagne ci sono, di quanto sono complesse e di quanto si investe; la spesa in annunci si versa direttamente a Google o a Microsoft.",
     ],
     nota: "Fasce elaborate da AgenziaGiusta.it, ottobre 2026: sono solo indicative e possono variare a seconda delle specifiche del servizio richiesto e dell'agenzia coinvolta.",
   },
@@ -90,7 +89,7 @@ export const seoSem: Testi = {
       gruppo("SEA (annunci a pagamento)", [
         ["Campagne sulla rete di ricerca", "Annunci testuali nei risultati di ricerca."],
         ["Campagne Shopping", "Annunci di prodotto con immagine e prezzo."],
-        ["Display e remarketing", "Annunci rivolti a chi ha già visitato il sito."],
+        ["Remarketing", "Annunci mostrati di nuovo, nelle ricerche e sui siti partner, a chi ha già visto il sito."],
         ["Landing page", "Pagine di destinazione costruite per la conversione."],
         ["Gestione delle offerte", "Controllo del costo per clic e del budget."],
       ]),
