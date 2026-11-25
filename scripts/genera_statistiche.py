@@ -63,8 +63,8 @@ for slug, nome in CITTA:
 def clienti(gruppo):
     c = Counter(x["clienti"] for x in gruppo if x["clienti"] != "non indicato")
     n = sum(c.values())
-    return {"n": n, "pmi": c["piccole imprese"] / n if n else 0, "misto": c["misto"] / n if n else 0,
-            "grandi": c["grandi marchi"] / n if n else 0}
+    q = lambda k: round(c[k] / n, 3) if n else 0
+    return {"n": n, "pmi": q("piccole imprese"), "misto": q("misto"), "grandi": q("grandi marchi")}
 
 
 # --- dati per servizio e città
@@ -79,12 +79,12 @@ for s, (voce, _, _) in SERVIZI.items():
         tutti_offerenti += g
         abb = Counter(t for x in g for t in x["S"] if t not in (voce, "comunicazione"))
         servizi[s][slug] = {
-            "agenzie": len(g), "base": len(b), "quota": len(g) / len(b),
-            "inCitta": sum(1 for x in g if x["in_citta"][slug]) / len(g) if g else 0,
+            "agenzie": len(g), "base": len(b), "quota": round(len(g) / len(b), 3),
+            "inCitta": round(sum(1 for x in g if x["in_citta"][slug]) / len(g), 3) if g else 0,
             "clienti": clienti(g),
             "abbinati": [[SERVIZI[VOCE_A_SLUG[t]][2], k / len(g)] for t, k in abb.most_common(2)] if g else [],
         }
-    medie[s] = {"quota": len(tutti_offerenti) / tutti_righe, "clienti": clienti(tutti_offerenti)}
+    medie[s] = {"quota": round(len(tutti_offerenti) / tutti_righe, 3), "clienti": clienti(tutti_offerenti)}
 
 # --- testi delle pagine servizio + città (solo dati che cambiano con servizio e città)
 testi = {}
